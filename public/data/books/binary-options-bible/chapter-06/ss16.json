@@ -1,0 +1,25 @@
+﻿{
+  "id": "ss16",
+  "code": "SS16",
+  "name": "Patrón Seguro 16 (Martillo Invertido + Martillo)",
+  "classification": {
+    "market": "Todo tipo de mercado",
+    "tradeType": "Continuación / Giro Alcista por Pinzas",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Busca una vela martillo invertido (cuerpo verde abajo con mecha superior prominente).",
+    "Si el mercado forma una vela martillo (cuerpo verde arriba con mecha inferior larga) después de una vela martillo invertida.",
+    "REGLA DE OPERACIÓN ALCISTA: Entonces podemos realizar una operación en la dirección ALCISTA (CALL) en la siguiente vela.",
+    "Compruebe si el estocástico respalda su dirección o no."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón seguro en la cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 3,
+    "triggerIndex": 1
+  }
+}

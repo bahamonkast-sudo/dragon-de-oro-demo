@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss12",
+  "code": "SS12",
+  "name": "Patrón Seguro 12 (Verde + Roja + Doji Direccional)",
+  "classification": {
+    "market": "Mercado Lateral o Apilado (todo tipo de mercado)",
+    "tradeType": "Continuación según Color del Doji",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado se encuentra en un movimiento lateral o apilado. Sin embargo, este patrón funciona en todo tipo de mercados.",
+    "En primer lugar, busca que se forme una vela verde y una vela roja consecutivas.",
+    "A continuación, espere a que aparezca una vela DOJI.",
+    "REGLA CRÍTICA DE OPERACIÓN: Realice la operación en la misma dirección del color del Doji.",
+    "Si el Doji es de color VERDE -> Opere en dirección ALCISTA (CALL) en la siguiente vela.",
+    "Si el Doji es de color ROJO -> Opere en dirección BAJISTA (PUT) en la siguiente vela.",
+    "Comprueba si el indicador estocástico respalda tu dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón seguro en cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "mtgNote": "1 Paso MTG se puede utilizar siempre para comprobar si el indicador estocástico respalda su dirección o no.",
+  "simulation": {
+    "velasBase": 4,
+    "triggerIndex": 2
+  }
+}

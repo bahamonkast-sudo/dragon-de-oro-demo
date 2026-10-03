@@ -1,0 +1,26 @@
+{
+  "id": "outside-bar",
+  "code": "OUTSIDE",
+  "name": "Outside Bar",
+  "classification": {
+    "market": "BREAKOUT",
+    "tradeType": "CALL_PUT"
+  },
+  "requirements": [
+    "La vela actual engloba completamente la vela anterior",
+    "Máxima actual > Máxima anterior",
+    "Mínima actual < Mínima anterior",
+    "Indica posible reversión o continuación fuerte"
+  ],
+  "snrRule": {
+    "nivel": "breakout level",
+    "tipoRuptura": "wick"
+  },
+  "stochRule": "%K crossing %D in overbought/oversold",
+  "mtgPolicy": "2_STEP",
+  "simulation": {
+    "velasBase": 4,
+    "triggerIndex": 3,
+    "resolutionCandle": 8
+  }
+}

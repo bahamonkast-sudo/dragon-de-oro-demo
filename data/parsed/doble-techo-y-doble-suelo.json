@@ -1,0 +1,180 @@
+{
+  "url": "https://www.binaryteach.com/doble-techo-y-doble-suelo/",
+  "slug": "doble-techo-y-doble-suelo",
+  "depth": 1,
+  "title": "Doble Techo y Doble Suelo",
+  "description": "Los doble techo y doble suelo son patrones de reversión y es muy importante que los encontremos al final de una tendencia, al aparecer este patrón podremos detectar un fallo en los impulsos y retrocesos,",
+  "kind": "class",
+  "level": 1,
+  "order": 12,
+  "date_published": "2020-02-05T21:18:22+00:00",
+  "date_modified": "2020-02-05T21:24:57+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 371,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "Taa9-BPBARo",
+      "url": "https://www.youtube.com/embed/Taa9-BPBARo?feature=oembed",
+      "title": "Dobles Techos y Dobles Suelos -Opciones Binarias- Figuras Chartistas"
+    }
+  ],
+  "links": [
+    {
+      "text": "el rectángulo ascendente y descendente",
+      "url": "https://www.binaryteach.com/rectangulo-ascendente-y-descendente/",
+      "kind": "page",
+      "slug": "rectangulo-ascendente-y-descendente"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/Taa9-BPBARo/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Taa9-BPBARo/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Taa9-BPBARo/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-12-doble-techo-y-doble-suelo-01.jpg",
+      "status": "ok",
+      "bytes": 120449
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Taa9-BPBARo/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Taa9-BPBARo/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Taa9-BPBARo/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Taa9-BPBARo/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "El doble techo y doble suelo son de mis figuras favoritas, son bastante comunes y se pueden operar fácilmente, aunque claro, hay que tener cierta experiencia antes de operar en una cuenta real.",
+      "html": "El doble techo y doble suelo son de mis figuras favoritas, son bastante comunes  y se pueden operar fácilmente, aunque claro, hay que tener cierta experiencia antes de operar en una cuenta real."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este patrón chartista es diferente a los que hemos visto hasta el momento, recuerdas que patrones cómo el rectángulo ascendente y descendente son patrones de continuidad. Pues en este caso, el doble techo y doble suelo nos indican una reversión del precio.",
+      "html": "Este patrón chartista es diferente a los que hemos visto hasta el momento, recuerdas que patrones cómo <a class=\"internal\" href=\"https://www.binaryteach.com/rectangulo-ascendente-y-descendente/\">el rectángulo ascendente  y descendente</a> son patrones de continuidad. Pues en este caso, el doble techo y doble suelo nos indican una reversión del precio."
+    },
+    {
+      "type": "paragraph",
+      "text": "También podemos encontrar esta figura chartista bajo el nombre de patrón M y patrón W, a parte de ser de mis favoritos es uno de los más utilizados.",
+      "html": "También podemos encontrar esta figura chartista bajo el nombre de patrón M y patrón W, a parte de ser de mis favoritos es uno de los más utilizados."
+    },
+    {
+      "type": "paragraph",
+      "text": "Al ser patrones de reversión debemos de tener claro que los tenemos que encontrar al final de una tendencia, al aparecer este patrón podremos detectar un fallo en los impulsos y retrocesos, lo que nos da el indicio de perdida de fuerza en la tendencia y posible reversión.",
+      "html": "Al ser patrones de reversión debemos de tener claro que los tenemos que encontrar al final de una tendencia,  al aparecer este patrón podremos detectar un fallo en los impulsos y retrocesos, lo que nos da el indicio de perdida de fuerza en la tendencia y posible reversión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo todas las demás figuras chartistas vistas con anterioridad, los doble techo y doble suelo pueden ser un poco difícil de identificar, pero con la practica los reconoceremos más fácilmente.",
+      "html": "Cómo todas las demás figuras chartistas vistas con anterioridad, los doble techo y doble suelo pueden ser un poco difícil de identificar, pero con la practica los reconoceremos más fácilmente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las características generales de este patrón chartista son:",
+      "html": "Las características generales de este patrón chartista son:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Previa tendencia definida.",
+          "html": "Previa tendencia definida."
+        },
+        {
+          "text": "En doble techo el segundo máximo puede estar más bajo que el primero o a la misma distancia.",
+          "html": "En doble techo el segundo máximo puede estar más bajo que el primero o a la misma distancia."
+        },
+        {
+          "text": "En el doble suelo el segundo mínimo puede estar más alto que el primero o a la misma distancia.",
+          "html": "En el doble suelo el segundo mínimo puede estar más alto que el primero  o a la misma distancia."
+        },
+        {
+          "text": "A simple vista el patrón doble techo asemeja a una M, y el patrón doble suelo asemeja a una W, de ahí el nombre de patrón M y W.",
+          "html": "A simple vista el patrón doble techo asemeja a una M, y el patrón doble suelo asemeja a una W, de ahí el nombre de patrón M y W."
+        },
+        {
+          "text": "La figura se termina de formar hasta que el precio rompe el cuello.",
+          "html": "La figura se termina de formar hasta que el precio rompe el cuello."
+        },
+        {
+          "text": "El cuello es la zona que comparten ambos máximos o ambos mínimos.",
+          "html": "El cuello es la zona que comparten ambos máximos o ambos mínimos."
+        },
+        {
+          "text": "Tras la ruptura del cuello esperamos que el precio continúe avanzando hasta un nivel objetivo.",
+          "html": "Tras la ruptura del cuello esperamos que el precio continúe avanzando hasta un nivel objetivo."
+        },
+        {
+          "text": "El nivel objetivo es la distancia que hay entre el cuello y el máximo en el caso del doble techo, y en el doble suelo entre el cuello y el mínimo",
+          "html": "El nivel objetivo es la distancia que hay entre el cuello y el máximo en el caso del doble techo, y en el doble suelo entre el cuello y el mínimo"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico cómo identificar y operar el doble techo y doble suelo.",
+      "html": "En el siguiente vídeo explico cómo identificar y operar el doble techo y doble suelo."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "Taa9-BPBARo",
+      "url": "https://www.youtube.com/embed/Taa9-BPBARo?feature=oembed",
+      "title": "Dobles Techos y Dobles Suelos -Opciones Binarias- Figuras Chartistas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-12-doble-techo-y-doble-suelo-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante que sepas que esta misma teoría se puede aplicar a lo que es un triple techo y un triple suelo. Siguen siendo patrones de reversión.",
+      "html": "Es importante que sepas que esta misma teoría se puede aplicar a lo que es un triple techo y un triple suelo. Siguen siendo patrones de reversión."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

@@ -1,0 +1,170 @@
+{
+  "url": "https://www.binaryteach.com/como-analizar-el-pinbar/",
+  "slug": "como-analizar-el-pinbar",
+  "depth": 1,
+  "title": "Cómo analizar el PinBar",
+  "description": "Después de haber visto al martillo y sus variaciones en la clase anterior, nos centramos en el estudio de un patrón de vela bastante similar. El […]",
+  "kind": "class",
+  "level": 1,
+  "order": 18,
+  "date_published": "2020-02-14T18:30:06+00:00",
+  "date_modified": "2020-02-14T18:30:08+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 243,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "rcNoisaTSmg",
+      "url": "https://www.youtube.com/embed/rcNoisaTSmg?feature=oembed",
+      "title": "Cómo Interpretar un PINBAR -Patrones de Velas- Opciones Binarias"
+    }
+  ],
+  "links": [
+    {
+      "text": "martillo y sus variaciones",
+      "url": "https://www.binaryteach.com/hammer-martillo/",
+      "kind": "page",
+      "slug": "hammer-martillo"
+    },
+    {
+      "text": "Soporte y Resistencia",
+      "url": "https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/",
+      "kind": "page",
+      "slug": "soportes-y-resistencias-techos-y-suelos"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/rcNoisaTSmg/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/rcNoisaTSmg/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/rcNoisaTSmg/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-18-como-analizar-el-pinbar-01.jpg",
+      "status": "ok",
+      "bytes": 99784
+    },
+    {
+      "url": "https://i.ytimg.com/vi/rcNoisaTSmg/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/rcNoisaTSmg/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/rcNoisaTSmg/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/rcNoisaTSmg/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Después de haber visto al martillo y sus variaciones en la clase anterior, nos centramos en el estudio de un patrón de vela bastante similar.",
+      "html": "Después de haber visto al <a class=\"internal\" href=\"https://www.binaryteach.com/hammer-martillo/\">martillo y sus variaciones</a> en la clase anterior, nos centramos en el estudio de un patrón de vela bastante similar."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Pinbar es un patrón que puede sernos útil para operar tanto reversiones cómo continuidades, el secreto cómo ya lo imaginas, amigo trader, esta en conocer el contexto completo y determinar la fuerza de la tendencia.",
+      "html": "El Pinbar es un patrón que puede sernos útil para operar tanto reversiones cómo continuidades, el secreto cómo ya lo imaginas, amigo trader, esta en conocer el contexto completo y determinar la fuerza de la tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Claro, si fuera tan sencillo cualquiera sería rentable utilizando el patrón. También tenemos que prestarle atención a zonas de Soporte y Resistencia que tengamos cerca, entre otras cosas.",
+      "html": "Claro, si fuera tan sencillo cualquiera sería rentable utilizando el patrón. También tenemos que prestarle atención a zonas de<a class=\"internal\" href=\"https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/\"> Soporte y Resistencia</a> que tengamos cerca, entre otras cosas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de explicar a detalle cómo usar el pinbar para realizar operaciones en opciones binarias, incluso en Forex, veamos sus caracteristicas.",
+      "html": "Antes de explicar a detalle cómo usar el pinbar para realizar operaciones en opciones binarias, incluso en Forex, veamos sus caracteristicas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una de las variaciones que encontramos entre el Pinbar y el Hammer, es el tamaño de su mecha, el pinbar tiene una mecha que es 3 veces el tamaño del cuerpo, mientras que el hammer tiene una mecha más pequeña.",
+      "html": "Una de las variaciones que encontramos entre el Pinbar y el Hammer, es el tamaño de su mecha, el pinbar tiene una mecha que es 3 veces el tamaño del cuerpo, mientras que el hammer tiene una mecha más pequeña."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos encontrar 4 variaciones de Pinbar:",
+      "html": "Podemos encontrar 4 variaciones de Pinbar:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Pinbar alcista con la mecha arriba,",
+          "html": "Pinbar alcista con la mecha arriba,"
+        },
+        {
+          "text": "Pinbar alcista con la mecha abajo,",
+          "html": "Pinbar alcista con la mecha abajo,"
+        },
+        {
+          "text": "Pinbar bajista con la mecha arriba y",
+          "html": "Pinbar bajista con la mecha arriba y"
+        },
+        {
+          "text": "Pinbar bajista con la mecha abajo.",
+          "html": "Pinbar bajista con la mecha abajo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Dependiendo de su mecha y su posición en la estructura del mercado así será la presión que nos este mostrando, por ejemplo en una resistencia un pinbar bajista con mecha superior puede estar indicándonos presión bajista.",
+      "html": "Dependiendo de su mecha y su posición en la estructura del mercado  así será la presión que nos este mostrando, por ejemplo  en una resistencia un pinbar bajista con mecha superior  puede estar indicándonos presión bajista."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo siempre, una imagen vale más que mil palabras y en esto del trading es mejor tener ejemplos, a continuación les dejo la clase de PINBAR:",
+      "html": "Cómo siempre, una imagen vale más que mil palabras y en esto del trading es mejor tener ejemplos, a continuación les dejo la clase de PINBAR:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "rcNoisaTSmg",
+      "url": "https://www.youtube.com/embed/rcNoisaTSmg?feature=oembed",
+      "title": "Cómo Interpretar un PINBAR -Patrones de Velas- Opciones Binarias",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-18-como-analizar-el-pinbar-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

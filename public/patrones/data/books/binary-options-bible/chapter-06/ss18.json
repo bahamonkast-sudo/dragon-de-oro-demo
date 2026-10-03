@@ -1,0 +1,27 @@
+﻿{
+  "id": "ss18",
+  "code": "SS18",
+  "name": "Patrón Seguro 18 (Vela Verde Sin Cola + Vela Roja Sin Cola)",
+  "classification": {
+    "market": "Todo tipo de mercado",
+    "tradeType": "Reversión Bajista por Techo Plano",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Busque una vela verde sin cola (sin mecha inferior, apertura igual al mínimo).",
+    "Espere a que se forme una vela roja sin cola después de la vela verde sin cola (apertura sin mecha superior).",
+    "REGLA DE OPERACIÓN BAJISTA: Entonces realice la operación en DIRECCIÓN BAJISTA (PUT) en la vela de comercio siguiente.",
+    "Para configuración simétrica alcista: vela roja sin mecha superior seguida de vela verde sin mecha inferior habilita operación en ALZA (CALL).",
+    "Compruebe si el indicador estocástico respalda su dirección o no."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación.",
+    "Verifique que la vela verde no tenga mecha inferior y la roja no tenga mecha superior."
+  ],
+  "simulation": {
+    "velasBase": 3,
+    "triggerIndex": 1
+  }
+}

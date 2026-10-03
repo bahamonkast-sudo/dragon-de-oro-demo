@@ -1,0 +1,1160 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dragón de Oro - Entrenador Oficial de Patrones de Dragón de Oro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #080b11; color: #f1f5f9; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+    
+    .chart-grid {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .stage { position: relative; height: 380px; flex-shrink: 0; }
+    .snr-line { position: absolute; left: 0; right: 0; height: 2px; background-color: #38bdf8; z-index: 10; box-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+    .candle-group { position: absolute; width: 44px; display: flex; flex-direction: column; align-items: center; }
+    .wick { width: 2px; position: absolute; }
+    .body { width: 38px; position: absolute; border-radius: 1px; }
+    .bull-wick { background-color: #22c55e; }
+    .bull-body { background-color: #22c55e; border: 1.5px solid #16a34a; box-shadow: 0 0 10px rgba(34,197,94,0.3); }
+    .bear-wick { background-color: #ef4444; }
+    .bear-body { background-color: #ef4444; border: 1.5px solid #dc2626; box-shadow: 0 0 10px rgba(239,68,68,0.3); }
+    .doji-green { background-color: #22c55e; border: 1.5px solid #16a34a; box-shadow: 0 0 8px rgba(34,197,94,0.4); }
+    .doji-red { background-color: #ef4444; border: 1.5px solid #dc2626; box-shadow: 0 0 8px rgba(239,68,68,0.4); }
+    .black-wick { background-color: #94a3b8; }
+    .black-body { background-color: #0f172a; border: 2px solid #64748b; box-shadow: 0 0 10px rgba(148,163,184,0.3); }
+    
+    @keyframes popIn { 0% { transform: scale(0.85); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    .animate-pop { animation: popIn 0.25s ease-out forwards; }
+  </style>
+</head>
+<body class="h-screen flex flex-col overflow-hidden select-none">
+
+  <!-- HEADER -->
+  <header class="h-14 bg-[#0d121d] border-b border-gray-800 flex items-center justify-between px-6 z-30 shrink-0">
+    <div class="flex items-center gap-3">
+      <div class="h-3 w-3 rounded-full bg-emerald-500 animate-pulse"></div>
+      <h1 class="text-sm font-bold tracking-wider text-white">DRAGÓN DE ORO <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">SURE SHOTS DE ANITA</span></h1>
+    </div>
+    
+    <div class="flex items-center gap-5 text-xs font-mono">
+      <div class="flex items-center gap-2 bg-[#131a29] px-3 py-1 rounded border border-gray-800">
+        <span class="text-gray-400">Aciertos:</span>
+        <span id="stat-wins" class="text-emerald-400 font-bold text-sm">0</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#131a29] px-3 py-1 rounded border border-gray-800">
+        <span class="text-gray-400">Fallos:</span>
+        <span id="stat-losses" class="text-rose-400 font-bold text-sm">0</span>
+      </div>
+      <div class="flex items-center gap-2 bg-[#131a29] px-3 py-1 rounded border border-gray-800">
+        <span class="text-gray-400">Racha:</span>
+        <span id="stat-streak" class="text-yellow-400 font-bold text-sm">0 🔥</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- WORKSPACE -->
+  <div class="flex-1 flex min-h-0">
+
+    <!-- 1. BIBLIOTECA -->
+    <aside class="w-60 bg-[#0a0e17] border-r border-gray-800/80 flex flex-col shrink-0">
+      <div class="p-3 border-b border-gray-800/80 bg-[#0d121f]">
+        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Patrones Seguros (1 - 30)</span>
+      </div>
+      <div class="flex-1 overflow-y-auto p-2 space-y-1" id="pattern-list"></div>
+    </aside>
+
+    <!-- 2. LIENZO GRÁFICO -->
+    <main class="flex-1 flex flex-col bg-[#05070b] relative min-w-0">
+      <div class="h-12 bg-[#0c101a] border-b border-gray-800/80 px-6 flex items-center justify-between z-20 shrink-0">
+        <div class="flex items-center gap-3 min-w-0">
+          <span id="pattern-badge" class="px-2 py-0.5 text-xs font-bold rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-mono shrink-0">PS01</span>
+          <h2 id="pattern-title" class="text-xs font-bold text-gray-200 truncate">Patrón Seguro 1</h2>
+        </div>
+
+        <div id="variant-selector" class="flex items-center gap-1.5 bg-[#141a27] p-1 rounded-lg border border-gray-800 shrink-0"></div>
+      </div>
+
+      <!-- CONTENEDOR FLEX CENTRADO -->
+      <div class="flex-1 flex flex-col justify-center items-center relative px-6 py-4 chart-grid overflow-x-auto overflow-y-hidden">
+        
+        <div class="w-full flex justify-center items-center">
+          <div class="stage" id="stage-container">
+            <div class="snr-line" id="main-snr-line">
+              <span id="snr-label-right" class="absolute -top-6 right-2 bg-gray-900/90 text-sky-400 text-[10px] font-bold px-2 py-0.5 rounded border border-sky-500/40 whitespace-nowrap">
+                Nivel Clave (SNR)
+              </span>
+            </div>
+
+            <div id="box-container"></div>
+            <div id="candles-render"></div>
+            <div id="operation-slot"></div>
+          </div>
+        </div>
+
+        <div id="pattern-note" class="mt-4 text-xs text-gray-300 bg-gray-900/90 px-6 py-1.5 rounded-full border border-gray-800 text-center shadow-lg max-w-2xl shrink-0"></div>
+      </div>
+
+      <!-- BARRA DE ACCIONES -->
+      <div class="h-20 bg-[#0d121f] border-t border-gray-800 px-8 flex items-center justify-between z-20 shrink-0">
+        <div class="flex items-center gap-3">
+          <button onclick="executeTrade('CALL')" class="h-11 px-7 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold rounded-xl shadow-lg shadow-emerald-950/60 flex items-center gap-2 text-xs tracking-wider transition-all">
+            <span class="text-base">▲</span> CALL (COMPRA)
+          </button>
+          <button onclick="executeTrade('PUT')" class="h-11 px-7 bg-rose-600 hover:bg-rose-500 active:scale-95 text-white font-bold rounded-xl shadow-lg shadow-rose-950/60 flex items-center gap-2 text-xs tracking-wider transition-all">
+            <span class="text-base">▼</span> PUT (VENTA)
+          </button>
+        </div>
+
+        <div id="trade-feedback" class="flex-1 text-center font-medium text-xs px-6">
+          <span class="text-gray-400">Analiza la estructura del patrón y ejecuta tu operación</span>
+        </div>
+
+        <button onclick="renderScenario()" class="h-9 px-4 bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold rounded-lg border border-gray-700 text-xs">
+          Reiniciar Escenario
+        </button>
+      </div>
+    </main>
+
+    <!-- 3. TEORÍA -->
+    <aside class="w-80 bg-[#0a0e17] border-l border-gray-800/80 p-5 overflow-y-auto flex flex-col gap-4 shrink-0">
+      <div class="border-b border-gray-800 pb-3">
+        <span class="text-[10px] font-bold text-sky-400 tracking-wider uppercase">Manual de Dragón de Oro</span>
+        <h3 id="theory-title" class="text-sm font-bold text-white mt-0.5">PATRÓN SEGURO – 01</h3>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Requisitos Oficiales</h4>
+        <ul id="theory-rules" class="text-xs text-gray-300 space-y-2.5 list-disc pl-4 leading-relaxed font-normal"></ul>
+      </div>
+
+      <div class="bg-[#121826] p-3.5 rounded-xl border border-gray-800 space-y-1.5 mt-2">
+        <div class="flex items-center gap-2 text-xs font-bold text-sky-400">
+          <span>⚡</span> Criterio Profesional
+        </div>
+        <p class="text-[11px] text-gray-300 leading-relaxed" id="theory-subtip">
+          Opera siguiendo estrictamente los gatillos técnicos establecidos por Dragón de Oro.
+        </p>
+      </div>
+
+      <div class="bg-[#15121e] p-3.5 rounded-xl border border-purple-900/30 space-y-1.5 mt-auto">
+        <div class="flex items-center gap-2 text-xs font-bold text-purple-400">
+          <span>🛡️</span> Regla de Dragón de Oro
+        </div>
+        <p class="text-[11px] text-gray-300 leading-relaxed" id="theory-tip">
+          Comprueba siempre que el oscilador estocástico respalde la dirección de entrada.
+        </p>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    const database = [
+      {
+        id: "ps01", code: "PS01", name: "Patrón Seguro 1", hasSnr: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Alza)", title: "Operación al Alza", snrTop: 160,
+            note: '"La ruptura con mecha y cuerpo es aceptada".', rules: ["Línea SNR en el punto de contacto."],
+            candles: [
+              { left: 20, wickTop: 70, wickTopH: 30, bodyTop: 100, bodyH: 115, wickBot: 215, wickBotH: 35, type: "bull", label: "Vela 1" },
+              { left: 90, wickTop: 65, wickTopH: 35, bodyTop: 100, bodyH: 60, wickBot: 160, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 160, wickTop: 135, wickTopH: 25, bodyTop: 160, bodyH: 90, wickBot: 250, wickBotH: 30, type: "bear", label: "Roja 2" },
+              { left: 230, wickTop: 215, wickTopH: 30, bodyTop: 245, bodyH: 85, wickBot: 330, wickBotH: 25, type: "bear", label: "Fondo" },
+              { left: 300, wickTop: 215, wickTopH: 25, bodyTop: 240, bodyH: 95, wickBot: 335, wickBotH: 25, type: "bull", label: "Giro" },
+              { left: 370, wickTop: 155, wickTopH: 30, bodyTop: 185, bodyH: 55, wickBot: 240, wickBotH: 20, type: "bull", label: "Avance" },
+              { left: 440, wickTop: 75, wickTopH: 30, bodyTop: 105, bodyH: 95, wickBot: 200, wickBotH: 25, type: "bull", label: "Ruptura SNR", isTrigger: true }
+            ],
+            operation: { left: 510, wickTop: 35, wickTopH: 35, bodyTop: 70, bodyH: 95, wickBot: 165, wickBotH: 30, type: "bull" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Baja)", title: "Operaciones a la Baja", snrTop: 160,
+            note: '"La ruptura con mecha y cuerpo es aceptada".', rules: ["Línea SNR en el punto de contacto."],
+            candles: [
+              { left: 20, wickTop: 120, wickTopH: 30, bodyTop: 150, bodyH: 85, wickBot: 235, wickBotH: 25, type: "bear", label: "Vela 1" },
+              { left: 90, wickTop: 140, wickTopH: 20, bodyTop: 160, bodyH: 55, wickBot: 215, wickBotH: 20, type: "bull", label: "Verde 1" },
+              { left: 160, wickTop: 70, wickTopH: 35, bodyTop: 105, bodyH: 55, wickBot: 160, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 230, wickTop: 35, wickTopH: 45, bodyTop: 80, bodyH: 60, wickBot: 140, wickBotH: 25, type: "bear", label: "Cúspide" },
+              { left: 300, wickTop: 110, wickTopH: 30, bodyTop: 140, bodyH: 80, wickBot: 220, wickBotH: 20, type: "bear", label: "Ruptura SNR", isTrigger: true }
+            ],
+            operation: { left: 370, wickTop: 200, wickTopH: 20, bodyTop: 220, bodyH: 55, wickBot: 275, wickBotH: 20, type: "bear" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps02", code: "PS02", name: "Patrón Seguro 2 (Magic V)", hasSnr: true,
+        variants: {
+          CONFIRM_GREEN: {
+            buttonLabel: "🟢 Confirmó Verde (CALL)", title: "Magic V - Confirmación Verde", snrTop: 160,
+            note: '"Si esta vela es verde, entonces la siguiente vela será verde (CALL)".', rules: ["Línea horizontal sobre cimas."],
+            candles: [
+              { left: 30, wickTop: 130, wickTopH: 30, bodyTop: 160, bodyH: 75, wickBot: 235, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 100, wickTop: 120, wickTopH: 40, bodyTop: 160, bodyH: 45, wickBot: 205, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 170, wickTop: 180, wickTopH: 25, bodyTop: 205, bodyH: 65, wickBot: 270, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 240, wickTop: 245, wickTopH: 25, bodyTop: 270, bodyH: 70, wickBot: 340, wickBotH: 15, type: "bear", label: "Fondo 1" },
+              { left: 310, wickTop: 240, wickTopH: 25, bodyTop: 265, bodyH: 75, wickBot: 340, wickBotH: 15, type: "bull", label: "Fondo 2" },
+              { left: 380, wickTop: 195, wickTopH: 25, bodyTop: 220, bodyH: 40, wickBot: 260, wickBotH: 15, type: "bull", label: "Avance" },
+              { left: 450, wickTop: 135, wickTopH: 20, bodyTop: 155, bodyH: 70, wickBot: 225, wickBotH: 15, type: "bull", label: "Ruptura" },
+              { left: 525, wickTop: 50, wickTopH: 25, bodyTop: 75, bodyH: 85, wickBot: 160, wickBotH: 8, type: "bull", label: "Conf. Verde", isTrigger: true }
+            ],
+            operation: { left: 605, wickTop: 20, wickTopH: 25, bodyTop: 45, bodyH: 50, wickBot: 95, wickBotH: 25, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          CONFIRM_RED: {
+            buttonLabel: "🔴 Confirmó Roja (PUT)", title: "Magic V - Confirmación Roja", snrTop: 160,
+            note: '"Si esta vela es roja, entonces la siguiente vela será roja (PUT)".', rules: ["Línea horizontal sobre cimas."],
+            candles: [
+              { left: 30, wickTop: 130, wickTopH: 30, bodyTop: 160, bodyH: 75, wickBot: 235, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 100, wickTop: 120, wickTopH: 40, bodyTop: 160, bodyH: 45, wickBot: 205, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 170, wickTop: 180, wickTopH: 25, bodyTop: 205, bodyH: 65, wickBot: 270, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 240, wickTop: 245, wickTopH: 25, bodyTop: 270, bodyH: 70, wickBot: 340, wickBotH: 15, type: "bear", label: "Fondo 1" },
+              { left: 310, wickTop: 240, wickTopH: 25, bodyTop: 265, bodyH: 75, wickBot: 340, wickBotH: 15, type: "bull", label: "Fondo 2" },
+              { left: 380, wickTop: 195, wickTopH: 25, bodyTop: 220, bodyH: 40, wickBot: 260, wickBotH: 15, type: "bull", label: "Avance" },
+              { left: 450, wickTop: 135, wickTopH: 20, bodyTop: 155, bodyH: 70, wickBot: 225, wickBotH: 15, type: "bull", label: "Ruptura" },
+              { left: 525, wickTop: 50, wickTopH: 25, bodyTop: 75, bodyH: 85, wickBot: 160, wickBotH: 8, type: "black", label: "Conf. Roja", isTrigger: true }
+            ],
+            operation: { left: 605, wickTop: 135, wickTopH: 25, bodyTop: 160, bodyH: 50, wickBot: 210, wickBotH: 25, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps03", code: "PS03", name: "Patrón Seguro 3 (Magic V Avanzado)", hasSnr: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Alza)", title: "Magic V Avanzado - Alza", snrTop: 160,
+            note: '"Rompa la línea horizontal y coloque la operación en la misma dirección (CALL)".', rules: ["Ruptura directa sin confirmación."],
+            candles: [
+              { left: 30, wickTop: 130, wickTopH: 30, bodyTop: 160, bodyH: 80, wickBot: 240, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 100, wickTop: 115, wickTopH: 45, bodyTop: 160, bodyH: 50, wickBot: 210, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 170, wickTop: 180, wickTopH: 25, bodyTop: 205, bodyH: 70, wickBot: 275, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 240, wickTop: 245, wickTopH: 25, bodyTop: 270, bodyH: 70, wickBot: 340, wickBotH: 15, type: "bear", label: "Fondo 1" },
+              { left: 310, wickTop: 240, wickTopH: 25, bodyTop: 265, bodyH: 75, wickBot: 340, wickBotH: 15, type: "bull", label: "Fondo 2" },
+              { left: 380, wickTop: 195, wickTopH: 25, bodyTop: 220, bodyH: 40, wickBot: 260, wickBotH: 15, type: "bull", label: "Avance" },
+              { left: 450, wickTop: 130, wickTopH: 25, bodyTop: 155, bodyH: 75, wickBot: 230, wickBotH: 15, type: "bull", label: "Ruptura", isTrigger: true }
+            ],
+            operation: { left: 530, wickTop: 20, wickTopH: 25, bodyTop: 45, bodyH: 115, wickBot: 160, wickBotH: 8, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Baja)", title: "Magic V Avanzado - Baja", snrTop: 230,
+            note: '"Rompa la línea horizontal y coloque la operación en la misma dirección (PUT)".', rules: ["Ruptura bajista directa."],
+            candles: [
+              { left: 40, wickTop: 120, wickTopH: 25, bodyTop: 145, bodyH: 85, wickBot: 230, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 110, wickTop: 160, wickTopH: 20, bodyTop: 180, bodyH: 50, wickBot: 230, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 180, wickTop: 65, wickTopH: 25, bodyTop: 90, bodyH: 95, wickBot: 185, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 250, wickTop: 25, wickTopH: 15, bodyTop: 40, bodyH: 60, wickBot: 100, wickBotH: 30, type: "bear", label: "Cúspide" },
+              { left: 320, wickTop: 85, wickTopH: 25, bodyTop: 110, bodyH: 85, wickBot: 195, wickBotH: 15, type: "bear", label: "Caída" },
+              { left: 390, wickTop: 175, wickTopH: 25, bodyTop: 200, bodyH: 50, wickBot: 250, wickBotH: 10, type: "bear", label: "Ruptura", isTrigger: true }
+            ],
+            operation: { left: 460, wickTop: 200, wickTopH: 30, bodyTop: 230, bodyH: 85, wickBot: 315, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps04", code: "PS04", name: "Patrón Seguro 4 (Engullimiento + Sin Cola)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Alza)", title: "Engullimiento + Sin Cola (CALL)",
+            note: '"Aparece una vela verde sin cola. Opere al alza (CALL)".', rules: ["Vela Verde engulle a la Roja. Vela Gatillo sin cola inferior."],
+            candles: [
+              { left: 140, wickTop: 165, wickTopH: 15, bodyTop: 180, bodyH: 60, wickBot: 240, wickBotH: 15, type: "bear", label: "Vela Roja" },
+              { left: 210, wickTop: 125, wickTopH: 20, bodyTop: 145, bodyH: 100, wickBot: 245, wickBotH: 18, type: "bull", label: "Engulle" },
+              { left: 280, wickTop: 30, wickTopH: 40, bodyTop: 70, bodyH: 75, wickBot: 145, wickBotH: 0, type: "bull", label: "Sin Cola", isTrigger: true }
+            ],
+            operation: { left: 350, wickTop: 5, wickTopH: 25, bodyTop: 30, bodyH: 70, wickBot: 100, wickBotH: 25, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Baja)", title: "Engullimiento + Sin Cola (PUT)",
+            note: '"Aparece una vela roja sin cola después de la envolvente. Opere a la baja (PUT)".', rules: ["Vela Roja engulle a la Verde. Vela Gatillo sin cola superior."],
+            candles: [
+              { left: 140, wickTop: 65, wickTopH: 15, bodyTop: 80, bodyH: 60, wickBot: 140, wickBotH: 15, type: "bull", label: "Vela Verde" },
+              { left: 210, wickTop: 55, wickTopH: 15, bodyTop: 70, bodyH: 100, wickBot: 170, wickBotH: 15, type: "bear", label: "Engulle" },
+              { left: 280, wickTop: 170, wickTopH: 0, bodyTop: 170, bodyH: 60, wickBot: 230, wickBotH: 45, type: "bear", label: "Sin Cola", isTrigger: true }
+            ],
+            operation: { left: 350, wickTop: 200, wickTopH: 30, bodyTop: 230, bodyH: 65, wickBot: 295, wickBotH: 30, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps05", code: "PS05", name: "Patrón Seguro 5 (Retroceso 1-2 Velas)", hasSnr: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Alza)", title: "Retroceso 1-2 Velas - Alza", snrTop: 140,
+            note: '"Si esta vela no rompe la línea horizontal, entonces coloque una operación alcista (CALL)".', rules: ["Mínimo 4 verdes + Retroceso + NO Rompe SNR."],
+            candles: [
+              { left: 30, wickTop: 240, wickTopH: 20, bodyTop: 260, bodyH: 60, wickBot: 320, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 95, wickTop: 195, wickTopH: 20, bodyTop: 215, bodyH: 55, wickBot: 270, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 160, wickTop: 155, wickTopH: 20, bodyTop: 175, bodyH: 55, wickBot: 230, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 225, wickTop: 120, wickTopH: 20, bodyTop: 140, bodyH: 60, wickBot: 200, wickBotH: 15, type: "bull", label: "Verde 4" },
+              { left: 290, wickTop: 105, wickTopH: 35, bodyTop: 140, bodyH: 45, wickBot: 185, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 355, wickTop: 185, wickTopH: 15, bodyTop: 200, bodyH: 55, wickBot: 255, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 420, wickTop: 145, wickTopH: 30, bodyTop: 175, bodyH: 65, wickBot: 240, wickBotH: 10, type: "bull", label: "NO Rompe", isTrigger: true }
+            ],
+            operation: { left: 485, wickTop: 105, wickTopH: 25, bodyTop: 130, bodyH: 45, wickBot: 175, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Baja)", title: "Retroceso 1-2 Velas - Baja", snrTop: 250,
+            note: '"Si esta vela no rompe la línea horizontal, entonces coloque una operación bajista (PUT)".', rules: ["Mínimo 4 rojas + Retroceso + NO Rompe SNR."],
+            candles: [
+              { left: 30, wickTop: 55, wickTopH: 15, bodyTop: 70, bodyH: 45, wickBot: 115, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 95, wickTop: 105, wickTopH: 15, bodyTop: 120, bodyH: 50, wickBot: 170, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 160, wickTop: 160, wickTopH: 15, bodyTop: 175, bodyH: 35, wickBot: 210, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 225, wickTop: 195, wickTopH: 15, bodyTop: 210, bodyH: 40, wickBot: 250, wickBotH: 15, type: "bear", label: "Roja 4" },
+              { left: 290, wickTop: 205, wickTopH: 15, bodyTop: 220, bodyH: 30, wickBot: 250, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 355, wickTop: 145, wickTopH: 15, bodyTop: 160, bodyH: 60, wickBot: 220, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 420, wickTop: 145, wickTopH: 15, bodyTop: 160, bodyH: 40, wickBot: 200, wickBotH: 20, type: "bear", label: "NO Rompe", isTrigger: true }
+            ],
+            operation: { left: 485, wickTop: 195, wickTopH: 5, bodyTop: 200, bodyH: 50, wickBot: 250, wickBotH: 25, type: "bear", label: "Operar (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps06", code: "PS06", name: "Patrón Seguro 6 (Ruptura Cuerpo)", hasSnr: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Alza)", title: "Ruptura Cuerpo - Alza", snrTop: 120,
+            note: '"Vela de ruptura: Solo con el cuerpo es válida".', rules: ["Ruptura de mechas superiores con el cuerpo."],
+            candles: [
+              { left: 30, wickTop: 245, wickTopH: 15, bodyTop: 260, bodyH: 60, wickBot: 320, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 95, wickTop: 200, wickTopH: 15, bodyTop: 215, bodyH: 45, wickBot: 260, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 160, wickTop: 150, wickTopH: 20, bodyTop: 170, bodyH: 55, wickBot: 225, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 225, wickTop: 120, wickTopH: 25, bodyTop: 145, bodyH: 60, wickBot: 205, wickBotH: 15, type: "bull", label: "Verde 4" },
+              { left: 290, wickTop: 120, wickTopH: 25, bodyTop: 145, bodyH: 45, wickBot: 190, wickBotH: 20, type: "bear", label: "1 Roja" },
+              { left: 355, wickTop: 95, wickTopH: 15, bodyTop: 110, bodyH: 75, wickBot: 185, wickBotH: 10, type: "bull", label: "Rompe Cuerpo", isTrigger: true }
+            ],
+            operation: { left: 420, wickTop: 40, wickTopH: 25, bodyTop: 65, bodyH: 45, wickBot: 110, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Baja)", title: "Ruptura Cuerpo - Baja", snrTop: 275,
+            note: '"Vela de ruptura: Solo con el cuerpo es válida".', rules: ["Ruptura de mechas inferiores con el cuerpo."],
+            candles: [
+              { left: 30, wickTop: 45, wickTopH: 15, bodyTop: 60, bodyH: 40, wickBot: 100, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 95, wickTop: 95, wickTopH: 15, bodyTop: 110, bodyH: 55, wickBot: 165, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 160, wickTop: 165, wickTopH: 15, bodyTop: 180, bodyH: 40, wickBot: 220, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 225, wickTop: 190, wickTopH: 15, bodyTop: 205, bodyH: 40, wickBot: 245, wickBotH: 30, type: "bear", label: "Roja 4" },
+              { left: 290, wickTop: 210, wickTopH: 15, bodyTop: 220, bodyH: 30, wickBot: 255, wickBotH: 20, type: "bull", label: "1 Verde" },
+              { left: 355, wickTop: 210, wickTopH: 15, bodyTop: 220, bodyH: 70, wickBot: 295, wickBotH: 15, type: "bear", label: "Rompe Cuerpo", isTrigger: true }
+            ],
+            operation: { left: 420, wickTop: 295, wickTopH: 5, bodyTop: 300, bodyH: 45, wickBot: 345, wickBotH: 20, type: "bear", label: "Operar (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps07", code: "PS07", name: "Patrón Seguro 7 (Secuencia V-R-V + 4)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Alza)", title: "Secuencia V-R-V + 4 (CALL)",
+            note: '"Busque ciclo V-R-V, luego mínimo 4 verdes. Espere 1 vela roja opuesta y opere ALZA (CALL)".', rules: ["Ciclo V-R-V + 4 Verdes + 1 Roja."],
+            candles: [
+              { left: 20, wickTop: 240, wickTopH: 15, bodyTop: 255, bodyH: 45, wickBot: 300, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 80, wickTop: 235, wickTopH: 20, bodyTop: 255, bodyH: 50, wickBot: 305, wickBotH: 15, type: "bear", label: "Roja" },
+              { left: 140, wickTop: 220, wickTopH: 15, bodyTop: 235, bodyH: 70, wickBot: 305, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 200, wickTop: 190, wickTopH: 15, bodyTop: 205, bodyH: 45, wickBot: 250, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 260, wickTop: 145, wickTopH: 15, bodyTop: 160, bodyH: 65, wickBot: 225, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 320, wickTop: 95, wickTopH: 20, bodyTop: 115, bodyH: 70, wickBot: 185, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 380, wickTop: 115, wickTopH: 0, bodyTop: 115, bodyH: 75, wickBot: 190, wickBotH: 15, type: "bear", label: "1 Opuesta", isTrigger: true }
+            ],
+            operation: { left: 440, wickTop: 100, wickTopH: 15, bodyTop: 115, bodyH: 75, wickBot: 190, wickBotH: 10, type: "bull", label: "Comercial (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Baja)", title: "Secuencia R-V-R + 4 (PUT)",
+            note: '"Busque ciclo R-V-R, luego mínimo 4 rojas. Espere 1 vela verde opuesta y opere BAJA (PUT)".', rules: ["Ciclo R-V-R + 4 Rojas + 1 Verde."],
+            candles: [
+              { left: 20, wickTop: 65, wickTopH: 15, bodyTop: 80, bodyH: 45, wickBot: 125, wickBotH: 15, type: "bear", label: "Rojo" },
+              { left: 80, wickTop: 65, wickTopH: 15, bodyTop: 80, bodyH: 45, wickBot: 125, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 140, wickTop: 75, wickTopH: 15, bodyTop: 90, bodyH: 45, wickBot: 135, wickBotH: 15, type: "bear", label: "Rojo" },
+              { left: 200, wickTop: 115, wickTopH: 15, bodyTop: 130, bodyH: 70, wickBot: 200, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 260, wickTop: 190, wickTopH: 15, bodyTop: 205, bodyH: 40, wickBot: 245, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 320, wickTop: 220, wickTopH: 20, bodyTop: 240, bodyH: 65, wickBot: 305, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 380, wickTop: 230, wickTopH: 15, bodyTop: 245, bodyH: 60, wickBot: 305, wickBotH: 0, type: "bull", label: "1 Opuesta", isTrigger: true }
+            ],
+            operation: { left: 440, wickTop: 250, wickTopH: 10, bodyTop: 260, bodyH: 50, wickBot: 310, wickBotH: 20, type: "bear", label: "Operar (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps08", code: "PS08", name: "Patrón Seguro 8 (Ruptura Patrón de Color)", hasSnr: false, hasBox: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Alza)", title: "Ruptura Patrón de Color (CALL)",
+            note: '"Esta vela ha roto el patrón de color (repite rojo). Realice una operación en otra dirección (CALL)".', rules: ["Caja V-R-V-R + Gatillo repite color."],
+            box: { left: 215, top: 90, width: 265, height: 160, label: "Patrón de Color (V-R-V-R)" },
+            candles: [
+              { left: 20, wickTop: 245, wickTopH: 15, bodyTop: 260, bodyH: 60, wickBot: 320, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 85, wickTop: 195, wickTopH: 15, bodyTop: 210, bodyH: 45, wickBot: 255, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 150, wickTop: 140, wickTopH: 20, bodyTop: 160, bodyH: 60, wickBot: 220, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 230, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 90, wickBot: 210, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 295, wickTop: 110, wickTopH: 15, bodyTop: 125, bodyH: 85, wickBot: 210, wickBotH: 20, type: "bear", label: "Roja" },
+              { left: 360, wickTop: 105, wickTopH: 20, bodyTop: 125, bodyH: 85, wickBot: 210, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 425, wickTop: 95, wickTopH: 25, bodyTop: 120, bodyH: 90, wickBot: 210, wickBotH: 30, type: "bear", label: "Roja" },
+              { left: 495, wickTop: 175, wickTopH: 15, bodyTop: 190, bodyH: 60, wickBot: 250, wickBotH: 15, type: "bear", label: "Rompe", isTrigger: true }
+            ],
+            operation: { left: 560, wickTop: 200, wickTopH: 15, bodyTop: 215, bodyH: 40, wickBot: 255, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Baja)", title: "Ruptura Patrón de Color (PUT)",
+            note: '"Esta vela ha roto el patrón de color (repite verde). Realice una operación en otra dirección (PUT)".', rules: ["Caja R-V-R-V + Gatillo repite color."],
+            box: { left: 215, top: 165, width: 265, height: 160, label: "Patrón de Color (R-V-R-V)" },
+            candles: [
+              { left: 20, wickTop: 45, wickTopH: 15, bodyTop: 60, bodyH: 50, wickBot: 110, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 85, wickTop: 95, wickTopH: 15, bodyTop: 110, bodyH: 70, wickBot: 180, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 150, wickTop: 165, wickTopH: 15, bodyTop: 180, bodyH: 40, wickBot: 220, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 230, wickTop: 180, wickTopH: 35, bodyTop: 215, bodyH: 70, wickBot: 285, wickBotH: 15, type: "bear", label: "Roja" },
+              { left: 295, wickTop: 200, wickTopH: 25, bodyTop: 225, bodyH: 65, wickBot: 290, wickBotH: 20, type: "bull", label: "Verde" },
+              { left: 360, wickTop: 230, wickTopH: 15, bodyTop: 245, bodyH: 50, wickBot: 295, wickBotH: 25, type: "bear", label: "Roja" },
+              { left: 425, wickTop: 220, wickTopH: 25, bodyTop: 245, bodyH: 55, wickBot: 300, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 495, wickTop: 175, wickTopH: 25, bodyTop: 200, bodyH: 50, wickBot: 250, wickBotH: 15, type: "bull", label: "Rompe", isTrigger: true }
+            ],
+            operation: { left: 560, wickTop: 185, wickTopH: 15, bodyTop: 200, bodyH: 45, wickBot: 245, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps09", code: "PS09", name: "Patrón Seguro 9 (SS8 Avanzado)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▼ Reversión a la Baja (PUT)", title: "SS8 Avanzado - PUT",
+            note: '"En SS8 tomaste alza y el mercado forma otra verde (repite color). Toma una posición bajista (PUT)".', rules: ["SS8 ganado + Vela repetida de color -> Reversión PUT."],
+            candles: [
+              { left: 20, wickTop: 255, wickTopH: 15, bodyTop: 270, bodyH: 60, wickBot: 330, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 75, wickTop: 205, wickTopH: 15, bodyTop: 220, bodyH: 45, wickBot: 265, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 130, wickTop: 155, wickTopH: 15, bodyTop: 170, bodyH: 55, wickBot: 225, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 190, wickTop: 110, wickTopH: 15, bodyTop: 125, bodyH: 65, wickBot: 190, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 245, wickTop: 115, wickTopH: 15, bodyTop: 130, bodyH: 60, wickBot: 190, wickBotH: 15, type: "bear", label: "Roja" },
+              { left: 300, wickTop: 110, wickTopH: 15, bodyTop: 125, bodyH: 65, wickBot: 190, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 355, wickTop: 115, wickTopH: 15, bodyTop: 130, bodyH: 60, wickBot: 190, wickBotH: 15, type: "bear", label: "Roja" },
+              { left: 415, wickTop: 180, wickTopH: 15, bodyTop: 195, bodyH: 45, wickBot: 240, wickBotH: 15, type: "bear", label: "Rompe" },
+              { left: 470, wickTop: 170, wickTopH: 15, bodyTop: 185, bodyH: 55, wickBot: 240, wickBotH: 15, type: "bull", label: "Win SS8" },
+              { left: 525, wickTop: 120, wickTopH: 15, bodyTop: 135, bodyH: 45, wickBot: 180, wickBotH: 10, type: "bull", label: "Gatillo", isTrigger: true }
+            ],
+            operation: { left: 580, wickTop: 125, wickTopH: 10, bodyTop: 135, bodyH: 65, wickBot: 200, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          },
+          PUT: {
+            buttonLabel: "▲ Reversión al Alza (CALL)", title: "SS8 Avanzado - CALL",
+            note: '"En SS8 tomaste baja y el mercado forma otra roja (repite color). Toma una posición alcista (CALL)".', rules: ["SS8 ganado + Vela repetida roja -> Reversión CALL."],
+            candles: [
+              { left: 20, wickTop: 45, wickTopH: 15, bodyTop: 60, bodyH: 45, wickBot: 105, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 75, wickTop: 95, wickTopH: 15, bodyTop: 110, bodyH: 55, wickBot: 165, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 130, wickTop: 160, wickTopH: 15, bodyTop: 175, bodyH: 40, wickBot: 215, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 190, wickTop: 195, wickTopH: 15, bodyTop: 210, bodyH: 45, wickBot: 255, wickBotH: 15, type: "bear", label: "Roja" },
+              { left: 245, wickTop: 185, wickTopH: 15, bodyTop: 200, bodyH: 55, wickBot: 255, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 300, wickTop: 195, wickTopH: 15, bodyTop: 210, bodyH: 45, wickBot: 255, wickBotH: 15, type: "bear", label: "Roja" },
+              { left: 355, wickTop: 185, wickTopH: 15, bodyTop: 200, bodyH: 55, wickBot: 255, wickBotH: 15, type: "bull", label: "Verde" },
+              { left: 415, wickTop: 135, wickTopH: 15, bodyTop: 150, bodyH: 50, wickBot: 200, wickBotH: 15, type: "bull", label: "Rompe" },
+              { left: 470, wickTop: 145, wickTopH: 10, bodyTop: 155, bodyH: 60, wickBot: 215, wickBotH: 15, type: "bear", label: "Win SS8" },
+              { left: 525, wickTop: 200, wickTopH: 10, bodyTop: 210, bodyH: 45, wickBot: 255, wickBotH: 15, type: "bear", label: "Gatillo", isTrigger: true }
+            ],
+            operation: { left: 580, wickTop: 185, wickTopH: 15, bodyTop: 200, bodyH: 55, wickBot: 255, wickBotH: 10, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps10", code: "PS10", name: "Patrón Seguro 10 (GAP UP y GAP DOWN)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ GAP UP (Alza)", title: "GAP UP - Relleno Opuesto",
+            note: '"1ª Op en Gap Up (verde). La 2ª Operación se ejecuta en PUT para que la vela roja llene el gap".', rules: ["Doble operación."],
+            arrow: { left: 10, top: 160, width: 140, text: "Situación de gap al alza" },
+            candles: [
+              { left: 160, wickTop: 160, wickTopH: 20, bodyTop: 180, bodyH: 90, wickBot: 270, wickBotH: 15, type: "bull", label: "Vela 1" },
+              { left: 230, wickTop: 65, wickTopH: 20, bodyTop: 85, bodyH: 55, wickBot: 140, wickBotH: 15, type: "bull", label: "1ª Op (Gap Up)", isTrigger: true }
+            ],
+            operation: { left: 300, wickTop: 65, wickTopH: 20, bodyTop: 85, bodyH: 95, wickBot: 180, wickBotH: 20, type: "bear", label: "2ª Op (Rellena Gap)" }, expectedAction: "PUT"
+          },
+          PUT: {
+            buttonLabel: "▼ GAP DOWN (Baja)", title: "GAP DOWN - Relleno Opuesto",
+            note: '"1ª Op en Gap Down (roja). La 2ª Operación se ejecuta en CALL para que la vela verde llene el gap".', rules: ["Doble operación."],
+            arrow: { left: 10, top: 160, width: 140, text: "Situación de caída (Gap)" },
+            candles: [
+              { left: 160, wickTop: 60, wickTopH: 20, bodyTop: 80, bodyH: 65, wickBot: 145, wickBotH: 15, type: "bear", label: "Vela 1" },
+              { left: 230, wickTop: 165, wickTopH: 15, bodyTop: 180, bodyH: 70, wickBot: 250, wickBotH: 20, type: "bear", label: "1ª Op (Gap Down)", isTrigger: true }
+            ],
+            operation: { left: 300, wickTop: 125, wickTopH: 20, bodyTop: 145, bodyH: 105, wickBot: 250, wickBotH: 10, type: "bull", label: "2ª Op (Rellena Gap)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps11", code: "PS11", name: "Patrón Seguro 11 (GAP Parte 2)", hasSnr: false, hasGapBox: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Gap Bajista tras Verde)", title: "Gap Bajista tras Verde",
+            note: '"Apertura con gap bajista tras verde. Opera CALL para que suba a cubrir la brecha".', rules: ["Brecha en contra -> Relleno alcista."],
+            arrow: { left: 20, top: 155, width: 160, text: "Apertura con gap bajista" },
+            gapBox: { left: 240, top: 140, width: 44, height: 30, label: "GAP BAJISTA" },
+            candles: [{ left: 170, wickTop: 115, wickTopH: 25, bodyTop: 140, bodyH: 90, wickBot: 230, wickBotH: 15, type: "bull", label: "Vela Verde 1" }],
+            operation: { left: 240, wickTop: 95, wickTopH: 25, bodyTop: 120, bodyH: 70, wickBot: 190, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Gap Alcista tras Roja)", title: "Gap Alcista tras Roja",
+            note: '"Apertura con gap alcista tras roja. Opera PUT para que baje a cubrir la brecha".', rules: ["Brecha en contra -> Relleno bajista."],
+            arrow: { left: 20, top: 180, width: 160, text: "Apertura con brecha al alza" },
+            gapBox: { left: 240, top: 170, width: 44, height: 30, label: "GAP ALCISTA" },
+            candles: [{ left: 170, wickTop: 115, wickTopH: 20, bodyTop: 135, bodyH: 65, wickBot: 200, wickBotH: 15, type: "bear", label: "Vela Roja 1" }],
+            operation: { left: 240, wickTop: 155, wickTopH: 15, bodyTop: 170, bodyH: 65, wickBot: 235, wickBotH: 20, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps12", code: "PS12", name: "Patrón Seguro 12 (Verde-Roja + Doji)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Doji Verde (CALL)", title: "Verde-Roja + Doji Verde",
+            note: '"Tras Verde y Roja aparece un Doji Verde. Opere en la misma dirección del doji: ALZA (CALL)".', rules: ["Misma dirección del doji."],
+            candles: [
+              { left: 130, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 80, wickBot: 200, wickBotH: 20, type: "bull", label: "Verde 1" },
+              { left: 195, wickTop: 125, wickTopH: 15, bodyTop: 140, bodyH: 60, wickBot: 200, wickBotH: 25, type: "bear", label: "Roja 2" },
+              { left: 260, wickTop: 130, wickTopH: 35, bodyTop: 165, bodyH: 2, wickBot: 167, wickBotH: 35, type: "doji-green", label: "Doji Verde", isTrigger: true }
+            ],
+            operation: { left: 325, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 80, wickBot: 200, wickBotH: 20, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Doji Rojo (PUT)", title: "Verde-Roja + Doji Rojo",
+            note: '"Tras Verde y Roja aparece un Doji Rojo. Opere en la misma dirección del doji: BAJA (PUT)".', rules: ["Misma dirección del doji."],
+            candles: [
+              { left: 130, wickTop: 120, wickTopH: 20, bodyTop: 140, bodyH: 80, wickBot: 220, wickBotH: 20, type: "bull", label: "Verde 1" },
+              { left: 195, wickTop: 145, wickTopH: 15, bodyTop: 160, bodyH: 60, wickBot: 220, wickBotH: 25, type: "bear", label: "Roja 2" },
+              { left: 260, wickTop: 160, wickTopH: 35, bodyTop: 195, bodyH: 2, wickBot: 197, wickBotH: 35, type: "doji-red", label: "Doji Rojo", isTrigger: true }
+            ],
+            operation: { left: 325, wickTop: 160, wickTopH: 20, bodyTop: 180, bodyH: 80, wickBot: 260, wickBotH: 20, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps13", code: "PS13", name: "Patrón Seguro 13 (Reversión Doji Opuesto)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra tras Doji Verde (CALL)", title: "Reversión Doji Opuesto - CALL",
+            note: '"Tras mínimo 3 velas rojas aparece un Doji Verde. Opere en reversión alcista: ALZA (CALL)".', rules: ["3 rojas + Doji Verde -> CALL."],
+            candles: [
+              { left: 40, wickTop: 50, wickTopH: 15, bodyTop: 65, bodyH: 60, wickBot: 125, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 105, wickTop: 105, wickTopH: 20, bodyTop: 125, bodyH: 80, wickBot: 205, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 170, wickTop: 200, wickTopH: 15, bodyTop: 215, bodyH: 50, wickBot: 265, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 235, wickTop: 205, wickTopH: 35, bodyTop: 240, bodyH: 2, wickBot: 242, wickBotH: 35, type: "doji-green", label: "Doji Verde", isTrigger: true }
+            ],
+            operation: { left: 300, wickTop: 160, wickTopH: 25, bodyTop: 185, bodyH: 85, wickBot: 270, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta tras Doji Rojo (PUT)", title: "Reversión Doji Opuesto - PUT",
+            note: '"Tras mínimo 3 velas verdes aparece un Doji Rojo. Opere en reversión bajista: BAJA (PUT)".', rules: ["3 verdes + Doji Rojo -> PUT."],
+            candles: [
+              { left: 40, wickTop: 260, wickTopH: 15, bodyTop: 275, bodyH: 60, wickBot: 335, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 105, wickTop: 205, wickTopH: 20, bodyTop: 225, bodyH: 50, wickBot: 275, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 170, wickTop: 115, wickTopH: 20, bodyTop: 135, bodyH: 90, wickBot: 225, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 235, wickTop: 100, wickTopH: 35, bodyTop: 135, bodyH: 2, wickBot: 137, wickBotH: 35, type: "doji-red", label: "Doji Rojo", isTrigger: true }
+            ],
+            operation: { left: 300, wickTop: 130, wickTopH: 15, bodyTop: 145, bodyH: 85, wickBot: 230, wickBotH: 20, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps14", code: "PS14", name: "Patrón Seguro 14 (Ruptura Oculta por Mecha)", hasSnr: false, hasWickCut: true,
+        variants: {
+          PUT: {
+            buttonLabel: "▼ Venta: Mecha Perfora Piso (PUT)", title: "Ruptura Mecha - PUT",
+            note: '"La mecha inferior de la vela verde rompe el mínimo/cuerpo de la vela roja previa. Opere en dirección BAJISTA (PUT)".', rules: ["Mecha rompe mínimo anterior."],
+            wickCut: { left: 100, top: 200, width: 140, label: "Mínimo de la roja previa" },
+            candles: [
+              { left: 40, wickTop: 100, wickTopH: 25, bodyTop: 125, bodyH: 75, wickBot: 200, wickBotH: 20, type: "bull", label: "Verde 1" },
+              { left: 105, wickTop: 110, wickTopH: 20, bodyTop: 130, bodyH: 50, wickBot: 180, wickBotH: 20, type: "bear", label: "Roja 2" },
+              { left: 170, wickTop: 75, wickTopH: 55, bodyTop: 130, bodyH: 50, wickBot: 180, wickBotH: 50, type: "bull", label: "Gatillo Mecha", isTrigger: true }
+            ],
+            operation: { left: 235, wickTop: 125, wickTopH: 10, bodyTop: 135, bodyH: 55, wickBot: 190, wickBotH: 25, type: "bear", label: "Operar (PUT)" }, expectedAction: "PUT"
+          },
+          CALL: {
+            buttonLabel: "▲ Compra: Mecha Perfora Techo (CALL)", title: "Ruptura Mecha - CALL",
+            note: '"La mecha superior de la vela roja rompe el máximo/cuerpo de la vela verde previa. Opere en dirección ALCISTA (CALL)".', rules: ["Mecha rompe máximo anterior."],
+            wickCut: { left: 100, top: 125, width: 140, label: "Máximo de la verde previa" },
+            candles: [
+              { left: 40, wickTop: 125, wickTopH: 20, bodyTop: 145, bodyH: 75, wickBot: 220, wickBotH: 25, type: "bear", label: "Roja 1" },
+              { left: 105, wickTop: 125, wickTopH: 20, bodyTop: 145, bodyH: 50, wickBot: 195, wickBotH: 20, type: "bull", label: "Verde 2" },
+              { left: 170, wickTop: 95, wickTopH: 50, bodyTop: 145, bodyH: 50, wickBot: 195, wickBotH: 25, type: "bear", label: "Gatillo Mecha", isTrigger: true }
+            ],
+            operation: { left: 235, wickTop: 110, wickTopH: 25, bodyTop: 135, bodyH: 55, wickBot: 190, wickBotH: 10, type: "bull", label: "Operar (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps15", code: "PS15", name: "Patrón Seguro 15 (Martillo + M. Invertido)", hasSnr: false,
+        variants: {
+          PUT: {
+            buttonLabel: "▼ Venta tras Martillo Invertido (PUT)", title: "Martillo + Invertido - PUT",
+            note: '"Martillo verde seguido de martillo invertido rojo con mecha superior ultra larga. Opere a la BAJA (PUT)".', rules: ["Martillo + M. Invertido superior."],
+            candles: [
+              { left: 120, wickTop: 118, wickTopH: 2, bodyTop: 120, bodyH: 40, wickBot: 160, wickBotH: 85, type: "bull", label: "Martillo" },
+              { left: 185, wickTop: 35, wickTopH: 90, bodyTop: 125, bodyH: 40, wickBot: 165, wickBotH: 2, type: "bear", label: "Invertido", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 145, wickTopH: 20, bodyTop: 165, bodyH: 65, wickBot: 230, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          },
+          CALL: {
+            buttonLabel: "▲ Compra tras Martillo Alcista (CALL)", title: "Invertido + Martillo - CALL",
+            note: '"Martillo invertido seguido de martillo alcista con mecha inferior ultra larga. Opere al ALZA (CALL)".', rules: ["M. Invertido + Martillo inferior."],
+            candles: [
+              { left: 120, wickTop: 100, wickTopH: 80, bodyTop: 180, bodyH: 40, wickBot: 220, wickBotH: 2, type: "bear", label: "Invertido" },
+              { left: 185, wickTop: 173, wickTopH: 2, bodyTop: 175, bodyH: 40, wickBot: 215, wickBotH: 85, type: "bull", label: "Martillo", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 120, wickTopH: 15, bodyTop: 135, bodyH: 65, wickBot: 200, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps16", code: "PS16", name: "Patrón Seguro 16 (M. Invertido + Martillo)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Inv. + Martillo (CALL)", title: "Inv. + Martillo - CALL",
+            note: '"Martillo invertido seguido de una vela martillo. Realice una operación en dirección alcista (CALL)".', rules: ["Inv. Martillo + Martillo."],
+            candles: [
+              { left: 120, wickTop: 115, wickTopH: 70, bodyTop: 185, bodyH: 40, wickBot: 225, wickBotH: 2, type: "bull", label: "Inv. Martillo" },
+              { left: 185, wickTop: 143, wickTopH: 2, bodyTop: 145, bodyH: 40, wickBot: 185, wickBotH: 70, type: "bull", label: "Martillo", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 65, wickTopH: 20, bodyTop: 85, bodyH: 80, wickBot: 165, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta: Secuencia Espejo (PUT)", title: "Martillo + Inv. - PUT",
+            note: '"Martillo seguido de martillo invertido en la cima. Realice una operación en dirección bajista (PUT)".', rules: ["Martillo + Inv. Martillo."],
+            candles: [
+              { left: 120, wickTop: 45, wickTopH: 70, bodyTop: 115, bodyH: 40, wickBot: 155, wickBotH: 2, type: "bear", label: "Martillo" },
+              { left: 185, wickTop: 75, wickTopH: 70, bodyTop: 145, bodyH: 40, wickBot: 185, wickBotH: 2, type: "bear", label: "Inv. Martillo", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 145, wickTopH: 15, bodyTop: 160, bodyH: 80, wickBot: 240, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps17", code: "PS17", name: "Patrón Seguro 17 (Sin Cabeza + Sin Cola)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Roja sin cabeza + Verde sin cola", title: "Sin Cabeza + Sin Cola (CALL)",
+            note: '"Se forma una vela verde sin cola después de una roja sin cabeza. Realice la operación en ALZA (CALL)".', rules: ["Roja sin cabeza + Verde sin cola."],
+            candles: [
+              { left: 120, wickTop: 115, wickTopH: 0, bodyTop: 115, bodyH: 80, wickBot: 195, wickBotH: 20, type: "bear", label: "Sin Cabeza" },
+              { left: 185, wickTop: 95, wickTopH: 40, bodyTop: 135, bodyH: 60, wickBot: 195, wickBotH: 0, type: "bull", label: "Sin Cola", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 55, wickTopH: 25, bodyTop: 80, bodyH: 80, wickBot: 160, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta: Verde sin cabeza + Roja sin cola", title: "Sin Cabeza + Sin Cola (PUT)",
+            note: '"Se forma una vela roja sin cola después de una verde sin cabeza. Realice la operación en BAJA (PUT)".', rules: ["Verde sin cabeza + Roja sin cola."],
+            candles: [
+              { left: 120, wickTop: 115, wickTopH: 20, bodyTop: 135, bodyH: 80, wickBot: 215, wickBotH: 0, type: "bull", label: "Sin Cabeza" },
+              { left: 185, wickTop: 135, wickTopH: 0, bodyTop: 135, bodyH: 60, wickBot: 195, wickBotH: 20, type: "bear", label: "Sin Cola", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 175, wickTopH: 15, bodyTop: 190, bodyH: 80, wickBot: 270, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps18", code: "PS18", name: "Patrón Seguro 18 (Verde + Roja Sin Cola)", hasSnr: false,
+        variants: {
+          PUT: {
+            buttonLabel: "▼ Venta: Verde sin cola + Roja sin cola", title: "Verde + Roja sin cola (PUT)",
+            note: '"Si se forma una vela roja sin cola después de una verde sin cola, realice la operación BAJISTA (PUT)".', rules: ["Verde sin cola + Roja sin cola."],
+            candles: [
+              { left: 120, wickTop: 105, wickTopH: 30, bodyTop: 135, bodyH: 80, wickBot: 215, wickBotH: 0, type: "bull", label: "Verde Sin Cola" },
+              { left: 185, wickTop: 135, wickTopH: 0, bodyTop: 135, bodyH: 60, wickBot: 215, wickBotH: 20, type: "bear", label: "Roja Sin Cola", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 175, wickTopH: 15, bodyTop: 190, bodyH: 80, wickBot: 270, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          },
+          CALL: {
+            buttonLabel: "▲ Compra: Roja sin cola + Verde sin cola", title: "Roja + Verde sin cola (CALL)",
+            note: '"Si se forma una vela verde sin cola después de una roja sin cola, realice la operación ALCISTA (CALL)".', rules: ["Roja sin cola + Verde sin cola."],
+            candles: [
+              { left: 120, wickTop: 105, wickTopH: 30, bodyTop: 135, bodyH: 80, wickBot: 215, wickBotH: 0, type: "bear", label: "Roja Sin Cola" },
+              { left: 185, wickTop: 135, wickTopH: 0, bodyTop: 135, bodyH: 60, wickBot: 215, wickBotH: 20, type: "bull", label: "Verde Sin Cola", isTrigger: true }
+            ],
+            operation: { left: 250, wickTop: 75, wickTopH: 15, bodyTop: 90, bodyH: 80, wickBot: 170, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps19", code: "PS19", name: "Patrón Seguro 19 (Ruptura de Doji SNR)", hasSnr: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra (Ruptura Doji Alza)", title: "Ruptura Doji SNR - CALL", snrTop: 162,
+            note: '"Coloque una línea horizontal bajo el cuerpo del doji. Cuando el mercado rompa esa línea hacia arriba, opere ALZA (CALL)".', rules: ["Ruptura alcista sobre la línea del doji."],
+            candles: [
+              { left: 30, wickTop: 70, wickTopH: 20, bodyTop: 90, bodyH: 50, wickBot: 140, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 95, wickTop: 110, wickTopH: 15, bodyTop: 125, bodyH: 50, wickBot: 175, wickBotH: 20, type: "bear", label: "Roja 2" },
+              { left: 160, wickTop: 125, wickTopH: 35, bodyTop: 160, bodyH: 2, wickBot: 162, wickBotH: 35, type: "doji-red", label: "Vela Doji", isTrigger: true },
+              { left: 225, wickTop: 155, wickTopH: 15, bodyTop: 170, bodyH: 45, wickBot: 215, wickBotH: 20, type: "bear", label: "Sostén" },
+              { left: 290, wickTop: 130, wickTopH: 15, bodyTop: 145, bodyH: 55, wickBot: 200, wickBotH: 15, type: "bull", label: "Avance" },
+              { left: 355, wickTop: 95, wickTopH: 20, bodyTop: 115, bodyH: 70, wickBot: 185, wickBotH: 15, type: "bull", label: "Ruptura" }
+            ],
+            operation: { left: 420, wickTop: 45, wickTopH: 20, bodyTop: 65, bodyH: 70, wickBot: 135, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta (Ruptura Doji Baja)", title: "Ruptura Doji SNR - PUT", snrTop: 162,
+            note: '"Coloque una línea horizontal bajo el cuerpo del doji. Cuando el mercado rompa esa línea hacia abajo, opere BAJA (PUT)".', rules: ["Ruptura bajista bajo la línea del doji."],
+            candles: [
+              { left: 30, wickTop: 230, wickTopH: 15, bodyTop: 245, bodyH: 50, wickBot: 295, wickBotH: 20, type: "bull", label: "Verde 1" },
+              { left: 95, wickTop: 190, wickTopH: 15, bodyTop: 205, bodyH: 50, wickBot: 255, wickBotH: 20, type: "bull", label: "Verde 2" },
+              { left: 160, wickTop: 155, wickTopH: 35, bodyTop: 160, bodyH: 2, wickBot: 162, wickBotH: 35, type: "doji-green", label: "Vela Doji", isTrigger: true },
+              { left: 225, wickTop: 165, wickTopH: 15, bodyTop: 180, bodyH: 45, wickBot: 225, wickBotH: 20, type: "bull", label: "Sostén" },
+              { left: 290, wickTop: 155, wickTopH: 20, bodyTop: 175, bodyH: 55, wickBot: 230, wickBotH: 15, type: "bear", label: "Caída" },
+              { left: 355, wickTop: 150, wickTopH: 20, bodyTop: 170, bodyH: 70, wickBot: 240, wickBotH: 15, type: "bear", label: "Ruptura" }
+            ],
+            operation: { left: 420, wickTop: 210, wickTopH: 20, bodyTop: 230, bodyH: 65, wickBot: 295, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps20", code: "PS20", name: "Patrón Seguro 20 (Doji de Continuación)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Doji Continuación (CALL)", title: "Doji Continuación Alcista",
+            note: '"4+ velas verdes consecutivas, Doji, y luego vela verde del mismo color. Opere al ALZA (CALL)".', rules: ["4+ Verdes + Doji + Vela verde -> CALL."],
+            candles: [
+              { left: 20, wickTop: 240, wickTopH: 15, bodyTop: 255, bodyH: 45, wickBot: 300, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 80, wickTop: 195, wickTopH: 15, bodyTop: 210, bodyH: 45, wickBot: 255, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 140, wickTop: 150, wickTopH: 15, bodyTop: 165, bodyH: 45, wickBot: 210, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 200, wickTop: 105, wickTopH: 15, bodyTop: 120, bodyH: 45, wickBot: 165, wickBotH: 15, type: "bull", label: "Verde 4" },
+              { left: 260, wickTop: 110, wickTopH: 30, bodyTop: 124, bodyH: 2, wickBot: 126, wickBotH: 30, type: "doji-green", label: "Doji", isTrigger: true },
+              { left: 320, wickTop: 65, wickTopH: 15, bodyTop: 80, bodyH: 50, wickBot: 145, wickBotH: 15, type: "bull", label: "Continuación" }
+            ],
+            operation: { left: 380, wickTop: 20, wickTopH: 20, bodyTop: 40, bodyH: 65, wickBot: 120, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta: Doji Continuación (PUT)", title: "Doji Continuación Bajista",
+            note: '"4+ velas rojas consecutivas, Doji, y luego vela roja del mismo color. Opere a la BAJA (PUT)".', rules: ["4+ Rojas + Doji + Vela roja -> PUT."],
+            candles: [
+              { left: 20, wickTop: 65, wickTopH: 15, bodyTop: 80, bodyH: 45, wickBot: 140, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 80, wickTop: 110, wickTopH: 15, bodyTop: 125, bodyH: 45, wickBot: 185, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 140, wickTop: 155, wickTopH: 15, bodyTop: 170, bodyH: 45, wickBot: 230, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 200, wickTop: 200, wickTopH: 15, bodyTop: 215, bodyH: 45, wickBot: 275, wickBotH: 15, type: "bear", label: "Roja 4" },
+              { left: 260, wickTop: 210, wickTopH: 30, bodyTop: 224, bodyH: 2, wickBot: 226, wickBotH: 30, type: "doji-red", label: "Doji", isTrigger: true },
+              { left: 320, wickTop: 245, wickTopH: 15, bodyTop: 260, bodyH: 50, wickBot: 325, wickBotH: 15, type: "bear", label: "Continuación" }
+            ],
+            operation: { left: 380, wickTop: 290, wickTopH: 20, bodyTop: 310, bodyH: 65, wickBot: 390, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps21", code: "PS21", name: "Patrón Seguro 21 (Ruptura Máx/Mín Opuesto)", hasSnr: true,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Ruptura Máximo Opuesto (CALL)", title: "Ruptura Máximo Opuesto - CALL", snrTop: 180,
+            note: '"5+ velas rojas, 1 vela verde opuesta. Marcar su máximo. Al romper el máximo hacia arriba, opere CALL".', rules: ["5 Rojas + 1 Verde opuesta + Ruptura al alza."],
+            candles: [
+              { left: 20, wickTop: 80, wickTopH: 15, bodyTop: 95, bodyH: 40, wickBot: 150, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 75, wickTop: 120, wickTopH: 15, bodyTop: 135, bodyH: 40, wickBot: 190, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 130, wickTop: 160, wickTopH: 15, bodyTop: 175, bodyH: 40, wickBot: 230, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 185, wickTop: 200, wickTopH: 15, bodyTop: 215, bodyH: 40, wickBot: 270, wickBotH: 15, type: "bear", label: "Roja 4" },
+              { left: 240, wickTop: 225, wickTopH: 15, bodyTop: 240, bodyH: 40, wickBot: 295, wickBotH: 15, type: "bear", label: "Roja 5" },
+              { left: 295, wickTop: 145, wickTopH: 20, bodyTop: 165, bodyH: 55, wickBot: 235, wickBotH: 15, type: "bull", label: "Opuesta", isTrigger: true },
+              { left: 350, wickTop: 110, wickTopH: 20, bodyTop: 130, bodyH: 70, wickBot: 215, wickBotH: 15, type: "bull", label: "Ruptura" }
+            ],
+            operation: { left: 405, wickTop: 65, wickTopH: 20, bodyTop: 85, bodyH: 75, wickBot: 175, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta: Ruptura Mínimo Opuesto (PUT)", title: "Ruptura Mínimo Opuesto - PUT", snrTop: 180,
+            note: '"5+ velas verdes, 1 vela roja opuesta. Marcar su mínimo. Al romper el mínimo hacia abajo, opere PUT".', rules: ["5 Verdes + 1 Roja opuesta + Ruptura a la baja."],
+            candles: [
+              { left: 20, wickTop: 220, wickTopH: 15, bodyTop: 235, bodyH: 40, wickBot: 290, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 75, wickTop: 180, wickTopH: 15, bodyTop: 195, bodyH: 40, wickBot: 250, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 130, wickTop: 140, wickTopH: 15, bodyTop: 155, bodyH: 40, wickBot: 210, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 185, wickTop: 100, wickTopH: 15, bodyTop: 115, bodyH: 40, wickBot: 170, wickBotH: 15, type: "bull", label: "Verde 4" },
+              { left: 240, wickTop: 75, wickTopH: 15, bodyTop: 90, bodyH: 40, wickBot: 145, wickBotH: 15, type: "bull", label: "Verde 5" },
+              { left: 295, wickTop: 135, wickTopH: 20, bodyTop: 155, bodyH: 55, wickBot: 225, wickBotH: 15, type: "bear", label: "Opuesta", isTrigger: true },
+              { left: 350, wickTop: 165, wickTopH: 20, bodyTop: 185, bodyH: 70, wickBot: 270, wickBotH: 15, type: "bear", label: "Ruptura" }
+            ],
+            operation: { left: 405, wickTop: 230, wickTopH: 20, bodyTop: 250, bodyH: 75, wickBot: 340, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps22", code: "PS22", name: "Patrón Seguro 22 (Método Tres Subidas)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Método Tres Subidas (CALL)", title: "Método de las Tres Subidas - CALL",
+            note: '"3 velas verdes, 3 rojas de retroceso, y una vela verde que engulle las tres rojas. Opere CALL".', rules: ["3 Verdes + 3 Rojas + Verde engullidora."],
+            candles: [
+              { left: 30, wickTop: 210, wickTopH: 15, bodyTop: 225, bodyH: 60, wickBot: 300, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 85, wickTop: 160, wickTopH: 15, bodyTop: 175, bodyH: 55, wickBot: 245, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 140, wickTop: 110, wickTopH: 15, bodyTop: 125, bodyH: 70, wickBot: 210, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 205, wickTop: 125, wickTopH: 15, bodyTop: 140, bodyH: 25, wickBot: 180, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 260, wickTop: 155, wickTopH: 15, bodyTop: 170, bodyH: 45, wickBot: 230, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 315, wickTop: 195, wickTopH: 15, bodyTop: 210, bodyH: 45, wickBot: 270, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 375, wickTop: 75, wickTopH: 25, bodyTop: 95, bodyH: 130, wickBot: 235, wickBotH: 15, type: "bull", label: "Engullidora", isTrigger: true }
+            ],
+            operation: { left: 440, wickTop: 35, wickTopH: 25, bodyTop: 55, bodyH: 80, wickBot: 150, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps23", code: "PS23", name: "Patrón Seguro 23 (Método Tres Caídas)", hasSnr: false,
+        variants: {
+          PUT: {
+            buttonLabel: "▼ Venta: Método Tres Caídas (PUT)", title: "Método de las Tres Caídas - PUT",
+            note: '"3 velas rojas, 3 verdes de retroceso, y una roja que engulle las tres verdes. Opere PUT".', rules: ["3 Rojas + 3 Verdes + Roja engullidora."],
+            candles: [
+              { left: 30, wickTop: 75, wickTopH: 15, bodyTop: 90, bodyH: 60, wickBot: 165, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 85, wickTop: 125, wickTopH: 15, bodyTop: 140, bodyH: 55, wickBot: 210, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 140, wickTop: 175, wickTopH: 15, bodyTop: 190, bodyH: 70, wickBot: 275, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 205, wickTop: 160, wickTopH: 15, bodyTop: 175, bodyH: 25, wickBot: 215, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 260, wickTop: 130, wickTopH: 15, bodyTop: 145, bodyH: 45, wickBot: 205, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 315, wickTop: 90, wickTopH: 15, bodyTop: 105, bodyH: 45, wickBot: 165, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 375, wickTop: 90, wickTopH: 25, bodyTop: 110, bodyH: 130, wickBot: 255, wickBotH: 15, type: "bear", label: "Engullidora", isTrigger: true }
+            ],
+            operation: { left: 440, wickTop: 235, wickTopH: 25, bodyTop: 255, bodyH: 80, wickBot: 350, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps24", code: "PS24", name: "Patrón Seguro 24 (Incremento de Tamaño)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Incremento de Tamaño (CALL)", title: "Incremento de Tamaño - CALL",
+            note: '"Configuración de 4 velas bajistas cuyo tamaño va aumentando. A continuación, realice una operación en dirección opuesta (CALL)".', rules: ["4 velas decrecientes/crecientes en tamaño -> Operar dirección opuesta."],
+            candles: [
+              { left: 60, wickTop: 70, wickTopH: 15, bodyTop: 85, bodyH: 25, wickBot: 125, wickBotH: 15, type: "bear", label: "Vela 1" },
+              { left: 130, wickTop: 95, wickTopH: 15, bodyTop: 110, bodyH: 40, wickBot: 165, wickBotH: 15, type: "bear", label: "Vela 2" },
+              { left: 200, wickTop: 115, wickTopH: 20, bodyTop: 135, bodyH: 60, wickBot: 210, wickBotH: 20, type: "bear", label: "Vela 3" },
+              { left: 270, wickTop: 150, wickTopH: 25, bodyTop: 175, bodyH: 110, wickBot: 300, wickBotH: 25, type: "bear", label: "Vela 4 (Gigante)", isTrigger: true }
+            ],
+            operation: { left: 340, wickTop: 85, wickTopH: 25, bodyTop: 110, bodyH: 75, wickBot: 200, wickBotH: 20, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta: Incremento de Tamaño (PUT)", title: "Incremento de Tamaño - PUT",
+            note: '"Configuración de 4 velas alcistas cuyo tamaño va aumentando. A continuación, realice una operación en dirección opuesta (PUT)".', rules: ["4 velas crecientes en tamaño -> Operar dirección opuesta."],
+            candles: [
+              { left: 60, wickTop: 220, wickTopH: 15, bodyTop: 235, bodyH: 25, wickBot: 275, wickBotH: 15, type: "bull", label: "Vela 1" },
+              { left: 130, wickTop: 195, wickTopH: 15, bodyTop: 210, bodyH: 40, wickBot: 265, wickBotH: 15, type: "bull", label: "Vela 2" },
+              { left: 200, wickTop: 165, wickTopH: 20, bodyTop: 185, bodyH: 60, wickBot: 260, wickBotH: 20, type: "bull", label: "Vela 3" },
+              { left: 270, wickTop: 95, wickTopH: 25, bodyTop: 120, bodyH: 110, wickBot: 255, wickBotH: 25, type: "bull", label: "Vela 4 (Gigante)", isTrigger: true }
+            ],
+            operation: { left: 340, wickTop: 150, wickTopH: 25, bodyTop: 175, bodyH: 75, wickBot: 265, wickBotH: 20, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps25", code: "PS25", name: "Patrón Seguro 25 (Patrón Brasileño 1-2-1-1)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Patrón Brasileño (CALL)", title: "Patrón Brasileño Alcista",
+            note: '"Mercado lateral: 1 verde, 2 rojas, 1 verde, 1 roja. A continuación, coloque la operación en alza (CALL)".', rules: ["Secuencia 1V - 2R - 1V - 1R -> Operar CALL."],
+            candles: [
+              { left: 20, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 50, wickBot: 175, wickBotH: 30, type: "bull", label: "1 Verde" },
+              { left: 85, wickTop: 80, wickTopH: 15, bodyTop: 95, bodyH: 95, wickBot: 205, wickBotH: 20, type: "bear", label: "2 Roja" },
+              { left: 150, wickTop: 170, wickTopH: 15, bodyTop: 185, bodyH: 55, wickBot: 255, wickBotH: 25, type: "bear", label: "3 Roja" },
+              { left: 215, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 205, wickBotH: 20, type: "bull", label: "4 Verde", isTrigger: true },
+              { left: 280, wickTop: 130, wickTopH: 15, bodyTop: 145, bodyH: 45, wickBot: 205, wickBotH: 20, type: "bear", label: "5 Roja" }
+            ],
+            operation: { left: 365, wickTop: 70, wickTopH: 25, bodyTop: 95, bodyH: 90, wickBot: 200, wickBotH: 20, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps26", code: "PS26", name: "Patrón Seguro 26 (Patrón Brasileño 1-2-1-1 Baja)", hasSnr: false,
+        variants: {
+          PUT: {
+            buttonLabel: "▼ Venta: Patrón Brasileño (PUT)", title: "Patrón Brasileño Bajista",
+            note: '"Movimiento oscilante: 1 rojo, 2 verdes, 1 rojo, 1 verde. A continuación, opere a la baja (PUT)".', rules: ["Secuencia 1R - 2V - 1R - 1V -> Operar PUT."],
+            candles: [
+              { left: 20, wickTop: 200, wickTopH: 20, bodyTop: 220, bodyH: 50, wickBot: 285, wickBotH: 30, type: "bear", label: "1 Roja" },
+              { left: 85, wickTop: 140, wickTopH: 25, bodyTop: 165, bodyH: 95, wickBot: 275, wickBotH: 20, type: "bull", label: "2 Verde" },
+              { left: 150, wickTop: 95, wickTopH: 20, bodyTop: 115, bodyH: 55, wickBot: 185, wickBotH: 25, type: "bull", label: "3 Verde" },
+              { left: 215, wickTop: 110, wickTopH: 20, bodyTop: 130, bodyH: 70, wickBot: 215, wickBotH: 20, type: "bear", label: "4 Roja", isTrigger: true },
+              { left: 280, wickTop: 165, wickTopH: 15, bodyTop: 180, bodyH: 45, wickBot: 240, wickBotH: 20, type: "bull", label: "5 Verde" }
+            ],
+            operation: { left: 365, wickTop: 140, wickTopH: 25, bodyTop: 165, bodyH: 90, wickBot: 270, wickBotH: 20, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps27", code: "PS27", name: "Patrón Seguro 27 (Brasileño 1-1-2)", hasSnr: false,
+        variants: {
+          PUT: {
+            buttonLabel: "▼ Venta: Brasileño 1-1-2 (PUT)", title: "Patrón Brasileño 1V-1R-2V",
+            note: '"Movimiento oscilante: 1 verde, 1 rojo, 2 verdes. A continuación, opere en dirección bajista (PUT)".', rules: ["Secuencia 1V - 1R - 2V -> Operar PUT."],
+            candles: [
+              { left: 40, wickTop: 115, wickTopH: 20, bodyTop: 135, bodyH: 50, wickBot: 200, wickBotH: 20, type: "bull", label: "1 Verde" },
+              { left: 105, wickTop: 70, wickTopH: 15, bodyTop: 85, bodyH: 110, wickBot: 210, wickBotH: 20, type: "bear", label: "2 Roja" },
+              { left: 170, wickTop: 130, wickTopH: 20, bodyTop: 150, bodyH: 60, wickBot: 225, wickBotH: 20, type: "bull", label: "3 Verde" },
+              { left: 235, wickTop: 115, wickTopH: 20, bodyTop: 135, bodyH: 50, wickBot: 200, wickBotH: 20, type: "bull", label: "4 Verde", isTrigger: true }
+            ],
+            operation: { left: 320, wickTop: 95, wickTopH: 25, bodyTop: 120, bodyH: 90, wickBot: 225, wickBotH: 20, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      },
+      {
+        id: "ps28", code: "PS28", name: "Patrón Seguro 28 (Brasileño 1-1-2 Alza)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Brasileño 1-1-2 (CALL)", title: "Patrón Brasileño 1R-1V-2R",
+            note: '"Movimiento oscilante: 1 rojo, 1 verde, 2 rojos. A continuación, opere en dirección alcista (CALL)".', rules: ["Secuencia 1R - 1V - 2R -> Operar CALL."],
+            candles: [
+              { left: 40, wickTop: 145, wickTopH: 20, bodyTop: 165, bodyH: 50, wickBot: 230, wickBotH: 20, type: "bear", label: "1 Roja" },
+              { left: 105, wickTop: 100, wickTopH: 15, bodyTop: 115, bodyH: 110, wickBot: 240, wickBotH: 20, type: "bull", label: "2 Verde" },
+              { left: 170, wickTop: 160, wickTopH: 20, bodyTop: 180, bodyH: 60, wickBot: 255, wickBotH: 20, type: "bear", label: "3 Roja" },
+              { left: 235, wickTop: 145, wickTopH: 20, bodyTop: 165, bodyH: 50, wickBot: 230, wickBotH: 20, type: "bear", label: "4 Roja", isTrigger: true }
+            ],
+            operation: { left: 320, wickTop: 125, wickTopH: 25, bodyTop: 150, bodyH: 90, wickBot: 255, wickBotH: 20, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps29", code: "PS29", name: "Patrón Seguro 29 (Patrón de Color Lateral)", hasSnr: false,
+        variants: {
+          PUT: {
+            buttonLabel: "▼ Venta: Alternancia R-V (PUT)", title: "Patrón de Color Bajista",
+            note: '"Movimiento lateral: formese un patrón de color rojo-verde-rojo-verde. Siga el patrón de color (PUT)".', rules: ["Alternancia R-V-R-V -> Continuar con PUT."],
+            candles: [
+              { left: 40, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bear", label: "Roja 1" },
+              { left: 105, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bull", label: "Verde 2" },
+              { left: 170, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bear", label: "Roja 3" },
+              { left: 235, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 25, type: "bull", label: "Verde 4", isTrigger: true }
+            ],
+            operation: { left: 320, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          },
+          CALL: {
+            buttonLabel: "▲ Compra: Alternancia V-R (CALL)", title: "Patrón de Color Alcista",
+            note: '"Movimiento lateral: formese un patrón de color verde-rojo-verde-rojo. Siga el patrón de color (CALL)".', rules: ["Alternancia V-R-V-R -> Continuar con CALL."],
+            candles: [
+              { left: 40, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bull", label: "Verde 1" },
+              { left: 105, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bear", label: "Roja 2" },
+              { left: 170, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bull", label: "Verde 3" },
+              { left: 235, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 25, type: "bear", label: "Roja 4", isTrigger: true }
+            ],
+            operation: { left: 320, wickTop: 100, wickTopH: 20, bodyTop: 120, bodyH: 70, wickBot: 210, wickBotH: 20, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          }
+        }
+      },
+      {
+        id: "ps30", code: "PS30", name: "Patrón Seguro 30 (Patrón de Color Extendido)", hasSnr: false,
+        variants: {
+          CALL: {
+            buttonLabel: "▲ Compra: Continuidad de Color (CALL)", title: "Patrón de Color - Continuidad",
+            note: '"En la tendencia general, siga el patrón de colores alternos para ejecutar su último tiro seguro (CALL)".', rules: ["Continuación de alternancia V-R."],
+            candles: [
+              { left: 40, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bull", label: "Verde 1" },
+              { left: 105, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bear", label: "Roja 2" },
+              { left: 170, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bull", label: "Verde 3" },
+              { left: 235, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bear", label: "Roja 4", isTrigger: true }
+            ],
+            operation: { left: 320, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bull", label: "Operación (CALL)" }, expectedAction: "CALL"
+          },
+          PUT: {
+            buttonLabel: "▼ Venta: Continuidad de Color (PUT)", title: "Patrón de Color - Continuidad Baja",
+            note: '"En la tendencia general, siga el patrón de colores alternos para ejecutar su último tiro seguro (PUT)".', rules: ["Continuación de alternancia R-V."],
+            candles: [
+              { left: 40, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bear", label: "Roja 1" },
+              { left: 105, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bull", label: "Verde 2" },
+              { left: 170, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bear", label: "Roja 3" },
+              { left: 235, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bull", label: "Verde 4", isTrigger: true }
+            ],
+            operation: { left: 320, wickTop: 90, wickTopH: 20, bodyTop: 110, bodyH: 75, wickBot: 205, wickBotH: 15, type: "bear", label: "Operación (PUT)" }, expectedAction: "PUT"
+          }
+        }
+      }
+    ];
+
+    let currentPatternIdx = 0; // PS01 por defecto
+    let currentVariantKey = "CALL";
+    let answered = false;
+    let wins = 0;
+    let losses = 0;
+    let streak = 0;
+
+    function renderList() {
+      const el = document.getElementById('pattern-list');
+      el.innerHTML = database.map((p, idx) => `
+        <div onclick="selectPattern(${idx})" class="p-2.5 rounded-lg cursor-pointer transition-all ${idx === currentPatternIdx ? 'bg-[#1b2333] border-l-4 border-emerald-500 text-white' : 'text-gray-400 hover:bg-gray-800/50'}">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold font-mono text-emerald-400">${p.code}</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-gray-800 text-gray-400 font-mono">${p.hasSnr ? 'SNR' : 'MOMENTUM'}</span>
+          </div>
+          <div class="text-[11px] font-semibold text-gray-300 mt-1 truncate">${p.name}</div>
+        </div>
+      `).join('');
+    }
+
+    function selectPattern(idx) {
+      currentPatternIdx = idx;
+      const keys = Object.keys(database[idx].variants);
+      currentVariantKey = keys[0];
+      renderList();
+      renderScenario();
+    }
+
+    function setVariant(key) {
+      currentVariantKey = key;
+      renderScenario();
+    }
+
+    function renderScenario() {
+      answered = false;
+      const pat = database[currentPatternIdx];
+      const data = pat.variants[currentVariantKey];
+
+      const maxX = Math.max(...data.candles.map(c => c.left), data.operation ? data.operation.left : 300) + 75;
+      const stageContainer = document.getElementById('stage-container');
+      stageContainer.style.width = `${Math.max(420, maxX + 20)}px`;
+
+      const lineEl = document.getElementById('main-snr-line');
+      if (pat.hasSnr === false) {
+        lineEl.style.display = 'none';
+      } else {
+        lineEl.style.display = 'block';
+        const snrTopPos = data.snrTop || pat.snrTop || 160;
+        lineEl.style.top = `${snrTopPos}px`;
+      }
+
+      const boxContainer = document.getElementById('box-container');
+      boxContainer.innerHTML = '';
+      if (pat.hasBox && data.box) {
+        const b = data.box;
+        boxContainer.innerHTML = `
+          <div style="position: absolute; border: 2px dashed #f43f5e; border-radius: 6px; pointer-events: none; z-index: 5; background-color: rgba(244, 63, 94, 0.05); left: ${b.left}px; top: ${b.top}px; width: ${b.width}px; height: ${b.height}px;">
+            <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-rose-400 whitespace-nowrap bg-rose-950/90 px-2 py-0.5 rounded border border-rose-500/40 shadow">
+              ${b.label}
+            </span>
+          </div>
+        `;
+      } else if (pat.hasWickCut && data.wickCut) {
+        const w = data.wickCut;
+        boxContainer.innerHTML = `
+          <div style="position: absolute; height: 1.5px; background-color: #38bdf8; z-index: 8; opacity: 0.8; left: ${w.left}px; top: ${w.top}px; width: ${w.width}px;">
+            <span class="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] font-bold text-sky-300 bg-gray-950/90 px-2 py-0.5 rounded border border-sky-500/40 whitespace-nowrap shadow">
+              ${w.label}
+            </span>
+          </div>
+        `;
+      } else if (pat.hasGapBox && data.gapBox) {
+        const g = data.gapBox;
+        const a = data.arrow;
+        boxContainer.innerHTML = `
+          <div class="gap-zone animate-pulse" style="position: absolute; border-left: 2px dashed #facc15; border-right: 2px dashed #facc15; background: rgba(250, 204, 21, 0.08); pointer-events: none; z-index: 4; left: ${g.left}px; top: ${g.top}px; width: ${g.width}px; height: ${g.height}px;">
+            <span class="absolute -right-24 top-1 text-[9px] font-black text-yellow-400 bg-yellow-950/90 px-1.5 py-0.5 rounded border border-yellow-500/50 whitespace-nowrap">
+              ${g.label}
+            </span>
+          </div>
+          <div style="position: absolute; left: ${a.left}px; top: ${a.top}px; display: flex; align-items: center; gap: 6px; z-index: 20;">
+            <span class="text-[10px] font-bold text-gray-300 bg-gray-900/90 px-2.5 py-1 rounded border border-gray-700 whitespace-nowrap shadow-lg">
+              ${a.text}
+            </span>
+            <span class="text-yellow-400 text-lg font-black animate-pulse">➔</span>
+          </div>
+        `;
+      } else if (data.arrow) {
+        const a = data.arrow;
+        boxContainer.innerHTML = `
+          <div style="position: absolute; left: ${a.left}px; top: ${a.top}px; display: flex; align-items: center; gap: 6px; z-index: 20;">
+            <span class="text-[10px] font-bold text-gray-300 bg-gray-900/90 px-2 py-1 rounded border border-gray-700 whitespace-nowrap shadow-lg">
+              ${a.text}
+            </span>
+            <span class="text-sky-400 text-lg font-black animate-pulse">➔</span>
+          </div>
+        `;
+      }
+
+      document.getElementById('pattern-badge').textContent = pat.code;
+      document.getElementById('pattern-title').textContent = `${pat.name} - ${data.title}`;
+      document.getElementById('pattern-note').textContent = data.note;
+      document.getElementById('theory-title').textContent = `${pat.name.toUpperCase()}`;
+      document.getElementById('theory-rules').innerHTML = data.rules.map(r => `<li>${r}</li>`).join('');
+      document.getElementById('trade-feedback').innerHTML = `<span class="text-gray-400">Analiza el escenario y opera la dirección correcta</span>`;
+      document.getElementById('operation-slot').innerHTML = '';
+
+      const varSelector = document.getElementById('variant-selector');
+      varSelector.innerHTML = Object.keys(pat.variants).map(k => {
+        const v = pat.variants[k];
+        const isActive = (k === currentVariantKey);
+        const activeClass = k.includes('RED') || k === 'PUT' ? 'bg-rose-600 text-white' : 'bg-emerald-600 text-white';
+        return `
+          <button onclick="setVariant('${k}')" class="px-3 py-1 text-xs font-bold rounded transition-all ${isActive ? activeClass + ' shadow' : 'text-gray-400 hover:text-white'}">
+            ${v.buttonLabel}
+          </button>
+        `;
+      }).join('');
+
+      const stage = document.getElementById('candles-render');
+      stage.innerHTML = data.candles.map(c => {
+        let wickClass = 'black-wick';
+        let bodyClass = 'black-body';
+
+        if (c.type === 'bull') {
+          wickClass = 'bull-wick';
+          bodyClass = 'bull-body';
+        } else if (c.type === 'bear') {
+          wickClass = 'bear-wick';
+          bodyClass = 'bear-body';
+        } else if (c.type === 'doji-green') {
+          wickClass = 'bull-wick';
+          bodyClass = 'doji-green';
+        } else if (c.type === 'doji-red') {
+          wickClass = 'bear-wick';
+          bodyClass = 'doji-red';
+        }
+
+        return `
+          <div class="candle-group" style="left: ${c.left}px;">
+            ${c.isTrigger ? `
+              <span class="absolute -top-7 text-[9px] font-bold text-yellow-400 bg-yellow-500/20 px-1.5 py-0.5 rounded border border-yellow-500/40 animate-bounce whitespace-nowrap">
+                GATILLO
+              </span>
+            ` : ''}
+            <div class="wick ${wickClass}" style="top: ${c.wickTop}px; height: ${c.wickTopH}px;"></div>
+            <div class="body ${bodyClass}" style="top: ${c.bodyTop}px; height: ${c.bodyH}px;"></div>
+            <div class="wick ${wickClass}" style="top: ${c.wickBot}px; height: ${c.wickBotH}px;"></div>
+            <span class="absolute text-[10px] font-mono ${c.isTrigger ? 'text-yellow-400 font-bold' : 'text-gray-400'}" style="top: ${c.wickBot + c.wickBotH + 8}px;">
+              ${c.label}
+            </span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function executeTrade(action) {
+      if (answered) return;
+      answered = true;
+
+      const pat = database[currentPatternIdx];
+      const data = pat.variants[currentVariantKey];
+      const expected = data.expectedAction || (currentVariantKey === 'CALL' ? 'CALL' : 'PUT');
+      const isWin = (action === expected);
+      const fb = document.getElementById('trade-feedback');
+
+      if (isWin) {
+        wins++;
+        streak++;
+      } else {
+        losses++;
+        streak = 0;
+      }
+      document.getElementById('stat-wins').textContent = wins;
+      document.getElementById('stat-losses').textContent = losses;
+      document.getElementById('stat-streak').textContent = `${streak} 🔥`;
+
+      const op = data.operation;
+      const wickClass = op.type === 'bull' ? 'bull-wick' : 'bear-wick';
+      const bodyClass = op.type === 'bull' ? 'bull-body' : 'bear-body';
+      const slot = document.getElementById('operation-slot');
+
+      slot.innerHTML = `
+        <div class="candle-group animate-pop" style="left: ${op.left}px;">
+          <span class="absolute -top-7 text-[9px] font-bold ${isWin ? 'text-emerald-400 bg-emerald-500/20 border-emerald-500/40' : 'text-rose-400 bg-rose-500/20 border-rose-500/40'} px-2 py-0.5 rounded border whitespace-nowrap">
+            ${isWin ? '✔ WIN' : '✘ LOSS'}
+          </span>
+          <div class="wick ${wickClass}" style="top: ${op.wickTop}px; height: ${op.wickTopH}px;"></div>
+          <div class="body ${bodyClass}" style="top: ${op.bodyTop}px; height: ${op.bodyH}px;"></div>
+          <div class="wick ${wickClass}" style="top: ${op.wickBot}px; height: ${op.wickBotH}px;"></div>
+          <span class="absolute text-[10px] font-mono ${op.type === 'bull' ? 'text-emerald-400' : 'text-rose-400'} font-bold whitespace-nowrap" style="top: ${op.wickBot + op.wickBotH + 8}px;">
+            ${op.label || 'Vela de Operación'}
+          </span>
+        </div>
+      `;
+
+      if (isWin) {
+        fb.innerHTML = `<span class="text-emerald-400 font-bold text-xs">✔ ¡WIN! Entrada perfecta en ${expected}. Análisis técnico validado con éxito.</span>`;
+      } else {
+        fb.innerHTML = `<span class="text-rose-400 font-bold text-xs">✘ LOSS. Error de análisis. El patrón exigía ${expected}.</span>`;
+      }
+    }
+
+    renderList();
+    renderScenario();
+  </script>
+</body>
+</html>

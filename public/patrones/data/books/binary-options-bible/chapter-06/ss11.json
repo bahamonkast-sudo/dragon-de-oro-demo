@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss11",
+  "code": "SS11",
+  "name": "Patrón Seguro 11 (Gap Contra Tendencia y Relleno Inmediato)",
+  "classification": {
+    "market": "Todo tipo de mercado (Tendencia, Rango o Apilado)",
+    "tradeType": "Relleno Inmediato de Brecha Opuesta",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "No importa si el mercado está en tendencia, en rango o en movimiento apilado. Este patrón funciona en todo tipo de mercados.",
+    "Para operar al ALZA: espere a que se forme una vela con un GAP BAJISTA después de una vela verde.",
+    "REGLA DE OPERACIÓN ALCISTA: Si hay una brecha a la baja después de una vela verde, la otra vela será verde porque el mercado creará una subida para llenar la brecha. Opere CALL.",
+    "Para operar en dirección BAJISTA: espere a que se forme una vela con un GAP ALCISTA después de una vela roja.",
+    "REGLA DE OPERACIÓN BAJISTA: Si se forma una vela con gap alcista después de una vela roja, realice una operación con la vela roja. El mercado bajará para cubrir el gap. Opere PUT.",
+    "Comprueba si el indicador estocástico respalda tu dirección o no."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón seguro en la cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación.",
+    "Asegúrese de que el gap sea un salto de cotización en sentido contrario al color de la vela precedente."
+  ],
+  "simulation": {
+    "velasBase": 2,
+    "triggerIndex": 0
+  }
+}

@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss08",
+  "code": "SS08",
+  "name": "Patrón Seguro 8 (Ruptura del Patrón de Color en Rango)",
+  "classification": {
+    "market": "Tendencia o Movimiento Lateral",
+    "tradeType": "Reversión tras Ruptura de Alternancia",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "NO_MTG",
+  "requirements": [
+    "El mercado debe estar en tendencia o en un movimiento lateral.",
+    "Espere a que se repitan mínimo 3 a 4 velas del mismo color.",
+    "Después de eso, el mercado comenzará el patrón de colores alternados: Verde - Rojo - Verde - Rojo (para compra) o Rojo - Verde - Rojo - Verde (para venta).",
+    "REGLA CRÍTICA: Espere hasta que una vela rompa el patrón de alternancia (repitiendo el color o quebrando la caja).",
+    "Al cierre de esa vela que rompe el ciclo, realice una operación en la otra dirección (CALL para compras, PUT para ventas) en la vela de operación siguiente.",
+    "Oscilador estocástico con valor predeterminado: para operaciones alcistas línea verde sobre roja; para operaciones bajistas línea roja sobre verde."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón seguro en la cuenta real.",
+    "Siga siempre la tendencia, nunca opere en contra de ella.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 9,
+    "triggerIndex": 7
+  }
+}

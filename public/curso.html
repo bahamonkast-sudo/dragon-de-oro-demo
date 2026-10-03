@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula Virtual · Acción del Precio | Dragón de Oro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .article-body h2 { font-size: 1.35rem; font-weight: 700; color: #f8fafc; margin-top: 1.75rem; margin-bottom: 0.75rem; border-left: 3px solid #eab308; padding-left: 0.75rem; }
+    .article-body h3 { font-size: 1.15rem; font-weight: 600; color: #e2e8f0; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .article-body p { margin-bottom: 1rem; line-height: 1.75; color: #cbd5e1; font-size: 0.95rem; }
+    .article-body ul, .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; color: #cbd5e1; }
+    .article-body ul { list-style-type: disc; }
+    .article-body ol { list-style-type: decimal; }
+    .article-body li { margin-bottom: 0.4rem; line-height: 1.6; }
+    .article-body blockquote { border-left: 4px solid #eab308; background: rgba(20, 17, 10, 0.6); padding: 0.75rem 1.25rem; border-radius: 0.5rem; margin: 1.25rem 0; color: #fef08a; font-style: italic; }
+    .zoom-cursor { cursor: zoom-in; }
+  </style>
+<script>window.checkAuth=()=>true;window.requireAuth=()=>true;localStorage.setItem("auth","true");localStorage.setItem("user",JSON.stringify({name:"Trader",role:"admin"}));</script>
+</head>
+<body class="h-full flex flex-col overflow-hidden bg-slate-950 font-sans">
+
+  <!-- Header Superior Institucional Dragón de Oro -->
+  <header class="h-14 border-b border-amber-500/20 bg-slate-900/90 backdrop-blur px-5 flex items-center justify-between z-10 shrink-0">
+    <div class="flex items-center gap-4">
+        <a href="inicio.html" class="flex items-center gap-2 text-slate-400 hover:text-amber-400 text-xs transition">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        <span>Volver a la Academia</span>
+      </a>
+      <div class="h-4 w-px bg-slate-800"></div>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-amber-500/10 text-amber-400 font-black text-xs border border-amber-500/30">DO</span>
+        <h1 class="text-sm font-semibold tracking-wide text-white">Dragón de Oro <span class="text-xs font-normal text-amber-400/80">· Acción del Precio</span></h1>
+      </div>
+    </div>
+    
+    <!-- Filtros de nivel y porcentaje global -->
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1.5 bg-slate-900 p-1 rounded-lg border border-slate-800">
+        <button onclick="filterLevel(1)" id="btnLvl1" class="px-3 py-1 text-xs rounded-md bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition shadow-sm">Nivel 1</button>
+        <button onclick="filterLevel(2)" id="btnLvl2" class="px-3 py-1 text-xs rounded-md text-slate-400 font-medium hover:text-white transition">Nivel 2</button>
+        <button onclick="filterLevel(3)" id="btnLvl3" class="px-3 py-1 text-xs rounded-md text-slate-400 font-medium hover:text-white transition">Nivel 3</button>
+      </div>
+
+      <!-- Barra de Progreso del Nivel -->
+      <div class="hidden sm:flex items-center gap-2 bg-slate-900/80 px-3 py-1 rounded-lg border border-slate-800">
+        <div class="w-20 bg-slate-800 h-2 rounded-full overflow-hidden">
+          <div id="levelProgressBar" class="bg-amber-400 h-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+        <span id="levelProgressText" class="text-xs font-mono text-amber-400 font-bold">0%</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout Principal -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- Área Central de Estudio -->
+    <main id="mainScrollArea" class="flex-1 overflow-y-auto p-4 md:p-8 bg-slate-950 scroll-smooth">
+      <div class="max-w-4xl w-full mx-auto space-y-6">
+        
+        <!-- Reproductor 16:9 -->
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-black border border-amber-500/20 shadow-2xl">
+          <iframe id="videoPlayer" class="w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div id="videoPlaceholder" class="absolute inset-0 flex flex-col items-center justify-center text-slate-500 bg-slate-900 gap-2">
+            <svg class="w-12 h-12 stroke-current text-amber-500/50" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-sm text-slate-400">Selecciona una lección para iniciar</span>
+          </div>
+        </div>
+
+        <!-- Encabezado de la Clase y Botón de Estado -->
+        <div class="border-b border-slate-800 pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span id="currentLevelBadge" class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Nivel 1</span>
+              <span id="currentOrder" class="text-xs text-slate-400 font-mono"></span>
+            </div>
+            <h2 id="currentTitle" class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Cargando...</h2>
+          </div>
+
+          <!-- Botón Marcar Completada -->
+          <button id="btnToggleCompleted" onclick="toggleCompletedCurrent()" class="self-start sm:self-center px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 border transition shrink-0 bg-slate-900 border-slate-700 text-slate-300 hover:border-amber-500/50">
+            <svg id="iconCompleted" class="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span id="labelCompleted">Marcar como vista</span>
+          </button>
+        </div>
+
+        <!-- Cuerpo del Artículo Teórico con Gráficos -->
+        <article id="articleContent" class="article-body bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 md:p-8 backdrop-blur">
+          <p class="text-slate-400">Selecciona una lección para ver el contenido teórico completo.</p>
+        </article>
+
+        <!-- Navegación Secuencial Inferior (Anterior / Siguiente) -->
+        <nav class="flex items-center justify-between pt-6 pb-12 border-t border-slate-800">
+          <button id="btnPrevLesson" onclick="navigateStep(-1)" class="px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-slate-300 hover:bg-slate-800 text-xs font-semibold flex items-center gap-2 transition disabled:opacity-40 disabled:cursor-not-allowed">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            <span>Clase anterior</span>
+          </button>
+          
+          <button id="btnNextLesson" onclick="navigateStep(1)" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold flex items-center gap-2 transition shadow-lg shadow-amber-500/20 disabled:opacity-40 disabled:cursor-not-allowed">
+            <span>Siguiente clase</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </nav>
+
+      </div>
+    </main>
+
+    <!-- Barra Lateral: Buscador + Temario -->
+    <aside class="w-80 md:w-96 border-l border-slate-800 bg-slate-900/50 flex flex-col shrink-0">
+      
+      <!-- Buscador predictivo -->
+      <div class="p-3 border-b border-slate-800 bg-slate-900 space-y-2">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="searchInput" 
+            oninput="handleSearch(this.value)" 
+            placeholder="Buscar concepto (ej: martillo, soporte)..." 
+            class="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition"
+          >
+          <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <div class="flex items-center justify-between text-[11px] text-slate-400">
+          <span id="sidebarTitle">Temario Nivel 1</span>
+          <span id="filteredCounter" class="font-mono text-amber-400">0 clases</span>
+        </div>
+      </div>
+
+      <!-- Lista con scroll -->
+      <div id="syllabusContainer" class="flex-1 overflow-y-auto p-2 space-y-1.5">
+        <div class="p-4 text-center text-sm text-slate-500">Cargando temario...</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Modal Lightbox -->
+  <div id="lightboxModal" onclick="closeLightbox()" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="Gráfico ampliado" class="max-w-full max-h-[80vh] rounded-lg border border-slate-700 shadow-2xl object-contain">
+      <p id="lightboxCaption" class="mt-3 text-xs text-amber-400 text-center max-w-2xl px-4 font-medium"></p>
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-slate-400 hover:text-white text-xs flex items-center gap-1">
+        Cerrar [ESC]
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let rawCourseData = null;
+    let allProcessedLessons = [];
+    let currentFilteredLevel = 1;
+    let activeLessonId = null;
+    let searchQuery = '';
+
+    const STORAGE_KEY = 'dragon_oro_completed_lessons';
+    function getCompletedMap() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { return {}; }
+    }
+    function isLessonCompleted(id) {
+      return !!getCompletedMap()[id];
+    }
+    function toggleCompletedCurrent() {
+      if (!activeLessonId) return;
+      const completed = getCompletedMap();
+      if (completed[activeLessonId]) {
+        delete completed[activeLessonId];
+      } else {
+        completed[activeLessonId] = true;
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
+      updateCompletedUI();
+      updateLevelProgress();
+      renderList();
+    }
+
+    function updateCompletedUI() {
+      const isDone = isLessonCompleted(activeLessonId);
+      const btn = document.getElementById('btnToggleCompleted');
+      const label = document.getElementById('labelCompleted');
+      const icon = document.getElementById('iconCompleted');
+
+      if (isDone) {
+        btn.className = 'self-start sm:self-center px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 border transition shrink-0 bg-emerald-500/15 border-emerald-500/30 text-emerald-300';
+        label.textContent = 'Completada ✓';
+        icon.className = 'w-4 h-4 text-emerald-400';
+      } else {
+        btn.className = 'self-start sm:self-center px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 border transition shrink-0 bg-slate-900 border-slate-700 text-slate-300 hover:border-amber-500/50';
+        label.textContent = 'Marcar como vista';
+        icon.className = 'w-4 h-4 text-slate-500';
+      }
+    }
+
+    function updateLevelProgress() {
+      const levelLessons = allProcessedLessons.filter(l => l.levelNumber === currentFilteredLevel);
+      if (levelLessons.length === 0) return;
+      const completedCount = levelLessons.filter(l => isLessonCompleted(l.id)).length;
+      const pct = Math.round((completedCount / levelLessons.length) * 100);
+
+      document.getElementById('levelProgressBar').style.width = `${pct}%`;
+      document.getElementById('levelProgressText').textContent = `${pct}%`;
+    }
+
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      img.src = src;
+      cap.textContent = caption || '';
+      modal.classList.remove('hidden');
+    }
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    function fixEncoding(str) {
+      if (!str) return '';
+      try {
+        return decodeURIComponent(escape(str));
+      } catch (e) {
+        return str
+          .replace(/Ã¡/g, 'á').replace(/Ã©/g, 'é').replace(/Ã­/g, 'í')
+          .replace(/Ã³/g, 'ó').replace(/Ãº/g, 'ú').replace(/Ã±/g, 'ñ')
+          .replace(/Â/g, '').replace(/â€¦/g, '...').replace(/â€œ/g, '“').replace(/â€/g, '”');
+      }
+    }
+
+    function extractVideoId(item) {
+      if (!item) return '';
+      if (typeof item === 'string') {
+        const m = item.match(/(?:youtu\.be\/|v\/|embed\/|watch\?v=|\&v=)([a-zA-Z0-9_-]{11})/);
+        return m ? m[1] : (item.length === 11 ? item : '');
+      }
+      if (item.youtube_id) return item.youtube_id;
+      if (item.video_id) return item.video_id;
+      if (item.id && String(item.id).length === 11) return item.id;
+      if (item.url) return extractVideoId(item.url);
+      if (item.src) return extractVideoId(item.src);
+      return '';
+    }
+
+    function parseLevels(data) {
+      const parsed = [];
+      const levelsList = data.levels || [];
+
+      levelsList.forEach((lvlObj) => {
+        const lvlNum = lvlObj.level || 1;
+        const lvlTitle = fixEncoding(lvlObj.title || `Nivel ${lvlNum}`);
+        const items = [...(lvlObj.classes || []), ...(lvlObj.video_classes || [])];
+
+        items.forEach((c, index) => {
+          let vidId = '';
+          if (Array.isArray(c.videos) && c.videos.length > 0) {
+            vidId = extractVideoId(c.videos[0]);
+          } else if (c.video) {
+            vidId = extractVideoId(c.video);
+          } else if (c.youtube_id) {
+            vidId = extractVideoId(c.youtube_id);
+          }
+
+          parsed.push({
+            id: `${lvlNum}-${c.order || index + 1}-${c.slug || index}`,
+            levelNumber: lvlNum,
+            levelTitle: lvlTitle,
+            order: c.order || index + 1,
+            title: fixEncoding(c.title || `Clase ${index + 1}`),
+            desc: fixEncoding(c.description || ''),
+            blocks: c.blocks || [],
+            videoId: vidId
+          });
+        });
+      });
+
+      return parsed;
+    }
+
+    function resolveImgPath(rawSrc) {
+      if (!rawSrc) return '';
+      let clean = rawSrc.replace(/^data\//, '').replace(/^public\//, '');
+      if (!clean.startsWith('assets/') && !clean.startsWith('http')) {
+        clean = 'assets/images/' + clean.split('/').pop();
+      }
+      return clean;
+    }
+
+    function renderArticleBlocks(blocks, fallbackDesc) {
+      if (!blocks || blocks.length === 0) {
+        if (fallbackDesc) {
+          return `<p class="text-slate-300 leading-relaxed text-base">${fallbackDesc}</p>`;
+        }
+        return '<p class="text-slate-500 italic">Esta lección es práctica en video y no cuenta con artículo complementario adjunto.</p>';
+      }
+
+      let html = '';
+      blocks.forEach(b => {
+        const type = b.type || '';
+        const content = fixEncoding(b.html || b.text || '');
+
+        if (type === 'paragraph' || type === 'p') {
+          html += `<p>${content}</p>`;
+        } else if (type === 'heading' || type === 'h2' || type === 'header') {
+          html += `<h2>${content}</h2>`;
+        } else if (type === 'h3') {
+          html += `<h3>${content}</h3>`;
+        } else if (type === 'image' || type === 'img') {
+          const localSrc = resolveImgPath(b.local || b.src || b.local_src || '');
+          const remoteSrc = b.remote_src || (b.candidates && b.candidates[0] ? b.candidates[0].url : '');
+          const caption = fixEncoding(b.caption || b.alt || 'Gráfico analítico');
+
+          html += `
+            <figure class="my-6 rounded-xl overflow-hidden border border-slate-800 bg-slate-950/60 p-2 text-center shadow-lg group">
+              <div class="overflow-hidden rounded-lg">
+                <img 
+                  src="${localSrc}" 
+                  alt="${caption}" 
+                  class="rounded-lg max-h-[460px] mx-auto object-contain zoom-cursor transition duration-200 group-hover:scale-[1.01]"
+                  loading="lazy"
+                  onclick="openLightbox('${localSrc}', '${caption.replace(/'/g, "\\'")}')"
+                  onerror="if(this.src !== '${remoteSrc}' && '${remoteSrc}') { this.src='${remoteSrc}'; }"
+                >
+              </div>
+              ${caption ? `<figcaption class="mt-2.5 text-xs text-amber-400/90 font-medium px-4 leading-normal flex items-center justify-center gap-1.5">
+                <span>${caption}</span>
+                <span class="text-[10px] text-slate-500 font-normal">(clic para ampliar)</span>
+              </figcaption>` : ''}
+            </figure>`;
+        } else if (type === 'list' || type === 'ul') {
+          html += `<ul>${content}</ul>`;
+        } else if (type === 'blockquote') {
+          html += `<blockquote>${content}</blockquote>`;
+        } else if (content) {
+          html += `<p>${content}</p>`;
+        }
+      });
+
+      return html;
+    }
+
+function selectLesson(id) {
+      const lesson = allProcessedLessons.find(l => l.id === id);
+      if (!lesson) return;
+
+      if (window.DragonOroAcceso && !window.DragonOroAcceso.libre(lesson.levelNumber, lesson.order)) {
+        window.DragonOroAcceso.pedir();
+        return;
+      }
+
+      activeLessonId = id;
+
+      document.getElementById('currentTitle').textContent = lesson.title;
+      document.getElementById('currentLevelBadge').textContent = `Nivel ${lesson.levelNumber}`;
+      document.getElementById('currentOrder').textContent = `Clase #${lesson.order}`;
+
+      const article = document.getElementById('articleContent');
+      article.innerHTML = renderArticleBlocks(lesson.blocks, lesson.desc);
+
+      const player = document.getElementById('videoPlayer');
+      const placeholder = document.getElementById('videoPlaceholder');
+
+      if (lesson.videoId) {
+        player.src = `https://www.youtube-nocookie.com/embed/${lesson.videoId}?autoplay=1&rel=0`;
+        placeholder.classList.add('hidden');
+      } else {
+        player.src = '';
+        placeholder.classList.remove('hidden');
+      }
+
+      document.getElementById('mainScrollArea').scrollTop = 0;
+
+      try { history.replaceState(null, '', '#n' + lesson.levelNumber + '-' + lesson.order); } catch (e) {}
+
+      updateCompletedUI();
+      updateNavigationButtons();
+      renderList();
+    }
+
+    function updateNavigationButtons() {
+      const visibleList = getFilteredLessons();
+      const currentIndex = visibleList.findIndex(l => l.id === activeLessonId);
+
+      const btnPrev = document.getElementById('btnPrevLesson');
+      const btnNext = document.getElementById('btnNextLesson');
+
+      btnPrev.disabled = currentIndex <= 0;
+      btnNext.disabled = currentIndex >= visibleList.length - 1 || currentIndex === -1;
+    }
+
+    function navigateStep(direction) {
+      const visibleList = getFilteredLessons();
+      const currentIndex = visibleList.findIndex(l => l.id === activeLessonId);
+      const targetIndex = currentIndex + direction;
+
+      if (targetIndex >= 0 && targetIndex < visibleList.length) {
+        selectLesson(visibleList[targetIndex].id);
+      }
+    }
+
+    function filterLevel(lvl) {
+      currentFilteredLevel = lvl;
+
+      [1, 2, 3].forEach(n => {
+        const btn = document.getElementById(`btnLvl${n}`);
+        if (!btn) return;
+        if (n === lvl) {
+          btn.className = 'px-3 py-1 text-xs rounded-md bg-amber-500 text-slate-950 font-bold hover:bg-amber-400 transition shadow-sm';
+        } else {
+          btn.className = 'px-3 py-1 text-xs rounded-md text-slate-400 font-medium hover:text-white transition';
+        }
+      });
+
+      document.getElementById('sidebarTitle').textContent = `Temario Nivel ${lvl}`;
+      updateLevelProgress();
+      renderList();
+
+      const levelList = getFilteredLessons();
+      if (levelList.length > 0) {
+        const currentInLevel = levelList.find(l => l.id === activeLessonId);
+        if (!currentInLevel) {
+          selectLesson(levelList[0].id);
+        }
+      }
+    }
+
+    function handleSearch(query) {
+      searchQuery = query.toLowerCase().trim();
+      renderList();
+    }
+
+    function getFilteredLessons() {
+      return allProcessedLessons.filter(l => {
+        const matchLevel = searchQuery ? true : (l.levelNumber === currentFilteredLevel);
+        const matchQuery = !searchQuery || 
+          l.title.toLowerCase().includes(searchQuery) || 
+          l.desc.toLowerCase().includes(searchQuery);
+        return matchLevel && matchQuery;
+      });
+    }
+
+    function renderList() {
+      const container = document.getElementById('syllabusContainer');
+      container.innerHTML = '';
+
+      const list = getFilteredLessons();
+      document.getElementById('filteredCounter').textContent = `${list.length} clases`;
+
+      if (list.length === 0) {
+        container.innerHTML = `<div class="p-4 text-center text-xs text-slate-500">No se encontraron lecciones que coincidan con la búsqueda.</div>`;
+        return;
+      }
+
+list.forEach((lesson) => {
+        const isActive = lesson.id === activeLessonId;
+        const isDone = isLessonCompleted(lesson.id);
+        const isLocked = !!window.DragonOroAcceso && !window.DragonOroAcceso.libre(lesson.levelNumber, lesson.order);
+
+        const btn = document.createElement('button');
+        btn.onclick = () => selectLesson(lesson.id);
+        btn.className = `w-full text-left p-2.5 rounded-lg flex items-start gap-2.5 transition-colors ${
+          isActive 
+            ? 'bg-amber-500/15 border border-amber-500/30 text-white' 
+            : 'hover:bg-slate-800/60 text-slate-300'
+        }${isLocked ? ' opacity-60' : ''}`;
+
+        btn.innerHTML = `
+          <div class="mt-0.5 flex flex-col items-center gap-1 shrink-0">
+            <span class="inline-flex items-center justify-center w-5 h-5 rounded text-[11px] font-mono ${
+              isActive ? 'bg-amber-500 text-slate-950 font-bold' : 'bg-slate-800 text-slate-400 border border-slate-700'
+            }">${lesson.order}</span>
+            ${isDone ? '<span class="text-emerald-400 text-[10px] font-bold">✓</span>' : ''}
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-xs font-medium leading-snug line-clamp-2 ${isActive ? 'text-white font-semibold' : 'text-slate-300'}">${lesson.title}</p>
+<div class="flex items-center gap-2 mt-1">
+              <span class="text-[10px] ${lesson.videoId ? 'text-emerald-400' : 'text-slate-400'}">${lesson.videoId ? '▶ Video' : '📖 Lectura'}</span>
+              ${searchQuery ? `<span class="text-[9px] bg-slate-800 text-amber-400 px-1.5 py-0.2 rounded font-mono">N${lesson.levelNumber}</span>` : ''}
+              ${isLocked ? '<span class="text-[9px] bg-slate-800 text-amber-400 px-1.5 py-0.2 rounded font-bold">🔒 Bloqueada</span>' : ''}
+            </div>
+          </div>
+        `;
+        container.appendChild(btn);
+      });
+    }
+
+    async function init() {
+      try {
+        const res = await fetch('data/course_data.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        rawCourseData = await res.json();
+
+        allProcessedLessons = parseLevels(rawCourseData);
+        filterLevel(1);
+        // Enlace profundo desde el temario: curso.html#n2-5 (nivel 2, clase 5).
+        const hm = (location.hash || '').match(/^#n(\d+)-(\d+)$/);
+        if (hm) {
+          const target = allProcessedLessons.find(l => l.levelNumber === parseInt(hm[1], 10) && l.order === parseInt(hm[2], 10));
+          if (target) { filterLevel(target.levelNumber); selectLesson(target.id); }
+        }
+      } catch (err) {
+        console.error("Error al cargar datos:", err);
+        document.getElementById('syllabusContainer').innerHTML = `
+          <div class="p-4 text-xs text-rose-400 bg-rose-950/20 border border-rose-900/30 rounded-lg m-2">
+            Error al leer datos del curso. Revisa la consola (F12).
+          </div>`;
+      }
+    }
+
+    document.addEventListener('dragonoro:acceso', () => {
+      renderList();
+      updateNavigationButtons();
+    });
+
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+  <script src="session-modal.js"></script>
+</body>
+</html>
+
+
+
+<script src="ai_chat.js"></script>

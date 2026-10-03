@@ -1,0 +1,12 @@
+{
+  "name": "binaryteach-demo",
+  "private": true,
+  "scripts": {
+    "build": "python scripts/build-deploy.py",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "dev": "wrangler dev --ip 127.0.0.1 --port 8787"
+  },
+  "devDependencies": {
+    "wrangler": "^4.122.0"
+  }
+}

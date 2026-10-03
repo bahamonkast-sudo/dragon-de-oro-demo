@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Usuario - Guardián GRANJITA de Oro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a0c;
+      --bg-secondary: #141418;
+      --bg-panel: rgba(20, 20, 24, 0.7);
+      --gold-primary: #d4af37;
+      --gold-dim: rgba(212, 175, 55, 0.3);
+      --text-main: #e0e0e0;
+      --text-muted: #888890;
+      --accent-green: #00e676;
+      --accent-red: #ff3b30;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.02);
+      --glass-border: rgba(255, 255, 255, 0.05);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.03), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.03), transparent 25%);
+      background-attachment: fixed;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: 300px;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border-color);
+      padding: 2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .brand h1 {
+      color: var(--gold-primary);
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .nav-menu { list-style: none; }
+    
+    .nav-item { margin-bottom: 0.5rem; }
+    
+    .nav-link {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      background: var(--glass-bg);
+      color: var(--gold-primary);
+      border-left: 3px solid var(--gold-primary);
+      padding-left: calc(1rem - 3px);
+    }
+
+    /* Main Content */
+    .content {
+      flex: 1;
+      padding: 3rem 4rem;
+      max-width: 900px;
+    }
+
+    h1, h2, h3 { color: #ffffff; font-weight: 600; margin-bottom: 1rem; }
+    h1 { font-size: 2.5rem; margin-bottom: 2rem; color: var(--gold-primary); }
+    h2 { font-size: 1.8rem; margin-top: 3rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+    h3 { font-size: 1.3rem; margin-top: 2rem; color: var(--gold-primary); }
+    
+    p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+    
+    ul, ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+
+    /* Cards & Callouts */
+    .card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .tip, .warning, .note {
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid;
+    }
+    
+    .tip { background: rgba(0, 230, 118, 0.05); border-left-color: var(--accent-green); }
+    .warning { background: rgba(255, 59, 48, 0.05); border-left-color: var(--accent-red); }
+    .note { background: rgba(212, 175, 55, 0.05); border-left-color: var(--gold-primary); }
+
+    .btn-visual {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      background: #2a2a35;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--gold-primary);
+    }
+
+    .panic-btn-visual {
+      background: rgba(255, 59, 48, 0.1);
+      border-color: var(--accent-red);
+      color: var(--accent-red);
+    }
+
+    /* Images */
+    .img-placeholder {
+      width: 100%;
+      height: 300px;
+      background: var(--bg-secondary);
+      border: 1px dashed var(--border-color);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--bg-secondary);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: var(--gold-primary);
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: static; border-right: none; border-bottom: 1px solid var(--border-color); }
+      .content { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Guardián GRANJITA</h1>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Manual de Usuario Oficial</p>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#intro" class="nav-link">1. Bienvenido</a></li>
+        <li class="nav-item"><a href="#instalacion" class="nav-link">2. Instalación y Activación</a></li>
+        <li class="nav-item"><a href="#tablero" class="nav-link">3. Panel Principal</a></li>
+        <li class="nav-item"><a href="#herramientas" class="nav-link">4. Herramientas Especiales</a></li>
+        <li class="nav-item"><a href="#faq" class="nav-link">5. Preguntas Frecuentes</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      
+      <section id="intro">
+        <h1>Manual de Usuario</h1>
+        <p>Bienvenido al <strong>Guardián GRANJITA de Oro</strong>, tu plataforma táctica personal diseñada para ayudarte a mantener el control psicológico, gestionar matemáticamente tu riesgo y proteger tu capital durante tus operaciones.</p>
+        
+        <div class="note">
+          <strong>¿Qué hace esta aplicación?</strong><br>
+          A diferencia de otras plataformas, el Guardián no opera por ti. Su trabajo es <strong>vigilarte a ti</strong>. Te obliga a respetar tus propios límites, te avisa cuando estás operando por revancha y te bloquea cuando tus emociones intentan arruinar tu capital.
+        </div>
+      </section>
+
+      <section id="instalacion">
+        <h2>2. Instalación y Activación</h2>
+        <p>El proceso para comenzar es muy rápido. La aplicación funciona de manera 100% local en tu computadora, garantizando privacidad total y sin depender de la nube.</p>
+        
+        <h3>Paso 1: Instalación</h3>
+        <ol>
+          <li>Haz doble clic en el archivo <code>Instalador_GRANJITA.exe</code> que te proporcionó tu proveedor.</li>
+          <li>Sigue las instrucciones en pantalla y haz clic en "Siguiente" hasta finalizar.</li>
+          <li>Busca el ícono de GRANJITA en tu escritorio o menú de inicio y ábrelo.</li>
+        </ol>
+
+        <h3>Paso 2: Activación de Licencia</h3>
+        <p>Por seguridad, la aplicación está vinculada exclusivamente a tu computadora.</p>
+        <div class="img-placeholder">[Imagen: Pantalla de Activación con el Código de Equipo]</div>
+        <ol>
+          <li>Al abrir la app por primera vez, verás una pantalla oscura solicitando activación.</li>
+          <li>Copia tu <strong>Código de Equipo (Hardware ID)</strong> pulsando el botón <span class="btn-visual">COPIAR</span>.</li>
+          <li>Envía este código a tu Administrador/Proveedor.</li>
+          <li>Él te devolverá un texto largo llamado <strong>Token de Activación</strong>.</li>
+          <li>Pega el Token en la casilla correspondiente y presiona <span class="btn-visual">⚡ ACTIVAR APLICACIÓN</span>.</li>
+        </ol>
+      </section>
+
+      <section id="tablero">
+        <h2>3. Conociendo tu Panel Principal</h2>
+        <p>Una vez activado, entrarás al panel de control principal. Aquí es donde registrarás toda tu operativa.</p>
+        
+        <h3>Configuración Inicial (Obligatoria)</h3>
+        <p>Antes de registrar cualquier movimiento, debes indicarle al Guardián tus reglas del día:</p>
+        <ul>
+          <li><strong>Capital Inicial:</strong> Cuánto dinero tienes en tu cuenta hoy.</li>
+          <li><strong>Límite Stop Loss Diario:</strong> Cuánto estás dispuesto a perder máximo hoy. (Ej. $50,000 COP). Si alcanzas este límite, el Guardián emitirá alertas críticas.</li>
+        </ul>
+
+        <div class="img-placeholder">[Imagen: Vista del formulario superior y bitácora]</div>
+
+        <h3>La Bitácora Operativa</h3>
+        <p>Cada vez que termines una operación en tu broker, debes registrarla aquí. Solo necesitas indicar si fue ganancia o pérdida, y el monto.</p>
+        <div class="tip">
+          <strong>Tip de uso:</strong> La aplicación dibujará un gráfico en tiempo real con tu progreso. Ver la curva subir o bajar te ayuda a tomar perspectiva y no operar a ciegas.
+        </div>
+      </section>
+
+      <section id="herramientas">
+        <h2>4. Herramientas Especiales y Seguridad</h2>
+        <p>El Guardián GRANJITA cuenta con funciones avanzadas para proteger tu psicología.</p>
+
+        <h3>El Interés Compuesto</h3>
+        <p>Si tu objetivo es hacer crecer tu cuenta de forma exponencial pero segura, esta función es para ti.</p>
+        <ul>
+          <li><strong>¿Cómo se activa?</strong> Completa operaciones positivas consecutivas para desbloquear este modo.</li>
+          <li><strong>¿Qué hace?</strong> Te muestra exactamente cuánto deberías invertir en tu siguiente operación utilizando las ganancias anteriores, sin arriesgar tu capital base.</li>
+          <li><strong>Protección:</strong> Si pierdes en este modo, el sistema automáticamente te expulsa del interés compuesto y te protege para evitar que pierdas lo ganado.</li>
+        </ul>
+
+        <h3>Alertas Sonoras</h3>
+        <p>La aplicación no es silenciosa. Está diseñada para sacarte de tu estado de hipnosis cuando operas:</p>
+        <ul>
+          <li>🔔 <strong>Campana suave:</strong> Operación exitosa.</li>
+          <li>⚠️ <strong>Alerta moderada:</strong> Operación perdida. Cuidado.</li>
+          <li>🚨 <strong>Sirena de peligro:</strong> Has alcanzado tu Stop Loss Diario. El sistema exige que cierres tu sesión.</li>
+        </ul>
+
+        <h3>El Botón de Pánico</h3>
+        <div class="card">
+          <p>En la esquina superior encontrarás un botón rojo: <span class="btn-visual panic-btn-visual">🛑 PÁNICO</span></p>
+          <p><strong>¿Cuándo usarlo?</strong> Úsalo cuando sientas que perdiste el control, estás operando por revancha, con rabia, o estás a punto de romper tus reglas.</p>
+          <p><strong>¿Qué pasa si lo presiono?</strong> El Guardián bloqueará instantáneamente la pantalla y forzará el cierre de la aplicación para protegerte de ti mismo. <em>(Tu sesión se guardará).</em></p>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>5. Preguntas Frecuentes y Solución de Problemas</h2>
+        
+        <div class="card">
+          <h4>¿Qué hago si mi licencia dice que ha expirado?</h4>
+          <p>El sistema te enviará automáticamente a la pantalla de activación. Simplemente copia tu Código de Equipo nuevamente y pídele a tu administrador una renovación de Token.</p>
+        </div>
+
+        <div class="card">
+          <h4>¿Por qué no carga la aplicación o dice "Página no encontrada"?</h4>
+          <p>Verifica que estás abriendo la aplicación desde el acceso directo oficial de GRANJITA. El sistema enciende servidores locales de forma automática; si el ícono de carga se queda girando, cierra la ventana e intenta abrir el acceso directo de nuevo.</p>
+        </div>
+
+        <div class="card">
+          <h4>Cometí un error al registrar una operación, ¿la puedo borrar?</h4>
+          <p>El sistema está diseñado para reflejar la realidad del trading (donde no puedes deshacer un click). Sin embargo, si necesitas empezar de cero el día, puedes resetear la sesión actualizando el capital base.</p>
+        </div>
+        
+      </section>
+      
+      <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 Guardián GRANJITA de Oro. Todos los derechos reservados.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    // Simple script to highlight active section in sidebar on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

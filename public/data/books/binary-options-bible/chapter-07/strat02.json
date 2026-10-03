@@ -1,0 +1,15 @@
+{
+  "id": "strat02",
+  "code": "STRAT02",
+  "name": "Estrategia 2 - Donchian (17) + EMA 5 + Sin Cola",
+  "marketType": "Tendencia",
+  "tradeType": "Continuación",
+  "requirements": [
+    "Canal Donchian (periodo 17), EMA 5, Parabólico y Estocástico. En canal superior alcista, esperar una vela sin cola confirmada por indicadores."
+  ],
+  "snr": 1,
+  "stochasticRule": false,
+  "riskManagement": "1_STEP",
+  "practice": true,
+  "mtgPolicy": "1_STEP"
+}

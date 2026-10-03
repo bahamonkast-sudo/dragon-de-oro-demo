@@ -1,0 +1,32 @@
+﻿{
+  "id": "ss07",
+  "code": "SS07",
+  "name": "Patrón Seguro 7 (Secuencia Alternada + Impulso + 1 Vela Opuesta)",
+  "classification": {
+    "market": "Tendencia Alcista o Bajista",
+    "tradeType": "Continuación tras Vela Opuesta",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debería estar en tendencia, ya sea alcista o bajista.",
+    "Para operaciones ALCISTAS: busque primero la secuencia Verde - Rojo - Verde, y luego un impulso de mínimo 3 a 4 velas verdes consecutivas.",
+    "A continuación, espere a que aparezca 1 vela roja opuesta.",
+    "Al cierre de esa vela roja, realice una operación en dirección ALZA (CALL) en la vela comercial siguiente.",
+    "Para operaciones BAJISTAS: busque primero Rojo - Verde - Rojo, y luego un mínimo de 3 a 4 velas rojas consecutivas.",
+    "A continuación, espere a que aparezca 1 vela verde opuesta.",
+    "Al cierre de esa vela verde, coloque la operación en dirección BAJISTA (PUT) en la vela comercial siguiente.",
+    "Oscilador estocástico con valor predeterminado: para alcistas línea verde sobre roja; para bajistas línea roja sobre verde."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en cuenta real.",
+    "Siga siempre la tendencia, nunca opere en contra de ella.",
+    "Compruebe siempre el indicador estocástico antes de realizar la operación.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "mtgNote": "MTG: 1 PASO. Si se pierde la operación, solo realice MTG si el oscilador estocástico aún respalda la dirección. Si se pierde el MTG, busque una nueva oportunidad.",
+  "simulation": {
+    "velasBase": 8,
+    "triggerIndex": 6
+  }
+}

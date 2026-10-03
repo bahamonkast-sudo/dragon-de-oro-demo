@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss22",
+  "code": "SS22",
+  "name": "Patrón Seguro 22 (Método de las Tres Subidas - Engullimiento Triple)",
+  "classification": {
+    "market": "Tendencia Alcista o Bajista",
+    "tradeType": "Continuación Fuerte tras Engullir Retroceso Triple",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia.",
+    "Para operaciones alcistas: espere a que se produzcan 3 velas verdes consecutivas de impulso.",
+    "Después, espere a que se formen 3 velas rojas consecutivas de retroceso.",
+    "REGLA CRÍTICA: Espere a que aparezca una vela verde que engulla completamente las tres velas rojas anteriores (vela de ruptura).",
+    "Una vez que se produzca una ruptura exitosa al cierre de esa vela envolvente, coloque la operación en la misma dirección (CALL) en la siguiente vela comercial.",
+    "Para operaciones bajistas simétricas: 3 rojas de impulso -> 3 verdes de retroceso -> 1 vela roja que engulla las 3 verdes -> operar PUT.",
+    "Oscilador estocástico con valor predeterminado respaldando la dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Solo si se cumplen todas las condiciones, realice la operación.",
+    "La vela de ruptura verde debe engullir netamente el rango de las 3 velas contrarias."
+  ],
+  "simulation": {
+    "velasBase": 8,
+    "triggerIndex": 6
+  }
+}

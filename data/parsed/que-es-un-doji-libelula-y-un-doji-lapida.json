@@ -1,0 +1,198 @@
+{
+  "url": "https://www.binaryteach.com/que-es-un-doji-libelula-y-un-doji-lapida/",
+  "slug": "que-es-un-doji-libelula-y-un-doji-lapida",
+  "depth": 1,
+  "title": "¿Qué es un Doji Libélula y un Doji Lápida?",
+  "description": "Cómo lo mencionamos en la introducción a los patrones de velas japonesas, vamos a encontrar una infinidad de patrones, y en esta ocasión le ha tocado […]",
+  "kind": "class",
+  "level": 1,
+  "order": 16,
+  "date_published": "2020-02-12T04:54:15+00:00",
+  "date_modified": "2020-02-12T04:54:17+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 228,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "MnXaRCtdDjQ",
+      "url": "https://www.youtube.com/embed/MnXaRCtdDjQ?feature=oembed",
+      "title": "Trading con Doji Libélula y Doji Lápida -Patrones de Velas Opciones Binarias- Acción del precio"
+    },
+    {
+      "provider": "youtube",
+      "id": "ZsIaEAiTyFE",
+      "url": "https://youtu.be/ZsIaEAiTyFE",
+      "title": "¿Cómo detectar si es un patrón de reversión o un patrón de continuidad?"
+    }
+  ],
+  "links": [
+    {
+      "text": "introducción a los patrones de velas japonesas",
+      "url": "https://www.binaryteach.com/introduccion-a-patrones-de-velas-japonesas/",
+      "kind": "page",
+      "slug": "introduccion-a-patrones-de-velas-japonesas"
+    },
+    {
+      "text": "¿Cómo detectar si es un patrón de reversión o un patrón de continuidad?",
+      "url": "https://youtu.be/ZsIaEAiTyFE",
+      "kind": "video",
+      "video_id": "ZsIaEAiTyFE",
+      "embed_url": "https://youtu.be/ZsIaEAiTyFE"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png",
+          "width": 286
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-01.png",
+      "status": "ok",
+      "bytes": 3266
+    },
+    {
+      "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-02.jpg",
+      "status": "ok",
+      "bytes": 118265
+    },
+    {
+      "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Cómo lo mencionamos en la introducción a los patrones de velas japonesas , vamos a encontrar una infinidad de patrones, y en esta ocasión le ha tocado a nuestro querido doji.",
+      "html": "Cómo lo mencionamos en la <a class=\"internal\" href=\"https://www.binaryteach.com/introduccion-a-patrones-de-velas-japonesas/\">introducción a los patrones de velas japonesas</a>, vamos a encontrar una infinidad de patrones, y en esta ocasión le ha tocado a nuestro querido doji."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Doji es una vela muy común, al igual que todas sus variaciones, empezamos con esta variación más conocida en ingles cómo Gravestone-Doji (Doji Lápida) y Dragonfly-Doji (Doji Libélula).",
+      "html": "El Doji es una vela muy común, al igual que todas sus variaciones, empezamos con esta variación más conocida en ingles cómo Gravestone-Doji (Doji Lápida) y Dragonfly-Doji (Doji Libélula)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Los doji son bastante peculiares, y muchos traders encuentran difícil su operación. Esto se debe a que es un patrón que puede representar una reversión o una continuidad, en la clase de ¿Cómo detectar si es un patrón de reversión o un patrón de continuidad? se explica cómo evitar caer en esta trampa.",
+      "html": "Los doji son bastante peculiares, y muchos traders encuentran difícil su operación. Esto se debe a que es un patrón que puede representar una reversión o una continuidad, en la clase de <a class=\"external\" href=\"https://youtu.be/ZsIaEAiTyFE\" rel=\"noopener nofollow\" target=\"_blank\">¿Cómo detectar si es un patrón de reversión o un patrón de continuidad? </a>se explica  cómo evitar caer en esta trampa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Te recomiendo que veas esa clase ahora, y tras finalizar todas las clases de patrones de velas. Lo encontrarás muy esclarecedor.",
+      "html": "Te recomiendo que veas esa clase ahora, y tras finalizar todas las clases de patrones de velas. Lo encontrarás muy esclarecedor."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Graveston-Doji y Dragonfly Doji se caracterizan por poder ser patrones de continuidad y reversión, tenemos que tener especial cuidado apoyados en la estructura del mercado para operarlo.",
+      "html": "El Graveston-Doji y Dragonfly Doji se caracterizan por poder ser patrones de continuidad y reversión, tenemos que tener especial cuidado apoyados en la estructura del mercado para operarlo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos patrones de velas poseen una larga mecha y un cuerpo pequeño o no poseen cuerpo. El Graveston-Doji es un patron bajista, que tiene el cuerpo en el extremo inferior.",
+      "html": "Estos patrones de velas poseen una larga mecha y un cuerpo pequeño o no poseen cuerpo. El Graveston-Doji es un patron bajista, que tiene el cuerpo en el extremo inferior."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Dragonfly Doji es un patrón alcista, que tiene el cuerpo en la parte superior, cómo puedes identificarlo en la siguiente imagen.",
+      "html": "El Dragonfly Doji es un patrón alcista, que tiene el cuerpo en la parte superior, cómo puedes identificarlo en la siguiente imagen."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-01.png",
+      "local": "data/assets/images/nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-01.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png",
+          "width": 286
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 286,
+      "height": 430,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico como puedes operar este patrón de vela tipo Doji:",
+      "html": "En el siguiente vídeo explico como puedes operar este patrón de vela tipo Doji:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "MnXaRCtdDjQ",
+      "url": "https://www.youtube.com/embed/MnXaRCtdDjQ?feature=oembed",
+      "title": "Trading con Doji Libélula y Doji Lápida -Patrones de Velas Opciones Binarias- Acción del precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-02.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

@@ -1,0 +1,27 @@
+﻿{
+  "id": "ss13",
+  "code": "SS13",
+  "name": "Patrón Seguro 13 (Doji de Giro tras 3 Velas Consecutivas)",
+  "classification": {
+    "market": "Rango de movimiento o Impulso",
+    "tradeType": "Reversión por Doji Contrario",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en un buen rango de movimiento.",
+    "Espere a que aparezcan tres velas verdes consecutivas o tres velas rojas consecutivas (mínimo 3 velas).",
+    "Después, espere a que aparezca un Doji y realice una operación.",
+    "REGLA ALCISTA: Si aparece un Doji verde después de 3 velas rojas, realice una operación en dirección ALCISTA (CALL) en la siguiente vela.",
+    "REGLA BAJISTA: Si aparece un Doji rojo después de 3 velas verdes, realice una operación en dirección BAJISTA (PUT) en la siguiente vela.",
+    "Además, compruebe que el indicador estocástico respalda su dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón Sure Shot en la cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 3
+  }
+}

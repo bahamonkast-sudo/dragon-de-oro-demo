@@ -1,0 +1,25 @@
+{
+  "id": "engulfing-bearish",
+  "code": "ENG_BEAR",
+  "name": "Engullimiento Bajista",
+  "classification": {
+    "market": "TRENDING",
+    "tradeType": "PUT"
+  },
+  "requirements": [
+    "La vela actual cubre completamente la vela anterior",
+    "Cierre de la vela actual por debajo del apertura de la vela anterior",
+    "Color de la vela actual diferente al anterior (roja sobre verde)"
+  ],
+  "snrRule": {
+    "nivel": "resistencia dinámica",
+    "tipoRuptura": "body"
+  },
+  "stochRule": "%K < %D y ambos por debajo de 50",
+  "mtgPolicy": "1_STEP",
+  "simulation": {
+    "velasBase": 3,
+    "triggerIndex": 1,
+    "resolutionCandle": 5
+  }
+}

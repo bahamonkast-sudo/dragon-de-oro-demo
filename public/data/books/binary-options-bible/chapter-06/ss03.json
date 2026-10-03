@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss03",
+  "code": "SS03",
+  "name": "Patrón Seguro 3 (Mágicos en V Avanzado)",
+  "classification": {
+    "market": "Tendencia",
+    "tradeType": "Ruptura Directa",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia.",
+    "Busque 1 vela verde y 2 velas rojas consecutivas (para CALL) o 1 vela roja y 2 velas verdes consecutivas (para PUT).",
+    "Trace una línea horizontal sobre las velas.",
+    "Espere a que el mercado llegue y rompa la línea horizontal y, a continuación, coloque la operación en la misma dirección (ENTRADA DIRECTA, sin vela de espera).",
+    "Oscilador estocástico predeterminado: para CALL línea verde sobre roja; para PUT línea roja sobre verde."
+  ],
+  "precautions": [
+    "Asegúrese de realizar prueba retrospectiva en el par de divisas antes de utilizar el patrón.",
+    "Siga siempre la tendencia, nunca opere en contra de ella.",
+    "Debe comprobar si SS2 o SS3 están funcionando en el mercado ese día en concreto. Si SS3 está funcionando, utilice SS3; si SS2 está funcionando, utilice SS2.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 8,
+    "triggerIndex": 6
+  }
+}

@@ -1,0 +1,3758 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragón de Oro - Consola FX Panel</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="ui/styles.css">
+    <style>
+      /* Tutorial floating button */
+      #DragonOro-tutorial-toggle {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        background: var(--accent-gold);
+        color: var(--bg-dark);
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: var(--shadow-gold-lift);
+        transition: var(--transition-fast);
+        z-index: 10000;
+      }
+      #DragonOro-tutorial-toggle.active { background: var(--success-green); }
+      /* Tooltip card */
+      #DragonOro-tutorial-tooltip {
+        position: fixed;
+        max-width: 280px;
+        background: rgba(12,10,22,0.94);
+        color: var(--text-white);
+        border: 1px solid rgba(212,175,55,0.3);
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        font-family: var(--font-main);
+        font-size: 0.84rem;
+        line-height: 1.4;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 0 20px rgba(212,175,55,0.2);
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+        z-index: 9999;
+      }
+      #DragonOro-tutorial-tooltip.show { opacity: 1; transform: translateY(0); }
+      #DragonOro-tutorial-tooltip .title { color: var(--accent-gold); font-weight: 600; margin-bottom: 0.3rem; }
+      #DragonOro-tutorial-tooltip .description { font-size: 0.82rem; line-height: 1.45; color: var(--text-white); margin-top: 0.2rem; }
+      #DragonOro-tutorial-tooltip .category { font-size: 0.72rem; opacity: 0.7; margin-top: 0.4rem; color: var(--accent-gold); letter-spacing: 0.3px; }
+      
+      /* Realce para botones laterales */
+      .sidebar-btn {
+        background: linear-gradient(145deg, rgba(40,45,60,0.5), rgba(20,24,34,0.7)) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        color: #ffffff !important;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.4) !important;
+      }
+      .sidebar-btn .btn-text {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.8px;
+      }
+      .sidebar-btn:hover {
+        background: linear-gradient(145deg, rgba(50,55,75,0.8), rgba(25,30,45,0.8)) !important;
+        border-color: rgba(212, 175, 55, 0.4) !important;
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15) !important;
+      }
+      .sidebar-btn:hover .btn-text {
+        color: var(--accent-gold) !important;
+      }
+      .sidebar-btn.emergency-warning {
+        border-color: rgba(255, 74, 74, 0.3) !important;
+      }
+      .sidebar-btn.emergency-warning:hover {
+        border-color: rgba(255, 74, 74, 0.6) !important;
+        box-shadow: 0 8px 25px rgba(255, 74, 74, 0.2) !important;
+      }
+      .sidebar-btn.emergency-warning:hover .btn-text {
+        color: #ff6e6e !important;
+      }
+    </style>
+  
+  <!-- Script Layers -->
+
+  <script src="core/calculator.js"></script>
+  <script src="system/timer.js"></script>
+  <script src="system/panic_button.js"></script>
+  <script src="ui/components/library.js"></script>
+  <script src="ui/components/visionarios_knowledge.js"></script>
+</head>
+<body>
+<button id="DragonOro-tutorial-toggle">❓</button>
+<div id="DragonOro-tutorial-tooltip">
+  <div class="title"></div>
+  <div class="description"></div>
+  <div class="category"></div>
+</div>
+
+
+
+  <!-- A. CABECERA GLOBAL: "REGLA" (Fija en la parte superior) -->
+  <header class="global-header">
+    
+    <!-- Lado Izquierdo: Logotipo de Dragón de Oro en Oro -->
+    <div class="logo-box">
+      <img src="ui/golden_visionarios_logo.png" class="header-DragonOro-logo" alt="Dragón de Oro Logo">
+      <div class="logo-text-group">
+        <h1 class="logo-main-title">DRAGÓN DE ORO</h1>
+        <h2 class="logo-subtitle">Traders</h2>
+      </div>
+    </div>
+
+    <!-- Lado Derecho: Bloque Regla -->
+    <div class="regla-oro-container" style="flex-grow: 1;"
+      data-tutorial='{"title":"Regla","desc":"Panel de métricas globales: Saldo Inicial (capital base configurado), Nuevo Saldo acumulado (arrastre automático permanente), Ganancia del día y metas.","category":"Cabecera","voice":true}'>
+      <div class="regla-oro-header-text" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.25rem; border-bottom: 1px dashed rgba(255,255,255,0.06); margin-bottom: 0.4rem;">
+        <span>🚀 Regla - Métricas del Día</span>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <span id="header-license-expiry" style="font-size: 0.7rem; font-family: monospace; color: #00b88a; letter-spacing: 0.5px; text-shadow: 0 0 5px rgba(0, 184, 138, 0.4);">Licencia: PREMIUM (Vence: --/--/----)</span>
+        </div>
+      </div>
+      <div class="regla-oro-body" style="display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 1rem; flex-wrap: nowrap; padding: 0.25rem 0;">
+        
+        <!-- Cell 1: Saldo Inicial -->
+        <div class="regla-cell" style="display: flex; flex-direction: column; min-width: 80px;"
+          data-tutorial='{"title":"Saldo Inicial","desc":"Capital base configurado. Referencia de partida. El saldo que realmente opera cada sesión es este valor más todas las ganancias y pérdidas acumuladas, y se conserva entre días.","category":"Métricas","voice":true}'>
+          <span class="regla-label" style="font-size: 0.62rem; color: var(--text-gray); font-weight: 600; text-transform: uppercase;">Saldo Inicial</span>
+          <span class="regla-value" id="header-capital-val" style="font-size: 1.05rem; color: var(--text-white); font-weight: 700; font-family: monospace;">$0</span>
+        </div>
+        
+        <div class="regla-divider" style="height: 30px; margin: 0 0.25rem;"></div>
+        
+        <!-- Cell 2: Nuevo Saldo (Acumulado) -->
+        <div class="regla-cell" style="display: flex; flex-direction: column; min-width: 80px;"
+          data-tutorial='{"title":"Nuevo Saldo (Acumulado)","desc":"Capital vigente total: Saldo Inicial + ganancias ya acumuladas de días anteriores + ganancias y pérdidas de las sesiones de hoy. Se arrastra solo, sin ningún botón: toda sesión nueva y el día siguiente arrancan sobre este saldo.","category":"Métricas","voice":true}'>
+          <span class="regla-label" style="font-size: 0.62rem; color: var(--text-gray); font-weight: 600; text-transform: uppercase;">Nuevo Saldo</span>
+          <span class="regla-value" id="header-current-balance-val" style="font-size: 1.05rem; color: var(--text-white); font-weight: 700; font-family: monospace; transition: all 0.3s ease;">$0</span>
+        </div>
+        
+        <div class="regla-divider" style="height: 30px; margin: 0 0.25rem;"></div>
+
+        <!-- Cell 3: Ganancia del Día (Acumulado) -->
+        <div class="regla-cell" style="display: flex; flex-direction: column; min-width: 80px;">
+          <span class="regla-label" style="font-size: 0.62rem; color: var(--text-gray); font-weight: 600; text-transform: uppercase;">Ganancia Día</span>
+          <span class="regla-value" id="header-daily-profit-val" style="font-size: 1.05rem; color: var(--neon-green); font-weight: 700; font-family: monospace;">$0</span>
+        </div>
+        
+        <div class="regla-divider" style="height: 30px; margin: 0 0.25rem;"></div>
+
+        <!-- Cell 4: Meta Ganancia Sesión -->
+        <div class="regla-cell" style="display: flex; flex-direction: column; min-width: 100px;">
+          <span class="regla-label" style="font-size: 0.62rem; color: var(--text-gray); font-weight: 600; text-transform: uppercase;">Meta Sesión</span>
+          <span class="regla-value" id="header-session-goal-val" style="font-size: 1.02rem; color: var(--accent-gold); font-weight: 700; font-family: monospace;">$0</span>
+        </div>
+        
+        <div class="regla-divider" style="height: 30px; margin: 0 0.25rem;"></div>
+
+        <!-- Cell 5: Meta del Día -->
+        <div class="regla-cell" style="display: flex; flex-direction: column; min-width: 100px;">
+          <span class="regla-label" style="font-size: 0.62rem; color: var(--text-gray); font-weight: 600; text-transform: uppercase;">Meta Día</span>
+          <span class="regla-value" id="header-day-goal-val" style="font-size: 1.02rem; color: var(--accent-gold); font-weight: 700; font-family: monospace;">$0</span>
+        </div>
+        
+      </div>
+    </div>
+
+  </header>
+
+  <!-- ASYMMETRIC APP LAYOUT -->
+  <main class="app-container">
+
+    <!-- B. COLUMNA LATERAL IZQUIERDA (Consola de Comandos Neumórfica) -->
+    <aside class="left-sidebar">
+      
+      <!-- Regla Traders Card -->
+      <div class="regla-oro-container" style="border: 1px solid rgba(212, 175, 55, 0.25); background: radial-gradient(circle at top, rgba(212, 175, 55, 0.06) 0%, var(--bg-card) 100%); margin-bottom: 1rem; padding: 1rem; border-radius: 12px; box-shadow: var(--shadow-inset);">
+        <div class="regla-oro-header-text" style="font-size: 0.85rem; color: var(--accent-gold); border-bottom: 1px dashed rgba(212, 175, 55, 0.2); padding-bottom: 0.5rem; margin-bottom: 0.6rem; font-weight: 700; font-family: 'Poppins', sans-serif; display: flex; align-items: center; gap: 0.3rem;">
+          Regla Dragón de Oro 🚀 :
+        </div>
+        <ul style="list-style: none; padding-left: 0; margin: 0; font-size: 0.72rem; line-height: 1.55; color: var(--text-white); font-weight: 500; display: flex; flex-direction: column; gap: 0.45rem;">
+          <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: var(--accent-gold); font-weight: bold; flex-shrink: 0;">✓</span>
+            <span>1 a 2 % Riesgo a Capital 💵💵</span>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: var(--accent-gold); font-weight: bold; flex-shrink: 0;">✓</span>
+            <span>3 a 5% ¿Pérdidas a Capital y STOP 🛑</span>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: var(--accent-gold); font-weight: bold; flex-shrink: 0;">✓</span>
+            <span>50% ¿Pérdidas a Ganancias y STOP 🛑</span>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: var(--accent-gold); font-weight: bold; flex-shrink: 0;">✓</span>
+            <span>1 hora máximo por sesión y STOP 🛑</span>
+          </li>
+          <li style="display: flex; align-items: flex-start; gap: 0.4rem;">
+            <span style="color: var(--accent-gold); font-weight: bold; flex-shrink: 0;">✓</span>
+            <span>Operar solo CONFIRMACIONES.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Toggle: Saldo Dinámico (Antes Usar Saldo Acumulado) -->
+      <div class="regla-oro-container" style="padding: 0.85rem; margin-bottom: 0.6rem; border: 1px solid rgba(212, 175, 55, 0.15); background: radial-gradient(circle at left, rgba(212, 175, 55, 0.03) 0%, var(--bg-card) 100%); box-shadow: var(--shadow-inset); display: flex; flex-direction: column; gap: 0.6rem;"
+        data-tutorial='{"title":"Saldo Dinámico Continuo","desc":"Activa esta opción para que el monto de operación crezca automáticamente minuto a minuto según vayas ganando. Calcula el porcentaje de riesgo siempre sobre tu saldo vivo actual.","category":"Configuración","voice":true}'>
+        <div style="font-size: 0.68rem; color: var(--accent-gold); font-weight: 700; letter-spacing: 0.5px; margin-bottom: 0.1rem;">📊 MODO DE OPERACIÓN</div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;">
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 0.68rem; color: var(--text-white); font-weight: 600;">📈 Saldo Dinámico Continuo</span>
+            <span style="font-size: 0.62rem; color: var(--text-gray); margin-top: 0.15rem;">Crece en vivo operación a operación</span>
+          </div>
+          <label class="neumorphic-toggle-switch">
+            <input type="checkbox" id="toggle-use-accumulated-balance" onchange="onToggleUseAccumulatedBalance(this.checked)">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        
+        <div style="margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed rgba(255,255,255,0.05);">
+          <button id="btn-update-base-balance" style="width: 100%; padding: 0.4rem; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); color: var(--accent-gold); border-radius: 4px; font-size: 0.65rem; font-weight: bold; cursor: pointer; transition: all 0.2s ease;" onclick="actualizarSaldoBaseConAcumulado()">
+            📥 Arrastrar Saldo (Fijar Nuevo Capital)
+          </button>
+        </div>
+      </div>
+
+      <!-- Toggle: Interés Compuesto -->
+      <div class="regla-oro-container" style="padding: 0.85rem; margin-bottom: 1rem; border: 1px solid rgba(0, 176, 116, 0.2); background: radial-gradient(circle at left, rgba(0, 176, 116, 0.04) 0%, var(--bg-card) 100%); box-shadow: var(--shadow-inset); display: flex; flex-direction: column; gap: 0.55rem;"
+        data-tutorial='{"title":"Interés Compuesto 🔄","desc":"Activa la estrategia de interés compuesto. A partir del minuto en que lo actives, los montos sugeridos siguen la secuencia 1%-2%-4% del capital. Las filas anteriores ya operadas NO se alteran. Si lo desactivas, el siguiente minuto sin resultado vuelve al monto estándar sugerido.","category":"Estrategia","voice":true}'>
+        <div style="font-size: 0.68rem; color: var(--accent-gold); font-weight: 700; letter-spacing: 0.5px; margin-bottom: 0.1rem;">🔄 INTERÉS COMPUESTO</div>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.4rem;">
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-size: 0.68rem; color: var(--text-white); font-weight: 600;">📈 Activar desde ahora</span>
+            <span id="label-compound-interest" style="font-size: 0.62rem; color: var(--success-green); margin-top: 0.15rem;">Inactivo</span>
+          </div>
+          <label class="neumorphic-toggle-switch">
+            <input type="checkbox" id="toggle-compound-interest" onchange="onToggleCompoundInterest(this.checked)">
+            <span class="toggle-slider glow-slider"></span>
+          </label>
+        </div>
+        <span style="font-size: 0.62rem; color: var(--text-gray); margin-top: 0.15rem;">Secuencia: <span style="color: var(--neon-green);">Base</span> ➔ <span style="color: var(--neon-green);">Base×1.83</span> ➔ <span style="color: var(--neon-green);">Base×3.35</span> · Se reinicia al perder o al 4to intento</span>
+      </div>
+
+      <!-- Panel de Límites Operativos -->
+      <div class="regla-oro-container" style="padding: 1rem; margin-bottom: 1.25rem; border: 1px solid rgba(255, 255, 255, 0.05); background: var(--bg-card); box-shadow: var(--shadow-inset);"
+        data-tutorial='{"title":"Límites Tácticos de Sesión","desc":"Muestra el rango de operación permitido en esta sesión: el monto mínimo configurado, el máximo (generalmente 2% de tu capital) y el límite de stop loss para proteger tus fondos.","category":"Límites","voice":true}'>
+        <div class="regla-oro-header-text" style="font-size: 0.72rem; color: var(--text-gray); border-bottom: 1px solid rgba(255,255,255,0.04); padding-bottom: 0.4rem; margin-bottom: 0.6rem; font-weight: 700; font-family: '\''Poppins'\'', sans-serif;">
+          🎯 Límites Tácticos de Sesión
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.72rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: var(--text-gray);">Monto Mínimo:</span>
+            <span id="header-min-val" style="color: var(--accent-gold); font-weight: bold; font-family: monospace;">$0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: var(--text-gray);">Monto Máx (2%):</span>
+            <span id="header-max-val" style="color: var(--text-white); font-weight: bold; font-family: monospace;">$0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="color: var(--text-gray);">Stop Loss de Sesión:</span>
+            <span id="header-stop-val" style="color: var(--neon-red); font-weight: bold; font-family: monospace;">$0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-buttons">
+
+        <!-- Biblioteca Dragón de Oro -->
+        <a href="library.html" class="sidebar-btn" id="btn-show-library" style="text-decoration: none;"
+          data-tutorial='{"title":"Biblioteca Dragón de Oro","desc":"Abre la biblioteca de Dragón de Oro: material de estudio, audios y lecciones sobre acción del precio y velas.","category":"Ayuda","voice":true}'>
+          <span class="btn-icon">📚</span>
+          <span class="btn-text">Biblioteca Dragón de Oro</span>
+        </a>
+        
+        
+
+        
+
+        <!-- Botón Manual de Uso -->
+        <a href="manual.html" class="sidebar-btn" id="btn-show-manual" style="text-decoration: none;"
+          data-tutorial='{"title":"Manual de Uso 📖","desc":"Accede al manual interactivo oficial para comprender el algoritmo de interés compuesto y gestión de riesgo.","category":"Ayuda","voice":true}'>
+          <span class="btn-icon">📖</span>
+          <span class="btn-text">Manual de Uso</span>
+        </a>
+
+        <!-- Button 1: Gestión de Riesgo -->
+        <button class="sidebar-btn" id="btn-config-target"
+          data-tutorial='{"title":"Gestión de Riesgo","desc":"Abre el panel de parámetros: capital inicial, gestión de riesgo, metas fraccionadas por sesión, stop loss y advertencias.","category":"Botones","voice":true}'>
+          <span class="btn-icon">⚙️</span>
+          <span class="btn-text">Gestión de Riesgo</span>
+        </button>
+
+
+
+        <!-- Button 3: Botón de pánico -->
+        <button class="sidebar-btn emergency-warning" id="btn-emergency-panic"
+          data-tutorial='{"title":"Botón de Pánico 🚨","desc":"Activa el modo de emergencia: bloquea la sesión, genera reporte y aplica el protocolo de protección de capital ante situación de pérdida extrema.","category":"Seguridad","voice":true}'>
+          <span class="btn-icon">🚨</span>
+          <span class="btn-text">Botón de pánico</span>
+        </button>
+
+      </div>
+
+      
+
+      <!-- Live warning notifier banner styled neumorphically -->
+      <div class="regla-oro-container" style="padding: 0.85rem;">
+        <span class="regla-label" style="font-size: 0.65rem; display: block; margin-bottom: 0.3rem;">Notificaciones</span>
+        <div id="session-alert-banner" class="alert-banner-neutral">
+          🚀 PROGRESO: EN EJECUCIÓN
+        </div>
+      </div>
+
+      <!-- Interactive Mini Equity worked hour graph in sidebar -->
+      <div class="regla-oro-container" style="padding: 0.85rem;"
+        data-tutorial='{"title":"Rendimiento de Sesión","desc":"Muestra una curva visual del avance de tus saldos operativos. Te permite analizar si te mantienes en tendencia ganadora o en una racha de retroceso.","category":"Gráficos","voice":true}'>
+        <span class="regla-label" style="font-size: 0.65rem; display: block; margin-bottom: 0.5rem;">Rendimiento de Sesión</span>
+        <div class="chart-svg-container" id="sidebar-equity-chart">
+          <!-- Live SVG injected -->
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem;">
+          <button id="btn-export-csv" class="neumorphic-btn" style="padding: 0.4rem; font-size: 0.72rem; text-transform: none;"
+            data-tutorial='{"title":"Exportar Excel","desc":"Genera un archivo CSV con toda la bitácora del día, incluyendo todas las sesiones horarias, montos, resultados y saldos.","category":"Herramientas","voice":true}'>
+            📊 Exportar Excel
+          </button>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- C. PANEL CENTRAL DERECHO (Bitácora Cronológica de 60 Filas) -->
+    <section class="main-content">
+      
+      <!-- Panel Operations Header -->
+      <div class="bitacora-header-row">
+        <h3 class="bitacora-title-text">60 Filas Exactas por Minuto de Sesión</h3>
+        
+        <div class="header-right-actions">
+          <!-- Neumorphic actualize bitacora button -->
+          <button id="btn-update-bitacora" class="neumorphic-update-btn"
+            data-tutorial='{"title":"Actualizar Bitácora","desc":"Recalcula manualmente todos los saldos y montos de la bitácora desde el inicio. Útil después de cambiar configuración.","category":"Bitácora","voice":true}'>
+            🔄 ACTUALIZAR BITÁCORA
+          </button>
+          
+          <!-- Close/Cut Session lock toggle button -->
+          <button id="btn-close-session" class="neumorphic-update-btn" style="background: rgba(255, 74, 74, 0.1); border-color: rgba(255, 74, 74, 0.2); color: #ff4a4a; display: none;" onclick="toggleCloseActiveSession()"
+            data-tutorial='{"title":"Cerrar / Reabrir Sesión","desc":"Congela la sesión activa: impide ediciones y guarda el historial final. Puedes reabrir si cometiste un error.","category":"Bitácora","voice":true}'>
+            🔒 CERRAR SESIÓN
+          </button>
+          
+          <!-- Giant timer clock display "60:00" -->
+          <span class="giant-timer-digits" id="session-countdown-clock"
+            data-tutorial='{"title":"Contador de Sesión","desc":"Temporizador regresivo de 60 minutos. La sesión dura máximo 1 hora según la Regla de Dragón de Oro.","category":"Timer","voice":true}'>60:00</span>
+        </div>
+      </div>
+
+      <!-- Inline daily goal target banner -->
+      <div id="goal-alert-banner-container"></div>
+
+      <!-- KPI Emotional/Tactical Badges -->
+      <div class="kpi-badges-container"
+        data-tutorial='{"title":"Panel de Rendimiento (KPI)","desc":"Muestra indicadores clave de tu operativa actual: racha activa, nivel de disciplina mantenido a lo largo del día y la efectividad o Win Rate global.","category":"Estadísticas","voice":true}'>
+        <div class="kpi-badge neumorphic-inset">
+          <span class="kpi-icon">🔥</span>
+          <div class="kpi-text">
+            <span class="kpi-label">Racha Activa</span>
+            <span class="kpi-value" id="kpi-racha-val">Neutral</span>
+          </div>
+        </div>
+        <div class="kpi-badge neumorphic-inset">
+          <span class="kpi-icon">🛡️</span>
+          <div class="kpi-text">
+            <span class="kpi-label">Índice de Disciplina</span>
+            <span class="kpi-value" id="kpi-disciplina-val">100%</span>
+          </div>
+        </div>
+        <div class="kpi-badge neumorphic-inset">
+          <span class="kpi-icon">🎯</span>
+          <div class="kpi-text">
+            <span class="kpi-label">Win Rate (Efectividad)</span>
+            <span class="kpi-value" id="kpi-winrate-val">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bitacora Table headers -->
+      <div class="bitacora-table-header"
+        data-tutorial='{"title":"Tabla de Bitácora","desc":"Registro minucioso enumerado por minuto. Aquí marcas tus victorias, derrotas y confirmaciones. Todo el capital se recalcula en tiempo real automáticamente según tu resultado.","category":"Registro Operativo","voice":true}'>
+        <div>Minuto</div>
+        <div>Monto de Operación</div>
+        <div>Win [+]</div>
+        <div>Loss [-]</div>
+        <div title="IM Impulso - RE Retroceso - CO Corrección - CN Continuidad - NI Ninguna">Estrategía Cumplida</div>
+        <div title="WIN: +83% del monto | LOSS: -100% del monto">Ganancia / Pérdida</div>
+        <div>Saldo Actualizado</div>
+      </div>
+
+      <!-- 60 exact rows populated dynamically by JavaScript -->
+      <div class="bitacora-list-container" id="bitacora-list">
+        <!-- JS injected rows -->
+      </div>
+
+      <!-- 🕒 CONSOLA DE SESIONES DIARIAS MULTITEMPORAL (COLOCADO AL FINAL ABAJO) -->
+      <div class="sessions-container-block" style="margin-top: 2rem; margin-bottom: 0;">
+        <div class="sessions-title-bar">
+          <h4 class="sessions-title-text">🕒 Historial de Bloques Horarios</h4>
+          
+          <div class="session-creator-bar" style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;"
+            data-tutorial='{"title":"Iniciar Nueva Sesión","desc":"Crea un nuevo bloque horario. La nueva sesión inicia automáticamente sobre el Nuevo Saldo acumulado, con todas las sumas y restas de las sesiones anteriores y de los días previos. No necesitas activar nada.","category":"Sesiones","voice":true}'>
+            <span class="session-creator-label">Fecha:</span>
+            <input type="date" id="creator-date-input" class="session-time-input" style="width: 130px; cursor: pointer; text-align: center; color: var(--accent-gold); font-family: monospace; font-size: 0.8rem; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 0.2rem 0.4rem;">
+            
+            <span class="session-creator-label">Hora:</span>
+            <input type="time" class="session-time-input" id="creator-time-input" style="width: 110px; cursor: pointer; text-align: center; color: var(--accent-gold); font-family: monospace; font-size: 0.8rem; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 0.2rem 0.4rem;">
+            
+            <!-- El checkbox 'Arrastrar Saldo' fue removido para evitar alterar el Saldo Inicial sin permiso. En su lugar se usa el toggle dinámico o el botón 'Actualizar Saldo Base' -->
+            
+            <button class="btn-session-create" onclick="iniciarNuevaSesionManual()">
+              ⚡ INICIAR SESIÓN
+            </button>
+          </div>
+        </div>
+        
+        <!-- Accordion items loaded dynamically by JavaScript -->
+        <div id="sessions-accordion-list"></div>
+      </div>
+
+    <!-- LEYENDA Y ESTADISTICAS DE CUMPLIMIENTO DE ESTRATEGIA -->
+        <div class="strategy-legend-block">
+          <div class="strategy-legend-head">
+            <span class="strategy-legend-title">CUMPLIMIENTO DE LA ESTRATEGIA</span>
+            <button class="btn-strategy-stats" id="btn-estr-stats" onclick="toggleEstadisticasEstrategia()">
+              📊 VER ESTADÍSTICAS
+            </button>
+          </div>
+
+          <div class="strategy-legend-items" id="strategy-legend-items"></div>
+
+          <p class="strategy-legend-help">
+            Clic en el botón de cada fila para marcar la categoría (IMP → RET → COR → CON → NIN).
+            Clic derecho para limpiar la marca.
+          </p>
+
+          <div class="strategy-stats-panel hidden" id="estr-stats-panel">
+            <div class="strategy-stats-title">RESULTADOS POR CATEGORÍA (sesión activa)</div>
+            <table class="strategy-stats-table" id="estr-stats-table"></table>
+          </div>
+        </div>
+
+    </section>
+
+  </main>
+
+  <!-- DYNAMIC TARGET CONFIGURATION SETTINGS MODAL -->
+  <div id="target-settings-modal" class="modal-overlay hidden">
+    <div class="modal-card" style="max-height: 90vh; overflow-y: auto;">
+      <h2 class="modal-title">Configuración del Riesgo</h2>
+      <p class="modal-desc">Modifica los parámetros tácticos de tu cuenta del Dragón de Oro.</p>
+      
+      <div class="input-group">
+        <label class="input-label">Divisa de Broker</label>
+        <div class="currency-switcher">
+          <button id="modal-currency-cop" class="currency-pill-btn active">COP</button>
+          <button id="modal-currency-usd" class="currency-pill-btn">USD</button>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Monto Mínimo de Operación (Opcional)</label>
+        <input type="number" id="modal-min-amount-input" class="neumorphic-input" min="1" value="4000">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Capital Inicial de Trabajo</label>
+        <input type="number" id="modal-capital-input" class="neumorphic-input" min="0" value="0" placeholder="Ej: 500000">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Porcentaje de Riesgo Base (%)</label>
+        <input type="number" id="modal-risk-input" class="neumorphic-input" min="0.1" max="10" step="0.1" value="1.0">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Meta Diaria Máxima (%)</label>
+        <input type="number" id="modal-daily-goal-input" class="neumorphic-input" min="1" max="100" value="15">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Número de Sesiones Diarias</label>
+        <input type="number" id="modal-sessions-count-input" class="neumorphic-input" min="1" max="10" value="3">
+      </div>
+
+      <!-- Bloque derivado dinámico -->
+      <div class="regla-oro-container" style="padding: 0.8rem; margin-top: 0.5rem; margin-bottom: 1rem; border: 1px dashed rgba(212, 175, 55, 0.4); background: rgba(0,0,0,0.2);">
+        <div style="font-size: 0.68rem; color: var(--accent-gold); font-weight: bold; margin-bottom: 0.4rem;">🎯 Proyección de Metas</div>
+        <div style="display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.72rem; color: var(--text-gray);">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Meta Diaria Total ($Z):</span>
+            <span id="derived-daily-val" style="color: var(--text-white); font-weight: bold; font-family: monospace;">$0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Meta por Sesión estimada ($X):</span>
+            <span id="derived-session-val" style="color: var(--success-green); font-weight: bold; font-family: monospace;">$0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Porcentaje por Sesión (%X):</span>
+            <span id="derived-session-pct" style="color: var(--success-green); font-weight: bold; font-family: monospace;">0%</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- hidden input for meta_sesion_pct compatibility -->
+      <input type="hidden" id="modal-goal-input" value="5">
+
+      <div class="input-group">
+        <label class="input-label">Límite de Pérdida de Sesión (%)</label>
+        <input type="number" id="modal-stoploss-input" class="neumorphic-input" min="1" max="100" value="5">
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Recalcular en Cascada desde Minuto</label>
+        <input type="number" id="modal-recalc-min-input" class="neumorphic-input" min="1" max="60" value="30">
+      </div>
+
+      <!-- Interés Compuesto hidden input kept for backward compat -->
+      <input type="hidden" id="modal-compound-input" value="0">
+      <input type="hidden" id="modal-suggest-dynamic-input" value="0">
+
+      <div id="modal-warning-box" style="margin-top: 1rem; display: none;"></div>
+
+      <!-- SECCIÓN DE ADVERTENCIAS POR VOZ -->
+      <div style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; text-align: left;">
+        <h4 style="color: var(--accent-gold); font-size: 0.85rem; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none;" onclick="toggleVoiceWarningsSection()">
+          <span>📢 Textos de Advertencias por Voz</span>
+          <span id="voice-warning-collapse-icon" style="font-size: 0.75rem;">▼</span>
+        </h4>
+        <div id="voice-warnings-config-section" style="display: none; flex-direction: column; gap: 0.85rem; padding-top: 0.5rem;">
+          <div class="input-group" style="margin-bottom: 0;">
+            <label class="input-label" style="font-size: 0.75rem; color: var(--text-gray); margin-bottom: 0.35rem;">Alerta de Retroceso (Drawdown)</label>
+            <input type="text" id="modal-speech-drawdown" class="neumorphic-input" style="font-size: 0.8rem; padding: 0.5rem; text-align: left;">
+          </div>
+          <div class="input-group" style="margin-bottom: 0;">
+            <label class="input-label" style="font-size: 0.75rem; color: var(--text-gray); margin-bottom: 0.35rem;">Tres Pérdidas Consecutivas</label>
+            <input type="text" id="modal-speech-streak" class="neumorphic-input" style="font-size: 0.8rem; padding: 0.5rem; text-align: left;">
+          </div>
+          <div class="input-group" style="margin-bottom: 0;">
+            <label class="input-label" style="font-size: 0.75rem; color: var(--text-gray); margin-bottom: 0.35rem;">Límite de Pérdida (Stop Loss)</label>
+            <input type="text" id="modal-speech-stoploss" class="neumorphic-input" style="font-size: 0.8rem; padding: 0.5rem; text-align: left;">
+          </div>
+          <div class="input-group" style="margin-bottom: 0;">
+            <label class="input-label" style="font-size: 0.75rem; color: var(--text-gray); margin-bottom: 0.35rem;">Alerta de Euforia</label>
+            <input type="text" id="modal-speech-euphoria" class="neumorphic-input" style="font-size: 0.8rem; padding: 0.5rem; text-align: left;">
+          </div>
+          <div class="input-group" style="margin-bottom: 0;">
+            <label class="input-label" style="font-size: 0.75rem; color: var(--text-gray); margin-bottom: 0.35rem;">Meta Diaria Alcanzada</label>
+            <input type="text" id="modal-speech-goal" class="neumorphic-input" style="font-size: 0.8rem; padding: 0.5rem; text-align: left;">
+          </div>
+          <div class="input-group" style="margin-top: 0.5rem; display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.75rem; color: var(--text-white); font-weight: 600;">🗣️ Voz del Tutorial Interactivo</span>
+            <label class="neumorphic-toggle-switch">
+              <input type="checkbox" id="modal-tutorial-voice-input" onchange="if(window.appConfig && window.appConfig.session){window.appConfig.session.tutorial_voice_enabled = this.checked; if(window.saveSettingsConfig) window.saveSettingsConfig();}">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+        <button id="btn-modal-cancel" class="neumorphic-btn" style="background: transparent; box-shadow: none;">Cancelar</button>
+        <button id="btn-modal-save" class="neumorphic-btn">GUARDAR Y CERRAR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CANDLE PATTERNS ACADEMIC MODAL OVERLAY -->
+  <div id="library-settings-modal" class="modal-overlay hidden">
+    <div class="modal-card" style="max-width: 600px; text-align: left;">
+      <h2 class="modal-title" style="text-align: center; margin-bottom: 1rem;">📚 Biblioteca de Traders</h2>
+      
+      <!-- Content from library.js injected inside library-body container -->
+      <div id="modal-academy-content" style="max-height: 450px; overflow-y: auto;"></div>
+      
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <button id="btn-library-close" class="neumorphic-btn" style="max-width: 200px;">Cerrar Biblioteca</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEDIA PLAYER MODAL OVERLAY (Netflix Style) -->
+  <div id="media-netflix-modal" class="modal-overlay hidden" style="z-index: 20000; background: rgba(0,0,0,0.92); backdrop-filter: blur(10px);">
+    <div class="modal-card" style="max-width: 900px; width: 95%; background: #0c0c0c; border: 1px solid #333; padding: 2rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2 class="modal-title" id="media-modal-title" style="color: #e50914; margin: 0; font-family: 'Space Grotesk', sans-serif; letter-spacing: 2px; font-size: 2rem; font-weight: 800;">DragónFlix</h2>
+        <button id="btn-media-close" style="background: transparent; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; transition: color 0.3s;" onmouseover="this.style.color='#e50914'" onmouseout="this.style.color='#fff'">✖</button>
+      </div>
+      
+      <!-- Video Player Area -->
+      <div id="media-player-container" style="width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 8px; margin-bottom: 2rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(0,0,0,0.9); border: 1px solid #222;">
+        <div style="text-align: center; color: #444;">
+          <span style="font-size: 3rem; opacity: 0.5;">▶</span>
+          <p id="media-placeholder-text" style="margin-top: 1rem; font-size: 0.9rem;">Selecciona un episodio para empezar a reproducir</p>
+        </div>
+        <!-- Iframe gets injected here -->
+      </div>
+
+      <!-- Horizontal scroll list -->
+      <h3 id="media-category-title" style="color: #fff; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600; border-left: 4px solid #e50914; padding-left: 0.8rem;">Catálogo</h3>
+      <div id="media-carousel" style="display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 1.5rem; scrollbar-width: thin; scrollbar-color: #e50914 #222;">
+        <!-- Dynamic items -->
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .netflix-card {
+      min-width: 240px;
+      height: 135px;
+      background: #1a1a1a;
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.2rem;
+      border: 1px solid #333;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .netflix-card:hover {
+      transform: scale(1.08) translateY(-5px);
+      box-shadow: 0 12px 30px rgba(229, 9, 20, 0.2);
+      border-color: #e50914;
+      z-index: 10;
+    }
+    .netflix-card h4 {
+      margin: 0; font-size: 0.9rem; color: #fff; z-index: 2; position: relative;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.9); font-weight: 600;
+    }
+    .netflix-card p {
+      margin: 0.3rem 0 0; font-size: 0.7rem; color: #bbb; z-index: 2; position: relative;
+      line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .netflix-card .play-icon {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.5);
+      font-size: 2.5rem; color: rgba(255,255,255,0.8); opacity: 0; transition: all 0.3s ease; z-index: 3;
+    }
+    .netflix-card:hover .play-icon {
+      opacity: 1; transform: translate(-50%, -50%) scale(1);
+    }
+    .netflix-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%); z-index: 1;
+    }
+  </style>
+
+  <!-- JAVASCRIPT LOGIC CONNECTIVITY AND DYNAMIC RENDERS -->
+  <script>
+    // Config properties synced with localStorage
+     let appConfig = {
+      session: {
+        capital_inicial: 0,
+        moneda: "COP",
+        riesgo_pct: 1.0,
+        meta_sesion_pct: 10,
+        meta_diaria_pct: 15,
+        stop_loss_pct: 5.0,
+        recalcular_minuto_cascada: 30,
+        usar_saldo_acumulado: false,
+        sugerir_saldo_dinamico: false,
+        audio_warnings: {
+          drawdown: "Advertencia de retroceso. Estás afectando tu capital, presta atención.",
+          streak: "Atención. Tres pérdidas consecutivas. Estás afectando tu capital, presta atención.",
+          stoploss: "Límite de pérdida excedido. Estás afectando tu capital, detén la sesión inmediatamente.",
+          euphoria: "Alerta de euforia. Estás arriesgando tus ganancias aseguradas, detén las operaciones ahora.",
+          goal: "Meta diaria alcanzada. Excelente trabajo, protege tus ganancias y cierra la sesión."
+        }
+      }
+    };
+
+    // Attempt configuration restore
+    if (localStorage.getItem('DragonOro_config')) {
+      try {
+        const stored = JSON.parse(localStorage.getItem('DragonOro_config'));
+        appConfig.session = stored.session || appConfig.session;
+        if (!appConfig.session.stop_loss_pct) {
+          appConfig.session.stop_loss_pct = 5.0;
+        }
+        if (appConfig.session.meta_diaria_pct === undefined) {
+          appConfig.session.meta_diaria_pct = 15;
+        }
+        if (appConfig.session.usar_saldo_acumulado === undefined) {
+          appConfig.session.usar_saldo_acumulado = false;
+        }
+        if (appConfig.session.sugerir_saldo_dinamico === undefined) {
+          appConfig.session.sugerir_saldo_dinamico = false;
+        }
+        if (!appConfig.session.audio_warnings) {
+          appConfig.session.audio_warnings = {
+            drawdown: "Advertencia de retroceso. Estás afectando tu capital, presta atención.",
+            streak: "Atención. Tres pérdidas consecutivas. Estás afectando tu capital, presta atención.",
+            stoploss: "Límite de pérdida excedido. Estás afectando tu capital, detén la sesión inmediatamente.",
+            euphoria: "Alerta de euforia. Estás arriesgando tus ganancias aseguradas, detén las operaciones ahora.",
+            goal: "Meta diaria alcanzada. Excelente trabajo, protege tus ganancias y cierra la sesión."
+          };
+        }
+        if (appConfig.session.tutorial_voice_enabled === undefined) {
+          appConfig.session.tutorial_voice_enabled = true; // Por defecto activo
+        }
+      } catch (e) {
+        console.error("Config restored failed:", e);
+      }
+    }
+
+    /* ==========================================================================
+       🏦 CAPITAL ACUMULADO PERMANENTE (Dragón de Oro)
+       El capital NO se reinicia al cambiar de día ni al abrir una nueva sesión:
+       se arrastra automáticamente con todas las sumas y restas de la bitácora.
+         - DragonOro_capital_base       : capital base configurado (referencia "Saldo Inicial")
+         - DragonOro_capital_acumulado  : capital vigente (base + profit ya bancado de días previos)
+       Durante el día el profit se calcula de las sesiones vivas; al cambiar de fecha
+       se "banca" en DragonOro_capital_acumulado para que nunca se pierda.
+       ========================================================================== */
+    const CAVE_CAPITAL_ACUMULADO = 'DragonOro_capital_acumulado';
+    const CAVE_BASE_DIA = 'DragonOro_base_dia';
+
+    function capitalBaseConfigurado() {
+      const v = Number(appConfig.session.capital_inicial);
+      return (isFinite(v) && v > 0) ? v : 40000;
+    }
+
+    // Profit (ganancias - pérdidas) ya consolidado de días anteriores. Es permanente.
+    function profitBancado() {
+      const guardado = Number(localStorage.getItem(CAVE_CAPITAL_ACUMULADO));
+      if (!isFinite(guardado) || guardado <= 0) return 0;
+      return guardado - capitalBaseConfigurado();
+    }
+
+    function guardarCapitalAcumulado(valor) {
+      const n = Number(valor);
+      if (isFinite(n) && n > 0) localStorage.setItem(CAVE_CAPITAL_ACUMULADO, String(n));
+      return n;
+    }
+
+    // Suma de todas las sesiones registradas hoy (incluida la activa).
+    function profitDeHoy() {
+      let total = 0;
+      const lista = (daySessions && daySessions.lista_sesiones) ? daySessions.lista_sesiones : {};
+      Object.keys(lista).forEach(k => {
+        const s = lista[k];
+        if (!s) return;
+        let ultimo = Number(s.capital_inicial) || 0;
+        (Array.isArray(s.rows) ? s.rows : []).forEach(r => {
+          if (r.currentBalance !== undefined && r.result !== null) {
+            ultimo = Number(r.currentBalance);
+          }
+        });
+        total += (ultimo - (Number(s.capital_inicial) || 0));
+      });
+      return total;
+    }
+
+    // Capital de referencia con el que arrancó el día (equity al inicio del día).
+    // Todas las sesiones de hoy parten de aquí, así que sumar el profit de cada
+    // una reconstruye el capital vigente sin perder nada.
+    function baseDelDia() {
+      const b = Number(localStorage.getItem(CAVE_BASE_DIA));
+      if (isFinite(b) && b > 0) return b;
+      return capitalBaseConfigurado() + profitBancado();
+    }
+
+    function guardarBaseDelDia(valor) {
+      const n = Number(valor);
+      if (isFinite(n) && n > 0) localStorage.setItem(CAVE_BASE_DIA, String(n));
+      return n;
+    }
+
+    // Capital vigente total = equity de inicio del día + profit acumulado de hoy.
+    function capitalVigenteTotal() {
+      return baseDelDia() + profitDeHoy();
+    }
+
+    // Consolida el capital al cerrar el día para que sobreviva al cambio de fecha.
+    function bancarProfitDelDia() {
+      const vigente = capitalVigenteTotal();
+      guardarCapitalAcumulado(vigente);
+      guardarBaseDelDia(vigente);
+      return vigente;
+    }
+
+    // Instances
+    let calculator;
+    let timer;
+    let panicButton;
+
+    // UI elements handles
+    const btnConfigTarget = document.getElementById('btn-config-target');
+    const btnTriggerLibrary = document.getElementById('btn-trigger-library');
+    const btnEmergencyPanic = document.getElementById('btn-emergency-panic');
+
+    const btnUpdateBitacora = document.getElementById('btn-update-bitacora');
+    const sessionClock = document.getElementById('session-countdown-clock');
+    const bitacoraList = document.getElementById('bitacora-list');
+
+    // Modals controls
+    const targetModal = document.getElementById('target-settings-modal');
+    const modalCurrencyCop = document.getElementById('modal-currency-cop');
+    const modalCurrencyUsd = document.getElementById('modal-currency-usd');
+    const modalCapitalInput = document.getElementById('modal-capital-input');
+    const modalRiskInput = document.getElementById('modal-risk-input');
+    const modalGoalInput = document.getElementById('modal-goal-input');
+    const modalDailyGoalInput = document.getElementById('modal-daily-goal-input');
+    const modalStoplossInput = document.getElementById('modal-stoploss-input');
+    const modalRecalcMinInput = document.getElementById('modal-recalc-min-input');
+    const modalCompoundInput = document.getElementById('modal-compound-input');
+    const modalSpeechDrawdown = document.getElementById('modal-speech-drawdown');
+    const modalSpeechStreak = document.getElementById('modal-speech-streak');
+    const modalSpeechStoploss = document.getElementById('modal-speech-stoploss');
+    const modalSpeechEuphoria = document.getElementById('modal-speech-euphoria');
+    const modalSpeechGoal = document.getElementById('modal-speech-goal');
+    const modalTutorialVoiceInput = document.getElementById('modal-tutorial-voice-input');
+    const btnModalCancel = document.getElementById('btn-modal-cancel');
+    const btnModalSave = document.getElementById('btn-modal-save');
+
+    const btnLibraryClose = document.getElementById('btn-library-close');
+
+    // MEDIA PLAYER EXPERIMENTAL LOGIC
+    const courseVideos = [
+      { id: "v1", mod: "Módulo I: Estructura y Bases", title: "Uso del Graficador", desc: "Aprender a leer el reporte de subasta OHLC (Apertura, Máximo, Mínimo, Cierre)." },
+      { id: "v2", mod: "Módulo I: Estructura y Bases", title: "Anatomía Técnica de la Vela", desc: "Comprender la psicología detrás del cuerpo real y las mechas (rechazo)." },
+      { id: "v3", mod: "Módulo I: Estructura y Bases", title: "Tendencias y Lateralidades", desc: "Identificar la ley de estructura (DOW) y comportamientos en rangos." },
+      { id: "v4", mod: "Módulo I: Estructura y Bases", title: "Operativa en Tendencias", desc: "Estrategias para operar el pullback (retroceso) en lugar del impulso." },
+      { id: "v5", mod: "Módulo I: Estructura y Bases", title: "Líneas de Tendencia", desc: "Medición del ángulo de ataque y validación de puntos." },
+      { id: "v6", mod: "Módulo I: Estructura y Bases", title: "Soporte y Resistencia", desc: "Zonas de memoria institucional y cambio de polaridad." },
+      { id: "v7", mod: "Módulo I: Estructura y Bases", title: "Rompimiento (Breakout)", desc: "Diferenciación entre rupturas reales y trampas institucionales." },
+      { id: "v8", mod: "Módulo I: Estructura y Bases", title: "S&R Microtendenciales", desc: "Puntos de entrada de alta precisión dentro de los impulsos." },
+      { id: "v9", mod: "Módulo I: Estructura y Bases", title: "Zonas Institucionales", desc: "Uso de números redondos y barreras psicológicas algorítmicas." },
+      { id: "v10", mod: "Módulo II: Lenguaje de Velas", title: "Patrones de Fuerza", desc: "Comparativa de cuerpos (Marubozu vs Doji) para predecir momentum." },
+      { id: "v11", mod: "Módulo II: Lenguaje de Velas", title: "Reversión (Rechazo)", desc: "Identificación de Pinbars (Martillos/Estrellas) en niveles clave." },
+      { id: "v12", mod: "Módulo II: Lenguaje de Velas", title: "Confirmación", desc: "Interpretación de la compresión de volatilidad antes de explosiones." },
+      { id: "v13", mod: "Módulo II: Lenguaje de Velas", title: "Vela Maestra", desc: "Análisis de la vela que absorbe el movimiento reciente." }
+    ];
+
+    const audioTracks = [
+      { id: "a1", mod: "Mindset", title: "Control Emocional", desc: "Respiración y foco antes de operar." },
+      { id: "a2", mod: "Mindset", title: "Disciplina de Acero", desc: "Cómo respetar la Regla a rajatabla." },
+      { id: "a3", mod: "Mindset", title: "Superar el Drawdown", desc: "Recuperación mental tras una racha perdedora." },
+      { id: "a4", mod: "Mindset", title: "Meditación de Apertura", desc: "Visualización del mercado (10 minutos)." }
+    ];
+
+    const mediaModal = document.getElementById('media-netflix-modal');
+    const mediaCarousel = document.getElementById('media-carousel');
+    const playerContainer = document.getElementById('media-player-container');
+    const mediaCatTitle = document.getElementById('media-category-title');
+    
+    document.getElementById('btn-media-close')?.addEventListener('click', () => {
+      mediaModal.classList.add('hidden');
+      playerContainer.innerHTML = '<div style="text-align: center; color: #444;"><span style="font-size: 3rem; opacity: 0.5;">▶</span><p id="media-placeholder-text" style="margin-top: 1rem; font-size: 0.9rem;">Selecciona un episodio para empezar a reproducir</p></div>';
+    });
+
+    function openMediaModal(type) {
+      mediaModal.classList.remove('hidden');
+      mediaCarousel.innerHTML = '';
+      
+      const items = type === 'courses' ? courseVideos : audioTracks;
+      mediaCatTitle.innerHTML = type === 'courses' ? "📚 <span style='color:var(--text-white)'>Catálogo:</span> Cursos de Trading" : "🎧 <span style='color:var(--text-white)'>Catálogo:</span> Mindset y Psicotrading";
+
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'netflix-card';
+        // Generar un fondo oscuro elegante basado en el índice
+        const hue = type === 'courses' ? 220 : 280; // Azul para cursos, Morado para audios
+        const lightness = Math.floor(Math.random() * 10) + 10;
+        card.style.background = `linear-gradient(135deg, hsl(${hue}, 40%, ${lightness}%), #050505)`;
+        card.innerHTML = `
+          <div class="play-icon">▶</div>
+          <h4>${item.title}</h4>
+          <p>${item.mod} - ${item.desc}</p>
+        `;
+        
+        card.addEventListener('click', () => {
+          playerContainer.innerHTML = `
+            <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);">
+              <span style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 0 10px ${type === 'courses' ? '#e50914' : '#c084fc'});">${type === 'courses' ? '🎬' : '🎙️'}</span>
+              <h2 style="color:#fff; margin-bottom:0.5rem; letter-spacing: 1px;">${item.title}</h2>
+              <p style="color:#aaa; font-size: 0.9rem;">${item.mod}</p>
+              
+              <div style="margin-top:2.5rem; width:60%; height:6px; background:#222; border-radius:3px; position:relative; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);">
+                <div style="width:30%; height:100%; background: ${type === 'courses' ? '#e50914' : '#c084fc'}; border-radius:3px; animation: progressFake 8s linear infinite;"></div>
+              </div>
+              <p style="color:#555; font-size: 0.7rem; margin-top: 0.8rem;">(Simulador Visual - Aquí iría el reproductor embebido)</p>
+            </div>
+            <style>@keyframes progressFake { 0% { width:0%; } 100% { width:100%; } }</style>
+          `;
+        });
+        
+        mediaCarousel.appendChild(card);
+      });
+    }
+
+    document.getElementById('btn-show-courses')?.addEventListener('click', () => openMediaModal('courses'));
+    document.getElementById('btn-show-audios')?.addEventListener('click', () => openMediaModal('audios'));
+
+    // Tactical Alert Audio State
+    let lastAudioState = {
+      drawdownTriggered: false,
+      consecutiveLossesAlerted: false,
+      stopLossAlerted: false,
+      euphoriaAlerted: false,
+      goalAlerted: false
+    };
+
+    // Native Web Audio Alert Synthesizer
+    function playTacticalSound(type) {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (!audioCtx) return;
+
+        if (type === 'siren') {
+          // Dual-frequency repeating alert siren (Emergency warning)
+          let time = audioCtx.currentTime;
+          const osc1 = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+          
+          osc1.type = 'sawtooth';
+          osc1.frequency.setValueAtTime(580, time);
+          // Modulate frequency to sound like an alarm siren
+          osc1.frequency.linearRampToValueAtTime(880, time + 0.25);
+          osc1.frequency.linearRampToValueAtTime(580, time + 0.5);
+          osc1.frequency.linearRampToValueAtTime(880, time + 0.75);
+          osc1.frequency.linearRampToValueAtTime(580, time + 1.0);
+
+          gainNode.gain.setValueAtTime(0.12, time);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, time + 1.25);
+
+          osc1.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+          
+          osc1.start(time);
+          osc1.stop(time + 1.25);
+        } else if (type === 'drawdown') {
+          // Heavy synth descending alert tone (Capital drawdown warning)
+          let time = audioCtx.currentTime;
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+
+          osc1.type = 'triangle';
+          osc1.frequency.setValueAtTime(220, time);
+          osc1.frequency.linearRampToValueAtTime(110, time + 0.65);
+
+          osc2.type = 'sawtooth';
+          osc2.frequency.setValueAtTime(224, time);
+          osc2.frequency.linearRampToValueAtTime(112, time + 0.65);
+
+          gainNode.gain.setValueAtTime(0.15, time);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, time + 0.85);
+
+          osc1.connect(gainNode);
+          osc2.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+
+          osc1.start(time);
+          osc2.start(time);
+          osc1.stop(time + 0.85);
+          osc2.stop(time + 0.85);
+        } else if (type === 'euphoria') {
+          // Modulated urgency warning alarm
+          let time = audioCtx.currentTime;
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+          
+          osc1.type = 'sawtooth';
+          osc1.frequency.setValueAtTime(880, time);
+          osc1.frequency.linearRampToValueAtTime(440, time + 0.15);
+          osc1.frequency.linearRampToValueAtTime(880, time + 0.3);
+          osc1.frequency.linearRampToValueAtTime(440, time + 0.45);
+          osc1.frequency.linearRampToValueAtTime(880, time + 0.6);
+          osc1.frequency.linearRampToValueAtTime(440, time + 0.75);
+          osc1.frequency.linearRampToValueAtTime(880, time + 0.9);
+          
+          osc2.type = 'sawtooth';
+          osc2.frequency.setValueAtTime(884, time);
+          osc2.frequency.linearRampToValueAtTime(442, time + 0.15);
+          osc2.frequency.linearRampToValueAtTime(884, time + 0.3);
+          osc2.frequency.linearRampToValueAtTime(442, time + 0.45);
+          osc2.frequency.linearRampToValueAtTime(884, time + 0.6);
+          osc2.frequency.linearRampToValueAtTime(442, time + 0.75);
+          osc2.frequency.linearRampToValueAtTime(884, time + 0.9);
+
+          gainNode.gain.setValueAtTime(0.18, time);
+          gainNode.gain.linearRampToValueAtTime(0.18, time + 0.8);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, time + 1.25);
+
+          osc1.connect(gainNode);
+          osc2.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+          
+          osc1.start(time);
+          osc2.start(time);
+          osc1.stop(time + 1.25);
+          osc2.stop(time + 1.25);
+        } else if (type === 'goal') {
+          // Triumph arpeggio celebration sound
+          let time = audioCtx.currentTime;
+          const osc = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+          
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(523.25, time); // C5
+          osc.frequency.setValueAtTime(659.25, time + 0.12); // E5
+          osc.frequency.setValueAtTime(783.99, time + 0.24); // G5
+          osc.frequency.setValueAtTime(1046.50, time + 0.36); // C6
+          
+          gainNode.gain.setValueAtTime(0.15, time);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, time + 1.2);
+          
+          osc.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+          
+          osc.start(time);
+          osc.stop(time + 1.25);
+        }
+      } catch (e) {
+        console.error("Audio Context error:", e);
+      }
+    }
+
+    // Native Web Speech Synthesis warning player
+    function speakWarning(text, append = false, pitch = 1.0, forceMale = false) {
+      try {
+        if ('speechSynthesis' in window) {
+          // Cancel ongoing speech to avoid queued announcements overlap ONLY if not appending
+          if (!append) {
+            window.speechSynthesis.cancel();
+          }
+          const utterance = new SpeechSynthesisUtterance(text);
+          utterance.lang = 'es-ES';
+          utterance.rate = 0.95;
+          utterance.pitch = pitch;
+          
+          // Attempt to find a native male voice if requested
+          if (forceMale) {
+            const voices = window.speechSynthesis.getVoices();
+            const maleVoice = voices.find(v => v.lang.startsWith('es') && (v.name.toLowerCase().includes('pablo') || v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('hombre')));
+            if (maleVoice) {
+              utterance.voice = maleVoice;
+            } else {
+              // Fallback to deeper pitch for masculine effect if no explicit male voice found
+              utterance.pitch = 0.3;
+              utterance.rate = 0.85; 
+            }
+          }
+          
+          window.speechSynthesis.speak(utterance);
+        }
+      } catch (e) {
+        console.error("Speech Synthesis error:", e);
+      }
+    }
+
+    // 60-Row dynamic items ledger
+        // Banderas estrictas de una sola emision por racha
+    window.rachaDisparadaWin5 = false;
+    window.rachaDisparadaLoss2 = false;
+
+    function verificarAlertaVozEstricta(tipoRacha, conteo) {
+      if (!('speechSynthesis' in window)) return;
+
+      if (tipoRacha === 'win') {
+        // Se resetea el seguro de perdidas al cambiar de racha
+        window.rachaDisparadaLoss2 = false;
+
+        if (conteo === 5 && !window.rachaDisparadaWin5) {
+          window.speechSynthesis.cancel();
+          const msg = new SpeechSynthesisUtterance("Vas muy bien, recuerda tu plan de trading, no caigas en euforia, no arriesgues tu capital.");
+          msg.lang = 'es-ES';
+          msg.rate = 0.95;
+          window.speechSynthesis.speak(msg);
+          window.rachaDisparadaWin5 = true;
+        } else if (conteo !== 5) {
+          // Si es 6, 7 o mayor: silencio total.
+          // Solo si la racha cae por debajo de 5 se rehabilita para una futura racha
+          if (conteo < 5) window.rachaDisparadaWin5 = false;
+        }
+      } else if (tipoRacha === 'loss') {
+        // Se resetea el seguro de ganancias al cambiar de racha
+        window.rachaDisparadaWin5 = false;
+
+        if (conteo === 2 && !window.rachaDisparadaLoss2) {
+          window.speechSynthesis.cancel();
+          const msg = new SpeechSynthesisUtterance("Atención. Has acumulado dos pérdidas. Estás cerca de tu límite máximo. Aplica disciplina.");
+          msg.lang = 'es-ES';
+          msg.rate = 0.95;
+          window.speechSynthesis.speak(msg);
+          window.rachaDisparadaLoss2 = true;
+        } else if (conteo !== 2) {
+          // Si es 3, 4 o mayor: silencio total.
+          if (conteo < 2) window.rachaDisparadaLoss2 = false;
+        }
+      } else {
+        window.rachaDisparadaWin5 = false;
+        window.rachaDisparadaLoss2 = false;
+      }
+    }
+    let sessionRows = [];
+    window.alertasSecuencia = {
+      win5: false,
+      win6: false,
+      loss2: false,
+      loss3: false
+    };
+    window.alertaEuforiaSonada = false;
+    window.conteoEuforiaAlertas = 0;
+
+    // Multitemporal Day Sessions State
+    let daySessions = {
+      fecha_actual: new Date().toISOString().split('T')[0],
+      active_session_key: '',
+      lista_sesiones: {}
+    };
+    let currentSessionKey = '';
+    let activeSessionStartCapital = 0;
+
+    async function fetchLicenseStatus() {
+      try {
+        const res = await fetch('/api/license-status');
+        const data = await res.json();
+        const el = document.getElementById('header-license-expiry');
+        if (el) {
+          if (data.valid && data.data) {
+            const expDate = new Date(data.data.expiry);
+            const day = String(expDate.getDate()).padStart(2, '0');
+            const month = String(expDate.getMonth() + 1).padStart(2, '0');
+            const year = expDate.getFullYear();
+            
+            el.textContent = `Licencia: ${data.data.type || 'ACTIVA'} (Vence: ${day}/${month}/${year})`;
+            el.style.color = '#00b88a';
+            el.style.textShadow = '0 0 10px rgba(0, 184, 138, 0.4)';
+          } else {
+            el.textContent = `Licencia: SIN ACTIVAR (Vence: --/--/----)`;
+            el.style.color = '#ff4a4a';
+            el.style.textShadow = '0 0 10px rgba(255, 74, 74, 0.4)';
+          }
+        }
+      } catch (e) {
+        console.error("Error fetching license status:", e);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      // Fetch active license status and expiry
+      fetchLicenseStatus();
+
+      // Restore Day Sessions from LocalStorage
+      const todayStr = new Date().toISOString().split('T')[0];
+      if (localStorage.getItem('DragonOro_day_sessions')) {
+        try {
+          const storedSessions = JSON.parse(localStorage.getItem('DragonOro_day_sessions'));
+          if (storedSessions && storedSessions.fecha_actual === todayStr) {
+            daySessions = storedSessions;
+            currentSessionKey = daySessions.active_session_key;
+          } else {
+            // Nuevo día: se reinician las sesiones del día, pero el capital
+            // acumulado se conserva permanentemente (bancamos el profit de ayer).
+            bancarProfitDelDia();
+            daySessions.fecha_actual = todayStr;
+            daySessions.active_session_key = '';
+            daySessions.lista_sesiones = {};
+            localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+          }
+        } catch (e) {
+          console.error("Day sessions restore failed:", e);
+        }
+      }
+
+      // Create instances
+      calculator = new DragonOroCalculator(appConfig);
+      timer = new SessionTimer(60);
+      panicButton = new PanicButton();
+
+      // Auto-start timer immediately (no login required)
+      timer.start();
+
+      // Load academy candles database
+      DragonOroLibrary.render('modal-academy-content');
+
+      // Excel export and balance carrying hooks
+      document.getElementById('btn-export-csv').addEventListener('click', exportExcelCSV);
+      
+      // Initialize creator-time-input default value to current time
+      const timeInput = document.getElementById('creator-time-input');
+      if (timeInput) {
+        const now = new Date();
+        const hrStr = String(now.getHours()).padStart(2, '0');
+        const minStr = String(now.getMinutes()).padStart(2, '0');
+        timeInput.value = `${hrStr}:${minStr}`;
+      }
+
+      const dateInput = document.getElementById('creator-date-input');
+      if (dateInput) {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        dateInput.value = `${yyyy}-${mm}-${dd}`;
+      }
+
+      // Restore toggle states from config
+      const initAB = document.getElementById('toggle-use-accumulated-balance');
+      if (initAB) initAB.checked = !!appConfig.session.usar_saldo_acumulado;
+
+      const initCI = document.getElementById('toggle-compound-interest');
+      if (initCI) initCI.checked = !!appConfig.session.interes_compuesto;
+      updateICLabel(!!appConfig.session.interes_compuesto, appConfig.session.ic_activado_en_minuto);
+
+      // No sidebar toggles to initialize (simplified UI)
+
+      // Generate the initial chronological 60-rows and paint their balances
+      recalcularBitacoraCompleta();
+      renderLeyendaEstrategia();
+      renderEstadisticasEstrategia();
+
+      if (localStorage.getItem('DragonOro_just_activated') === 'true') {
+        localStorage.removeItem('DragonOro_just_activated');
+        setTimeout(() => {
+          speakWarning("Bienvenido al Dragón de Oro. Tu licencia ha sido activada con éxito. Por favor, configura tu capital inicial para comenzar.");
+        }, 1000);
+      }
+    });
+
+    function saveSettingsConfig() {
+      localStorage.setItem('DragonOro_config', JSON.stringify(appConfig));
+    }
+
+    // ⚙️ Fija meta diaria Settings Modal Interactions
+    btnConfigTarget.addEventListener('click', () => {
+      syncModalInputsFromConfig();
+      targetModal.classList.remove('hidden');
+    });
+
+    btnModalCancel.addEventListener('click', () => {
+      targetModal.classList.add('hidden');
+      targetModal.style.display = 'none';
+      document.querySelectorAll('#target-settings-modal, .modal-backdrop, .backdrop, [class*="backdrop"]').forEach(el => {
+        el.classList.add('hidden');
+        el.style.display = 'none';
+        el.style.pointerEvents = 'none';
+      });
+    });
+
+    // Toggle divisa buttons in modal
+    let selectedModalDivisa = "COP";
+    modalCurrencyCop.addEventListener('click', () => {
+      selectedModalDivisa = "COP";
+      modalCurrencyCop.classList.add('active');
+      modalCurrencyUsd.classList.remove('active');
+      const minInput = document.getElementById('modal-min-amount-input');
+      if (minInput) {
+        minInput.min = 4000;
+        if (parseFloat(minInput.value) < 4000) minInput.value = 4000;
+      }
+    });
+
+    modalCurrencyUsd.addEventListener('click', () => {
+      selectedModalDivisa = "USD";
+      modalCurrencyUsd.classList.add('active');
+      modalCurrencyCop.classList.remove('active');
+      const minInput = document.getElementById('modal-min-amount-input');
+      if (minInput) {
+        minInput.min = 1;
+        if (parseFloat(minInput.value) < 1) minInput.value = 1;
+      }
+    });
+
+    function syncModalInputsFromConfig() {
+      selectedModalDivisa = appConfig.session.moneda;
+      const minInput = document.getElementById('modal-min-amount-input');
+      
+      if (selectedModalDivisa === "COP") {
+        modalCurrencyCop.classList.add('active');
+        modalCurrencyUsd.classList.remove('active');
+        if (minInput) minInput.min = 4000;
+      } else {
+        modalCurrencyUsd.classList.add('active');
+        modalCurrencyCop.classList.remove('active');
+        if (minInput) minInput.min = 1;
+      }
+
+      if (minInput) minInput.value = appConfig.session.monto_minimo_usuario || (selectedModalDivisa === 'COP' ? 4000 : 1);
+      
+      modalCapitalInput.value = appConfig.session.capital_inicial;
+      modalRiskInput.value = appConfig.session.riesgo_pct;
+      if (modalDailyGoalInput) {
+        modalDailyGoalInput.value = appConfig.session.meta_diaria_pct || 15;
+      }
+      const sessionsInput = document.getElementById('modal-sessions-count-input');
+      if (sessionsInput) {
+        sessionsInput.value = appConfig.session.numero_sesiones || 3;
+      }
+
+      modalStoplossInput.value = appConfig.session.stop_loss_pct || 5.0;
+      modalRecalcMinInput.value = appConfig.session.recalcular_minuto_cascada;
+      modalCompoundInput.checked = !!appConfig.session.interes_compuesto;
+      const modalSD = document.getElementById('modal-suggest-dynamic-input');
+      if (modalSD) {
+        modalSD.checked = !!appConfig.session.sugerir_saldo_dinamico;
+      }
+      if (appConfig.session.audio_warnings) {
+        if (modalSpeechDrawdown) modalSpeechDrawdown.value = appConfig.session.audio_warnings.drawdown || "";
+        if (modalSpeechStreak) modalSpeechStreak.value = appConfig.session.audio_warnings.streak || "";
+        if (modalSpeechStoploss) modalSpeechStoploss.value = appConfig.session.audio_warnings.stoploss || "";
+        if (modalSpeechEuphoria) modalSpeechEuphoria.value = appConfig.session.audio_warnings.euphoria || "";
+        if (modalSpeechGoal) modalSpeechGoal.value = appConfig.session.audio_warnings.goal || "";
+      }
+      if (modalTutorialVoiceInput) {
+        modalTutorialVoiceInput.checked = !!appConfig.session.tutorial_voice_enabled;
+      }
+      updateDerivedGoalSettings();
+    }
+
+    function updateDerivedGoalSettings() {
+      const dailyGoalPct = parseFloat(modalDailyGoalInput.value) || 0;
+      const sessionsInput = document.getElementById('modal-sessions-count-input');
+      const sessionsCount = parseInt(sessionsInput ? sessionsInput.value : 3) || 1;
+      const capital = parseFloat(modalCapitalInput.value) || 0;
+
+      // Calcular meta diaria en valor ($Z)
+      const dailyGoalVal = capital * (dailyGoalPct / 100);
+      
+      // Calcular meta por sesión ($X) y porcentaje (%X)
+      const sessionGoalPct = dailyGoalPct / sessionsCount;
+      const sessionGoalVal = dailyGoalVal / sessionsCount;
+
+      // Actualizar la UI
+      const valZ = document.getElementById('derived-daily-val');
+      const valX = document.getElementById('derived-session-val');
+      const pctX = document.getElementById('derived-session-pct');
+      
+      const currency = selectedModalDivisa === 'COP' ? 'COP' : 'USD';
+      
+      function fmt(val) {
+        if (currency === 'COP') return '$' + Math.round(val).toLocaleString('es-CO');
+        return '$' + val.toFixed(2);
+      }
+
+      if (valZ) valZ.textContent = fmt(dailyGoalVal);
+      if (valX) valX.textContent = fmt(sessionGoalVal);
+      if (pctX) pctX.textContent = sessionGoalPct.toFixed(2) + '%';
+      
+      // Keep hidden input updated for compatibility with rest of system
+      if (modalGoalInput) modalGoalInput.value = sessionGoalPct;
+
+      const warningBox = document.getElementById('modal-warning-box');
+      if (warningBox) warningBox.style.display = 'none'; // Error de fundamento removido
+      btnModalSave.style.opacity = '1';
+      btnModalSave.style.pointerEvents = 'auto';
+    }
+
+    window.toggleVoiceWarningsSection = function() {
+      const sec = document.getElementById('voice-warnings-config-section');
+      const icon = document.getElementById('voice-warning-collapse-icon');
+      if (sec) {
+        if (sec.style.display === 'none') {
+          sec.style.display = 'flex';
+          if (icon) icon.textContent = '▲';
+        } else {
+          sec.style.display = 'none';
+          if (icon) icon.textContent = '▼';
+        }
+      }
+    };
+
+    if (modalDailyGoalInput) {
+      modalDailyGoalInput.addEventListener('input', updateDerivedGoalSettings);
+    }
+    const sessionsInput = document.getElementById('modal-sessions-count-input');
+    if (sessionsInput) {
+      sessionsInput.addEventListener('input', updateDerivedGoalSettings);
+    }
+    if (modalCapitalInput) {
+      modalCapitalInput.addEventListener('input', updateDerivedGoalSettings);
+    }
+
+    btnModalSave.addEventListener('click', () => {
+      appConfig.session.moneda = selectedModalDivisa;
+      
+      const minInput = document.getElementById('modal-min-amount-input');
+      if (minInput) {
+        let minVal = parseFloat(minInput.value) || 0;
+        const legalMin = selectedModalDivisa === 'COP' ? 4000 : 1;
+        if (minVal < legalMin) minVal = legalMin;
+        appConfig.session.monto_minimo_usuario = minVal;
+        minInput.value = minVal;
+      }
+
+      appConfig.session.capital_inicial = parseFloat(modalCapitalInput.value) || 0;
+      if (currentSessionKey && daySessions.lista_sesiones[currentSessionKey]) {
+        daySessions.lista_sesiones[currentSessionKey].capital_inicial = appConfig.session.capital_inicial;
+        localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      }
+      appConfig.session.riesgo_pct = parseFloat(modalRiskInput.value) || 1.0;
+      
+      const sessionsInput = document.getElementById('modal-sessions-count-input');
+      appConfig.session.numero_sesiones = parseInt(sessionsInput ? sessionsInput.value : 3) || 3;
+      
+      if (modalDailyGoalInput) {
+        appConfig.session.meta_diaria_pct = parseFloat(modalDailyGoalInput.value) || 15;
+      }
+      // Derivar e inyectar meta fraccionada
+      appConfig.session.meta_sesion_pct = appConfig.session.meta_diaria_pct / appConfig.session.numero_sesiones;
+      
+      appConfig.session.stop_loss_pct = parseFloat(modalStoplossInput.value) || 5.0;
+      appConfig.session.recalcular_minuto_cascada = parseInt(modalRecalcMinInput.value) || 30;
+      appConfig.session.interes_compuesto = !!modalCompoundInput.checked;
+
+      const modalSD = document.getElementById('modal-suggest-dynamic-input');
+      if (modalSD) {
+        appConfig.session.sugerir_saldo_dinamico = !!modalSD.checked;
+      }
+
+      if (!appConfig.session.audio_warnings) {
+        appConfig.session.audio_warnings = {};
+      }
+      if (modalSpeechDrawdown) appConfig.session.audio_warnings.drawdown = modalSpeechDrawdown.value.trim();
+      if (modalSpeechStreak) appConfig.session.audio_warnings.streak = modalSpeechStreak.value.trim();
+      if (modalSpeechStoploss) appConfig.session.audio_warnings.stoploss = modalSpeechStoploss.value.trim();
+      if (modalSpeechEuphoria) appConfig.session.audio_warnings.euphoria = modalSpeechEuphoria.value.trim();
+      if (modalSpeechGoal) appConfig.session.audio_warnings.goal = modalSpeechGoal.value.trim();
+      
+      if (modalTutorialVoiceInput) {
+        appConfig.session.tutorial_voice_enabled = modalTutorialVoiceInput.checked;
+      }
+
+      // Sync the left sidebar toggle lever
+      const sidebarCI = document.getElementById('toggle-compound-interest');
+      if (sidebarCI) {
+        sidebarCI.checked = appConfig.session.interes_compuesto;
+      }
+
+      const sidebarAB = document.getElementById('toggle-use-accumulated-balance');
+      if (sidebarAB) {
+        sidebarAB.checked = !!appConfig.session.usar_saldo_acumulado;
+      }
+
+      const sidebarSD = document.getElementById('toggle-suggest-dynamic-balance');
+      if (sidebarSD) {
+        sidebarSD.checked = !!appConfig.session.sugerir_saldo_dinamico;
+      }
+
+      saveSettingsConfig();
+      
+      // Update calculator settings
+      calculator.capitalInicial = appConfig.session.capital_inicial;
+      calculator.moneda = appConfig.session.moneda;
+
+      targetModal.classList.add('hidden');
+      targetModal.style.display = 'none';
+      document.querySelectorAll('#target-settings-modal, .modal-backdrop, .backdrop, [class*="backdrop"]').forEach(el => {
+        el.classList.add('hidden');
+        el.style.display = 'none';
+        el.style.pointerEvents = 'none';
+      });
+      
+      // Full recalculate cascade
+      recalcularBitacoraCompleta();
+    });
+
+    // 📚 Biblioteca academic trigger - Toggles the sliding curtain overlay panel
+    if (btnTriggerLibrary) {
+      btnTriggerLibrary.addEventListener('click', () => {
+        console.log('Toggling slide-over library panel...');
+        if (window.DragonOroKnowledge) {
+          window.DragonOroKnowledge.toggle();
+        } else {
+          console.warn('window.DragonOroKnowledge is undefined! Falling back to legacy modal.');
+          libraryModal.classList.remove('hidden');
+        }
+      });
+    }
+
+    btnLibraryClose.addEventListener('click', () => {
+      console.log('Closing legacy library modal...');
+      libraryModal.classList.add('hidden');
+    });
+
+    // 🚨 Botón de pánico trigger
+    btnEmergencyPanic.addEventListener('click', () => {
+      panicButton.activate();
+    });
+
+    // Manual recalculation trigger on button click
+    btnUpdateBitacora.addEventListener('click', () => {
+      recalcularBitacoraCompleta();
+    });
+
+    function insertQuarterDivider(blockTitle, blockSubtitle, blockMinutes) {
+      const div = document.createElement('div');
+      div.className = 'session-quarter-divider';
+      div.innerHTML = `
+        <span class="quarter-tag-glow">${blockTitle}</span>
+        <span class="quarter-desc">${blockSubtitle}</span>
+        <span class="quarter-time-span">${blockMinutes}</span>
+      `;
+      bitacoraList.appendChild(div);
+    }
+
+    // Parse start hour and minute from timeKey (supports 12h AM/PM and 24h formats)
+    function parseTimeKey(timeKey) {
+      if (!timeKey) return { hours: 6, minutes: 0 };
+      const matches12 = timeKey.match(/^(\d+):(\d+)\s+(AM|PM)$/i);
+      if (matches12) {
+        let hours = parseInt(matches12[1]);
+        const minutes = parseInt(matches12[2]);
+        const period = matches12[3].toUpperCase();
+        if (period === 'PM' && hours < 12) hours += 12;
+        if (period === 'AM' && hours === 12) hours = 0;
+        return { hours, minutes };
+      }
+      const matches24 = timeKey.match(/^(\d+):(\d+)$/);
+      if (matches24) {
+        return { hours: parseInt(matches24[1]), minutes: parseInt(matches24[2]) };
+      }
+      return { hours: 6, minutes: 0 };
+    }
+
+    // Generate chronological minute log rows
+    // Recalcula y repinta toda la bitácora de la sesión activa.
+    // Entry point de todos los cambios del usuario: monto digitado, WIN y LOSS.
+    // Guarda un guardia de reentrada porque generateBitacoraLedger ya calcula todo.
+    let _recalcEnCurso = false;
+    function recalcularBitacoraCompleta() {
+      if (_recalcEnCurso) return;
+      _recalcEnCurso = true;
+      try {
+        // Las sesiones cerradas quedan congeladas: no se recalculan sus filas.
+        const act = daySessions.lista_sesiones[currentSessionKey];
+        if (act && act.isClosed) {
+          renderSessionsAccordion();
+          if (typeof window.sincronizarConsolaMetricas === 'function') {
+            window.sincronizarConsolaMetricas();
+          }
+          return;
+        }
+        // 1. Reconstruye/repinta las 60 filas del DOM
+        generateBitacoraLedger();
+        // 2. Recalcula saldos, curva y cabecera sobre esas filas
+        _motorCalculoBitacora();
+        // 3. Persiste y refresca las metricas del panel
+        const s = daySessions.lista_sesiones[currentSessionKey];
+        if (s) {
+          s.rows = sessionRows;
+          localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+        }
+        if (typeof window.sincronizarConsolaMetricas === 'function') {
+          window.sincronizarConsolaMetricas();
+        }
+      } finally {
+        _recalcEnCurso = false;
+      }
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // CUMPLIMIENTO DE ESTRATEGIA POR FILA
+    // Un unico boton por fila que recorre las 5 categorias en orden.
+    // El valor vive en row.estrategia, asi que sobrevive al repintado.
+    // Click izq. = siguiente categoria. Click der. = limpiar.
+    // ══════════════════════════════════════════════════════════
+    const ESTRATEGIAS_BITACORA = [
+      { key: 'impulso',     abbr: 'IM', label: 'Impulso',     color: '#00b074' },
+      { key: 'retroceso',   abbr: 'RE', label: 'Retroceso',   color: '#4a9eff' },
+      { key: 'correccion',  abbr: 'CO', label: 'Corrección',  color: '#ff9f43' },
+      { key: 'continuidad', abbr: 'CN', label: 'Continuidad', color: '#d4af37' },
+      { key: 'ninguna',     abbr: 'NI', label: 'Ninguna',     color: '#ff4a4a' }
+    ];
+
+    function _estrategiaPorKey(key) {
+      return ESTRATEGIAS_BITACORA.find(e => e.key === key) || null;
+    }
+
+    // Genera los 5 checks con abreviatura de 2 letras, en una sola linea.
+    function _htmlPickerEstrategia(rowNum, key) {
+      return ESTRATEGIAS_BITACORA.map(e => `
+        <label class="estr-chip${e.key === key ? ' on' : ''}" style="--c:${e.color}" title="${e.label}">
+          <input type="checkbox" class="estr-chk"${e.key === key ? ' checked' : ''}
+                 onchange="setRowEstrategia(${rowNum}, '${e.key}', this)">
+          <span class="estr-abbr">${e.abbr}</span>
+        </label>`).join('');
+    }
+
+    // Pinta el estado visual de los 5 checks de una fila.
+    function _pintarPickerEstrategia(rowNum) {
+      const box = document.getElementById(`estr-pick-${rowNum}`);
+      if (!box) return;
+      const row = sessionRows[rowNum - 1];
+      const key = row ? row.estrategia : null;
+      box.querySelectorAll('.estr-chip').forEach(chip => {
+        const chk = chip.querySelector('.estr-chk');
+        const k = chk.getAttribute('onchange').match(/'([a-z]+)'/i);
+        const isOn = !!key && k && k[1] === key;
+        chip.classList.toggle('on', isOn);
+        if (chk.checked !== isOn) chk.checked = isOn;
+      });
+    }
+
+    function generateBitacoraLedger() {
+      bitacoraList.innerHTML = '';
+      
+      if (!currentSessionKey) {
+        // If there's no active session key, we look at the list of sessions
+        const keys = Object.keys(daySessions.lista_sesiones);
+        if (keys.length > 0) {
+          currentSessionKey = keys[0];
+          daySessions.active_session_key = currentSessionKey;
+          localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+        } else {
+          // No sessions yet! Create a default one at current time (24h format)
+          const now = new Date();
+          const hrStr = String(now.getHours()).padStart(2, '0');
+          const minStr = String(now.getMinutes()).padStart(2, '0');
+          currentSessionKey = `${hrStr}:${minStr}`;
+          
+          daySessions.active_session_key = currentSessionKey;
+          daySessions.lista_sesiones[currentSessionKey] = {
+            timeKey: currentSessionKey,
+            capital_inicial: Math.max(capitalVigenteTotal(), 1),
+            moneda: appConfig.session.moneda,
+            riesgo_pct: appConfig.session.riesgo_pct,
+            meta_sesion_pct: appConfig.session.meta_sesion_pct,
+            stop_loss_pct: appConfig.session.stop_loss_pct || 5.0,
+            recalcular_minuto_cascada: appConfig.session.recalcular_minuto_cascada,
+            interes_compuesto: appConfig.session.interes_compuesto,
+            rows: []
+          };
+          
+          localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+        }
+      }
+
+      const activeSession = daySessions.lista_sesiones[currentSessionKey];
+      if (!activeSession) return;
+
+      // 5-hour automatic timeout check (informative alert only, no lockout)
+      if (activeSession && !activeSession.isClosed) {
+        const timeParsed = parseTimeKey(activeSession.timeKey);
+        const startDate = new Date();
+        startDate.setHours(timeParsed.hours, timeParsed.minutes, 0, 0);
+        
+        const now = new Date();
+        const diffMs = now - startDate;
+        const diffHours = diffMs / (1000 * 60 * 60);
+        
+        if (diffHours >= 5.0 || diffHours < 0) {
+          if (!activeSession.exceeded5hWarningShown) {
+            activeSession.exceeded5hWarningShown = true;
+            localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+            alert("🛡️ INFORMATIVO: Has superado el límite recomendado de 5 horas de operación para evitar sobreoperación.");
+          }
+        }
+      }
+      
+      // Update appConfig values to match selected session
+      // REGLA INMUTABLE: el capital inicial de configuracion NUNCA se reescribe
+      // con el capital de la sesion. Ese acumulado vive aparte (baseDelDia +
+      // profitDeHoy); sobrescribirlo destroys la referencia y realimenta el arrastre.
+      appConfig.session.moneda = activeSession.moneda;
+      appConfig.session.riesgo_pct = activeSession.riesgo_pct;
+      appConfig.session.meta_sesion_pct = activeSession.meta_sesion_pct;
+      appConfig.session.stop_loss_pct = activeSession.stop_loss_pct || 5.0;
+      appConfig.session.recalcular_minuto_cascada = activeSession.recalcular_minuto_cascada;
+      appConfig.session.interes_compuesto = activeSession.interes_compuesto;
+      appConfig.session.ic_activado_en_minuto = activeSession.ic_activado_en_minuto || 0;
+
+      // Sync IC toggle and label
+      syncModalInputsFromConfig();
+      const toggleCI = document.getElementById('toggle-compound-interest');
+      if (toggleCI) toggleCI.checked = !!appConfig.session.interes_compuesto;
+      updateICLabel(!!appConfig.session.interes_compuesto, appConfig.session.ic_activado_en_minuto);
+
+      const toggleAB = document.getElementById('toggle-use-accumulated-balance');
+      if (toggleAB) toggleAB.checked = !!appConfig.session.usar_saldo_acumulado;
+
+      // Parse start hour and minute from session key
+      const timeParsed = parseTimeKey(activeSession.timeKey);
+      let startHr = timeParsed.hours;
+      let startMin = timeParsed.minutes;
+
+      // Check if rows are already generated, if not generate them
+      if (!activeSession.rows || activeSession.rows.length === 0) {
+        activeSession.rows = [];
+        for (let i = 0; i < 60; i++) {
+          const targetMin = startMin + i;
+          const targetHr = (startHr + Math.floor(targetMin / 60)) % 24;
+          const displayMin = targetMin % 60;
+
+          const hrStr = String(targetHr).padStart(2, '0');
+          const minStr = String(displayMin).padStart(2, '0');
+          const timeStr = `${hrStr}:${minStr}`;
+
+          activeSession.rows.push({
+            minute: i + 1,
+            timeStr: timeStr,
+            result: null,
+            discipline: false,
+            estrategia: null,
+            customAmount: null,
+            currentBalance: activeSession.capital_inicial
+          });
+        }
+        localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      }
+
+      sessionRows = activeSession.rows;
+
+      // Now render the rows in the UI
+      const isClosed = activeSession ? !!activeSession.isClosed : false;
+
+      for (let i = 0; i < 60; i++) {
+        const row = sessionRows[i];
+        const rowNum = row.minute;
+        const rowNumStr = String(rowNum).padStart(2, '0');
+
+        // Insert Chronological Quarter Dividers
+        if (i === 0) {
+          insertQuarterDivider("BLOQUE I", "Apertura & Establecimiento de Tendencia", "Min 01 - 15");
+        } else if (i === 15) {
+          insertQuarterDivider("BLOQUE II", "Desarrollo & Estabilización", "Min 16 - 30");
+        } else if (i === 30) {
+          insertQuarterDivider("BLOQUE III", "Consolidación de Beneficios", "Min 31 - 45");
+        } else if (i === 45) {
+          insertQuarterDivider("BLOQUE IV", "Cierre & Protección de Capital", "Min 46 - 60");
+        }
+
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'bitacora-row-card' + (isClosed ? ' locked-session-row' : '');
+        rowDiv.id = `row-${rowNum}`;
+
+        const winClass = row.result === 'win' ? 'active' : '';
+        const lossClass = row.result === 'loss' ? 'active' : '';
+        const stratClass = row.discipline ? 'active' : '';
+
+        rowDiv.innerHTML = `
+          <div class="row-min-label">
+            Minuto ${rowNumStr} <span style="font-size: 0.65rem; color: var(--text-gray); font-family: monospace;">(${activeSession.fecha || daySessions.fecha_actual || ''} ${row.timeStr})</span>
+          </div>
+          <div>
+            <input type="number" class="row-amount-input" id="amount-input-${rowNum}" value="${row.customAmount !== null ? row.customAmount : 0}" min="0" onfocus="this.select()" oninput="onRowAmountChange(${rowNum}, this.value)">
+          </div>
+          <div>
+            <button class="checkbox-neumorphic win-check ${winClass}" id="win-btn-${rowNum}" onclick="toggleRowResult(${rowNum}, 'win')">[+]</button>
+          </div>
+          <div>
+            <button class="checkbox-neumorphic loss-check ${lossClass}" id="loss-btn-${rowNum}" onclick="toggleRowResult(${rowNum}, 'loss')">[-]</button>
+          </div>
+          <div class="row-strategy-cell">
+            <div class="strategy-picker" id="estr-pick-${rowNum}">${_htmlPickerEstrategia(rowNum, row.estrategia)}</div>
+          </div>
+          <div class="row-perf-label" id="perf-${rowNum}">-</div>
+          <div class="row-saldo-label" id="saldo-${rowNum}">$0</div>
+        `;
+
+        bitacoraList.appendChild(rowDiv);
+      }
+
+      // Sync the header Close Session lock button
+      const closeBtn = document.getElementById('btn-close-session');
+      if (closeBtn) {
+        if (currentSessionKey && activeSession) {
+          if (isClosed) {
+            closeBtn.innerHTML = "🔓 REABRIR SESIÓN";
+            closeBtn.style.background = "rgba(0, 176, 116, 0.1)";
+            closeBtn.style.borderColor = "rgba(0, 176, 116, 0.2)";
+            closeBtn.style.color = "#00b074";
+          } else {
+            closeBtn.innerHTML = "🔒 CERRAR SESIÓN";
+            closeBtn.style.background = "rgba(255, 74, 74, 0.1)";
+            closeBtn.style.borderColor = "rgba(255, 74, 74, 0.2)";
+            closeBtn.style.color = "#ff4a4a";
+          }
+          closeBtn.style.display = "inline-flex";
+        } else {
+          closeBtn.style.display = "none";
+        }
+      }
+
+      renderSessionsAccordion();
+    }
+
+    // Handle manual row trade amount overrides
+    window.onRowAmountChange = function(rowNum, val) {
+      const row = sessionRows[rowNum - 1];
+      if (val === '' || isNaN(val)) {
+        row.customAmount = null;
+        row.isManualOverride = false;
+      } else {
+        row.customAmount = parseFloat(val);
+        row.isManualOverride = true;
+      }
+      recalcularBitacoraCompleta();
+    };
+
+    // Toggle Win/Loss LED active selectors
+    window.toggleRowResult = function(rowNum, type) {
+      const row = sessionRows[rowNum - 1];
+      const isSettingResult = (row.result !== type);
+
+      if (row.result === type) {
+        row.result = null;
+      } else {
+        row.result = type;
+      }
+
+      if (isSettingResult) {
+        // Freeze! If the trade amount was using dynamic suggest (customAmount is null), freeze it.
+        if (row.customAmount === null) {
+          const amtInput = document.getElementById(`amount-input-${rowNum}`);
+          const curVal = amtInput ? parseFloat(amtInput.value) : 0;
+          row.customAmount = curVal > 0 ? curVal : null;
+          row.isManualOverride = false; // it is auto-frozen suggestion
+        }
+      } else {
+        // We are clearing the result.
+        // If it was auto-frozen suggested value, unfreeze it.
+        if (row.isManualOverride === false) {
+          row.customAmount = null;
+        }
+      }
+
+      const winBtn = document.getElementById(`win-btn-${rowNum}`);
+      const lossBtn = document.getElementById(`loss-btn-${rowNum}`);
+
+      winBtn.classList.remove('active');
+      lossBtn.classList.remove('active');
+
+      if (row.result === 'win') {
+        winBtn.classList.add('active');
+      } else if (row.result === 'loss') {
+        lossBtn.classList.add('active');
+      }
+
+      recalcularBitacoraCompleta();
+    };
+
+    // Marca una categoria de cumplimiento para la fila. Solo una por fila:
+    // al activar un check se desactivan los otros cuatro.
+    window.setRowEstrategia = function(rowNum, key, el) {
+      const row = sessionRows[rowNum - 1];
+      if (!row) return;
+      const s = daySessions.lista_sesiones[currentSessionKey];
+      if (s && s.isClosed) { el.checked = false; return; }
+
+      row.estrategia = el.checked ? key : null;
+      _pintarPickerEstrategia(rowNum);
+
+      // No hace falta repintar la bitacora: la categoria no altera saldos.
+      // Solo se persisten las filas y se refrescan las estadisticas.
+      const act = daySessions.lista_sesiones[currentSessionKey];
+      if (act) {
+        act.rows = sessionRows;
+        localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      }
+      renderEstadisticasEstrategia();
+    };
+
+    // ══════════════════════════════════════════════════════════
+    // LEYENDA Y ESTADÍSTICAS DE CUMPLIMIENTO DE ESTRATEGIA
+    // ══════════════════════════════════════════════════════════
+
+    // Dibuja la leyenda con el nombre completo y la abreviatura de cada categoría.
+    window.renderLeyendaEstrategia = function() {
+      const box = document.getElementById('strategy-legend-items');
+      if (!box) return;
+      if (box.dataset.ready === '1') return;
+      box.dataset.ready = '1';
+      box.innerHTML = ESTRATEGIAS_BITACORA.map(e => `
+        <div class="strategy-legend-item">
+          <span class="strategy-dot" style="background:${e.color};"></span>
+          <span class="strategy-legend-name">${e.label}</span>
+          <span class="strategy-legend-abbr">${e.abbr}</span>
+        </div>
+      `).join('');
+    };
+
+    window.toggleEstadisticasEstrategia = function() {
+      const panel = document.getElementById('estr-stats-panel');
+      if (!panel) return;
+      renderEstadisticasEstrategia();
+      panel.classList.toggle('hidden');
+    };
+
+    // Calcula operaciones, aciertos y pérdida/ganancia neta por categoría.
+    window.renderEstadisticasEstrategia = function() {
+      const table = document.getElementById('estr-stats-table');
+      if (!table) return;
+
+      const vacio = () => ({ ops: 0, wins: 0, losses: 0, monto: 0, neto: 0 });
+      const acc = {};
+      ESTRATEGIAS_BITACORA.forEach(e => { acc[e.key] = vacio(); });
+      acc.__sin = vacio();
+
+      (sessionRows || []).forEach(r => {
+        if (!r || !r.result) return;
+        const k = (r.estrategia && acc[r.estrategia]) ? r.estrategia : '__sin';
+        const a = acc[k];
+        a.ops++;
+        if (r.result === 'win') a.wins++; else a.losses++;
+        const amt = (r.customAmount !== null && r.customAmount !== undefined)
+          ? Number(r.customAmount) || 0 : 0;
+        a.monto += amt;
+        a.neto += (r.result === 'win') ? amt * 0.83 : -amt;
+      });
+
+      const fila = (label, abbr, color, a) => {
+        const tasa = a.ops > 0 ? Math.round((a.wins / a.ops) * 100) : 0;
+        const colorNeto = a.neto > 0 ? '#00b074' : (a.neto < 0 ? '#ff4a4a' : 'var(--text-gray)');
+        return `<tr>
+          <td class="sts-cat">
+            <span class="strategy-dot" style="background:${color};"></span>
+            ${label} <span class="strategy-legend-abbr">${abbr}</span>
+          </td>
+          <td>${a.ops}</td>
+          <td style="color:#00b074;">${a.wins}</td>
+          <td style="color:#ff4a4a;">${a.losses}</td>
+          <td>${a.ops > 0 ? tasa + '%' : '-'}</td>
+          <td>${formatCurrencyText(a.monto)}</td>
+          <td style="color:${colorNeto}; font-weight:700;">${a.ops > 0 ? (a.neto >= 0 ? '+' : '') + formatCurrencyText(a.neto) : '-'}</td>
+        </tr>`;
+      };
+
+      let html = `<thead><tr>
+          <th>Categoría</th><th>Operaciones</th><th>Aciertos</th><th>Fallos</th>
+          <th>Tasa de acierto</th><th>Monto operado</th><th>Resultado neto</th>
+        </tr></thead><tbody>`;
+
+      ESTRATEGIAS_BITACORA.forEach(e => {
+        html += fila(e.label, e.abbr, e.color, acc[e.key]);
+      });
+      html += fila('Sin marcar', '--', 'var(--text-gray)', acc.__sin);
+      html += '</tbody>';
+
+      table.innerHTML = html;
+    };
+
+    // Toggle discipline check switches
+    window.toggleRowStrategy = function(rowNum) {
+      const row = sessionRows[rowNum - 1];
+      row.discipline = !row.discipline;
+
+      const btn = document.getElementById(`strat-btn-${rowNum}`);
+      if (row.discipline) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+
+      recalcularBitacoraCompleta();
+    };
+
+    // ── helper: update IC activation label ────────────────────────────────────
+    function updateICLabel(isActive, fromMinute) {
+      const lbl = document.getElementById('label-compound-interest');
+      if (!lbl) return;
+      if (isActive && fromMinute > 0) {
+        lbl.textContent = `Activo desde minuto ${fromMinute}`;
+        lbl.style.color = 'var(--success-green)';
+      } else if (isActive) {
+        lbl.textContent = 'Activo';
+        lbl.style.color = 'var(--success-green)';
+      } else {
+        lbl.textContent = 'Inactivo';
+        lbl.style.color = 'var(--text-gray)';
+      }
+    }
+
+    // ── helper: get current session minute based on real time ─────────────────
+    function getActivationMinuteForRealTime() {
+      if (!currentSessionKey || !daySessions.lista_sesiones[currentSessionKey]) return 1;
+      const activeSession = daySessions.lista_sesiones[currentSessionKey];
+      
+      const timeParsed = parseTimeKey(activeSession.timeKey);
+      const now = new Date();
+      
+      const sessionStartMins = timeParsed.hours * 60 + timeParsed.minutes;
+      const nowMins = now.getHours() * 60 + now.getMinutes();
+      
+      let diff = nowMins - sessionStartMins;
+      if (diff < 0) diff += 24 * 60; // Crosses midnight
+      
+      let activationMinute = diff + 1; // 1-indexed (Minuto 1, Minuto 2...)
+      
+      if (activationMinute < 1) activationMinute = 1;
+      if (activationMinute > 60) activationMinute = 60;
+      
+      return activationMinute;
+    }
+
+    // Compound interest toggle
+    window.onToggleCompoundInterest = function(checked) {
+      if (checked) {
+        // Validar que existan ganancias globales antes de permitir activar IC
+        let totalDailyProfitsAnteriores = 0;
+        Object.keys(daySessions.lista_sesiones).forEach(k => {
+          if (k !== currentSessionKey) {
+            const s = daySessions.lista_sesiones[k];
+            let sLastBalance = s.capital_inicial;
+            if (s.rows && s.rows.length > 0) {
+              s.rows.forEach(r => {
+                if (r.currentBalance !== undefined && r.result !== null) {
+                  sLastBalance = r.currentBalance;
+                }
+              });
+            }
+            const sNetProfit = sLastBalance - s.capital_inicial;
+            totalDailyProfitsAnteriores += sNetProfit;
+          }
+        });
+        
+        let sessionProfits = 0;
+        if (sessionRows && sessionRows.length > 0) {
+          let lastBalance = appConfig.session.capital_inicial;
+          sessionRows.forEach(r => {
+            if (r.currentBalance !== undefined && r.result !== null) {
+              lastBalance = r.currentBalance;
+            }
+          });
+          sessionProfits = lastBalance - appConfig.session.capital_inicial;
+        }
+
+        const globalProfits = totalDailyProfitsAnteriores + sessionProfits;
+
+        if (globalProfits <= 0) {
+          alert("REGLA: No puedes activar el Interés Compuesto si no tienes ganancias acumuladas.\n\nEl Interés Compuesto se hace ÚNICAMENTE con dinero del mercado, nunca con tu capital base.");
+          document.getElementById('toggle-compound-interest').checked = false;
+          return;
+        }
+      }
+
+      appConfig.session.interes_compuesto = checked;
+
+      // Record the minute where IC was activated/deactivated
+      if (checked) {
+        appConfig.session.ic_activado_en_minuto = getActivationMinuteForRealTime();
+      } else {
+        appConfig.session.ic_activado_en_minuto = 0;
+      }
+
+      if (currentSessionKey && daySessions.lista_sesiones[currentSessionKey]) {
+        daySessions.lista_sesiones[currentSessionKey].interes_compuesto = checked;
+        daySessions.lista_sesiones[currentSessionKey].ic_activado_en_minuto = appConfig.session.ic_activado_en_minuto;
+      }
+      saveSettingsConfig();
+      localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+
+      updateICLabel(checked, appConfig.session.ic_activado_en_minuto);
+      recalcularBitacoraCompleta();
+    };
+
+    // Toggle Saldo Dinámico Continuo (Antes Usar Saldo Acumulado)
+    window.onToggleUseAccumulatedBalance = function(checked) {
+      appConfig.session.usar_saldo_acumulado = checked;
+      
+      if (checked) {
+        appConfig.session.arrastrar_activado_minuto = getActivationMinuteForRealTime();
+      } else {
+        appConfig.session.arrastrar_activado_minuto = 0;
+      }
+
+      if (currentSessionKey && daySessions.lista_sesiones[currentSessionKey]) {
+        daySessions.lista_sesiones[currentSessionKey].usar_saldo_acumulado = checked;
+        daySessions.lista_sesiones[currentSessionKey].arrastrar_activado_minuto = appConfig.session.arrastrar_activado_minuto;
+      }
+      saveSettingsConfig();
+      localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      recalcularBitacoraCompleta();
+    };
+
+    // Botón para arrastrar y fijar el saldo (creando nueva sesión limpia)
+    window.actualizarSaldoBaseConAcumulado = function() {
+      const confirmMsg = "¿Estás seguro que deseas Fijar el Nuevo Capital?\n\nEsto cerrará la sesión actual y abrirá una nueva sesión inmediatamente. Así, la ganancia de la sesión arrancará en cero sobre la nueva base, pero la ganancia del día seguirá su curso normal.";
+      if (!confirm(confirmMsg)) return;
+
+      // Calcular el acumulado actual global
+      let totalDailyProfitsAnteriores = 0;
+      Object.keys(daySessions.lista_sesiones).forEach(k => {
+        if (k !== currentSessionKey) {
+          const s = daySessions.lista_sesiones[k];
+          let sLastBalance = s.capital_inicial;
+          if (s.rows && s.rows.length > 0) {
+            s.rows.forEach(r => {
+              if (r.currentBalance !== undefined && r.result !== null) {
+                sLastBalance = r.currentBalance;
+              }
+            });
+          }
+          const sNetProfit = sLastBalance - s.capital_inicial;
+          totalDailyProfitsAnteriores += sNetProfit;
+        }
+      });
+      
+      let sessionProfits = 0;
+      if (sessionRows && sessionRows.length > 0) {
+        let lastBalance = appConfig.session.capital_inicial;
+        sessionRows.forEach(r => {
+          if (r.currentBalance !== undefined && r.result !== null) {
+            lastBalance = r.currentBalance;
+          }
+        });
+        sessionProfits = lastBalance - appConfig.session.capital_inicial;
+      }
+
+      const accumulatedBalance = appConfig.session.capital_inicial + totalDailyProfitsAnteriores + sessionProfits;
+      
+      // Crear nueva sesión con el saldo acumulado
+      const now = new Date();
+      const hrStr = String(now.getHours()).padStart(2, '0');
+      const minStr = String(now.getMinutes()).padStart(2, '0');
+      const newSessionKey = `${hrStr}:${minStr}`;
+      
+      if (daySessions.lista_sesiones[newSessionKey]) {
+        alert("Espera un minuto para crear otra sesión de corte.");
+        return;
+      }
+      
+      // Cerrar la sesión actual
+      if (currentSessionKey && daySessions.lista_sesiones[currentSessionKey]) {
+        daySessions.lista_sesiones[currentSessionKey].isClosed = true;
+      }
+      
+      appConfig.session.capital_inicial = accumulatedBalance;
+      
+      daySessions.lista_sesiones[newSessionKey] = {
+        timeKey: newSessionKey,
+        fecha: daySessions.fecha_actual,
+        capital_inicial: accumulatedBalance,
+        moneda: appConfig.session.moneda,
+        riesgo_pct: appConfig.session.riesgo_pct,
+        meta_sesion_pct: appConfig.session.meta_sesion_pct,
+        stop_loss_pct: appConfig.session.stop_loss_pct || 5.0,
+        recalcular_minuto_cascada: appConfig.session.recalcular_minuto_cascada,
+        interes_compuesto: false,
+        ic_activado_en_minuto: 0,
+        usar_saldo_acumulado: false,
+        rows: []
+      };
+      
+      currentSessionKey = newSessionKey;
+      daySessions.active_session_key = newSessionKey;
+      
+      saveSettingsConfig();
+      localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      
+      // Force UI toggle switch off as it's a new clean session
+      const toggleDynamic = document.getElementById('toggle-use-accumulated-balance');
+      if (toggleDynamic) toggleDynamic.checked = false;
+      appConfig.session.usar_saldo_acumulado = false;
+      
+      generateBitacoraLedger();
+      renderSessionsAccordion();
+      
+      alert("¡Capital base fijado exitosamente! Tu sesión arranca en 0 ganancias con el nuevo saldo.");
+    };
+
+    /* ==========================================================================
+       🕒 MULTI-SESSION TACTICAL CONTROLLER
+       ========================================================================== */
+
+    window.renderSessionsAccordion = function() {
+      const container = document.getElementById('sessions-accordion-list');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      
+      const keys = Object.keys(daySessions.lista_sesiones);
+      if (keys.length === 0) {
+        container.innerHTML = `<div style="text-align: center; font-size: 0.75rem; color: var(--text-gray); padding: 1rem;">No hay sesiones activas. Inicia un bloque de sesión arriba para comenzar.</div>`;
+        return;
+      }
+      
+      keys.forEach(key => {
+        const session = daySessions.lista_sesiones[key];
+        const isActive = (key === currentSessionKey) ? 'active' : '';
+        
+        let totalWins = 0;
+        let totalLosses = 0;
+        let totalOperated = 0;
+        let lastBalance = session.capital_inicial;
+        
+        if (session.rows && session.rows.length > 0) {
+          session.rows.forEach(r => {
+            if (r.result === 'win') {
+              totalWins++;
+              totalOperated++;
+            } else if (r.result === 'loss') {
+              totalLosses++;
+              totalOperated++;
+            }
+            if (r.currentBalance !== undefined && r.result !== null) {
+              lastBalance = r.currentBalance;
+            }
+          });
+        }
+        
+        const winRate = totalOperated > 0 ? Math.round((totalWins / totalOperated) * 100) : 0;
+        const netProfit = lastBalance - session.capital_inicial;
+        const profitClass = netProfit >= 0 ? 'profit' : 'loss';
+        const formattedNetProfit = (netProfit >= 0 ? '+' : '') + formatCurrencyText(netProfit);
+        
+        const goalAmount = session.capital_inicial * ((session.meta_sesion_pct || 10) / 100);
+        const stopAmount = session.capital_inicial * ((session.stop_loss_pct || 5.0) / 100);
+
+        let statusTag = `<span class="session-status-badge status-completada">Completada ✅</span>`;
+        if (session.isClosed) {
+          if (netProfit >= goalAmount) {
+            statusTag = `<span class="session-status-badge" style="background: rgba(0, 176, 116, 0.15); color: var(--neon-green); border-color: rgba(0, 176, 116, 0.25);">Meta Lograda 🎯</span>`;
+          } else if (netProfit <= -stopAmount) {
+            statusTag = `<span class="session-status-badge status-stoploss">Stop Loss 🚨</span>`;
+          } else {
+            statusTag = `<span class="session-status-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-gray); border-color: rgba(255, 255, 255, 0.1);">Cerrada ⚖️</span>`;
+          }
+        } else {
+          if (totalOperated === 0) {
+            statusTag = `<span class="session-status-badge status-operando" style="background: rgba(255,255,255,0.03); color: var(--text-gray); border-color: rgba(255,255,255,0.05);">Pendiente 🕒</span>`;
+          } else if (key === currentSessionKey) {
+            statusTag = `<span class="session-status-badge status-operando">Operando 🐉</span>`;
+          } else {
+            // Unclosed past session
+            if (netProfit >= goalAmount) {
+              statusTag = `<span class="session-status-badge" style="background: rgba(0, 176, 116, 0.15); color: var(--neon-green); border-color: rgba(0, 176, 116, 0.25);">Meta Lograda 🎯</span>`;
+            } else if (netProfit <= -stopAmount) {
+              statusTag = `<span class="session-status-badge status-stoploss">Stop Loss 🚨</span>`;
+            } else {
+              statusTag = `<span class="session-status-badge status-completada">Abierta ✅</span>`;
+            }
+          }
+        }
+        
+        const card = document.createElement('div');
+        card.className = `session-accordion-card ${isActive}`;
+        card.onclick = (e) => {
+          if (e.target.closest('.btn-session-delete') || e.target.closest('.btn-session-delete *')) return;
+          seleccionarSesionHoraria(key);
+        };
+        
+        card.innerHTML = `
+          <div class="session-info-left" style="display: flex; flex-direction: column; gap: 0.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="session-time-badge" style="font-family: monospace;">📅 ${session.fecha || daySessions.fecha_actual || ''} &nbsp; 🕒 ${key}</span>
+              ${statusTag}
+            </div>
+            <span class="session-target-badge" style="font-size: 0.65rem; color: var(--text-gray); border: 1px dashed rgba(255,255,255,0.04); padding: 2px 6px; border-radius: 4px; font-family: monospace; display: inline-block; max-width: fit-content;">
+              Meta: +${session.meta_sesion_pct || 10}% / Stop: -${session.stop_loss_pct || 5}%
+            </span>
+          </div>
+          
+          <div class="session-stats-group">
+            <div class="session-stat-item">
+              <span class="session-stat-label">Operadas</span>
+              <span class="session-stat-val">${totalOperated}</span>
+            </div>
+            <div class="session-stat-item">
+              <span class="session-stat-label">W / L</span>
+              <span class="session-stat-val" style="color: var(--text-white);">${totalWins} [+] <span style="color: var(--text-gray);">/</span> ${totalLosses} [-]</span>
+            </div>
+            <div class="session-stat-item">
+              <span class="session-stat-label">Win Rate</span>
+              <span class="session-stat-val">${winRate}%</span>
+            </div>
+            <div class="session-stat-item">
+              <span class="session-stat-label">Beneficio</span>
+              <span class="session-saldo-badge ${profitClass}">${formattedNetProfit}</span>
+            </div>
+          </div>
+          
+          <div class="session-actions-right">
+            <button class="btn-session-delete" title="Eliminar bloque de las ${key}" onclick="eliminarSesionHoraria('${key}')">
+              ✖
+            </button>
+          </div>
+        `;
+        
+        container.appendChild(card);
+      });
+    };
+
+    window.seleccionarSesionHoraria = function(key) {
+      if (daySessions.lista_sesiones[key]) {
+        currentSessionKey = key;
+        daySessions.active_session_key = key;
+        localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+        generateBitacoraLedger();
+      }
+    };
+
+    window.iniciarNuevaSesionManual = function() {
+      const inputEl = document.getElementById('creator-time-input');
+      const dateEl = document.getElementById('creator-date-input');
+      
+      let horaInput = inputEl ? inputEl.value : '';
+      if (!horaInput) {
+        alert("Por favor selecciona una hora de inicio.");
+        return;
+      }
+      
+      if (daySessions.lista_sesiones[horaInput]) {
+        alert("Este bloque de sesión ya ha sido iniciado.");
+        return;
+      }
+
+      // Check daily risk management limits
+      const keys = Object.keys(daySessions.lista_sesiones);
+      let totalDailyProfit = 0;
+      let completedSessionsCount = 0;
+      
+      keys.forEach(k => {
+        const s = daySessions.lista_sesiones[k];
+        let sLastBalance = s.capital_inicial;
+        if (s.rows && s.rows.length > 0) {
+          s.rows.forEach(r => {
+            if (r.currentBalance !== undefined && r.result !== null) {
+              sLastBalance = r.currentBalance;
+            }
+          });
+        }
+        const sNetProfit = sLastBalance - s.capital_inicial;
+        totalDailyProfit += sNetProfit;
+        
+        const goalAmount = s.capital_inicial * ((s.meta_sesion_pct || 10) / 100);
+        if (s.isClosed || sNetProfit >= goalAmount) {
+          if (sNetProfit > 0) completedSessionsCount++;
+        }
+      });
+
+      const maxSessions = appConfig.session.numero_sesiones || 3;
+      const dailyGoalVal = appConfig.session.capital_inicial * ((appConfig.session.meta_diaria_pct || 15) / 100);
+
+      if (completedSessionsCount >= maxSessions || totalDailyProfit >= dailyGoalVal) {
+        const confirmMsg = "⚠️ ADVERTENCIA DE RIESGO ⚠️\n\nHas alcanzado o superado tu Meta Diaria o tu límite de sesiones ganadas.\n\nIniciar una nueva sesión ahora significa operar en SOBREOPERACIÓN y arriesgar el capital ganado.\n\n¿Estás seguro de que quieres continuar bajo tu propio riesgo?";
+        if (!confirm(confirmMsg)) return;
+      }
+      
+      let fechaVal = dateEl ? dateEl.value : '';
+      let fechaDisplay = daySessions.fecha_actual;
+      if (fechaVal) {
+        try {
+          fechaDisplay = new Date(fechaVal + "T00:00:00").toLocaleDateString('es-CO');
+        } catch (e) {
+          fechaDisplay = fechaVal;
+        }
+      }
+      
+      // Arrastre automático: cada nueva sesión inicia sobre el capital acumulado
+      // permanente (base configurada + profit de días previos + profit de las
+      // sesiones de hoy). Ya no depende de pulsar ningún botón.
+      let startCapital = Math.max(capitalVigenteTotal(), 1);
+      
+      daySessions.lista_sesiones[horaInput] = {
+        timeKey: horaInput,
+        fecha: fechaDisplay || daySessions.fecha_actual,
+        capital_inicial: startCapital,
+        moneda: appConfig.session.moneda,
+        riesgo_pct: appConfig.session.riesgo_pct,
+        meta_sesion_pct: appConfig.session.meta_sesion_pct,
+        stop_loss_pct: appConfig.session.stop_loss_pct || 5.0,
+        recalcular_minuto_cascada: appConfig.session.recalcular_minuto_cascada,
+        interes_compuesto: false,
+        ic_activado_en_minuto: 0,
+        usar_saldo_acumulado: appConfig.session.usar_saldo_acumulado,
+        rows: []
+      };
+      
+      currentSessionKey = horaInput;
+      daySessions.active_session_key = horaInput;
+      
+      localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      
+      if (inputEl) {
+        const now = new Date();
+        const hrStr = String(now.getHours()).padStart(2, '0');
+        const minStr = String(now.getMinutes()).padStart(2, '0');
+        inputEl.value = `${hrStr}:${minStr}`;
+      }
+      
+      generateBitacoraLedger();
+    };
+
+    /* ==========================================================================
+       ♻️ RESET APP TO ZERO
+       Clears all day sessions and restarts the bitácora fresh.
+       The configured capital (appConfig.session.capital_inicial) is preserved.
+       ========================================================================== */
+    window.resetAppToZero = function() {
+      const confirmMsg =
+        '♻️ REINICIAR A CEROS\n\n' +
+        'Esto borrará TODAS las sesiones y datos del día (bitácora, saldos, historial).\n' +
+        'El capital configurado (' + formatCurrencyVal(appConfig.session.capital_inicial) + ') se conservará.\n\n' +
+        '¿Deseas continuar con el reinicio diario?';
+      if (!confirm(confirmMsg)) return;
+
+      // Clear day sessions (el capital acumulado permanente se conserva)
+      bancarProfitDelDia();
+      const todayStr = new Date().toISOString().split('T')[0];
+      daySessions = {
+        fecha_actual: todayStr,
+        active_session_key: '',
+        lista_sesiones: {}
+      };
+      currentSessionKey = '';
+      sessionRows = [];
+      localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+
+      // Reset audio alert state
+      lastAudioState = {
+        drawdownTriggered: false,
+        consecutiveLossesAlerted: false,
+        stopLossAlerted: false,
+        euphoriaAlerted: false,
+        goalAlerted: false
+      };
+
+      // Re-generate fresh bitácora
+      generateBitacoraLedger();
+
+      // Notify user
+      const banner = document.getElementById('session-alert-banner');
+      if (banner) {
+        banner.textContent = '♻️ APP REINICIADA — Nueva sesión lista para operar';
+        banner.className = 'alert-banner-neutral';
+      }
+
+      // Stage 2: Factory Reset Prompt
+      setTimeout(() => {
+        const factoryResetMsg =
+          '⚙️ RESTABLECIMIENTO DE FÁBRICA COMPLETO\n\n' +
+          '¿Deseas también eliminar la licencia de seguridad y restablecer la aplicación a Estado de Fábrica?\n' +
+          '(Esto desvinculará esta computadora y requerirá una nueva clave de activación para operar).';
+        if (confirm(factoryResetMsg)) {
+          localStorage.clear();
+          
+          fetch('/api/reset-local', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+          })
+          .then(res => {
+            if (res.ok) {
+              alert('✅ Restablecimiento de Fábrica exitoso. La aplicación se recargará en el estado de activación.');
+              window.location.reload();
+            } else {
+              alert('⚠️ Se limpió la configuración local, pero no se pudo eliminar el archivo de licencia del servidor.');
+              window.location.reload();
+            }
+          })
+          .catch(err => {
+            console.error('Error in factory reset:', err);
+            alert('⚠️ Error de conexión con el servidor. La página se recargará.');
+            window.location.reload();
+          });
+        }
+      }, 300);
+    };
+
+    // Formateo monetario estandar del panel (bitacora, sesiones, alertas).
+    // COP -> $40.000   |   USD -> $1,234.56
+    function formatCurrencyText(val) {
+      const n = Number(val);
+      if (!isFinite(n)) return '$0';
+      if (appConfig.session && appConfig.session.moneda === 'COP') {
+        return '$' + Math.round(n).toLocaleString('es-CO');
+      }
+      return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function formatCurrencyVal(val) {
+      if (appConfig.session.moneda === 'COP') {
+        return '$' + Math.round(val).toLocaleString('es-CO') + ' COP';
+      }
+      return '$' + val.toFixed(2) + ' USD';
+    }
+
+    // Sincroniza los widgets de la cabecera con los limites calculados por el
+    // motor de la bitacora (capital de referencia, monto minimo, monto maximo
+    // y stop loss de sesion).
+    function syncGlobalHeaderOutputs(capitalInicial, minSuggestion, maxSuggestion, stopLoss) {
+      const capEl = document.getElementById('header-capital-val');
+      if (capEl) capEl.textContent = formatCurrencyText(Number(capitalInicial) || 0);
+
+      const minEl = document.getElementById('header-min-val');
+      if (minEl) minEl.textContent = formatCurrencyText(Number(minSuggestion) || 0);
+
+      const maxEl = document.getElementById('header-max-val');
+      if (maxEl) maxEl.textContent = formatCurrencyText(Number(maxSuggestion) || 0);
+
+      const stopEl = document.getElementById('header-stop-val');
+      if (stopEl) stopEl.textContent = formatCurrencyText(Number(stopLoss) || 0);
+    }
+
+    // Cierra la sesion activa: consolida el saldo final de la bitacora, la marca
+    // como cerrada y deja el capital acumulado listo para el siguiente bloque.
+    window.toggleCloseActiveSession = function() {
+      const key = currentSessionKey;
+      const s = key ? daySessions.lista_sesiones[key] : null;
+      if (!s) {
+        alert('No hay ninguna sesion activa para cerrar.');
+        return;
+      }
+
+      // 1. Persiste las filas ya recalculadas y calcula el saldo final
+      s.rows = sessionRows;
+      let lastBalance = s.capital_inicial;
+      s.rows.forEach(r => {
+        if (r.currentBalance !== undefined && r.result !== null) {
+          lastBalance = r.currentBalance;
+        }
+      });
+      s.currentBalance = lastBalance;
+      s.isClosed = true;
+      daySessions.lista_sesiones[key] = s;
+
+      // 2. NO se consolida el dia aqui: las claves del dia se actualizan solo
+      // en el cierre de jornada. Consolidar a mitad del dia hace que el motor
+      // re-aplique los resultados de esta sesion sobre un capital que ya los
+      // incluye (doble conteo). El arrastre a la sesion siguiente lo resuelve
+      // capitalVigenteTotal() al crear la nueva sesion.
+      localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+
+      // 3. Salta al siguiente bloque pendiente del dia
+      const pendientes = Object.keys(daySessions.lista_sesiones)
+        .filter(k => !daySessions.lista_sesiones[k].isClosed);
+      if (pendientes.length > 0) {
+        seleccionarSesionHoraria(pendientes[0]);
+      } else {
+        // Todas las sesiones del dia quedaron cerradas: se abre una nueva con
+        // el capital acumulado (arrastre automatico) para poder seguir operando.
+        const baseMs = Date.now();
+        let newKey = null;
+        for (let i = 0; i < 1440; i++) {
+          const d = new Date(baseMs + i * 60000);
+          const k = `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+          if (!daySessions.lista_sesiones[k]) { newKey = k; break; }
+        }
+        if (!newKey) newKey = `${String(new Date().getHours()).padStart(2, '0')}:${String(new Date().getMinutes()).padStart(2, '0')}`;
+
+        currentSessionKey = newKey;
+        daySessions.active_session_key = newKey;
+        daySessions.lista_sesiones[newKey] = {
+          timeKey: newKey,
+          capital_inicial: Math.max(capitalVigenteTotal(), 1),
+          moneda: appConfig.session.moneda,
+          riesgo_pct: appConfig.session.riesgo_pct,
+          meta_sesion_pct: appConfig.session.meta_sesion_pct,
+          stop_loss_pct: appConfig.session.stop_loss_pct || 5.0,
+          recalcular_minuto_cascada: appConfig.session.recalcular_minuto_cascada,
+          interes_compuesto: appConfig.session.interes_compuesto,
+          rows: []
+        };
+        sessionRows = [];
+        localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      }
+
+      renderSessionsAccordion();
+      recalcularBitacoraCompleta();
+    };
+
+    window.eliminarSesionHoraria = function(key) {
+      if (confirm(`¿Estás seguro de que deseas eliminar permanentemente el bloque de las ${key}?`)) {
+        delete daySessions.lista_sesiones[key];
+        
+        if (currentSessionKey === key) {
+          currentSessionKey = '';
+          daySessions.active_session_key = '';
+        }
+        
+        localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+        generateBitacoraLedger();
+      }
+    };
+
+    // Motor de calculo de la bitacora: recorre las 60 filas, recalcula saldos,
+    // pinta los labels por fila, actualiza la cabecera y la curva del sidebar.
+    function _motorCalculoBitacora() {
+if (!currentSessionKey || !daySessions.lista_sesiones[currentSessionKey]) {
+      const baseCap = capitalVigenteTotal();
+        const metaDiaPct = (window.appConfig && window.appConfig.session && window.appConfig.session.meta_diaria) ? Number(window.appConfig.session.meta_diaria) : 15;
+        const numSesiones = (window.appConfig && window.appConfig.session && window.appConfig.session.sesiones_dia) ? Number(window.appConfig.session.sesiones_dia) : 3;
+        const metaSesPct = (window.appConfig && window.appConfig.session && window.appConfig.session.meta_sesion_pct) ? Number(window.appConfig.session.meta_sesion_pct) : (metaDiaPct / (numSesiones || 1));
+
+        const elCapital = document.getElementById('header-capital-val');
+        if (elCapital) elCapital.textContent = formatCurrencyText(baseCap);
+
+        const currentBalanceEl = document.getElementById('header-current-balance-val');
+        if (currentBalanceEl) {
+          currentBalanceEl.textContent = formatCurrencyText(baseCap);
+          currentBalanceEl.style.color = 'var(--text-white)';
+          currentBalanceEl.style.textShadow = 'none';
+        }
+
+        const elDailyProfit = document.getElementById('header-daily-profit-val');
+        if (elDailyProfit) {
+          elDailyProfit.textContent = formatCurrencyText(0);
+          elDailyProfit.style.color = 'var(--text-gray)';
+          elDailyProfit.style.textShadow = 'none';
+        }
+
+        const elSessionGoal = document.getElementById('header-session-goal-val');
+        if (elSessionGoal) {
+          const sessionGoalVal = baseCap * (metaSesPct / 100);
+          elSessionGoal.textContent = formatCurrencyText(sessionGoalVal);
+        }
+
+        const elDayGoal = document.getElementById('header-day-goal-val');
+        if (elDayGoal) {
+          const dayGoalVal = baseCap * (metaDiaPct / 100);
+          elDayGoal.textContent = formatCurrencyText(dayGoalVal);
+        }
+
+        renderSidebarCurveGraphEmpty();
+        renderSessionsAccordion();
+        return;
+      }
+
+      // 1. Calculate profits of other sessions to support accumulated balance calculations
+      let totalDailyProfitsAnteriores = 0;
+      Object.keys(daySessions.lista_sesiones).forEach(k => {
+        if (k !== currentSessionKey) {
+          const s = daySessions.lista_sesiones[k];
+          let sLastBalance = s.capital_inicial;
+          if (s.rows && s.rows.length > 0) {
+            s.rows.forEach(r => {
+              if (r.currentBalance !== undefined && r.result !== null) {
+                sLastBalance = r.currentBalance;
+              }
+            });
+          }
+          const sNetProfit = sLastBalance - s.capital_inicial;
+          totalDailyProfitsAnteriores += sNetProfit;
+        }
+      });
+
+      // 2. Determinar capital inicial base y mínimos de operación
+      const absoluteFloor = appConfig.session.moneda === "COP" ? 4000 : 1;
+      const montoMinimoUsuario = parseFloat(appConfig.session.monto_minimo_usuario) || 0;
+      const montoMinimoDefinitivo = Math.max(absoluteFloor, montoMinimoUsuario);
+
+      // Capital acumulado permanente: equity de inicio del día + profit de las
+      // sesiones anteriores del día. El arrastre es AUTOMÁTICO.
+      const capitalVigente = baseDelDia() + totalDailyProfitsAnteriores;
+      const initialCapital = Math.max(capitalVigente, absoluteFloor);
+
+      let currentBalance = initialCapital;
+      let totalWins = 0;
+      let totalLosses = 0;
+      let totalLogged = 0;
+      let activeDiscipline = 0;
+
+      const riskPct = appConfig.session.riesgo_pct;
+      const startMinVal = appConfig.session.recalcular_minuto_cascada;
+
+      // Golden rule standard suggestions based on fixed initialCapital
+      const defaultMinSuggestion = initialCapital * 0.01;
+      const defaultMaxSuggestion = initialCapital * 0.02;
+      const stopLossLimit = initialCapital * ((appConfig.session.stop_loss_pct || 5.0) / 100);
+
+      const headerMinSuggestion = defaultMinSuggestion < absoluteFloor ? absoluteFloor : defaultMinSuggestion;
+      const headerMaxSuggestion = defaultMaxSuggestion < absoluteFloor ? absoluteFloor : defaultMaxSuggestion;
+
+      // Sync sidebar limit widgets
+      syncGlobalHeaderOutputs(
+        appConfig.session.capital_inicial,
+        headerMinSuggestion,
+        headerMaxSuggestion,
+        stopLossLimit
+      );
+
+      // Perform calculator threshold balance calculations
+      calculator.updateConfig({
+        session: {
+          ...appConfig.session,
+          capital_inicial: initialCapital
+        }
+      });
+      const cascadeResults = calculator.recalcularBitacoraDesdeMinuto(startMinVal, sessionRows, riskPct);
+      const intermediateThresholdBalance = cascadeResults.balanceAtThreshold;
+
+      // Compound interest state-machine variables
+      let currentICStep = 1;
+      let lastOperatedICAmount = 0;
+
+      // Temporary counters for live tactical KPI badges
+      let consecutiveStreak = 0;
+      let activeStreakType = null;
+      let currentStreakVal = 0;
+      let disciplineAppliedCount = 0;
+      let operatedRowsCount = 0;
+      let firstRowIndexGoalReached = -1;
+      let continuedOperatingAfterGoal = false;
+      let icDeactivatedByLoss = false;
+      let requiredProfitThreshold = 0;
+
+      let saldoCorteArrastrado = null;
+
+      for (let i = 0; i < 60; i++) {
+        const row = sessionRows[i];
+        const prevBalance = currentBalance;
+        let baseCalculo = initialCapital;
+
+        // Current net profit before this row
+        let netProfitBeforeRow = prevBalance - initialCapital;
+
+        // Interés Compuesto trigger condition
+        const icFromMinute = appConfig.session.ic_activado_en_minuto || 0;
+        const arrastrarFromMinute = appConfig.session.arrastrar_activado_minuto || 0;
+        
+        const rowAlreadyFrozen = row.isManualOverride === true || (row.customAmount !== null && row.result !== null);
+        
+        let isCompoundActive = appConfig.session.interes_compuesto
+          && icFromMinute > 0 
+          && row.minute >= icFromMinute
+          && !rowAlreadyFrozen;
+
+        let isArrastrarActive = appConfig.session.usar_saldo_acumulado
+          && arrastrarFromMinute > 0
+          && row.minute >= arrastrarFromMinute
+          && !rowAlreadyFrozen;
+
+        // 1. Determine Standard Base Capital (Arrastrar or Fallback)
+        let standardBaseCapital = initialCapital;
+        if (isArrastrarActive) {
+          if (saldoCorteArrastrado === null) {
+            saldoCorteArrastrado = prevBalance;
+          }
+          standardBaseCapital = saldoCorteArrastrado;
+        } else {
+          if (row.minute > startMinVal && intermediateThresholdBalance > 0) {
+            standardBaseCapital = intermediateThresholdBalance;
+          }
+        }
+
+        // 2. Calculate dynamic suggested amount (Top-Down Logic)
+        let suggestedAmount = 0;
+        let globalNetProfitBeforeRow = totalDailyProfitsAnteriores + netProfitBeforeRow;
+
+        if (isCompoundActive) {
+          // Interés Compuesto (Rollover de Monto + Ganancia 83%)
+          let proposedICAmount = 0;
+          if (currentICStep === 1) {
+            proposedICAmount = standardBaseCapital * (riskPct / 100);
+          } else {
+            // Pasos 2 y 3: Acumulan capital de operación + ganancia (100% + 83% = 1.83)
+            proposedICAmount = lastOperatedICAmount * 1.83;
+          }
+
+          // Regla 50%: La operación de IC no puede arriesgar más del 50% de las ganancias globales
+          let icMaxRisk = globalNetProfitBeforeRow * 0.5;
+          if (globalNetProfitBeforeRow > 0 && proposedICAmount > icMaxRisk) {
+            // Bloqueo de seguridad: Se pasa del 50%. Regresa al riesgo estándar y reinicia el paso.
+            suggestedAmount = standardBaseCapital * (riskPct / 100);
+            currentICStep = 1;
+            row.icBlockedBy50PctRule = true;
+          } else {
+            suggestedAmount = proposedICAmount;
+            row.icBlockedBy50PctRule = false;
+          }
+        } else {
+          // Riesgo Normal
+          suggestedAmount = standardBaseCapital * (riskPct / 100);
+          row.icBlockedBy50PctRule = false;
+        }
+
+        // 4. Aplicar Override de Seguridad (Mínimos Legales)
+        if (prevBalance > 0 && suggestedAmount < montoMinimoDefinitivo) {
+          suggestedAmount = montoMinimoDefinitivo;
+        } else if (prevBalance <= 0) {
+          suggestedAmount = 0;
+        }
+
+        // Check user custom input manual overrides
+        let actualTradeAmount = suggestedAmount;
+        if (row.customAmount !== null && row.customAmount !== undefined) {
+          actualTradeAmount = row.customAmount;
+        }
+
+        // Sync input field content
+        const amtInput = document.getElementById(`amount-input-${row.minute}`);
+        if (amtInput && document.activeElement !== amtInput) {
+          if (row.customAmount !== null && row.customAmount !== undefined) {
+            amtInput.value = row.customAmount;
+          } else {
+            amtInput.value = Math.round(actualTradeAmount);
+          }
+        }
+
+        // Process outcomes under 83% payout Binomo logic rules
+        if (row.result === 'win') {
+          totalWins++;
+          totalLogged++;
+          operatedRowsCount++;
+          if (row.discipline) disciplineAppliedCount++;
+          currentBalance = prevBalance + (actualTradeAmount * 0.83);
+
+          // Calculate consecutive streak
+          if (activeStreakType === 'win') {
+            currentStreakVal++;
+          } else {
+            activeStreakType = 'win';
+            currentStreakVal = 1;
+          }
+
+        } else if (row.result === 'loss') {
+          totalLosses++;
+          totalLogged++;
+          operatedRowsCount++;
+          if (row.discipline) disciplineAppliedCount++;
+          currentBalance = prevBalance - actualTradeAmount;
+
+          // Calculate consecutive drawdown
+          if (activeStreakType === 'loss') {
+            currentStreakVal++;
+          } else {
+            activeStreakType = 'loss';
+            currentStreakVal = 1;
+          }
+        } else {
+          currentBalance = prevBalance;
+        }
+
+        // --- IC STEP ADVANCEMENT LOGIC ---
+        // Se aplica tanto en resultados reales como en proyecciones futuras (simulando WINS)
+        if (isCompoundActive) {
+          const stepOutcome = row.result !== null ? row.result : 'win'; // Proyectar futuro asumiendo Win
+          
+          if (stepOutcome === 'win') {
+            currentICStep++;
+            if (currentICStep > 3) currentICStep = 1; // Reinicio cíclico
+          } else if (stepOutcome === 'loss') {
+            currentICStep = 1; // Reinicio por pérdida (se mantiene encendido pero vuelve a paso 1)
+          }
+          
+          lastOperatedICAmount = actualTradeAmount;
+        }
+
+        row.currentBalance = currentBalance;
+
+        // Step-by-step euphoria tracking
+        const isOperated = (row.result === 'win' || row.result === 'loss');
+        const stepNetProfit = currentBalance - initialCapital;
+        const stepNetPct = initialCapital > 0 ? (stepNetProfit / initialCapital) * 100 : 0;
+        const isCurrentlyGoalReached = stepNetPct >= appConfig.session.meta_sesion_pct;
+        
+        if (isCurrentlyGoalReached && firstRowIndexGoalReached === -1 && isOperated) {
+          firstRowIndexGoalReached = i;
+        } else if (firstRowIndexGoalReached !== -1 && isOperated && i > firstRowIndexGoalReached) {
+          continuedOperatingAfterGoal = true;
+        }
+
+        // Render dynamic row glowing modifier states
+        const rowDiv = document.getElementById(`row-${row.minute}`);
+        if (rowDiv) {
+          rowDiv.classList.remove('win-row', 'loss-row', 'ic-step-row');
+          if (isCompoundActive) {
+            rowDiv.classList.add('ic-step-row');
+          }
+          if (row.result === 'win') {
+            rowDiv.classList.add('win-row');
+          } else if (row.result === 'loss') {
+            rowDiv.classList.add('loss-row');
+          }
+
+          // Handle 50% IC Block warning indicator
+          let warnSpan = document.getElementById(`ic-warn-${row.minute}`);
+          if (row.icBlockedBy50PctRule) {
+            if (!warnSpan) {
+              warnSpan = document.createElement('span');
+              warnSpan.id = `ic-warn-${row.minute}`;
+              warnSpan.innerHTML = "⚠️50%";
+              warnSpan.style.fontSize = "0.5rem";
+              warnSpan.style.color = "var(--danger-red)";
+              warnSpan.style.position = "absolute";
+              warnSpan.style.marginTop = "-15px";
+              warnSpan.style.marginLeft = "2px";
+              warnSpan.title = "Interés compuesto frenado por Límite de 50% de las Ganancias Globales";
+              const amtInput = document.getElementById(`amount-input-${row.minute}`);
+              if (amtInput && amtInput.parentNode) {
+                amtInput.parentNode.appendChild(warnSpan);
+              }
+            }
+          } else {
+            if (warnSpan) warnSpan.remove();
+          }
+        }
+
+        // Render visual outcomes and sparklines per row
+        const perfLabel = document.getElementById(`perf-${row.minute}`);
+        const saldoLabel = document.getElementById(`saldo-${row.minute}`);
+
+        if (perfLabel && saldoLabel) {
+          saldoLabel.textContent = formatCurrencyText(currentBalance);
+          
+          // Color-code active drawdown states per row
+          if (currentBalance < appConfig.session.capital_inicial) {
+            saldoLabel.style.color = '#ff4a4a'; // Vibrant Red
+            saldoLabel.style.fontWeight = 'bold';
+          } else if (currentBalance > appConfig.session.capital_inicial) {
+            saldoLabel.style.color = '#00b074'; // Neon Green
+            saldoLabel.style.fontWeight = '600';
+          } else {
+            saldoLabel.style.color = 'var(--text-white)'; // Baseline White
+            saldoLabel.style.fontWeight = 'normal';
+          }
+          
+          if (row.result === 'win') {
+            const ganancia = actualTradeAmount * 0.83;
+            perfLabel.innerHTML = `<span class="sparkline-trend positive" title="+83% de ${formatCurrencyText(actualTradeAmount)}">▲ +${formatCurrencyText(ganancia)}</span>`;
+          } else if (row.result === 'loss') {
+            perfLabel.innerHTML = `<span class="sparkline-trend negative" title="-100% de ${formatCurrencyText(actualTradeAmount)}">▼ -${formatCurrencyText(actualTradeAmount)}</span>`;
+          } else {
+            perfLabel.innerHTML = `<span style="color: var(--text-gray); font-weight: 500;">-</span>`;
+          }
+        }
+      }
+
+      // Compute final session tactical metrics
+      const winRatePct = operatedRowsCount > 0 ? Math.round((totalWins / operatedRowsCount) * 100) : 0;
+      const disciplinePct = operatedRowsCount > 0 ? Math.round((disciplineAppliedCount / operatedRowsCount) * 100) : 100;
+      
+      let streakLabel = "Neutral";
+      if (activeStreakType === 'win') {
+        streakLabel = `🔥 ${currentStreakVal} Wins`;
+      } else if (activeStreakType === 'loss') {
+        streakLabel = `❄️ ${currentStreakVal} Loss`;
+      }
+
+      // Write computed metrics to Neumorphic KPI Badges
+      const rachaBadge = document.getElementById('kpi-racha-val');
+      const discBadge = document.getElementById('kpi-disciplina-val');
+      const rateBadge = document.getElementById('kpi-winrate-val');
+
+      if (rachaBadge) rachaBadge.textContent = streakLabel;
+      if (discBadge) discBadge.textContent = `${disciplinePct}%`;
+      if (rateBadge) rateBadge.textContent = `${winRatePct}%`;
+
+      // Alerta Antieuforia: 5 WIN consecutivos
+      if (activeStreakType === 'win' && currentStreakVal >= 5) {
+        if (!window.alertaEuforiaSonada && ('speechSynthesis' in window)) {
+          window.speechSynthesis.cancel();
+          const voiceMsg = new SpeechSynthesisUtterance("Vas muy bien, recuerda tu plan de trading, no caigas en euforia, no arriesgues tu capital.");
+          voiceMsg.lang = 'es-ES';
+          voiceMsg.rate = 0.95;
+          window.speechSynthesis.speak(voiceMsg);
+          window.alertaEuforiaSonada = true;
+        }
+      } else {
+        window.alertaEuforiaSonada = false;
+    window.conteoEuforiaAlertas = 0;
+      }
+
+      // Dynamic notifications states
+      const totalNetProfit = currentBalance - appConfig.session.capital_inicial;
+      const totalNetPct = appConfig.session.capital_inicial > 0 ? (totalNetProfit / appConfig.session.capital_inicial) * 100 : 0;
+
+      const alertBanner = document.getElementById('session-alert-banner');
+      const inlineGoalContainer = document.getElementById('goal-alert-banner-container');
+
+      // Stop loss daily trigger status Check (5% limit)
+      const stopLossReached = totalNetProfit <= -stopLossLimit;
+      // Session daily goal status Check
+      const goalTargetReached = totalNetPct >= appConfig.session.meta_sesion_pct;
+
+      // Compound enabled but profit threshold locked check
+      let compoundEnabledButLocked = appConfig.session.interes_compuesto && (totalNetProfit < requiredProfitThreshold);
+
+      const activeSession = currentSessionKey ? daySessions.lista_sesiones[currentSessionKey] : null;
+      let isSessionClosed = activeSession ? !!activeSession.isClosed : false;
+      const isAutoClosed5h = isSessionClosed && activeSession.autoClosed5h;
+
+      // Condición de Parada de Sesión: Informativa únicamente (no bloquea al usuario)
+      if (activeSession && goalTargetReached && !isSessionClosed) {
+        // La sesión continúa abierta para permitir la libre operación
+      }
+
+      if (isSessionClosed) {
+        if (isAutoClosed5h) {
+          alertBanner.textContent = "🛡️ SESIÓN AUTO-CERRADA POR LÍMITE DE 5 HORAS (PREVENCIÓN DE SOBREOPERACIÓN)";
+          alertBanner.className = "alert-banner-loss";
+        } else if (goalTargetReached) {
+          alertBanner.textContent = "🏆 CUMPLIDA: META FRACCIONADA DE SESIÓN LOGRADA";
+          alertBanner.className = "alert-banner-win";
+        } else if (stopLossReached) {
+          alertBanner.textContent = "🚨 CERRADO: STOP LOSS EXCEDIDO (ACUMULADO EN HISTORIAL)";
+          alertBanner.className = "alert-banner-loss";
+        } else {
+          alertBanner.textContent = "🔒 CERRADO: SESIÓN CONSOLIDADA E HISTORIAL ACUMULADO";
+          alertBanner.className = "alert-banner-neutral";
+        }
+      } else {
+        if (stopLossReached) {
+          alertBanner.textContent = "🚨 ALERTA: STOP LOSS EXCEDIDO (DETENER OPERACIONES)";
+          alertBanner.className = "alert-banner-loss";
+        } else if (icDeactivatedByLoss) {
+          alertBanner.textContent = "⚠️ INTERÉS COMPUESTO DESACTIVADO POR PÉRDIDA [-]";
+          alertBanner.className = "alert-banner-loss";
+        } else if (continuedOperatingAfterGoal) {
+          alertBanner.textContent = "🚨 ADVERTENCIA: EUFORIA DETECTADA (¡PARA YA!)";
+          alertBanner.className = "alert-banner-loss";
+        } else if (goalTargetReached) {
+          alertBanner.textContent = "🎯 META DE SESIÓN LOGRADA (¡RECOMIENDA CERRAR!)";
+          alertBanner.className = "alert-banner-win";
+        } else if (compoundEnabledButLocked) {
+          const missingProfit = requiredProfitThreshold - totalNetProfit;
+          alertBanner.innerHTML = `💡 COMPUESTO BLOQUEADO: Mínimo ${formatCurrencyText(requiredProfitThreshold)} ganados (Faltan: ${formatCurrencyText(missingProfit)})`;
+          alertBanner.className = "alert-banner-neutral";
+        } else if (appConfig.session.interes_compuesto && totalNetProfit >= requiredProfitThreshold) {
+          alertBanner.textContent = `🔄 OPERANDO INTERÉS COMPUESTO (Paso ${currentICStep} activo)`;
+          alertBanner.className = "alert-banner-win";
+        } else {
+          alertBanner.textContent = "🐉 PROGRESO: EN EJECUCIÓN";
+          alertBanner.className = "alert-banner-neutral";
+        }
+      }
+
+      if (continuedOperatingAfterGoal) {
+        inlineGoalContainer.innerHTML = `
+          <div class="target-hit-banner warning-euphoria-pulse" style="border: 2px solid var(--alert-red); background: radial-gradient(circle, rgba(255, 74, 74, 0.2) 0%, var(--bg-dark) 100%);">
+            <h3 style="color: var(--alert-red); text-shadow: 0 0 8px var(--alert-red); margin-bottom: 0.5rem; font-weight: 800;">⚠️ ALERTA DE RIESGO: ESTÁS EN SOBREOPERACIÓN ⚠️</h3>
+            <p style="color: #ffe6e6; font-size: 0.85rem; line-height: 1.4;">Has superado la meta fraccionada de tu sesión (+${totalNetPct.toFixed(2)}%) y has continuado operando o abriendo nuevas sesiones. Estás ingresando al peligroso estado mental de <strong>Euforia</strong> y codicia. El sistema te permite la autonomía de continuar, pero <strong>te advertimos que estás arriesgando tu capital ganado.</strong></p>
+          </div>
+        `;
+      } else if (goalTargetReached) {
+        inlineGoalContainer.innerHTML = `
+          <div class="target-hit-banner">
+            <h3>🎉 ¡META FRACCIONADA DE SESIÓN CUMPLIDA! (+${totalNetPct.toFixed(2)}%)</h3>
+            <p>Has asegurado el objetivo asignado ($X) para esta fracción. La sesión se ha cerrado automáticamente para proteger tus ganancias frente a la sobreoperación.</p>
+          </div>
+        `;
+      } else {
+        inlineGoalContainer.innerHTML = '';
+      }
+
+      // Tactical Alert Sound and Voice Checks
+      if (initialCapital <= 0) {
+        lastAudioState.euphoriaAlerted = false;
+        lastAudioState.goalAlerted = false;
+        lastAudioState.consecutiveLossesAlerted = false;
+        lastAudioState.stopLossAlerted = false;
+        lastAudioState.drawdownTriggered = false;
+      } else {
+        const warnings = appConfig.session.audio_warnings || {};
+        const speechDrawdown = warnings.drawdown || "Advertencia de retroceso. Estás afectando tu capital, presta atención.";
+        const speechStreak = warnings.streak || "Atención. Tres pérdidas consecutivas. Estás afectando tu capital, presta atención.";
+        const speechStoploss = warnings.stoploss || "Límite de pérdida excedido. Estás afectando tu capital, detén la sesión inmediatamente.";
+        const speechEuphoria = warnings.euphoria || "Alerta de euforia. Estás arriesgando tus ganancias aseguradas, detén las operaciones ahora.";
+        const speechGoal = warnings.goal || "Meta diaria alcanzada. Excelente trabajo, protege tus ganancias y cierra la sesión.";
+
+        if (continuedOperatingAfterGoal) {
+          if (!lastAudioState.euphoriaAlerted) {
+            playTacticalSound('euphoria');
+            speakWarning(speechEuphoria);
+            lastAudioState.euphoriaAlerted = true;
+          }
+        } else {
+          lastAudioState.euphoriaAlerted = false;
+        }
+
+        if (goalTargetReached) {
+          if (!lastAudioState.goalAlerted) {
+            playTacticalSound('goal');
+            speakWarning(speechGoal);
+            lastAudioState.goalAlerted = true;
+          }
+        } else {
+          lastAudioState.goalAlerted = false;
+        }
+
+        let hasThreeLosses = (activeStreakType === 'loss' && currentStreakVal >= 3);
+        if (hasThreeLosses) {
+          if (!lastAudioState.consecutiveLossesAlerted) {
+            playTacticalSound('siren');
+            speakWarning(speechStreak);
+            lastAudioState.consecutiveLossesAlerted = true;
+          }
+        } else {
+          lastAudioState.consecutiveLossesAlerted = false;
+        }
+
+        if (stopLossReached) {
+          if (!lastAudioState.stopLossAlerted) {
+            playTacticalSound('siren');
+            speakWarning(speechStoploss);
+            // Segunda advertencia agregada a la cola con voz masculina
+            speakWarning("Advertencia, por la seguridad de tu capital debes activar el botón de pánico.", true, 1.0, true);
+            lastAudioState.stopLossAlerted = true;
+          }
+        } else {
+          lastAudioState.stopLossAlerted = false;
+        }
+
+        if (totalNetProfit < 0) {
+          if (!lastAudioState.drawdownTriggered) {
+            playTacticalSound('drawdown');
+            speakWarning(speechDrawdown);
+            lastAudioState.drawdownTriggered = true;
+          }
+        } else {
+          lastAudioState.drawdownTriggered = false;
+        }
+      }
+
+      // Sync the live global updated balance display and the other 4 headers
+      activeSessionStartCapital = initialCapital; // Sync module-level chart base
+      
+      const currentSessionNetProfit = currentBalance - initialCapital;
+      const totalDailyProfits = totalDailyProfitsAnteriores + currentSessionNetProfit;
+
+      // Find original starting capital of the day (chronological first session)
+      let originalCapitalInicial = appConfig.session.capital_inicial;
+      const sessionKeysSorted = Object.keys(daySessions.lista_sesiones).sort();
+      if (sessionKeysSorted.length > 0) {
+        const firstKey = sessionKeysSorted[0];
+        originalCapitalInicial = daySessions.lista_sesiones[firstKey].capital_inicial;
+      }
+
+      // 1. Saldo Inicial (The baseline configured capital)
+      const elCapital = document.getElementById('header-capital-val');
+      if (elCapital) {
+        elCapital.textContent = formatCurrencyText(originalCapitalInicial);
+      }
+
+      // 2. Nuevo Saldo (Overall cumulative daily balance)
+      const overallDailyBalance = originalCapitalInicial + totalDailyProfits;
+      const currentBalanceEl = document.getElementById('header-current-balance-val');
+      if (currentBalanceEl) {
+        currentBalanceEl.textContent = formatCurrencyText(overallDailyBalance);
+        if (overallDailyBalance < originalCapitalInicial) {
+          currentBalanceEl.style.color = '#ff4a4a'; // Vibrant Red
+          currentBalanceEl.style.textShadow = '0 0 12px rgba(255, 74, 74, 0.5)';
+        } else if (overallDailyBalance > originalCapitalInicial) {
+          currentBalanceEl.style.color = '#00b074'; // Neon Green
+          currentBalanceEl.style.textShadow = '0 0 12px rgba(0, 176, 116, 0.5)';
+        } else {
+          currentBalanceEl.style.color = 'var(--text-white)'; // Baseline White
+          currentBalanceEl.style.textShadow = 'none';
+        }
+      }
+
+      // 3. Ganancia Día (Combined profits)
+      const elDailyProfit = document.getElementById('header-daily-profit-val');
+      if (elDailyProfit) {
+        elDailyProfit.textContent = (totalDailyProfits >= 0 ? '+' : '') + formatCurrencyText(totalDailyProfits);
+        if (totalDailyProfits < 0) {
+          elDailyProfit.style.color = '#ff4a4a';
+          elDailyProfit.style.textShadow = '0 0 10px rgba(255, 74, 74, 0.3)';
+        } else if (totalDailyProfits > 0) {
+          elDailyProfit.style.color = '#00b074';
+          elDailyProfit.style.textShadow = '0 0 10px rgba(0, 176, 116, 0.3)';
+        } else {
+          elDailyProfit.style.color = 'var(--text-gray)';
+          elDailyProfit.style.textShadow = 'none';
+        }
+      }
+
+      // 4. Meta Ganancia Sesión
+      const elSessionGoal = document.getElementById('header-session-goal-val');
+      if (elSessionGoal) {
+        const sessionGoalAmt = initialCapital * (appConfig.session.meta_sesion_pct / 100);
+        elSessionGoal.textContent = `+${appConfig.session.meta_sesion_pct}% (${formatCurrencyText(sessionGoalAmt)})`;
+      }
+
+      // 5. Meta del Día
+      const elDayGoal = document.getElementById('header-day-goal-val');
+      const dayGoalPct = appConfig.session.meta_diaria_pct || 15;
+      if (elDayGoal) {
+        const dayGoalAmt = originalCapitalInicial * (dayGoalPct / 100);
+        elDayGoal.textContent = `+${dayGoalPct}% (${formatCurrencyText(dayGoalAmt)})`;
+      }
+
+      // Paint real-time dynamic curve graph
+      renderSidebarCurveGraph();
+
+      // Persist recalculated rows back to the active session and save to storage
+      if (currentSessionKey && daySessions.lista_sesiones[currentSessionKey]) {
+        daySessions.lista_sesiones[currentSessionKey].rows = sessionRows;
+        localStorage.setItem('DragonOro_day_sessions', JSON.stringify(daySessions));
+      }
+
+      // Sync the closed session statistics rendered in the accordion
+      renderSessionsAccordion();
+    }
+
+    function renderSidebarCurveGraphEmpty() {
+      const container = document.getElementById('sidebar-equity-chart');
+      if (!container) return;
+
+      const width = 300;
+      const height = 110;
+      const pad = 8;
+
+      container.innerHTML = `
+        <svg class="chart-svg" viewBox="0 0 ${width} ${height}">
+          <line x1="${pad}" y1="${height / 2}" x2="${width - pad}" y2="${height / 2}" stroke="rgba(255,255,255,0.03)" stroke-dasharray="2,2"/>
+          <text x="${width / 2}" y="${height / 2 + 5}" fill="rgba(255,255,255,0.2)" font-size="0.75rem" text-anchor="middle" font-family="sans-serif">Gráfico de Equidad Inactivo</text>
+        </svg>
+      `;
+    }
+
+    // Paint dynamic SVG equity worked hour curve line
+    function renderSidebarCurveGraph() {
+      const container = document.getElementById('sidebar-equity-chart');
+      if (!container) return;
+
+      if (!currentSessionKey || !daySessions.lista_sesiones[currentSessionKey]) {
+        renderSidebarCurveGraphEmpty();
+        return;
+      }
+
+      let dataPoints = [activeSessionStartCapital];
+      for (let i = 0; i < 60; i++) {
+        if (sessionRows[i]) dataPoints.push(sessionRows[i].currentBalance);
+      }
+
+      const minVal = Math.min(...dataPoints);
+      const maxVal = Math.max(...dataPoints);
+      const range = maxVal - minVal;
+
+      const width = 300;
+      const height = 110;
+      const pad = 8;
+
+      let coords = [];
+      for (let i = 0; i < dataPoints.length; i++) {
+        const x = pad + (i * (width - 2 * pad)) / (dataPoints.length - 1);
+        let y = height / 2;
+        if (range > 0) {
+          y = height - pad - ((dataPoints[i] - minVal) * (height - 2 * pad)) / range;
+        }
+        coords.push({ x, y });
+      }
+
+      let lineD = `M ${coords[0].x} ${coords[0].y}`;
+      for (let i = 1; i < coords.length; i++) {
+        lineD += ` L ${coords[i].x} ${coords[i].y}`;
+      }
+
+      let areaD = `${lineD} L ${coords[coords.length - 1].x} ${height - pad} L ${coords[0].x} ${height - pad} Z`;
+
+      container.innerHTML = `
+        <svg class="chart-svg" viewBox="0 0 ${width} ${height}">
+          <defs>
+            <linearGradient id="curve-area-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--accent-gold)" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="var(--accent-gold)" stop-opacity="0.0"/>
+            </linearGradient>
+            <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3.5" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <line x1="${pad}" y1="${height / 2}" x2="${width - pad}" y2="${height / 2}" stroke="rgba(255,255,255,0.03)" stroke-dasharray="2,2"/>
+          <path d="${areaD}" fill="url(#curve-area-grad)" stroke="none" />
+          <path d="${lineD}" fill="none" stroke="var(--accent-gold)" stroke-width="2.5" filter="url(#glow-filter)" style="stroke-linecap: round; stroke-linejoin: round;" />
+        </svg>
+      `;
+    }
+
+    // Export semicolon-delimited Excel friendly CSV spreadsheet with chronological daily sessions
+    function exportExcelCSV() {
+      let csvLines = [];
+      const keys = Object.keys(daySessions.lista_sesiones);
+      
+      if (keys.length === 0) {
+        alert("No hay bloques horarios registrados en el día para exportar.");
+        return;
+      }
+      
+      // Sort sessions chronologically (comparing hours/minutes parsed)
+      keys.sort((a, b) => {
+        const parseTime = (str) => {
+          const matches = str.match(/^(\d+):(\d+)\s+(AM|PM)$/i);
+          if (!matches) return 0;
+          let hr = parseInt(matches[1]);
+          let min = parseInt(matches[2]);
+          const period = matches[3].toUpperCase();
+          if (period === "PM" && hr < 12) hr += 12;
+          if (period === "AM" && hr === 12) hr = 0;
+          return hr * 60 + min;
+        };
+        return parseTime(a) - parseTime(b);
+      });
+      
+      csvLines.push(`REPORTE DIARIO DE SESIONES DE OPERACIÓN - GUARDÍAN DRAGÓN (${daySessions.fecha_actual})`);
+      csvLines.push("");
+      
+      keys.forEach(key => {
+        const session = daySessions.lista_sesiones[key];
+        
+        let totalWins = 0;
+        let totalLosses = 0;
+        let totalOperated = 0;
+        let lastBalance = session.capital_inicial;
+        
+        if (session.rows && session.rows.length > 0) {
+          session.rows.forEach(r => {
+            if (r.result === 'win') {
+              totalWins++;
+              totalOperated++;
+            } else if (r.result === 'loss') {
+              totalLosses++;
+              totalOperated++;
+            }
+            if (r.currentBalance !== undefined && r.result !== null) {
+              lastBalance = r.currentBalance;
+            }
+          });
+        }
+        const winRate = totalOperated > 0 ? Math.round((totalWins / totalOperated) * 100) : 0;
+        
+        csvLines.push(`======================================================================`);
+        csvLines.push(`FECHA:;${session.fecha || daySessions.fecha_actual || ''};BLOQUE HORARIO:;${key}`);
+        csvLines.push(`Capital Inicial:;${session.capital_inicial};Moneda:;${session.moneda}`);
+        csvLines.push(`Win Rate (Efectividad):;${winRate}%;Operaciones:;${totalOperated} (Ganadas: ${totalWins} / Perdidas: ${totalLosses})`);
+        csvLines.push(`Interés Compuesto:;${session.interes_compuesto ? "ACTIVADO" : "DESACTIVADO"};Meta de Sesión:;${session.meta_sesion_pct}%`);
+        csvLines.push(`Saldo Final Recalculado:;${lastBalance}`);
+        csvLines.push(`======================================================================`);
+        csvLines.push("Minuto;Hora;Monto de Operación;Resultado;Estrategia Checklist;Saldo Actualizado");
+        
+        if (session.rows && session.rows.length > 0) {
+          session.rows.forEach(row => {
+            let outcome = "SIN OPERAR";
+            if (row.result === 'win') outcome = "WIN [+]";
+            else if (row.result === 'loss') outcome = "LOSS [-]";
+            const strat = row.discipline ? "SI" : "NO";
+            
+            // Suggested or customized trade amount
+            let amt = row.customAmount !== null ? row.customAmount : 0;
+            
+            csvLines.push(`${row.minute};${row.timeStr};${Math.round(amt)};${outcome};${strat};${Math.round(row.currentBalance * 100) / 100}`);
+          });
+        }
+        csvLines.push("");
+        csvLines.push("");
+      });
+      
+      const rawCsv = "\uFEFF" + csvLines.join("\n");
+      const blob = new Blob([rawCsv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const downloadLink = document.createElement("a");
+      
+      downloadLink.setAttribute("href", url);
+      downloadLink.setAttribute("download", `DragonOro_DailyLedger_${daySessions.fecha_actual}.csv`);
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+
+    // Listen to session timer ticks
+    window.addEventListener('timer-tick', (e) => {
+      sessionClock.textContent = e.detail.formatted;
+    });
+
+    window.addEventListener('timer-warning', (e) => {
+      alert("⚠️ Alerta de Tiempo: " + e.detail.message);
+    });
+
+    window.addEventListener('timer-expired', (e) => {
+      alert("⏱️ Sesión Sugerida Expirada: " + e.detail.message + "\n\nHas alcanzado el límite recomendado de 60 minutos de operación por sesión. Te aconsejamos tomar un descanso para mantener tu disciplina operativa y salud emocional. ¡El sistema continuará activo y disponible si decides seguir!");
+    });
+  </script>
+
+  <div id="debug-path-display-index" style="position: fixed; bottom: 5px; left: 5px; background: rgba(0,0,0,0.8); color: lime; padding: 5px; font-family: monospace; z-index: 99999; font-size: 12px; border: 1px solid lime; border-radius: 4px; pointer-events: none;">
+    [VERIFICACIÓN] Ejecutando desde: Cargando...
+  </div>
+  <script>
+    fetch('/api/debug-path').then(r => r.json()).then(d => {
+      const pathLower = d.path.toLowerCase();
+      const isMaster = pathLower.endsWith('\\DragonOro') || pathLower.endsWith('/DragonOro');
+      const versionLabel = isMaster ? '🐉 APP MAESTRA (ORIGINAL)' : '📦 APP INSTALADA';
+      document.getElementById('debug-path-display-index').innerHTML = `<strong>[${versionLabel}]</strong><br>Ruta real: ${d.path}`;
+    }).catch(e => console.error(e));
+  </script>
+  <!-- Tutorial Engine: loaded AFTER DOM is ready -->
+  <script src="ui/components/tutorial_engine.js"></script>
+
+
+
+
+
+
+
+
+
+<script id="dragonoro-targetmodal-fix">
+document.addEventListener('DOMContentLoaded', () => {
+  const tModal = document.getElementById('target-settings-modal');
+  const btnGuardar = document.getElementById('btn-save-params') || 
+                     Array.from(document.querySelectorAll('button')).find(b => b.innerText.includes('GUARDAR'));
+  const btnCancel = Array.from(document.querySelectorAll('button')).find(b => b.innerText.trim() === 'CANCELAR');
+
+  // Funcion de cierre identica a la de Cancelar
+  function ejecutarCierreLimpio() {
+    if (btnCancel) {
+      // Simular click de cancelar para usar exactamente su misma rutina
+      btnCancel.click();
+    } else if (tModal) {
+      tModal.classList.add('hidden');
+      tModal.style.display = 'none';
+    }
+  }
+
+  if (btnGuardar) {
+    btnGuardar.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      try {
+        // 1. Extraer los valores ingresados en el formulario
+        const capVal = parseFloat(document.getElementById('modal-capital-input')?.value) || 0;
+        const riskVal = parseFloat(document.getElementById('modal-risk-input')?.value) || 1;
+        const goalVal = parseFloat(document.getElementById('modal-daily-goal-input')?.value) || 15;
+        const sessVal = parseFloat(document.getElementById('modal-sessions-count-input')?.value) || 3;
+        const stopVal = parseFloat(document.getElementById('modal-stoploss-input')?.value) || 5;
+        const minVal  = parseFloat(document.getElementById('modal-min-amount-input')?.value) || 4000;
+
+        // 2. Persistir en appConfig global nativo si existe
+        if (window.appConfig && window.appConfig.session) {
+          window.appConfig.session.capital_inicial = capVal;
+          window.appConfig.session.porcentaje_riesgo = riskVal;
+          window.appConfig.session.meta_diaria = goalVal;
+          window.appConfig.session.sesiones_dia = sessVal;
+          window.appConfig.session.limite_perdida_sesion = stopVal;
+          window.appConfig.session.monto_minimo_operacion = minVal;
+        }
+
+        // 3. Persistir en calculator si existe
+        if (window.calculator) {
+          window.calculator.capitalInicial = capVal;
+        }
+
+        // 4. Guardar copia de seguridad en localStorage
+        localStorage.setItem('DragonOro_capital_base', capVal);
+
+        // 4b. Un capital configurado explícitamente es la nueva referencia:
+        // re-basa el capital acumulado para que la config mande sobre el arrastre.
+        if (typeof guardarCapitalAcumulado === 'function') {
+          guardarCapitalAcumulado(capVal);
+        }
+        if (typeof guardarBaseDelDia === 'function') {
+          guardarBaseDelDia(capVal);
+        }
+
+        if (typeof saveSettingsConfig === 'function') {
+          saveSettingsConfig();
+        }
+      } catch (err) {
+        console.warn('Advertencia al guardar datos en memoria:', err);
+      }
+
+      // 5. CERRAR EL MODAL con la misma accion limpia de CANCELAR
+      ejecutarCierreLimpio();
+
+      // 6. Recalcular bitacora y consola de metricas
+      setTimeout(() => {
+        try {
+if (typeof recalcularBitacoraCompleta === 'function') {
+            recalcularBitacoraCompleta();
+          }
+          if (typeof actualizarConsolaMetricas === 'function') {
+            actualizarConsolaMetricas();
+          }
+        } catch (calcErr) {
+          console.warn('Error en recalculo:', calcErr);
+        }
+      }, 100);
+    };
+  }
+});
+</script>
+<script id="dragonoro-console-engine">
+(function() {
+  const fmt = (v) => '$'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ + Math.round(Number(v) || 0).toLocaleString('es-CO');
+
+  window.sincronizarConsolaMetricas = function() {
+    // 1. Obtener Capital Inicial configurado (de appConfig, input o localStorage)
+    let capital = 0;
+    if (window.appConfig && window.appConfig.session && window.appConfig.session.capital_inicial) {
+      capital = parseFloat(window.appConfig.session.capital_inicial) || 0;
+    }
+    if (!capital) {
+      const modalCap = document.getElementById('modal-capital-input');
+      if (modalCap && parseFloat(modalCap.value)) {
+        capital = parseFloat(modalCap.value);
+      }
+    }
+    if (!capital) {
+      capital = parseFloat(localStorage.getItem('DragonOro_capital_base')) || 40000;
+    }
+
+    // 2. Metas y limites configurados
+    let metaDiaPct = 15;
+    let sesiones = 3;
+    let riesgoPct = 1;
+    let stopLossPct = 5;
+
+    if (window.appConfig && window.appConfig.session) {
+      metaDiaPct = parseFloat(window.appConfig.session.meta_diaria) || 15;
+      sesiones = parseFloat(window.appConfig.session.sesiones_dia) || 3;
+      riesgoPct = parseFloat(window.appConfig.session.porcentaje_riesgo) || 1;
+      stopLossPct = parseFloat(window.appConfig.session.limite_perdida_sesion) || 5;
+    } else {
+      const inRisk = document.getElementById('modal-risk-input');
+      const inGoal = document.getElementById('modal-daily-goal-input');
+      const inSess = document.getElementById('modal-sessions-count-input');
+      const inStop = document.getElementById('modal-stoploss-input');
+      if (inRisk && parseFloat(inRisk.value)) riesgoPct = parseFloat(inRisk.value);
+      if (inGoal && parseFloat(inGoal.value)) metaDiaPct = parseFloat(inGoal.value);
+      if (inSess && parseFloat(inSess.value)) sesiones = parseFloat(inSess.value);
+      if (inStop && parseFloat(inStop.value)) stopLossPct = parseFloat(inStop.value);
+    }
+
+    // 3. Evaluar PnL de la bitacora de operaciones (Sumar y Restar)
+    // Fuente de verdad: los currentBalance de la bitácora real
+    // (WIN = +83% del monto operado, LOSS = -100% del monto operado).
+    let pnlTotal = (typeof profitDeHoy === 'function') ? profitDeHoy() : 0;
+
+    // Fallback directo leyendo las filas del DOM si estan en pantalla
+    if (pnlTotal === 0) {
+      const celdasPnl = document.querySelectorAll('td.col-ganancia, td.ganancia, [data-field="pnl"], .row-pnl');
+      celdasPnl.forEach(td => {
+        const raw = td.innerText.replace(/[$\.,]/g, '').trim();
+        const n = parseFloat(raw) || 0;
+        pnlTotal += n;
+      });
+    }
+
+    const profitPrevioEngine = (typeof capitalVigenteTotal === 'function') ? capitalVigenteTotal() : 0;
+    const nuevoSaldo = profitPrevioEngine;
+    const metaDiaDinero = capital * (metaDiaPct / 100);
+    const metaSesionDinero = metaDiaDinero / (sesiones || 1);
+    const stopLossDinero = capital * (stopLossPct / 100);
+    const montoMinimoOperacion = Math.max(4000, capital * (riesgoPct / 100));
+
+    // 4. Pintar en los encabezados del Header
+    // Buscamos las etiquetas por proximidad de texto si no tienen IDs fijos
+    const allLabels = Array.from(document.querySelectorAll('*'));
+
+    const updateLabelValue = (searchText, valorTxt, color) => {
+      const headerLabel = allLabels.find(el => el.children.length === 0 && el.innerText.trim().toUpperCase().includes(searchText));
+      if (headerLabel) {
+        const container = headerLabel.parentElement;
+        const valElem = container ? Array.from(container.querySelectorAll('*')).find(el => el !== headerLabel && el.children.length === 0 && (el.innerText.includes('$'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+) || el.innerText.trim() === '0')) : null;
+        if (valElem) {
+          valElem.innerText = valorTxt;
+          if (color) valElem.style.color = color;
+        }
+      }
+    };
+
+    updateLabelValue('SALDO INICIAL', fmt(capital));
+    updateLabelValue('NUEVO SALDO', fmt(nuevoSaldo));
+    updateLabelValue('GANANCIA D', fmt(pnlTotal), pnlTotal >= 0 ? '#10b981' : '#ef4444');
+    updateLabelValue('META SESI', fmt(metaSesionDinero));
+    updateLabelValue('META D', fmt(metaDiaDinero));
+
+    // 5. Pintar en los limites tacticos de la barra lateral izquierda
+    updateLabelValue('MONTO M', fmt(montoMinimoOperacion));
+    updateLabelValue('STOP LOSS', fmt(stopLossDinero));
+  };
+
+  // Escuchar eventos globales de cambio
+  window.addEventListener('load', () => {
+    setTimeout(window.sincronizarConsolaMetricas, 250);
+  });
+
+  document.addEventListener('input', () => {
+    setTimeout(window.sincronizarConsolaMetricas, 50);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('button') || e.target.closest('.toggle-slider') || e.target.closest('input')) {
+      setTimeout(window.sincronizarConsolaMetricas, 100);
+    }
+  });
+
+  // Interceptar la funcion de calculo nativa si existe para que siempre refresque la barra
+  const origRecalc = window.recalcularBitacoraCompleta;
+  if (typeof origRecalc === 'function') {
+    window.recalcularBitacoraCompleta = function() {
+      const res = origRecalc.apply(this, arguments);
+      window.sincronizarConsolaMetricas();
+      return res;
+    };
+  }
+})();
+</script>
+<script id="dragonoro-header-sync">
+(function() {
+  function refrescarMetricasCabecera() {
+    // 1. Obtener capital configurado
+    let cap = 0;
+    if (window.appConfig && window.appConfig.session && Number(window.appConfig.session.capital_inicial) > 0) {
+      cap = Number(window.appConfig.session.capital_inicial);
+    } else {
+      const inp = document.getElementById('modal-capital-input');
+      if (inp && Number(inp.value) > 0) {
+        cap = Number(inp.value);
+      } else {
+        cap = Number(localStorage.getItem('DragonOro_capital_base')) || 40000;
+      }
+    }
+
+    // 2. Metas configuradas
+    let metaDiaPct = 15;
+    let sesiones = 3;
+    if (window.appConfig && window.appConfig.session) {
+      metaDiaPct = Number(window.appConfig.session.meta_diaria) || 15;
+      sesiones = Number(window.appConfig.session.sesiones_dia) || 3;
+    } else {
+      const gInp = document.getElementById('modal-daily-goal-input');
+      const sInp = document.getElementById('modal-sessions-count-input');
+      if (gInp && Number(gInp.value)) metaDiaPct = Number(gInp.value);
+      if (sInp && Number(sInp.value)) sesiones = Number(sInp.value);
+    }
+
+    const metaSesPct = metaDiaPct / (sesiones || 1);
+    const metaDiaDinero = cap * (metaDiaPct / 100);
+    const metaSesDinero = cap * (metaSesPct / 100);
+
+    // 3. Moneda y formateo nativo
+    const moneda = (window.appConfig && window.appConfig.session && window.appConfig.session.moneda) ? window.appConfig.session.moneda : 'COP';
+    const fmt = (typeof formatCurrencyText === 'function') 
+      ? formatCurrencyText 
+      : (v => '$'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ + Math.round(v).toLocaleString('es-CO') + ' ' + moneda);
+
+    // 4. PnL acumulado real derivado de los currentBalance de la bitácora
+    let pnlNeto = (typeof profitDeHoy === 'function') ? profitDeHoy() : 0;
+
+    // Fuente unica de verdad: capital vigente (base del dia + profit de hoy)
+    const nuevoSaldo = (typeof capitalVigenteTotal === 'function') ? capitalVigenteTotal() : (cap + pnlNeto);
+
+    // 5. Inyectar directamente en los IDs nativos del DOM
+    const elCap = document.getElementById('header-capital-val');
+    const elBal = document.getElementById('header-current-balance-val');
+    const elPnl = document.getElementById('header-daily-profit-val');
+    const elSes = document.getElementById('header-session-goal-val');
+    const elDia = document.getElementById('header-day-goal-val');
+
+    if (elCap) elCap.textContent = fmt(cap);
+    if (elBal) {
+      elBal.textContent = fmt(nuevoSaldo);
+      if (nuevoSaldo > cap) {
+        elBal.style.color = '#00b074';
+      } else if (nuevoSaldo < cap) {
+        elBal.style.color = '#ff4a4a';
+      } else {
+        elBal.style.color = 'var(--text-white)';
+      }
+    }
+    if (elPnl) {
+      elPnl.textContent = (pnlNeto >= 0 ? '+' : '') + fmt(pnlNeto);
+      elPnl.style.color = pnlNeto > 0 ? '#00b074' : (pnlNeto < 0 ? '#ff4a4a' : 'var(--text-gray)');
+    }
+    if (elSes) elSes.textContent = fmt(metaSesDinero);
+    if (elDia) elDia.textContent = fmt(metaDiaDinero);
+  }
+
+  // Ejecutar al cargar y tras cualquier interaccion
+  window.addEventListener('load', () => {
+    setTimeout(refrescarMetricasCabecera, 100);
+  });
+  document.addEventListener('click', () => {
+    setTimeout(refrescarMetricasCabecera, 80);
+  });
+  window.refrescarMetricasCabecera = refrescarMetricasCabecera;
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

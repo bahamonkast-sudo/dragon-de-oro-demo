@@ -1,0 +1,495 @@
+{
+  "url": "https://www.binaryteach.com/tendencias-y-fractales/",
+  "slug": "tendencias-y-fractales",
+  "depth": 1,
+  "title": "Tendencias y Fractales",
+  "description": "Bienvenido al material de apoyo de preguntas y respuestas #1. Antes de continuar mira el vídeo. Impulsos y Retrocesos En la última clase hablábamos sobre las […]",
+  "kind": "class",
+  "level": null,
+  "order": null,
+  "date_published": "2019-07-28T19:17:48+00:00",
+  "date_modified": "2019-07-28T20:14:15+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-accion-del-precio",
+    "tag-curso-nuevo"
+  ],
+  "word_count": 272,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "mefrrYM1Wi0",
+      "url": "https://www.youtube.com/embed/mefrrYM1Wi0?feature=oembed",
+      "title": "Respondiendo Dudas#1 - Tendencias y Fractales"
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/tendencias-y-fractales-01.jpg",
+      "status": "ok",
+      "bytes": 69279
+    },
+    {
+      "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/tendencias-y-fractales-02.jpg",
+      "status": "ok",
+      "bytes": 30702
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/tendencias-y-fractales-03.jpg",
+      "status": "ok",
+      "bytes": 27006
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/tendencias-y-fractales-04.jpg",
+      "status": "ok",
+      "bytes": 31076
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal-1024x323.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/tendencias-y-fractales-05.jpg",
+      "status": "ok",
+      "bytes": 281749
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/tendencias-y-fractales-06.jpg",
+      "status": "ok",
+      "bytes": 30061
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/tendencias-y-fractales-07.jpg",
+      "status": "ok",
+      "bytes": 98555
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Bienvenido al material de apoyo de preguntas y respuestas #1. Antes de continuar mira el vídeo.",
+      "html": "Bienvenido al material de apoyo de preguntas y respuestas #1. Antes de continuar mira el vídeo."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "mefrrYM1Wi0",
+      "url": "https://www.youtube.com/embed/mefrrYM1Wi0?feature=oembed",
+      "title": "Respondiendo Dudas#1 - Tendencias y Fractales",
+      "caption": "",
+      "poster": "data/assets/images/tendencias-y-fractales-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Impulsos y Retrocesos",
+      "html": "<strong>Impulsos y Retrocesos</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "En la última clase hablábamos sobre las tendencias generales y secundarias del gráfico, podemos notar que el precio rara vez se mueve de manera constante y lineal.",
+      "html": "En la última clase hablábamos sobre las tendencias generales y secundarias del gráfico, podemos notar que el precio rara vez se mueve de manera constante y lineal."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/tendencias-y-fractales-02.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Ejemplo Tendencia General Bajista y sus tendencias secundarias.",
+      "width": 1280,
+      "height": 720,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/tendencias-y-fractales-03.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Movimiento bajista constante y lineal.",
+      "width": 1280,
+      "height": 720,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "La mayoría de veces las tendencias están compuestas por impulsos y retrocesos.",
+      "html": "La mayoría de veces las tendencias están compuestas por<strong> impulsos y retrocesos. </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo puedes notar los impulsos son a favor de la tendencia general y los retrocesos son en contra de la tendencia general.",
+      "html": "Cómo puedes notar los impulsos son a favor de la tendencia general y los retrocesos son en contra de la tendencia general."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/tendencias-y-fractales-04.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-04.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Para que el precio pueda continuar con la misma dirección es necesario que vaya creando máximos y mínimos hacia esa misma dirección.",
+      "html": "Para que el precio pueda continuar con la misma dirección es necesario que vaya creando máximos y mínimos hacia esa misma dirección."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mercado Fractal",
+      "html": "<strong>Mercado Fractal</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los fractales son patrones repetitivos en diferentes escalas, estas escalas pueden ser físicas o temporales.",
+      "html": "Los fractales son patrones repetitivos en diferentes escalas, estas escalas pueden ser físicas o temporales."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos encontrar ejemplos de fractales en la naturaleza, cómo en los ríos o en las hojas de algunas plantas.",
+      "html": "Podemos encontrar ejemplos de fractales en la naturaleza, cómo en los ríos o en las hojas de algunas plantas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/tendencias-y-fractales-05.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-05.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal-1024x323.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Los fractales en al naturaleza.",
+      "width": 1280,
+      "height": 404,
+      "index": 4,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "El mercado de valores surge por el comportamiento humano, nuestro comportamiento es repetitivo, por lo tanto los fractales también forman parte del historial de precios.",
+      "html": "El mercado de valores surge por el comportamiento humano, nuestro comportamiento es repetitivo, por lo tanto los fractales también forman parte del historial de precios."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/tendencias-y-fractales-06.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-06.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Ejemplo de fractales en el mercado, por conteo de velas podemos encontrar pequeños retrocesos en nuestra tendencia.",
+      "width": 1280,
+      "height": 720,
+      "index": 5,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Fuerza en las tendencias",
+      "html": "<strong>Fuerza en las tendencias</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una tendencia es fuerte por su angulo de inclinación, ese angulo nos dice que el precio esta recorriendo bastante distancia en poco tiempo. Pero también podemos encontrar movimientos constantes del precio pero a mayor tiempo.",
+      "html": "Una tendencia es fuerte por su angulo de inclinación, ese angulo nos dice que el precio esta recorriendo bastante distancia en poco tiempo. Pero también podemos encontrar movimientos constantes del precio pero a mayor tiempo."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/tendencias-y-fractales-07.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-07.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Tendencia fuerte acelerada / tendencia fuerte lenta.",
+      "width": 1280,
+      "height": 720,
+      "index": 6,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos notar que el avance de este ultimo ejemplo es lento, y las velas presentan poco volumen, es decir poco cuerpo. Ambas tendencias son fuertes, nos muestran insistencia del precio por continuar su camino.",
+      "html": "Podemos notar que el avance de este ultimo ejemplo es lento, y las velas presentan poco volumen, es decir poco cuerpo. Ambas tendencias son fuertes, nos muestran insistencia del precio por continuar su camino."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mientras que con esta otra tendencia débil el precio mismo va contrarrestando el recorrido, son velas de poco avance.",
+      "html": "Mientras que con esta otra tendencia débil el precio mismo va contrarrestando el recorrido, son velas de poco avance."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los ejemplos se presentan en tendencias especificas, si tu tarea buscar ejemplos en la tendencia contraria 🙂",
+      "html": "Los ejemplos se presentan en tendencias especificas, si tu tarea buscar ejemplos en la tendencia contraria 🙂"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

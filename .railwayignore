@@ -1,0 +1,12 @@
+# Excluidos del deploy: pesados, locales o respaldos. No afectan la app.
+node_modules/
+.wrangler/
+.wrangler-config/
+*.bak
+*.bak_*
+*.backup_*
+*corrupto*
+*CORRUPTO*
+public/patrones/control_riesgo/runtime/
+data/raw/
+candle-study-console/

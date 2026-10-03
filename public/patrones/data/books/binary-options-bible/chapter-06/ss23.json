@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss23",
+  "code": "SS23",
+  "name": "Patrón Seguro 23 (Método de las Tres Caídas - Engullimiento Triple Bajista)",
+  "classification": {
+    "market": "Tendencia Bajista o Alcista",
+    "tradeType": "Continuación Bajista tras Engullir Retroceso Triple",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia.",
+    "Para operaciones bajistas: espere a que se produzcan 3 velas rojas consecutivas de impulso bajista.",
+    "Después, espere a que se formen 3 velas verdes consecutivas de retroceso.",
+    "REGLA CRÍTICA: Espere a que una vela roja engulla completamente el retroceso de las tres velas verdes anteriores (vela de ruptura).",
+    "Una vez que consigas una ruptura exitosa al cierre de esa vela envolvente, coloca la operación en la misma dirección (PUT) en la siguiente vela comercial.",
+    "Para operaciones alcistas simétricas: 3 verdes de impulso -> 3 rojas de retroceso -> 1 vela verde que engulla las 3 rojas -> operar CALL.",
+    "Oscilador estocástico con valor predeterminado respaldando la dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación.",
+    "La vela de ruptura roja debe cubrir netamente el recorrido alcista del retroceso."
+  ],
+  "simulation": {
+    "velasBase": 8,
+    "triggerIndex": 6
+  }
+}

@@ -1,0 +1,931 @@
+{
+  "url": "https://www.binaryteach.com/patrones-de-velas-japonesas/",
+  "slug": "patrones-de-velas-japonesas",
+  "depth": 1,
+  "title": "Patrones de Velas Japonesas",
+  "description": "Una vela japonesa es la representación gráfica de la cotización del precio de un activo en determinado tiempo. Las velas japonesas surgen en el siglo XVII […]",
+  "kind": "class",
+  "level": null,
+  "order": null,
+  "date_published": "2019-10-01T22:49:23+00:00",
+  "date_modified": "2020-04-12T19:51:56+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-accion-del-precio",
+    "tag-curso-nuevo",
+    "tag-velas-japonesas"
+  ],
+  "word_count": 893,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "WimeBmFsWi4",
+      "url": "https://www.youtube.com/embed/WimeBmFsWi4?feature=oembed",
+      "title": "Velas Japonesas en 3 minutos - Patrones de Reversión y Continuidad"
+    },
+    {
+      "provider": "youtube",
+      "id": "VCdV0SQvabs",
+      "url": "https://youtu.be/VCdV0SQvabs",
+      "title": "Introducción a patrones de velas japonesas"
+    },
+    {
+      "provider": "youtube",
+      "id": "wx0L4ua4zoQ",
+      "url": "https://youtu.be/wx0L4ua4zoQ",
+      "title": "Doji"
+    },
+    {
+      "provider": "youtube",
+      "id": "MnXaRCtdDjQ",
+      "url": "https://youtu.be/MnXaRCtdDjQ",
+      "title": "Doji Libélula / Doji Lápida"
+    },
+    {
+      "provider": "youtube",
+      "id": "4rbWKoiF3_I",
+      "url": "https://youtu.be/4rbWKoiF3_I",
+      "title": "Martillo"
+    },
+    {
+      "provider": "youtube",
+      "id": "Tgig6dSvcds",
+      "url": "https://youtu.be/Tgig6dSvcds",
+      "title": "Estrella Fugaz"
+    },
+    {
+      "provider": "youtube",
+      "id": "rcNoisaTSmg",
+      "url": "https://youtu.be/rcNoisaTSmg",
+      "title": "Pinbar"
+    },
+    {
+      "provider": "youtube",
+      "id": "F0LWGy2-eMs",
+      "url": "https://youtu.be/F0LWGy2-eMs",
+      "title": "Tweezer Top / Bottom"
+    },
+    {
+      "provider": "youtube",
+      "id": "Mjus3wUr5Hg",
+      "url": "https://youtu.be/Mjus3wUr5Hg",
+      "title": "Envolvente"
+    },
+    {
+      "provider": "youtube",
+      "id": "ZVRK8S4Ix0g",
+      "url": "https://youtu.be/ZVRK8S4Ix0g",
+      "title": "Barra Interna"
+    },
+    {
+      "provider": "youtube",
+      "id": "mCcSblfQMxk",
+      "url": "https://youtu.be/mCcSblfQMxk",
+      "title": "Harami"
+    },
+    {
+      "provider": "youtube",
+      "id": "9CL4pA78yWI",
+      "url": "https://youtu.be/9CL4pA78yWI",
+      "title": "Estrella de la mañana / Estrella de la tarde"
+    },
+    {
+      "provider": "youtube",
+      "id": "Ahm58jcL5HY",
+      "url": "https://youtu.be/Ahm58jcL5HY",
+      "title": "Marubozu"
+    },
+    {
+      "provider": "youtube",
+      "id": "t6P2wuo5D-Q",
+      "url": "https://youtu.be/t6P2wuo5D-Q",
+      "title": "Ventana Alcista / Bajista"
+    },
+    {
+      "provider": "youtube",
+      "id": "8Y0XXW_MiIQ",
+      "url": "https://youtu.be/8Y0XXW_MiIQ",
+      "title": "Dark Cloud Cover / Piercing Line"
+    },
+    {
+      "provider": "youtube",
+      "id": "_7BfQzWRL1Y",
+      "url": "https://youtu.be/_7BfQzWRL1Y",
+      "title": "Deserción Alcista / Bajista"
+    },
+    {
+      "provider": "youtube",
+      "id": "SwMMmvteeSY",
+      "url": "https://youtu.be/SwMMmvteeSY",
+      "title": "Secretos de velas japonesas 1"
+    },
+    {
+      "provider": "youtube",
+      "id": "7-MoATE5e3Q",
+      "url": "https://youtu.be/7-MoATE5e3Q",
+      "title": "Secretos de velas japonesas 2"
+    }
+  ],
+  "links": [
+    {
+      "text": "DESCARGA DESDE MEDIAFIRE",
+      "url": "http://www.mediafire.com/file/61juufuq29ebfli/manualcandlestick.pdf/file",
+      "kind": "external"
+    },
+    {
+      "text": "DESCARGA DESDE GOOGLE DRIVE",
+      "url": "https://drive.google.com/open",
+      "kind": "pdf"
+    },
+    {
+      "text": "http://thepatternsite.com/CandleVisual.html",
+      "url": "http://thepatternsite.com/CandleVisual.html",
+      "kind": "external"
+    },
+    {
+      "text": "Lista de reproducción Completa",
+      "url": "https://www.youtube.com/playlist",
+      "kind": "youtube"
+    },
+    {
+      "text": "Introducción a patrones de velas japonesas",
+      "url": "https://youtu.be/VCdV0SQvabs",
+      "kind": "video",
+      "video_id": "VCdV0SQvabs",
+      "embed_url": "https://youtu.be/VCdV0SQvabs"
+    },
+    {
+      "text": "Doji",
+      "url": "https://youtu.be/wx0L4ua4zoQ",
+      "kind": "video",
+      "video_id": "wx0L4ua4zoQ",
+      "embed_url": "https://youtu.be/wx0L4ua4zoQ"
+    },
+    {
+      "text": "Doji Libélula / Doji Lápida",
+      "url": "https://youtu.be/MnXaRCtdDjQ",
+      "kind": "video",
+      "video_id": "MnXaRCtdDjQ",
+      "embed_url": "https://youtu.be/MnXaRCtdDjQ"
+    },
+    {
+      "text": "Martillo",
+      "url": "https://youtu.be/4rbWKoiF3_I",
+      "kind": "video",
+      "video_id": "4rbWKoiF3_I",
+      "embed_url": "https://youtu.be/4rbWKoiF3_I"
+    },
+    {
+      "text": "Estrella Fugaz",
+      "url": "https://youtu.be/Tgig6dSvcds",
+      "kind": "video",
+      "video_id": "Tgig6dSvcds",
+      "embed_url": "https://youtu.be/Tgig6dSvcds"
+    },
+    {
+      "text": "Pinbar",
+      "url": "https://youtu.be/rcNoisaTSmg",
+      "kind": "video",
+      "video_id": "rcNoisaTSmg",
+      "embed_url": "https://youtu.be/rcNoisaTSmg"
+    },
+    {
+      "text": "Tweezer Top / Bottom",
+      "url": "https://youtu.be/F0LWGy2-eMs",
+      "kind": "video",
+      "video_id": "F0LWGy2-eMs",
+      "embed_url": "https://youtu.be/F0LWGy2-eMs"
+    },
+    {
+      "text": "Envolvente",
+      "url": "https://youtu.be/Mjus3wUr5Hg",
+      "kind": "video",
+      "video_id": "Mjus3wUr5Hg",
+      "embed_url": "https://youtu.be/Mjus3wUr5Hg"
+    },
+    {
+      "text": "Barra Interna",
+      "url": "https://youtu.be/ZVRK8S4Ix0g",
+      "kind": "video",
+      "video_id": "ZVRK8S4Ix0g",
+      "embed_url": "https://youtu.be/ZVRK8S4Ix0g"
+    },
+    {
+      "text": "Harami",
+      "url": "https://youtu.be/mCcSblfQMxk",
+      "kind": "video",
+      "video_id": "mCcSblfQMxk",
+      "embed_url": "https://youtu.be/mCcSblfQMxk"
+    },
+    {
+      "text": "Estrella de la mañana / Estrella de la tarde",
+      "url": "https://youtu.be/9CL4pA78yWI",
+      "kind": "video",
+      "video_id": "9CL4pA78yWI",
+      "embed_url": "https://youtu.be/9CL4pA78yWI"
+    },
+    {
+      "text": "Marubozu",
+      "url": "https://youtu.be/Ahm58jcL5HY",
+      "kind": "video",
+      "video_id": "Ahm58jcL5HY",
+      "embed_url": "https://youtu.be/Ahm58jcL5HY"
+    },
+    {
+      "text": "Ventana Alcista / Bajista",
+      "url": "https://youtu.be/t6P2wuo5D-Q",
+      "kind": "video",
+      "video_id": "t6P2wuo5D-Q",
+      "embed_url": "https://youtu.be/t6P2wuo5D-Q"
+    },
+    {
+      "text": "Dark Cloud Cover / Piercing Line",
+      "url": "https://youtu.be/8Y0XXW_MiIQ",
+      "kind": "video",
+      "video_id": "8Y0XXW_MiIQ",
+      "embed_url": "https://youtu.be/8Y0XXW_MiIQ"
+    },
+    {
+      "text": "Deserción Alcista / Bajista",
+      "url": "https://youtu.be/_7BfQzWRL1Y",
+      "kind": "video",
+      "video_id": "_7BfQzWRL1Y",
+      "embed_url": "https://youtu.be/_7BfQzWRL1Y"
+    },
+    {
+      "text": "Secretos de velas japonesas 1",
+      "url": "https://youtu.be/SwMMmvteeSY",
+      "kind": "video",
+      "video_id": "SwMMmvteeSY",
+      "embed_url": "https://youtu.be/SwMMmvteeSY"
+    },
+    {
+      "text": "Secretos de velas japonesas 2",
+      "url": "https://youtu.be/7-MoATE5e3Q",
+      "kind": "video",
+      "video_id": "7-MoATE5e3Q",
+      "embed_url": "https://youtu.be/7-MoATE5e3Q"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/WimeBmFsWi4/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/WimeBmFsWi4/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/WimeBmFsWi4/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/patrones-de-velas-japonesas-01.jpg",
+      "status": "ok",
+      "bytes": 149924
+    },
+    {
+      "url": "https://i.ytimg.com/vi/WimeBmFsWi4/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/WimeBmFsWi4/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/WimeBmFsWi4/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/WimeBmFsWi4/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa-1024x347.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/patrones-de-velas-japonesas-02.png",
+      "status": "ok",
+      "bytes": 11646
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes-1024x576.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/patrones-de-velas-japonesas-03.png",
+      "status": "ok",
+      "bytes": 28145
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg",
+          "width": 300
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas-300x300.jpg",
+          "width": 300
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/patrones-de-velas-japonesas-04.jpg",
+      "status": "ok",
+      "bytes": 17473
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela-1024x413.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/patrones-de-velas-japonesas-05.jpg",
+      "status": "ok",
+      "bytes": 22508
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/patrones-de-velas-japonesas-06.jpg",
+      "status": "ok",
+      "bytes": 52851
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/patrones-de-velas-japonesas-07.jpg",
+      "status": "ok",
+      "bytes": 96461
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Una vela japonesa es la representación gráfica de la cotización del precio de un activo en determinado tiempo.",
+      "html": "Una vela japonesa es la representación gráfica de la cotización del precio de un activo en determinado tiempo."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "WimeBmFsWi4",
+      "url": "https://www.youtube.com/embed/WimeBmFsWi4?feature=oembed",
+      "title": "Velas Japonesas en 3 minutos - Patrones de Reversión y Continuidad",
+      "caption": "Mira el vídeo antes de continuar.",
+      "poster": "data/assets/images/patrones-de-velas-japonesas-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Las velas japonesas surgen en el siglo XVII a causa de la necesidad de analizar los mercados de arroz, es curioso saber que los japoneses han sido los primeros en utilizar el análisis técnico en los mercados de futuros de arroz.",
+      "html": "Las velas\njaponesas surgen en el siglo XVII a causa de la necesidad de analizar los\nmercados de arroz, es curioso saber que los japoneses han sido los primeros en\nutilizar el análisis técnico en los mercados de futuros de arroz."
+    },
+    {
+      "type": "paragraph",
+      "text": "Fue introducido en el occidente por Steve Nison en la década de los 90.",
+      "html": "Fue introducido en el occidente por Steve Nison en la década de los 90."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "¿Qué es una vela japonesa?",
+      "html": "¿Qué es una vela japonesa?"
+    },
+    {
+      "type": "paragraph",
+      "text": "La vela japonesa encapsula los movimientos del precio en determinado tiempo, mostrándonos más información que con los otros gráficos y de una manera más rápida.",
+      "html": "La vela japonesa  encapsula los movimientos del precio en determinado tiempo, mostrándonos  más información que con los otros gráficos y de una manera más rápida."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tomemos el siguiente ejemplo, en el lado «A» podemos observar el gráfico de líneas y cómo se ha movido desde las 8:50 hasta las 8:51. En el lado «B» podemos observar cómo la vela representa esos movimientos.",
+      "html": "Tomemos el siguiente ejemplo, en el lado «A» podemos observar el gráfico de líneas y cómo se ha movido desde las 8:50 hasta las 8:51. En el lado «B» podemos observar cómo la vela representa esos movimientos."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/patrones-de-velas-japonesas-02.png",
+      "local": "data/assets/images/patrones-de-velas-japonesas-02.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa-1024x347.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 434,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "La vela japonesa está compuesta por 4 partes, apertura, Máximo, Mínimo, cierre, la siguiente imagen nos muestra las partes de la vela vista previamente",
+      "html": "La vela japonesa está compuesta por 4 partes, apertura, Máximo, Mínimo, cierre, la siguiente imagen nos muestra las partes de la vela vista previamente"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/patrones-de-velas-japonesas-03.png",
+      "local": "data/assets/images/patrones-de-velas-japonesas-03.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes-1024x576.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Con estas cuatro partes formamos una vela, dándonos la oportunidad de poder dividirla en 2 partes básicas, el cuerpo y las mechas.",
+      "html": "Con estas cuatro partes formamos una vela, dándonos la oportunidad de poder dividirla en 2 partes básicas, el cuerpo y las mechas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/patrones-de-velas-japonesas-04.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-04.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg",
+          "width": 300
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas-300x300.jpg",
+          "width": 300
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 512,
+      "height": 512,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Los colores de las velas pueden variar según el gusto del trader, en mi caso suelo utilizar uno de los colores más tradicionales, verde y rojo.",
+      "html": "Los colores de las velas pueden variar según el gusto del trader, en mi caso suelo utilizar uno de los colores más tradicionales, verde y rojo."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Si el precio de cierre es por encima al de apertura entonces la vela será verde, podemos llamarle vela alcista.",
+          "html": "Si el precio de cierre es por encima al de apertura entonces la vela será verde, podemos llamarle vela alcista."
+        },
+        {
+          "text": "Si el precio de cierre es por debajo al de la apertura entonces la vela será roja, podemos llamarle vela bajista.",
+          "html": "Si el precio de cierre es por debajo al de la apertura entonces la vela será roja, podemos llamarle vela bajista."
+        },
+        {
+          "text": "Y si es al mismo nivel entonces será gris, podemos llamarle doji.",
+          "html": "Y si es al mismo nivel entonces será gris, podemos llamarle doji."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/patrones-de-velas-japonesas-05.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-05.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela-1024x413.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Cada vela encapsula los movimientos del precio durante 1 minuto, en este ejemplo podemos ver los movimientos del precio en los últimos 3 minutos.",
+      "width": 1280,
+      "height": 516,
+      "index": 4,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Las mechas nos muestran los punto más altos o más bajos a los que el precio llegó durante el tiempo de vida de la vela, dependiendo del contexto esta información nos puede mostrar la presión por parte de los compradores y vendedores.",
+      "html": "Las mechas nos muestran los punto más altos o más bajos a los que el precio llegó durante el tiempo de vida de la vela, dependiendo del contexto esta información nos puede mostrar la presión por parte de los compradores y vendedores."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dependiendo de la forma de la vela y sus mechas podemos clasificaras en:",
+      "html": "Dependiendo de la forma de la vela y sus mechas podemos clasificaras en:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Alcistas, demanda o fuerza de compradores.",
+          "html": "Alcistas, demanda o fuerza de compradores."
+        },
+        {
+          "text": "Bajista, oferta o fuerza de vendedores.",
+          "html": "Bajista, oferta o fuerza de vendedores."
+        },
+        {
+          "text": "Neutrales, velas de indecisión, o equilibro.",
+          "html": "Neutrales, velas de indecisión, o equilibro."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/patrones-de-velas-japonesas-06.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-06.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 5,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "A partir de esta clasificación surgen los patrones de velas, existe una gran cantidad de patrones, y para no inventar el agua azucarada, te comparto un pdf donde podrás encontrar todos los patrones de velas con sus respectivas explicaciones y ejemplos, puedes descargarlo desde cualquiera de los siguientes enlaces:",
+      "html": "A partir de esta clasificación surgen los patrones de velas, existe una gran cantidad de patrones, y para no inventar el agua azucarada, te comparto un pdf donde podrás encontrar todos  los patrones de velas con sus respectivas explicaciones y ejemplos, puedes descargarlo desde cualquiera de los siguientes enlaces:"
+    },
+    {
+      "type": "paragraph",
+      "text": "DESCARGA DESDE MEDIAFIRE",
+      "html": "<a class=\"external\" href=\"http://www.mediafire.com/file/61juufuq29ebfli/manualcandlestick.pdf/file\" rel=\"noopener nofollow\" target=\"_blank\">DESCARGA DESDE MEDIAFIRE</a>"
+    },
+    {
+      "type": "paragraph",
+      "text": "DESCARGA DESDE GOOGLE DRIVE",
+      "html": "<a class=\"external\" href=\"https://drive.google.com/open\" rel=\"noopener nofollow\" target=\"_blank\">DESCARGA DESDE GOOGLE DRIVE</a>"
+    },
+    {
+      "type": "paragraph",
+      "text": "También te comparto la página más completa de patrones de velas japonesas, esta en ingles pero si te interesan las velas entonces vale la pena revisarla, en ella encontrarás incluso información del porcentaje de fiabilidad de cada patrón. El enlace a la página es: http://thepatternsite.com/CandleVisual.html",
+      "html": "También te comparto la página más completa de patrones de velas japonesas, esta en ingles pero si te interesan  las velas entonces vale la pena revisarla, en ella encontrarás incluso información del porcentaje de fiabilidad de cada patrón. El enlace a la página es: <a class=\"external\" href=\"http://thepatternsite.com/CandleVisual.html\" rel=\"noopener nofollow\" target=\"_blank\">http://thepatternsite.com/CandleVisual.html</a>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La información que nos deja una vela depende de su cuerpo, mechas y contexto donde se dé.",
+      "html": "La información que nos deja una vela depende de su cuerpo, mechas y contexto donde se dé."
+    },
+    {
+      "type": "paragraph",
+      "text": "Existe una gran variedad de patrones de velas, no puedo abarcar todas en una sola clase, si deseas profundizar más sobre los diferentes patrones puedes ver las siguientes clases:",
+      "html": "Existe una gran variedad de patrones de velas, no puedo abarcar todas en una sola clase, si deseas profundizar más sobre los diferentes patrones puedes ver las siguientes clases:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Lista de reproducción Completa",
+      "html": "<a class=\"external\" href=\"https://www.youtube.com/playlist\" rel=\"noopener nofollow\" target=\"_blank\">Lista de reproducción Completa</a>"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Introducción a patrones de velas japonesas",
+          "html": "<a class=\"external\" href=\"https://youtu.be/VCdV0SQvabs\" rel=\"noopener nofollow\" target=\"_blank\">Introducción a patrones de velas japonesas</a>"
+        },
+        {
+          "text": "Doji",
+          "html": "<a class=\"external\" href=\"https://youtu.be/wx0L4ua4zoQ\" rel=\"noopener nofollow\" target=\"_blank\">Doji</a>"
+        },
+        {
+          "text": "Doji Libélula / Doji Lápida",
+          "html": "<a class=\"external\" href=\"https://youtu.be/MnXaRCtdDjQ\" rel=\"noopener nofollow\" target=\"_blank\">Doji Libélula / Doji Lápida</a>"
+        },
+        {
+          "text": "Martillo",
+          "html": "<a class=\"external\" href=\"https://youtu.be/4rbWKoiF3_I\" rel=\"noopener nofollow\" target=\"_blank\">Martillo </a>"
+        },
+        {
+          "text": "Estrella Fugaz",
+          "html": "<a class=\"external\" href=\"https://youtu.be/Tgig6dSvcds\" rel=\"noopener nofollow\" target=\"_blank\">Estrella Fugaz</a>"
+        },
+        {
+          "text": "Pinbar",
+          "html": "<a class=\"external\" href=\"https://youtu.be/rcNoisaTSmg\" rel=\"noopener nofollow\" target=\"_blank\">Pinbar</a>"
+        },
+        {
+          "text": "Tweezer Top / Bottom",
+          "html": "<a class=\"external\" href=\"https://youtu.be/F0LWGy2-eMs\" rel=\"noopener nofollow\" target=\"_blank\">Tweezer Top / Bottom</a>"
+        },
+        {
+          "text": "Envolvente",
+          "html": "<a class=\"external\" href=\"https://youtu.be/Mjus3wUr5Hg\" rel=\"noopener nofollow\" target=\"_blank\">Envolvente</a>"
+        },
+        {
+          "text": "Barra Interna",
+          "html": "<a class=\"external\" href=\"https://youtu.be/ZVRK8S4Ix0g\" rel=\"noopener nofollow\" target=\"_blank\">Barra Interna</a>"
+        },
+        {
+          "text": "Harami",
+          "html": "<a class=\"external\" href=\"https://youtu.be/mCcSblfQMxk\" rel=\"noopener nofollow\" target=\"_blank\">Harami</a>"
+        },
+        {
+          "text": "Estrella de la mañana / Estrella de la tarde",
+          "html": "<a class=\"external\" href=\"https://youtu.be/9CL4pA78yWI\" rel=\"noopener nofollow\" target=\"_blank\">Estrella de la mañana / Estrella de la tarde</a>"
+        },
+        {
+          "text": "Marubozu",
+          "html": "<a class=\"external\" href=\"https://youtu.be/Ahm58jcL5HY\" rel=\"noopener nofollow\" target=\"_blank\">Marubozu </a>"
+        },
+        {
+          "text": "Ventana Alcista / Bajista",
+          "html": "<a class=\"external\" href=\"https://youtu.be/t6P2wuo5D-Q\" rel=\"noopener nofollow\" target=\"_blank\">Ventana Alcista / Bajista</a>"
+        },
+        {
+          "text": "Dark Cloud Cover / Piercing Line",
+          "html": "<a class=\"external\" href=\"https://youtu.be/8Y0XXW_MiIQ\" rel=\"noopener nofollow\" target=\"_blank\">Dark Cloud Cover / Piercing Line</a>"
+        },
+        {
+          "text": "Deserción Alcista / Bajista",
+          "html": "<a class=\"external\" href=\"https://youtu.be/_7BfQzWRL1Y\" rel=\"noopener nofollow\" target=\"_blank\">Deserción Alcista / Bajista</a>"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "¡CLASE BONUS!",
+      "html": "¡CLASE BONUS!"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Secretos de velas japonesas 1",
+          "html": "<a class=\"external\" href=\"https://youtu.be/SwMMmvteeSY\" rel=\"noopener nofollow\" target=\"_blank\">Secretos de velas japonesas 1</a>"
+        },
+        {
+          "text": "Secretos de velas japonesas 2",
+          "html": "<a class=\"external\" href=\"https://youtu.be/7-MoATE5e3Q\" rel=\"noopener nofollow\" target=\"_blank\">Secretos de velas japonesas 2</a>"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "ACTIVIDAD #5",
+      "html": "<strong>ACTIVIDAD #5</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para nuestra siguiente actividad nos apoyaremos en el pasado del gráfico, muchos consideran buscar en el pasado del gráfico una pérdida de tiempo y quieren pasar rápidamente a operar. Y claro, tienen razón, es una perdida de tiempo cuando no sabes hacerlo.",
+      "html": "Para nuestra siguiente actividad nos apoyaremos en el pasado del gráfico, muchos consideran  buscar en el pasado del gráfico una pérdida de tiempo y quieren pasar rápidamente a operar. Y claro, tienen razón, es una perdida de tiempo cuando no sabes hacerlo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pero nosotros lo haremos muy bien, no basta solo con identificar el patrón, hay que identificar claramente el contexto donde lo encontramos, ¿Cómo identificar el contexto? pues eso es lo que hemos aprendido a lo largo de este curso. Bueno, este curso es una versión resumida, así que es normal que tengas muchísimas dudas, para ello te dejo para que puedas profundizar en todos los temas, esta versión corta del curso es un apoyo de introducción / repaso",
+      "html": "Pero nosotros lo haremos muy bien, no basta solo con identificar el patrón, hay que identificar claramente el contexto donde lo encontramos, ¿Cómo identificar el contexto? pues eso es lo que hemos aprendido a lo largo de este curso. Bueno, este curso es una versión resumida, así que es normal que tengas muchísimas dudas, para ello te dejo para que puedas profundizar en todos los temas, esta versión corta del curso es un apoyo de introducción / repaso"
+    },
+    {
+      "type": "paragraph",
+      "text": "Puedes compartir la siguiente actividad en el salón virtual, utiliza #Actividad5 , y súbelo bajo la etiqueta “ Velas ”.",
+      "html": "Puedes compartir la siguiente actividad en el salón virtual, utiliza <strong>#Actividad5</strong>, y súbelo bajo la etiqueta “<strong>Velas</strong>”."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instrucciones:",
+      "html": "<strong>Instrucciones:</strong>"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Identifica 1 o 2 patrones de velas que te sean más sencillos de memorizar.",
+          "html": "Identifica 1 o 2 patrones de velas que te sean más sencillos de memorizar."
+        },
+        {
+          "text": "Dibújalos / Imprimelos y anota las características de la vela y de los contextos donde debes encontrarlas, por ejemplo: tendencia perdiendo fuerza, nivel clave, mecha 2 veces más grande que el cuerpo, etc. Hazlo de una manera simple y concisa.",
+          "html": "Dibújalos / Imprimelos y anota las características de la vela y de los contextos donde debes encontrarlas, por ejemplo: tendencia perdiendo fuerza, nivel clave, mecha 2 veces más grande que el cuerpo, etc.  Hazlo de una manera  simple y concisa."
+        },
+        {
+          "text": "Elije un par de divisas (la que normalmente operas) y busca los patrones que te has aprendido, en el pasado del gráfico.",
+          "html": "Elije un par de divisas (la que normalmente operas) y busca los patrones que te has aprendido, en el pasado del gráfico."
+        },
+        {
+          "text": "Asegúrate de haber encontrado el patrón de vela en un contexto adecuado. Podemos encontrar buenos patrones de velas y que han sido efectivos pero sin contextos adecuados, estos no debemos de contarlos ya que al momento de operarlos no tendremos apoyo de un contexto adecuado por lo que estaríamos entrando en operaciones con 50/50% de probabilidades de éxito.",
+          "html": "Asegúrate de haber encontrado el patrón de vela en un contexto adecuado. Podemos encontrar buenos patrones de velas  y que han sido efectivos pero sin contextos adecuados, estos no debemos de contarlos ya que al momento de operarlos no tendremos apoyo de un contexto adecuado por lo que estaríamos entrando en operaciones con 50/50% de probabilidades de éxito."
+        },
+        {
+          "text": "Comparte en el salón virtual 2 imágenes de cada uno de los patrones que hayas elegido en esta actividad para que entre toda la comunidad podamos retroalimentar.",
+          "html": "Comparte en el salón virtual 2 imágenes de cada uno de los patrones que hayas elegido en esta actividad para que entre toda la comunidad podamos retroalimentar."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación te dejo un ejemplo:",
+      "html": "A continuación te dejo un ejemplo:"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/patrones-de-velas-japonesas-07.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-07.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 6,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "¡Gracias por participar en la clase! Cualquier duda puedes dejarla en los comentarios o en el hilo respectivo en el salón para que puedan ser resueltas en la próxima clase de preguntas y respuestas.",
+      "html": "¡Gracias por participar en la clase! Cualquier duda puedes dejarla en los comentarios o en el hilo respectivo en el salón para que puedan ser resueltas en la próxima clase de preguntas y respuestas."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

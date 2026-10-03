@@ -1,0 +1,26 @@
+{
+  "id": "inside-bar",
+  "code": "INSIDE",
+  "name": "Inside Bar",
+  "classification": {
+    "market": "CONSOLIDATION",
+    "tradeType": "CALL_PUT"
+  },
+  "requirements": [
+    "La vela actual está completamente dentro del rango de la vela anterior",
+    "Máxima actual < Máxima anterior",
+    "Mínima actual > Mínima anterior",
+    "Indica pausa en la tendencia actual"
+  ],
+  "snrRule": {
+    "nivel": "nivel de pausa",
+    "tipoRuptura": "none"
+  },
+  "stochRule": "%K y %D convergentes cerca de 50",
+  "mtgPolicy": "2_STEP",
+  "simulation": {
+    "velasBase": 4,
+    "triggerIndex": 3,
+    "resolutionCandle": 8
+  }
+}

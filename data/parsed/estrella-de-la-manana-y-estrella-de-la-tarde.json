@@ -1,0 +1,195 @@
+{
+  "url": "https://www.binaryteach.com/estrella-de-la-manana-y-estrella-de-la-tarde/",
+  "slug": "estrella-de-la-manana-y-estrella-de-la-tarde",
+  "depth": 1,
+  "title": "Estrella de la Mañana y Estrella de la Tarde",
+  "description": "Ya hemos aprendido a reconocer varios patrones de velas ¿no es así?, pues este es bastante particular y muy común de encontrar, pero, siempre hay un […]",
+  "kind": "class",
+  "level": 1,
+  "order": 23,
+  "date_published": "2020-02-19T23:25:40+00:00",
+  "date_modified": "2020-02-19T23:25:42+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 277,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "9CL4pA78yWI",
+      "url": "https://www.youtube.com/embed/9CL4pA78yWI?feature=oembed",
+      "title": "Cómo operar una ESTRELLA de la MAÑANA / TARDE -Opciones Binarias- Velas Japonesas"
+    }
+  ],
+  "links": [
+    {
+      "text": "Doji",
+      "url": "https://www.binaryteach.com/como-operar-con-doji/",
+      "kind": "page",
+      "slug": "como-operar-con-doji"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png",
+          "width": 1020
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-01.png",
+      "status": "ok",
+      "bytes": 13828
+    },
+    {
+      "url": "https://i.ytimg.com/vi/9CL4pA78yWI/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/9CL4pA78yWI/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/9CL4pA78yWI/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-02.jpg",
+      "status": "ok",
+      "bytes": 120013
+    },
+    {
+      "url": "https://i.ytimg.com/vi/9CL4pA78yWI/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/9CL4pA78yWI/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/9CL4pA78yWI/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/9CL4pA78yWI/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Ya hemos aprendido a reconocer varios patrones de velas ¿no es así?, pues este es bastante particular y muy común de encontrar, pero, siempre hay un «pero», puede ser algo engañoso.",
+      "html": "Ya hemos aprendido a reconocer varios patrones de velas ¿no es así?, pues este es bastante particular y muy común de encontrar, pero, siempre hay un «pero», puede ser algo engañoso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Empecemos a conocer al patrón en sí:",
+      "html": "Empecemos a conocer al patrón en sí:"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-01.png",
+      "local": "data/assets/images/nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-01.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png",
+          "width": 1020
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1020,
+      "height": 516,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "El patrón estrella de la tarde se da al final de una tendencia alcista y nos muestra el posible cambio de tendencia. El patrón estrella de la mañana se encuentra al final de una tendencia bajista y nos indica un posible inicio de la tendencia alcista.",
+      "html": "<em>El patrón estrella de la tarde se da al final de una tendencia alcista y nos muestra el posible cambio de tendencia. El patrón estrella de la mañana se encuentra al final de una tendencia bajista y nos indica un posible inicio de la tendencia alcista. </em>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo puedes observar, este patrón esta compuesto por 3 VELAS , es muy importante que identifiquemos esto.",
+      "html": "Cómo puedes observar, este patrón esta compuesto por <strong>3 VELAS</strong>, es muy importante que identifiquemos esto."
+    },
+    {
+      "type": "paragraph",
+      "text": "La estrella de la mañana (Morning Star) esta compuesta por una vela bajista, una vela de indecisión (mucho mejor si es un doji) y una vela de decisión alcista, el doji debe estar en un nivel de soporte para mayor confianza.",
+      "html": "<strong>La estrella de la mañana (Morning Star)</strong> esta compuesta por una vela bajista, una vela de indecisión (mucho mejor si es un doji) y una vela de decisión alcista, el doji debe estar en un nivel de soporte para mayor confianza."
+    },
+    {
+      "type": "paragraph",
+      "text": "La estrella de la tarde (Evening Star) esta compuesta por una vela alcista, una vela de indecisión (mucho mejor si es un doji) y una vela de decisión bajista, el doji debe encontrarse en un nivel de resistencia para mayor confianza.",
+      "html": "<strong>La estrella de la tarde (Evening Star) </strong>esta compuesta por una vela alcista, una vela de indecisión (mucho mejor si es un doji) y una vela de decisión bajista, el doji debe encontrarse en un nivel de resistencia para mayor confianza."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo puedes observar, el patrón incluye cómo segunda vela un Doji o una vela de indecisión, por lo que nosotros podemos empezar a operar desde esta oportunidad.",
+      "html": "Cómo puedes observar, el patrón incluye cómo segunda vela un <a class=\"internal\" href=\"https://www.binaryteach.com/como-operar-con-doji/\">Doji </a>o una vela de indecisión, por lo que nosotros podemos empezar a operar desde esta oportunidad."
+    },
+    {
+      "type": "paragraph",
+      "text": "A veces estamos dudosos de operar el doji, por lo que podemos esperar a que mejor se forme por completo la estrella.",
+      "html": "A veces estamos dudosos de operar el doji, por lo que podemos esperar a que mejor se forme por completo la estrella."
+    },
+    {
+      "type": "paragraph",
+      "text": "Recuerda, al ser un patrón de reversión es muy importante que se encuentre en una tendencia saludable, ya que de ir en una tendencia fuerte podría indicar solo un retroceso.",
+      "html": "Recuerda, al ser un patrón de reversión es muy importante que se encuentre en una tendencia saludable, ya que de ir en una tendencia fuerte podría indicar solo un retroceso."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo te explico cómo operar el patrón desde que identificamos el doji:",
+      "html": "En el siguiente vídeo te explico cómo operar el patrón desde que identificamos el doji:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "9CL4pA78yWI",
+      "url": "https://www.youtube.com/embed/9CL4pA78yWI?feature=oembed",
+      "title": "Cómo operar una ESTRELLA de la MAÑANA / TARDE -Opciones Binarias- Velas Japonesas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-02.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

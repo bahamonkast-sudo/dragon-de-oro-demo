@@ -1,0 +1,155 @@
+{
+  "url": "https://www.binaryteach.com/rectangulo-ascendente-y-descendente/",
+  "slug": "rectangulo-ascendente-y-descendente",
+  "depth": 1,
+  "title": "Rectángulo Ascendente y Descendente",
+  "description": "Esta es una de las figuras chartistas más sencillas de identificar, al igual que los patrones vistos con anterioridad cómo la cuña, el rectángulo nos indica […]",
+  "kind": "class",
+  "level": 1,
+  "order": 11,
+  "date_published": "2020-02-05T20:58:26+00:00",
+  "date_modified": "2020-02-05T20:58:28+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 202,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "TF0P_opMAQ4",
+      "url": "https://www.youtube.com/embed/TF0P_opMAQ4?feature=oembed",
+      "title": "Rectángulo Ascendente/Descendente -Opciones Binarias- Figuras Chartistas"
+    }
+  ],
+  "links": [
+    {
+      "text": "cómo la cuña",
+      "url": "https://www.binaryteach.com/cunas-alcistas-y-bajistas/",
+      "kind": "page",
+      "slug": "cunas-alcistas-y-bajistas"
+    },
+    {
+      "text": "canal horizontal",
+      "url": "https://www.binaryteach.com/trading-con-canales/",
+      "kind": "page",
+      "slug": "trading-con-canales"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-11-rectangulo-ascendente-y-descendente-01.jpg",
+      "status": "ok",
+      "bytes": 106788
+    },
+    {
+      "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Esta es una de las figuras chartistas más sencillas de identificar, al igual que los patrones vistos con anterioridad cómo la cuña , el rectángulo nos indica un breve descanso del precio antes de continuar con al tendencia.",
+      "html": "Esta es una de las figuras chartistas más sencillas de identificar, al igual que los patrones vistos con anterioridad <a class=\"internal\" href=\"https://www.binaryteach.com/cunas-alcistas-y-bajistas/\">cómo la cuña</a>, el rectángulo nos indica un breve descanso del precio antes de continuar con al tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "El rectángulo consiste en una pequeña consolidación, que se ve igual que un canal horizontal , con la especial característica que es mucho más corto.",
+      "html": "El rectángulo consiste en una pequeña consolidación, que se ve igual que un <a class=\"internal\" href=\"https://www.binaryteach.com/trading-con-canales/\">canal horizontal</a>, con la especial característica que es mucho más corto."
+    },
+    {
+      "type": "paragraph",
+      "text": "Veamos las características que nos permitirán identificar un rectángulo ascendente y descendente:",
+      "html": "Veamos las características que nos permitirán identificar un rectángulo ascendente y descendente:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Tendencia previa definida.",
+          "html": "Tendencia previa definida."
+        },
+        {
+          "text": "Dos testeos o máximos que se detienen en el mismo nivel, y dos testeos o mínimos que se detienen en el mismo nivel formando Soportes y Resistencias.",
+          "html": "Dos testeos o máximos que se detienen en el mismo nivel, y dos testeos o mínimos que se detienen en el mismo nivel formando Soportes y Resistencias."
+        },
+        {
+          "text": "Mientras más este durando el rectángulo hay más probabilidades que sea roto.",
+          "html": "Mientras más este durando el rectángulo hay más probabilidades que sea roto."
+        },
+        {
+          "text": "El precio objetivo esta definido según la amplitud del rectángulo.",
+          "html": "El precio objetivo esta definido según la amplitud del rectángulo."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Tras la ruptura de esta figura chartista, el precio va a continuar la tendencia hasta una distancia aproximada a la anchura o amplitud del rectángulo. Una vez alcanzado esta distancia puede ser que el precio haga un pullback a la zona que ha sido rota, para después continuar con la tendencia.",
+      "html": "Tras la ruptura de esta figura chartista, el precio va a continuar la tendencia hasta una distancia aproximada a la anchura o amplitud del rectángulo. Una vez alcanzado esta distancia puede ser que el precio haga un pullback a la zona que ha sido rota, para después continuar con la tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Se que en este momento puede estar un poco enredado entender los rectángulos ascendentes y descendentes, pero en el próximo vídeo explico cómo operarlos:",
+      "html": "Se que en este momento puede estar un poco enredado entender los rectángulos ascendentes y descendentes, pero en el próximo vídeo explico cómo operarlos:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "TF0P_opMAQ4",
+      "url": "https://www.youtube.com/embed/TF0P_opMAQ4?feature=oembed",
+      "title": "Rectángulo Ascendente/Descendente -Opciones Binarias- Figuras Chartistas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-11-rectangulo-ascendente-y-descendente-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

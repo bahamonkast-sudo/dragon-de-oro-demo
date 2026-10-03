@@ -1,0 +1,144 @@
+{
+  "url": "https://www.binaryteach.com/introduccion-a-patrones-de-velas-japonesas/",
+  "slug": "introduccion-a-patrones-de-velas-japonesas",
+  "depth": 1,
+  "title": "Introducción a Patrones de Velas Japonesas",
+  "description": "En este curso explicaremos los patrones de velas más comunes y de más fácil comprensión, sin embargo debes saber que existen más de 100 patrones de […]",
+  "kind": "class",
+  "level": 1,
+  "order": 14,
+  "date_published": "2020-02-12T04:14:07+00:00",
+  "date_modified": "2020-02-12T04:55:20+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 188,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "VCdV0SQvabs",
+      "url": "https://www.youtube.com/embed/VCdV0SQvabs?feature=oembed",
+      "title": "Introducción Patrones de Velas -Opciones Binarias- Acción del precio"
+    }
+  ],
+  "links": [
+    {
+      "text": "patrones de velas",
+      "url": "https://www.binaryteach.com/patrones-de-velas-japonesas/",
+      "kind": "page",
+      "slug": "patrones-de-velas-japonesas"
+    },
+    {
+      "text": "Figuras Chartistas,",
+      "url": "https://www.binaryteach.com/figuras-chartistas/",
+      "kind": "page",
+      "slug": "figuras-chartistas"
+    },
+    {
+      "text": "Soportes y Resistencias,",
+      "url": "https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/",
+      "kind": "page",
+      "slug": "soportes-y-resistencias-techos-y-suelos"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/VCdV0SQvabs/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/VCdV0SQvabs/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/VCdV0SQvabs/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-14-introduccion-a-patrones-de-velas-japonesas-01.jpg",
+      "status": "ok",
+      "bytes": 141961
+    },
+    {
+      "url": "https://i.ytimg.com/vi/VCdV0SQvabs/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/VCdV0SQvabs/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/VCdV0SQvabs/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/VCdV0SQvabs/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "En este curso explicaremos los patrones de velas más comunes y de más fácil comprensión, sin embargo debes saber que existen más de 100 patrones de velas diferentes y aprendérselos es una tarea difícil.",
+      "html": "En este curso explicaremos los patrones de velas más comunes y de más fácil comprensión, sin embargo debes saber que existen más de 100 patrones de velas diferentes y aprendérselos es una tarea difícil."
+    },
+    {
+      "type": "paragraph",
+      "text": "No es imposible, pero como recomendación es que empieces aprendiendo un par de patrones, los que sean más sencillos para ti de identificar y una vez los domines bien puedes ir aprendiendo más.",
+      "html": "No es imposible, pero como recomendación es que empieces aprendiendo un par de patrones, los que sean más sencillos para ti de identificar y una vez los domines bien puedes ir aprendiendo más."
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes tener claro que un patrón de vela por si solo no te indica la dirección que podría tomar el precio, es necesario que exista un contexto junto con el patrón, el cual nos dará la información necesaria para el análisis.",
+      "html": "Debes tener claro que un patrón de vela por si solo no te indica la dirección que podría tomar el precio, es necesario que exista un contexto junto con el patrón, el cual nos dará la información necesaria para el análisis."
+    },
+    {
+      "type": "paragraph",
+      "text": "No puedes operar todos los patrones de velas que veas, así como no se pueden operar todas las Figuras Chartistas, o todos los Soportes y Resistencias, es necesario que exista un contexto.",
+      "html": "No puedes operar todos los <a class=\"internal\" href=\"https://www.binaryteach.com/patrones-de-velas-japonesas/\">patrones de velas</a> que veas, así como no se pueden operar todas las <a class=\"internal\" href=\"https://www.binaryteach.com/figuras-chartistas/\">Figuras Chartistas,</a> o todos los <a class=\"internal\" href=\"https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/\">Soportes y Resistencias,</a> es necesario que exista un <strong>contexto.</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los patrones de velas no son 100% efectivos, pero nos dan una buena información sobre los posibles movimientos del mercado, los patrones de velas son creados por la acción del precio.",
+      "html": "Los patrones de velas no son 100% efectivos, pero nos dan una buena información sobre los posibles movimientos del mercado, los patrones de velas son creados por la acción del precio."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase doy más información introductoria al arte de operar con patrones de velas japonesas:",
+      "html": "En la siguiente clase doy más información introductoria al arte de operar con patrones de velas japonesas:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "VCdV0SQvabs",
+      "url": "https://www.youtube.com/embed/VCdV0SQvabs?feature=oembed",
+      "title": "Introducción Patrones de Velas -Opciones Binarias- Acción del precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-14-introduccion-a-patrones-de-velas-japonesas-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

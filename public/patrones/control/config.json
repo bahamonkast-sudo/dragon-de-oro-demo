@@ -1,0 +1,21 @@
+{
+  "auth": {
+    "password_set": false,
+    "password_hash": ""
+  },
+  "session": {
+    "capital_inicial": 0,
+    "moneda": "COP",
+    "limite_operacion_min": 0,
+    "limite_operacion_max": 0,
+    "stop_loss_diario": 0,
+    "ganancia_acumulada": 0,
+    "perdidas_consecutivas_compuesto": 0,
+    "estado_interes_compuesto": "bloqueado",
+    "duracion_maxima_minutos": 60,
+    "tasas_conversion": {
+      "COP_BASE_IC": 4000,
+      "USD_BASE_IC": 1
+    }
+  }
+}

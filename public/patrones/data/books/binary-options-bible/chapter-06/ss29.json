@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss29",
+  "code": "SS29",
+  "name": "Patrón Seguro 29-30 (Patrón de Color Alternante con Tendencia)",
+  "classification": {
+    "market": "Mercado Lateral o Apilado alineado con Tendencia General",
+    "tradeType": "Alternancia de Colores a Favor de la Tendencia",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en movimiento lateral o apilado.",
+    "A continuación, espere a que el mercado forme un patrón de color verde-rojo alternante de 4 velas.",
+    "Compruebe la tendencia general y siga el patrón de colores en esa dirección.",
+    "CONFIGURACIÓN DE COMPRA (ALZA): Verde -> Rojo -> Verde -> Rojo (Trigger) -> Operar CALL en la siguiente vela.",
+    "CONFIGURACIÓN DE VENTA (BAJA): Rojo -> Verde -> Rojo -> Verde (Trigger) -> Operar PUT en la siguiente vela.",
+    "Compruebe que el indicador estocástico respalda su dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "El patrón funciona con mayor probabilidad cuando la alternancia coincide con el flujo de la tendencia mayor.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 3
+  }
+}

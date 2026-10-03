@@ -1,0 +1,1390 @@
+{
+  "url": "https://www.binaryteach.com/el-grafico-entendiendo-nuestra-area-de-trabajo/",
+  "slug": "el-grafico-entendiendo-nuestra-area-de-trabajo",
+  "depth": 1,
+  "title": "El Gráfico -Entendiendo nuestra área de Trabajo",
+  "description": "Algo a lo cual muy pocos traders le prestan la atención debida al inicio de su formación es a su área de trabajo, ahora no hablo […]",
+  "kind": "class",
+  "level": null,
+  "order": null,
+  "date_published": "2019-07-22T21:05:25+00:00",
+  "date_modified": "2019-07-28T20:14:59+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-curso-nuevo"
+  ],
+  "word_count": 1536,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "ac4M_sk2biA",
+      "url": "https://www.youtube.com/embed/ac4M_sk2biA?feature=oembed",
+      "title": "El Gráfico y los movimientos del precio - Clase 1 Curso de Acción del Precio"
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/ac4M_sk2biA/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ac4M_sk2biA/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/ac4M_sk2biA/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-01.jpg",
+      "status": "ok",
+      "bytes": 117164
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ac4M_sk2biA/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ac4M_sk2biA/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ac4M_sk2biA/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ac4M_sk2biA/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532-1024x412.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-02.png",
+      "status": "ok",
+      "bytes": 14509
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png",
+          "width": 994
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-03.png",
+      "status": "ok",
+      "bytes": 10485
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg",
+          "width": 700
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-04.jpg",
+      "status": "ok",
+      "bytes": 26923
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD-1024x414.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-05.png",
+      "status": "ok",
+      "bytes": 6751
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "status": "ok",
+      "bytes": 33859
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "status": "ok",
+      "bytes": 41592
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-08.jpg",
+      "status": "ok",
+      "bytes": 35762
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "status": "ok",
+      "bytes": 44914
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-02.jpg",
+      "status": "ok",
+      "bytes": 28830
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-03.jpg",
+      "status": "ok",
+      "bytes": 34196
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-12.jpg",
+      "status": "ok",
+      "bytes": 28156
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-13.jpg",
+      "status": "ok",
+      "bytes": 169983
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-14.jpg",
+      "status": "ok",
+      "bytes": 20573
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "status": "ok",
+      "bytes": 26390
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "status": "ok",
+      "bytes": 31564
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Algo a lo cual muy pocos traders le prestan la atención debida al inicio de su formación es a su área de trabajo, ahora no hablo del área de trabajo física, sino al área de trabajo virtual",
+      "html": "Algo a lo cual muy pocos traders le prestan la atención\ndebida al inicio de su formación es a su área de trabajo, ahora no hablo del\nárea de trabajo física, sino al área de trabajo virtual"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada broker nos ofrece una plataforma para que podamos realizar nuestro análisis técnico, en esta plataforma nosotros veremos los gráficos.",
+      "html": "Cada broker nos ofrece una plataforma para que podamos\nrealizar nuestro análisis técnico, en esta plataforma nosotros veremos los\ngráficos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hay una gran cantidad de plataformas por lo que se hablara de manera general, ya que ahora tampoco profundizaremos en las herramientas que estas plataformas nos brindan (por ejemplo trazar líneas).",
+      "html": "Hay una gran cantidad de plataformas por lo que se hablara\nde manera general, ya que ahora tampoco profundizaremos en las herramientas que\nestas plataformas nos brindan (por ejemplo trazar líneas)."
+    },
+    {
+      "type": "paragraph",
+      "text": "En este momento estudiaremos la información que el precio nos deja en el gráfico.",
+      "html": "En este momento estudiaremos la información que el precio nos deja en el gráfico."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "ac4M_sk2biA",
+      "url": "https://www.youtube.com/embed/ac4M_sk2biA?feature=oembed",
+      "title": "El Gráfico y los movimientos del precio - Clase 1 Curso de Acción del Precio",
+      "caption": "Mira el vídeo de la clase antes de continuar 🙂",
+      "poster": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Par de Divisas",
+      "html": "<strong>Par de Divisas</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Un par de divisas está compuesta por dos divisas, cada una de ellas modificada mediante un código de letras que hacen referencia al país u organización donde la divisa es utilizada. La última letra hace referencia al nombre de la divisa.",
+      "html": "Un par de divisas está compuesta por dos divisas, cada una\nde ellas modificada mediante un código de letras que hacen referencia al país u\norganización donde la divisa es utilizada. La última letra hace referencia al\nnombre de la divisa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aquí algunos ejemplos:",
+      "html": "Aquí algunos ejemplos:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "USD – U nited S tates D ollar (Estados Unidos, dólar americano)",
+          "html": "<strong>USD</strong> – <strong>U</strong>nited <strong>S</strong>tates <strong>D</strong>ollar (Estados\nUnidos, dólar americano)"
+        },
+        {
+          "text": "EUR – E uropean U nion eu R o (Unión Europea, el euro, como se ve es una excepción)",
+          "html": "<strong>EUR</strong> – <strong>E</strong>uropean <strong>U</strong>nion eu<strong>R</strong>o (Unión\nEuropea, el euro, como se ve es una excepción)"
+        },
+        {
+          "text": "GBP – G reat B ritain P ound (Gran Bretaña, libra esterlina)",
+          "html": "<strong>GBP</strong> – <strong>G</strong>reat <strong>B</strong>ritain <strong>P</strong>ound (Gran Bretaña, libra esterlina)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "En el par de divisas podemos encontrar en primera posición la moneda base y en segunda posición la moneda cotizada",
+      "html": "En el par de divisas podemos encontrar en primera posición la moneda base y en segunda posición la moneda cotizada"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ejemplo:",
+      "html": "Ejemplo:"
+    },
+    {
+      "type": "paragraph",
+      "text": "EUR / USD Donde EUR es la moneda base y USD es la moneda cotizada.",
+      "html": "<strong>EUR / USD</strong> Donde EUR es la moneda base y USD es la moneda cotizada."
+    },
+    {
+      "type": "paragraph",
+      "text": "Acá sabremos cuantos dolares (moneda cotizada) necesitamos para comprar 1 Euro (moneda base). Si el EUR/USD tiene un valor de 1.1250 , significa que necesitamos $1.1250 de dolares para comprar 1 Euro.",
+      "html": "Acá sabremos cuantos dolares (moneda cotizada) necesitamos para comprar 1 Euro (moneda base). Si el EUR/USD tiene un valor de  1.1250 , significa que necesitamos $1.1250  de dolares para comprar 1 Euro."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "¿Qué es un Pip?",
+      "html": "<strong>¿Qué es un Pip?</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Su significado en inglés es “point in porcentaje” o punto porcentual. Es la medida del movimiento más pequeño que puede llegar a tener un par de divisas.",
+      "html": "Su significado en inglés es “point in porcentaje” o punto porcentual. Es la medida del movimiento más pequeño que puede llegar a tener un par de divisas."
+    },
+    {
+      "type": "paragraph",
+      "text": "La mayoría de pares de divisas tienen 4 decimales, a excepción de los pares basados en el Yen Japonés donde la variación se mide con 2 decimales.",
+      "html": "La mayoría de pares de divisas tienen 4 decimales, a\nexcepción de los pares basados en el Yen Japonés donde la variación se mide con\n2 decimales."
+    },
+    {
+      "type": "paragraph",
+      "text": "EUR/USD 1.1250-1.1251 Este movimiento de 0.0001 es una variación de 1 pip.",
+      "html": "<strong>EUR/USD</strong><br/>1.1250-1.1251<br/><br/>Este movimiento de 0.0001 es una variación de 1 pip."
+    },
+    {
+      "type": "paragraph",
+      "text": "EUR/JPY 120.10 – 120.11 Este movimiento de 0.01 es una variación de 1 pip.",
+      "html": "<strong>EUR/JPY<br/></strong>120.10 – 120.11<br/><br/>Este movimiento de 0.01 es una variación de 1 pip."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "También se pueden encontrar cotizaciones con 5 decimales y 3 respectivamente, este último decimal mide la variación del precio en fracciones de pips. Denominados Pipettes .",
+      "html": "También se pueden encontrar cotizaciones con 5 decimales y 3 respectivamente, este último decimal mide la variación del precio en fracciones de pips. Denominados <em>Pipettes</em> ."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "EUR/USD 1.12500 – 1.12501 Este movimiento de 0.00001 es una Variación de 1 Pipette.",
+      "html": "<strong>EUR/USD</strong><br/> 1.12500 – 1.12501 <br/><br/> Este movimiento de 0.00001 es una Variación de 1  Pipette."
+    },
+    {
+      "type": "paragraph",
+      "text": "EUR/JPY 120.100 – 120.101 Este movimiento de 0.001 es una variación de 1 Pipette.",
+      "html": "<strong>EUR/JPY<br/></strong> 120.100 – 120.101<br/><br/>Este movimiento de 0.001 es una variación de 1   Pipette."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Gráfico de Líneas",
+      "html": "<strong>Gráfico de Líneas </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "El gráfico de líneas nos muestra los movimientos del precio según la temporalidad elegida. Si eliges un tiempo de 1 minuto el gráfico de líneas te mostrará los movimientos que ha presentado el precio cada minuto, uniendo mediante líneas los puntos de los movimientos.",
+      "html": "El gráfico de líneas nos muestra los movimientos del precio según la temporalidad elegida. Si eliges un tiempo de 1 minuto el gráfico de líneas te mostrará los movimientos que ha presentado el precio cada minuto, uniendo mediante líneas los puntos de los movimientos."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-02.png",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-02.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532-1024x412.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Gráfico de líneas del par EUR/USD en temporalidad de 1 Minuto.",
+      "width": 1259,
+      "height": 506,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando inicia un nuevo minuto el gráfico avanza y podemos ver el desplazamiento vertical del precio dependiendo de los movimientos que este realice, al finalizar el minuto el gráfico imprime el ultimo movimiento del precio y luego avanza.",
+      "html": "Cuando inicia un nuevo minuto el gráfico avanza y podemos ver el desplazamiento vertical del precio dependiendo de los movimientos que este realice, al finalizar el minuto el gráfico imprime el ultimo movimiento del precio y luego avanza."
+    },
+    {
+      "type": "paragraph",
+      "text": "También podemos encontrarnos con gráficos que imprimen los movimientos cada segundo, esto dependiendo del broker y la plataforma.",
+      "html": "También podemos encontrarnos con gráficos que imprimen los movimientos cada segundo, esto dependiendo del broker y la plataforma."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-03.png",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-03.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png",
+          "width": 994
+        }
+      ],
+      "alt": "",
+      "caption": "Gráfico de líneas del par de divisas EUR/USD imprimiendo los movimientos cada segundo.",
+      "width": 994,
+      "height": 503,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Gráfico de Velas Japonesas",
+      "html": "<strong>Gráfico de Velas Japonesas</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Más adelante profundizaremos en el tema de velas japonesas, ahora veremos una introducción.",
+      "html": "Más adelante profundizaremos en el tema de velas japonesas, ahora veremos una introducción."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las velas Japonesas surgen en Japón en el siglo XVIII en el mercado de arroz. Las velas japonesas nos muestran en el gráfico los movimientos del precio y nos permite realizar un análisis técnico.",
+      "html": "Las velas Japonesas surgen en Japón en el siglo XVIII en el\nmercado de arroz. Las velas japonesas nos muestran en el gráfico los\nmovimientos del precio y nos permite realizar un análisis técnico."
+    },
+    {
+      "type": "paragraph",
+      "text": "Muchos traders prefieren utilizar las velas japonesas para su análisis técnico ya que estas nos brindan mayor información y son más atractivas visualmente.",
+      "html": "Muchos traders prefieren utilizar las velas japonesas para su análisis técnico ya que estas nos brindan mayor información y son más atractivas visualmente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las velas japonesas muestran los movimientos que ha tenido el precio durante un lapso de tiempo, este lapso o intervalo de tiempo se llama TIMEFRAME o Temporalidad.",
+      "html": "Las velas japonesas muestran los movimientos que ha tenido el precio durante un lapso de tiempo, este lapso o intervalo de tiempo se llama <strong>TIMEFRAME o Temporalidad. </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo, si estamos en un timeframe de 1 minuto, la nueva vela abrirá en el segundo 00 y cerrará en el segundo 59.",
+      "html": "Por ejemplo, si estamos en un timeframe de 1 minuto,  la nueva vela abrirá en el segundo 00 y cerrará en el segundo 59."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las velas japonesas están conformadas de la siguiente manera:",
+      "html": "Las velas japonesas están conformadas de la siguiente\nmanera:"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-04.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-04.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg",
+          "width": 700
+        }
+      ],
+      "alt": "",
+      "caption": "Formación de Velas Japonesas",
+      "width": 700,
+      "height": 400,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Apertura de la vela: Nos indica donde se encontraba el precio al momento de iniciar el intervalo de tiempo.",
+      "html": "<strong>Apertura de la vela:</strong> Nos indica donde se encontraba el precio al momento de iniciar el intervalo de tiempo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cierre de la vela: Nos indica donde se encontraba el precio al momento de finalizar el intervalo de tiempo.",
+      "html": "<strong>Cierre de la vela:</strong> Nos indica donde se encontraba el precio al momento de finalizar el intervalo de tiempo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuerpo de la vela: Comprendido entre los puntos de apertura y cierre de la vela.",
+      "html": "<strong>Cuerpo de la vela:</strong> Comprendido entre los puntos de apertura y cierre de la vela."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mecha superior e inferior: El punto puede sobrepasar los puntos de cierre y apertura de la vela, las mechas nos muestran estos puntos más altos y más bajos que pudo alcanzar el precio durante el intervalo de tiempo.",
+      "html": "<strong>Mecha superior e inferior:</strong> El punto puede sobrepasar los puntos de cierre y apertura de la vela, las mechas nos muestran estos puntos más altos y más bajos que pudo alcanzar el precio durante el intervalo de tiempo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si el precio de cierre es superior al precio de apertura la vela es alcista, dependiendo de la plataforma o la configuración que tengas así sera el color de la vela, por defecto suele ser verde o blanco.",
+      "html": "Si el precio de cierre es superior al precio de apertura la vela es alcista, dependiendo de la plataforma o la configuración que tengas así sera el color de la vela, por defecto suele ser verde o blanco."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si el precio de cierre es inferior al precio de apertura la vela será bajista, dependiendo de la plataforma o la configuración que tengas así sera el color de la vela, por defecto suele ser roja o negra.",
+      "html": "Si el precio de cierre es inferior al precio de apertura la vela será bajista,   dependiendo de la plataforma o la configuración que tengas así sera el color de la vela, por defecto suele ser roja  o negra."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-05.png",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-05.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD-1024x414.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Gráfico de velas japonesas del par de divisas EUR/USD, en un timeframe de 1 minuto, es decir cada vela almacena el movimiento que ha tenido el precio en lapsos de un minuto, mostrándonos la apertura del precio, el cierre y los máximos y mínimos que pudo tener el precio a lo largo del minuto.",
+      "width": 1248,
+      "height": 504,
+      "index": 4,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tendencias",
+      "html": "<strong>Tendencias</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dependiendo de los movimientos del precio podemos identificar 3 tipos de tendencias.",
+      "html": "Dependiendo de los movimientos del precio podemos identificar 3 tipos de tendencias."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Alcista",
+      "html": "<strong>Tendencia Alcista</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decimos que es una tendencia alcista cuando el precio a subido. En tendencias generales podemos ver que el precio se mueve creando máximos y mínimos más altos.",
+      "html": "Decimos que es una tendencia alcista cuando el precio a subido. En tendencias generales podemos ver  que el precio se mueve creando máximos y mínimos más altos."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Tendencia Alcista, la flecha blanca nos muestra la dirección alcista del precio. Los círculos amarillos nos muestran los máximos (círculos por encima) y mínimos (círculos por debajo) que va haciendo el precio, en este caso máximos y mínimos más altos.",
+      "width": 1280,
+      "height": 720,
+      "index": 5,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Bajista",
+      "html": "<strong>Tendencia Bajista</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decimos que es una tendencia bajista cuando el precio a bajado. En tendencias generales podemos ver que el precio se mueve creando máximos y mínimos más bajos.",
+      "html": "Decimos que es  una tendencia bajista cuando el precio a bajado. En tendencias generales podemos ver que el precio se mueve creando máximos y mínimos más bajos."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Tendencia Bajista, la flecha blanca nos muestra la dirección bajista del precio. Los círculos amarillos nos muestran los máximos (círculos por encima) y mínimos (círculos por debajo) que va haciendo el precio, en este caso máximos y mínimos son cada vez más bajos.",
+      "width": 1280,
+      "height": 720,
+      "index": 6,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Consolidación / Lateralización",
+      "html": "<strong>Consolidación / Lateralización</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decimos que es una lateralización cuando el precio se esta moviendo de manera horizontal y los máximos y mínimos los crea al mismo nivel.",
+      "html": "Decimos que es una lateralización cuando el precio se esta moviendo de manera horizontal y los máximos y mínimos los crea al mismo nivel."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-08.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-08.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Movimiento horizontal del precio, los máximos y mínimos están a un mismo nivel.",
+      "width": 1280,
+      "height": 720,
+      "index": 7,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos tres tipos de tendencias se pueden dar en tendencias generales y tendencias secundarias.",
+      "html": "Estos tres tipos de tendencias se pueden dar en tendencias generales y tendencias secundarias."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencias generales o primarias",
+      "html": "<strong>Tendencias generales o primarias</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas tendencias están vistas desde «lejos», y cómo su nombre lo indica nos muestra la información general del mercado (tipo de tendencia).",
+      "html": "Estas tendencias están vistas desde «lejos»,  y cómo su nombre lo indica nos muestra la información general del mercado (tipo de tendencia)."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Secundaria",
+      "html": "<strong>Tendencia Secundaria</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las tendencias generales están compuestas de tendencias secundarias, es decir son movimientos más pequeños del precio.",
+      "html": "Las tendencias generales están compuestas de tendencias secundarias, es decir son movimientos más pequeños del precio."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "En color Gris podemos identificar la tendencia general, en este caso es una tendencia general bajista. En blanco podemos identificar las tendencias secundarias, cómo puedes observar tenemos tendencias secundarias bajistas, alcistas y consolidaciones.",
+      "width": 1280,
+      "height": 720,
+      "index": 8,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Fuerza de las Tendencias",
+      "html": "<strong>Fuerza de las Tendencias</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "En cada análisis que hacemos debemos tener en cuenta con que fuerza se esta moviendo el precio.",
+      "html": "En cada análisis que hacemos debemos tener en cuenta con que fuerza se esta moviendo el precio."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos determinar la fuerza del precio observando los ángulos de inclinación de las tendencias.",
+      "html": "Podemos determinar la fuerza del precio observando los ángulos de inclinación de las tendencias."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto solo es un aproximado, no es algo que tengas que medir con regla ni debe de quedar exactamente en el valor indicado.",
+      "html": "Esto solo es un aproximado, no es algo que tengas que medir con regla ni debe de quedar exactamente en el valor indicado."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Fuerte:",
+      "html": "<strong>Tendencia Fuerte:</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos identificar las tendencias fuertes cuando presentan un ángulo entre los 60°.",
+      "html": "Podemos identificar las tendencias fuertes cuando presentan un ángulo entre los 60°."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 9,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Saludable:",
+      "html": "<strong>Tendencia Saludable: </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos identificar las tendencias saludables cuando presentan un ángulo entre los 45°.",
+      "html": "Podemos identificar las tendencias saludables cuando presentan un ángulo entre los 45°."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 10,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencias Débiles:",
+      "html": "<strong>Tendencias Débiles:</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos identificar las tendencias débiles cuando presentan un ángulo entre los 30-15°.",
+      "html": "Podemos identificar las tendencias débiles cuando presentan un ángulo entre los 30-15°."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-12.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-12.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 11,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Si el ángulo es inferior a los 15° decimos que estamos en una consolidación",
+      "html": "Si el ángulo es inferior a los 15° decimos que estamos en una consolidación"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-13.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-13.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 12,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "La fuerza se puede observar de la misma manera independientemente del si la tendencia es bajista o alcista. También puedes ver la fuerza que presentan las tendencias generales y las tendencias secundarias.",
+      "html": "La fuerza se puede observar de la misma manera independientemente del si la tendencia es bajista o alcista. También puedes ver la fuerza que presentan las tendencias generales y las tendencias secundarias."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Volatilidad",
+      "html": "<strong>Volatilidad</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La volatilidad es algo a lo que pocos traders le prestan atención. Es nuestro trabajo identificar en que tipo de volatilidad podemos hacer análisis más cómodos.",
+      "html": "La volatilidad es algo a lo que  pocos traders le prestan atención.  Es nuestro trabajo identificar en que tipo de volatilidad podemos hacer análisis más cómodos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para motivos del curso explicaremos el termino de volatilidad de la siguiente manera: La volatilidad es la frecuencia de cambio que ha experimentado el precio a lo largo de un intervalo dado.",
+      "html": "Para motivos del curso explicaremos el termino de volatilidad de la siguiente manera: La volatilidad es la frecuencia de cambio que ha experimentado el precio a lo largo de un intervalo dado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podremos identificar 3 tipos de volatilidad.",
+      "html": "Podremos identificar 3 tipos de volatilidad."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Volatilidad Débil:",
+      "html": "<strong>Volatilidad Débil:</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "En este tipo de volatilidad el precio se mueve muy poco. Podemos identificarlo porque los cuerpos de las velas son muy pequeños. Este tipo de volatilidad puede llegar a ser engañosa ya que con sus pocos movimientos se nos dificulta ver la reacción del precio con las zonas importantes.",
+      "html": "En este tipo de volatilidad el precio se mueve muy poco. Podemos identificarlo porque los cuerpos de las velas son muy pequeños.  Este tipo de volatilidad puede llegar a ser engañosa  ya que con sus pocos movimientos se nos dificulta ver la reacción del precio con las zonas importantes."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-14.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-14.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Podemos observar muchas velas sin movimiento (velas sin cuerpo).",
+      "width": 1280,
+      "height": 720,
+      "index": 13,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Volatilidad Saludable:",
+      "html": "<strong>Volatilidad Saludable: </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este tipo de volatilidad nos presenta movimientos más tranquilos, se facilita hacer el seguimiento del precio en zonas importantes. Todas las velas mantienen un tamaño promedio y no presenta demasiadas mechas.",
+      "html": "Este tipo de volatilidad nos presenta movimientos más tranquilos, se facilita hacer el seguimiento del precio en zonas importantes. Todas las velas mantienen un tamaño promedio y no presenta demasiadas mechas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Este tipo de volatilidad nos muestra movimientos más claros y seguros.",
+      "width": 1280,
+      "height": 720,
+      "index": 14,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Volatilidad Alta :",
+      "html": "<strong>Volatilidad Alta</strong>:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este tipo de volatilidad presenta movimientos rápidos e indecisos. Este tipo de mercado puede ser engañoso puesto que con los movimientos que presenta se dificulta ver la reacción del precio con las zonas importantes, también nos puede dejar un mal punto de entrada a causa de sus movimientos rápidos.",
+      "html": "Este tipo de volatilidad presenta movimientos rápidos  e indecisos. Este tipo de mercado puede ser engañoso puesto que con los movimientos que presenta se dificulta ver la reacción del precio con las zonas importantes, también nos puede dejar un mal punto de entrada a causa de sus movimientos rápidos."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Este tipo de volatilidad nos presenta movimientos muy rápidos. Podemos decir que este mercado es «sucio» o esta presentando mucho «ruido».",
+      "width": 1280,
+      "height": 720,
+      "index": 15,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "La volatilidad saludable es la más recomendada para operar gracias a los movimientos que presenta y la estructura que nos deja.",
+      "html": "La volatilidad saludable es la más recomendada para operar gracias a los movimientos que presenta y la estructura que nos deja."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto no quiere decir que debemos temerle a la volatilidad alta o baja. Todos se pueden operar solo que necesitas tener más paciencia de lo normal o ser un trader más experimentado.",
+      "html": "Esto no quiere decir que debemos temerle a la volatilidad alta o baja. Todos se pueden operar solo que necesitas tener más paciencia de lo normal o ser un trader más experimentado."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación encontrarás las actividades correspondientes a esta clase.",
+      "html": "A continuación encontrarás las actividades correspondientes a esta clase."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Preguntas:",
+      "html": "<strong>Preguntas: </strong>"
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "items": [
+        {
+          "text": "¿Qué es una divisa?",
+          "html": "¿Qué es una divisa?"
+        },
+        {
+          "text": "¿Qué es un par de divisas y cómo está conformada?",
+          "html": "¿Qué es un par de divisas y cómo está conformada?"
+        },
+        {
+          "text": "¿Qué es un Pip y una Pipette?",
+          "html": "¿Qué es un Pip y una Pipette?"
+        },
+        {
+          "text": "¿Qué es la volatilidad?",
+          "html": "¿Qué es la volatilidad?"
+        },
+        {
+          "text": "¿Qué tipos de volatilidad podríamos encontrar y cómo los identificas?",
+          "html": "¿Qué tipos de volatilidad podríamos encontrar y cómo los identificas?"
+        },
+        {
+          "text": "Define que es una tendencia alcista, tendencia bajista y una consolidación.",
+          "html": "Define que es una tendencia alcista, tendencia bajista y una consolidación."
+        },
+        {
+          "text": "¿Cómo identificas una tendencia fuerte?",
+          "html": "¿Cómo identificas una tendencia fuerte?"
+        },
+        {
+          "text": "¿Cómo identificas una tendencia saludable?",
+          "html": "¿Cómo identificas una tendencia saludable?"
+        },
+        {
+          "text": "¿Cómo identificas una tendencia débil?",
+          "html": "¿Cómo identificas una tendencia débil?"
+        },
+        {
+          "text": "Anota las conclusiones de lo aprendido.",
+          "html": "Anota las conclusiones de lo aprendido."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Si no sabes cual es la respuesta a alguna de las preguntas puedes investigar en otras fuentes, recuerda que es tu responsabilidad buscar información adicional o hacer las preguntas correspondientes.",
+      "html": "Si no sabes cual es la respuesta a alguna de las preguntas puedes investigar en otras fuentes, recuerda que es tu responsabilidad buscar información adicional o hacer las preguntas correspondientes."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Actividad #2",
+      "html": "<strong>Actividad #2</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para esta actividad debes buscar en tu gráfico e identificar:",
+      "html": "Para esta actividad debes buscar en tu gráfico e identificar:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Una tendencia Fuerte.",
+          "html": "Una tendencia Fuerte."
+        },
+        {
+          "text": "Una tendencia Débil.",
+          "html": "Una tendencia Débil."
+        },
+        {
+          "text": "Una tendencia Saludable.",
+          "html": "Una tendencia Saludable."
+        },
+        {
+          "text": "Tendencia General y Secundaria.",
+          "html": "Tendencia General y Secundaria."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Puedes compartir las capturas de pantalla en el salón virtual, agregando #Actividad2 en la descripción y colocándole la etiqueta de tema “Tendencias”, en total serían 4 capturas, una por cada inciso.",
+      "html": "Puedes compartir las capturas de pantalla en el salón virtual, agregando #Actividad2 en la descripción y colocándole la etiqueta de tema  “Tendencias”, en total serían 4 capturas, una por cada inciso."
+    },
+    {
+      "type": "paragraph",
+      "text": "En las próximas clases explicaré porque es importante identificar la fuerza de las tendencias.",
+      "html": "<strong>En las próximas clases explicaré porque es importante identificar la fuerza de las tendencias. </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "¡Gracias!",
+      "html": "¡Gracias!"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

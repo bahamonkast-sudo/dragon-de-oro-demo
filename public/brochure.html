@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dragón de Oro — Propuesta Comercial</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { font-family: 'Inter', sans-serif; }
+  .hero-gradient { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%); }
+  .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f5d442 50%, #b8860b 100%); }
+  .gold-text { background: linear-gradient(135deg, #d4af37, #f5d442, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .card-hover { transition: all 0.3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15); }
+  .glow { box-shadow: 0 0 60px rgba(212, 175, 55, 0.1); }
+  .border-gold { border-color: rgba(212, 175, 55, 0.3); }
+  .bg-gold-10 { background-color: rgba(212, 175, 55, 0.1); }
+  .bg-gold-5 { background-color: rgba(212, 175, 55, 0.05); }
+  .text-gold { color: #d4af37; }
+  .float { animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent); }
+  .badge { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+  .badge-gold { background: rgba(212, 175, 55, 0.15); color: #d4af37; border: 1px solid rgba(212, 175, 55, 0.3); }
+  .badge-green { background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3); }
+  .badge-blue { background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.3); }
+  .badge-purple { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3); }
+  .terminal { background: #0a0a0a; border: 1px solid #333; border-radius: 8px; font-family: 'Courier New', monospace; }
+  .terminal-header { background: #1a1a1a; padding: 8px 12px; border-bottom: 1px solid #333; border-radius: 8px 8px 0 0; }
+  .terminal-body { padding: 12px; font-size: 0.8rem; line-height: 1.6; }
+  .terminal-prompt { color: #22c55e; }
+  .terminal-cmd { color: #e5e5e5; }
+  .terminal-output { color: #a3a3a3; }
+  .terminal-success { color: #22c55e; }
+  .terminal-warning { color: #f59e0b; }
+  .terminal-info { color: #3b82f6; }
+  .grid-pattern { background-image: radial-gradient(circle, rgba(212, 175, 55, 0.05) 1px, transparent 1px); background-size: 20px 20px; }
+  .btn-primary { background: linear-gradient(135deg, #d4af37, #b8860b); color: #0f172a; font-weight: 700; padding: 12px 24px; border-radius: 8px; transition: all 0.3s ease; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); }
+  .btn-secondary { background: transparent; color: #d4af37; font-weight: 600; padding: 12px 24px; border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); transition: all 0.3s ease; }
+  .btn-secondary:hover { background: rgba(212, 175, 55, 0.1); }
+  .nav-link { color: #94a3b8; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+  .nav-link:hover { color: #d4af37; }
+  .feature-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 12px; padding: 24px; }
+  .feature-card:hover { border-color: rgba(212, 175, 55, 0.3); }
+  .slide-in { animation: slideIn 0.6s ease-out; }
+  @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-in { animation: fadeIn 0.8s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .scale-in { animation: scaleIn 0.5s ease-out; }
+  @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+  .shimmer { background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent); background-size: 200% 100%; animation: shimmer 3s infinite; }
+  @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+  .glow-border { box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.2), 0 0 20px rgba(212, 175, 55, 0.1); }
+  .bg-mesh { background: radial-gradient(at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%), radial-gradient(at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%), radial-gradient(at 50% 50%, rgba(212, 175, 55, 0.02) 0%, transparent 70%); }
+  .candle-demo { display: flex; align-items: flex-end; gap: 3px; height: 80px; }
+  .candle-demo .candle { width: 8px; border-radius: 2px; position: relative; }
+  .candle-demo .candle::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 2px; background: inherit; }
+  .candle-demo .candle.green { background: #22c55e; }
+  .candle-demo .candle.red { background: #ef4444; }
+  .candle-demo .candle.green::before { top: -6px; bottom: -6px; }
+  .candle-demo .candle.red::before { top: -6px; bottom: -6px; }
+  .chat-bubble { max-width: 80%; padding: 12px 16px; border-radius: 12px; margin-bottom: 8px; }
+  .chat-bubble.user { background: rgba(212, 175, 55, 0.15); margin-left: auto; border-bottom-right-radius: 4px; }
+  .chat-bubble.ai { background: rgba(30, 41, 59, 0.8); border-bottom-left-radius: 4px; }
+  .typing-indicator { display: flex; gap: 4px; padding: 12px 16px; }
+  .typing-indicator span { width: 6px; height: 6px; border-radius: 50%; background: #d4af37; animation: typing 1.4s infinite; }
+  .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typing { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+  .scroll-indicator { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: rgba(212, 175, 55, 0.1); z-index: 50; }
+  .scroll-indicator .progress { height: 100%; background: linear-gradient(90deg, #d4af37, #f5d442); width: 0%; transition: width 0.1s; }
+  .back-to-top { position: fixed; bottom: 24px; right: 24px; width: 48px; height: 48px; border-radius: 50%; background: rgba(212, 175, 55, 0.15); border: 1px solid rgba(212, 175, 55, 0.3); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; pointer-events: none; transition: all 0.3s; z-index: 40; }
+  .back-to-top.visible { opacity: 1; pointer-events: auto; }
+  .back-to-top:hover { background: rgba(212, 175, 55, 0.25); }
+  .back-to-top svg { width: 20px; height: 20px; color: #d4af37; }
+  .nav-mobile { display: none; }
+  @media (max-width: 768px) { .nav-mobile { display: flex; } .nav-desktop { display: none; } }
+  .mobile-menu { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; background: #0f172a; border-left: 1px solid rgba(212, 175, 55, 0.2); transform: translateX(100%); transition: transform 0.3s; z-index: 60; padding: 24px; }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-menu-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 55; }
+  .mobile-menu-overlay.open { opacity: 1; pointer-events: auto; }
+  .stat-card { background: rgba(30, 41, 59, 0.3); border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-card:hover { border-color: rgba(212, 175, 55, 0.3); }
+  .check-list { list-style: none; padding: 0; }
+  .check-list li { padding: 6px 0; padding-left: 28px; position: relative; color: #94a3b8; font-size: 0.875rem; }
+  .check-list li::before { content: ''; position: absolute; left: 0; top: 10px; width: 16px; height: 16px; border-radius: 50%; background: rgba(34, 197, 94, 0.2); }
+  .check-list li::after { content: ''; position: absolute; left: 5px; top: 14px; width: 6px; height: 3px; border-left: 2px solid #22c55e; border-bottom: 2px solid #22c55e; transform: rotate(-45deg); }
+  .x-list { list-style: none; padding: 0; }
+  .x-list li { padding: 6px 0; padding-left: 28px; position: relative; color: #94a3b8; font-size: 0.875rem; }
+  .x-list li::before { content: ''; position: absolute; left: 0; top: 10px; width: 16px; height: 16px; border-radius: 50%; background: rgba(239, 68, 68, 0.2); }
+  .x-list li::after { content: ''; position: absolute; left: 6px; top: 14px; width: 4px; height: 4px; border-radius: 50%; background: #ef4444; }
+  .highlight-box { background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05)); border-left: 4px solid #d4af37; padding: 20px; border-radius: 0 12px 12px 0; }
+  .info-box { background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05)); border-left: 4px solid #3b82f6; padding: 20px; border-radius: 0 12px 12px 0; }
+  .success-box { background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05)); border-left: 4px solid #22c55e; padding: 20px; border-radius: 0 12px 12px 0; }
+  .warning-box { background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.05)); border-left: 4px solid #f97316; padding: 20px; border-radius: 0 12px 12px 0; }
+  .chat-widget { position: fixed; bottom: 24px; right: 24px; z-index: 100; }
+  .chat-widget-button { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #b8860b); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); transition: all 0.3s; }
+  .chat-widget-button:hover { transform: scale(1.1); }
+  .chat-widget-button svg { width: 28px; height: 28px; color: #0f172a; }
+  .chat-widget-panel { position: fixed; bottom: 100px; right: 24px; width: 380px; height: 500px; background: #0f172a; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 16px; display: none; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); z-index: 100; }
+  .chat-widget-panel.open { display: flex; }
+  .chat-widget-header { background: linear-gradient(135deg, #1e293b, #0f172a); padding: 16px; border-bottom: 1px solid rgba(212, 175, 55, 0.2); display: flex; align-items: center; gap: 12px; }
+  .chat-widget-header .avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #d4af37, #b8860b); display: flex; align-items: center; justify-content: center; }
+  .chat-widget-header .avatar svg { width: 20px; height: 20px; color: #0f172a; }
+  .chat-widget-header .info h4 { color: #fff; font-size: 0.875rem; font-weight: 600; }
+  .chat-widget-header .info p { color: #22c55e; font-size: 0.75rem; }
+  .chat-widget-messages { flex: 1; overflow-y: auto; padding: 16px; }
+  .chat-widget-input { padding: 16px; border-top: 1px solid rgba(212, 175, 55, 0.2); display: flex; gap: 8px; }
+  .chat-widget-input input { flex: 1; background: #1e293b; border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 8px; padding: 10px 14px; color: #e2e8f0; font-size: 0.875rem; outline: none; }
+  .chat-widget-input input:focus { border-color: rgba(212, 175, 55, 0.5); }
+  .chat-widget-input button { background: linear-gradient(135deg, #d4af37, #b8860b); border: none; border-radius: 8px; padding: 10px 16px; color: #0f172a; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+  .chat-widget-input button:hover { transform: translateY(-1px); }
+  .chat-widget-input button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .chat-message { margin-bottom: 12px; }
+  .chat-message.user { text-align: right; }
+  .chat-message.user .bubble { background: rgba(212, 175, 55, 0.15); border-bottom-right-radius: 4px; }
+  .chat-message.ai .bubble { background: rgba(30, 41, 59, 0.8); border-bottom-left-radius: 4px; }
+  .chat-message .bubble { display: inline-block; padding: 10px 14px; border-radius: 12px; max-width: 85%; font-size: 0.875rem; line-height: 1.5; }
+  .chat-message.user .bubble { color: #e2e8f0; }
+  .chat-message.ai .bubble { color: #e2e8f0; }
+  .chat-message .bubble strong { color: #d4af37; }
+  .chat-message .bubble ul { margin: 8px 0; padding-left: 20px; }
+  .chat-message .bubble li { margin: 4px 0; }
+  .chat-message .bubble code { background: rgba(212, 175, 55, 0.1); padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.8rem; }
+  .chat-message .bubble pre { background: #0a0a0a; padding: 12px; border-radius: 8px; overflow-x: auto; margin: 8px 0; }
+  .chat-message .bubble pre code { background: none; padding: 0; }
+  .chat-typing { display: flex; gap: 4px; padding: 10px 14px; }
+  .chat-typing span { width: 6px; height: 6px; border-radius: 50%; background: #d4af37; animation: typing 1.4s infinite; }
+  .chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+  .chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typing { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+  .neuro-card { position: relative; overflow: hidden; }
+  .neuro-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent); transition: left 0.5s; }
+  .neuro-card:hover::before { left: 100%; }
+  .value-prop { background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.02)); border: 1px solid rgba(212, 175, 55, 0.15); border-radius: 16px; padding: 32px; }
+  .value-prop:hover { border-color: rgba(212, 175, 55, 0.4); }
+  .icon-box { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+  .icon-box.gold { background: rgba(212, 175, 55, 0.15); }
+  .icon-box.green { background: rgba(34, 197, 94, 0.15); }
+  .icon-box.blue { background: rgba(59, 130, 246, 0.15); }
+  .icon-box.purple { background: rgba(168, 85, 247, 0.15); }
+  .icon-box.red { background: rgba(239, 68, 68, 0.15); }
+  .icon-box.orange { background: rgba(249, 115, 22, 0.15); }
+  .icon-box svg { width: 28px; height: 28px; }
+  .icon-box.gold svg { color: #d4af37; }
+  .icon-box.green svg { color: #22c55e; }
+  .icon-box.blue svg { color: #3b82f6; }
+  .icon-box.purple svg { color: #a855f7; }
+  .icon-box.red svg { color: #ef4444; }
+  .icon-box.orange svg { color: #f97316; }
+  .timeline-item { position: relative; padding-left: 32px; padding-bottom: 24px; border-left: 2px solid rgba(212, 175, 55, 0.2); }
+  .timeline-item:last-child { border-left-color: transparent; }
+  .timeline-item::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #d4af37; }
+  .timeline-item .time { font-size: 0.75rem; color: #d4af37; font-weight: 600; margin-bottom: 4px; }
+  .timeline-item .title { font-size: 1rem; color: #fff; font-weight: 600; margin-bottom: 4px; }
+  .timeline-item .desc { font-size: 0.875rem; color: #94a3b8; }
+  .metric-card { background: rgba(30, 41, 59, 0.3); border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 12px; padding: 20px; text-align: center; }
+  .metric-card .value { font-size: 2rem; font-weight: 800; color: #d4af37; }
+  .metric-card .label { font-size: 0.75rem; color: #94a3b8; margin-top: 4px; }
+  .progress-bar { height: 6px; background: rgba(212, 175, 55, 0.1); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, #d4af37, #f5d442); border-radius: 3px; transition: width 0.5s ease; }
+  .comparison-table { width: 100%; border-collapse: collapse; }
+  .comparison-table th, .comparison-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+  .comparison-table th { color: #d4af37; font-weight: 600; font-size: 0.875rem; }
+  .comparison-table td { color: #94a3b8; font-size: 0.875rem; }
+  .comparison-table tr:hover td { background: rgba(212, 175, 55, 0.05); }
+  .feature-list { list-style: none; padding: 0; }
+  .feature-list li { padding: 8px 0; padding-left: 24px; position: relative; color: #94a3b8; font-size: 0.875rem; }
+  .feature-list li::before { content: ''; position: absolute; left: 0; top: 12px; width: 12px; height: 12px; border-radius: 50%; background: rgba(212, 175, 55, 0.3); }
+  .feature-list li::after { content: ''; position: absolute; left: 4px; top: 16px; width: 4px; height: 4px; border-radius: 50%; background: #d4af37; }
+  .flow-step { position: relative; padding-left: 40px; }
+  .flow-step::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: rgba(212, 175, 55, 0.2); }
+  .flow-step:last-child::before { display: none; }
+  .flow-step::after { content: ''; position: absolute; left: 12px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: #d4af37; }
+  .flow-step .step-number { position: absolute; left: 0; top: 0; width: 32px; height: 32px; border-radius: 50%; background: rgba(212, 175, 55, 0.15); border: 1px solid rgba(212, 175, 55, 0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #d4af37; }
+  .legal-card { background: rgba(30, 41, 59, 0.3); border: 1px solid rgba(212, 175, 55, 0.1); border-radius: 12px; padding: 20px; }
+  .legal-card:hover { border-color: rgba(212, 175, 55, 0.3); }
+  .legal-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(212, 175, 55, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .legal-icon svg { width: 24px; height: 24px; color: #d4af37; }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+
+<div class="scroll-indicator"><div class="progress" id="scrollProgress"></div></div>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<div class="chat-widget">
+  <div class="chat-widget-button" id="chatWidgetButton" onclick="toggleChat()">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+  </div>
+  <div class="chat-widget-panel" id="chatWidgetPanel">
+    <div class="chat-widget-header">
+      <div class="avatar">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+      </div>
+      <div class="info">
+        <h4>Asistente Dragón de Oro</h4>
+        <p>En línea — Pregunta sobre la plataforma</p>
+      </div>
+    </div>
+    <div class="chat-widget-messages" id="chatMessages">
+      <div class="chat-message ai">
+        <div class="bubble">
+          ¡Hola! Soy el asistente de <strong>Dragón de Oro</strong>. Pregúntame sobre la plataforma, sus funcionalidades, inversión o cualquier duda que tengas. Estoy aquí para ayudarte.
+        </div>
+      </div>
+    </div>
+    <div class="chat-widget-input">
+      <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." onkeypress="if(event.key==='Enter')sendMessage()">
+      <button id="chatSend" onclick="sendMessage()">Enviar</button>
+    </div>
+  </div>
+</div>
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-gold">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center">
+          <svg class="w-6 h-6 text-slate-950" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="text-lg font-bold text-white">Dragón de Oro</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#plataforma" class="nav-link">Plataforma</a>
+        <a href="#herramientas" class="nav-link">Herramientas</a>
+        <a href="#bot" class="nav-link">Bot Telegram</a>
+        <a href="#inversion" class="nav-link">Inversión</a>
+        <a href="#legal" class="nav-link">Legal</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+      <button class="md:hidden text-gold" onclick="document.getElementById('mobileMenu').classList.add('open');document.getElementById('mobileMenuOverlay').classList.add('open')">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="flex justify-end mb-8">
+    <button onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')" class="text-slate-400 hover:text-white">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="flex flex-col gap-4">
+    <a href="#inicio" class="nav-link text-lg" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')">Inicio</a>
+    <a href="#plataforma" class="nav-link text-lg" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')">Plataforma</a>
+    <a href="#herramientas" class="nav-link text-lg" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')">Herramientas</a>
+    <a href="#bot" class="nav-link text-lg" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')">Bot Telegram</a>
+    <a href="#inversion" class="nav-link text-lg" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')">Inversión</a>
+    <a href="#legal" class="nav-link text-lg" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')">Legal</a>
+    <a href="#contacto" class="nav-link text-lg" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')">Contacto</a>
+  </div>
+</div>
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuOverlay').classList.remove('open')"></div>
+
+<section id="inicio" class="hero-gradient min-h-screen flex items-center relative overflow-hidden pt-16">
+  <div class="absolute inset-0 grid-pattern"></div>
+  <div class="absolute top-20 right-20 w-72 h-72 bg-gold/5 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 left-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="slide-in">
+        <div class="flex items-center gap-2 mb-6">
+          <span class="badge badge-gold">Propuesta Comercial</span>
+          <span class="badge badge-green">Acceso de por vida</span>
+        </div>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+          <span class="gold-text">Dragón de Oro</span>
+        </h1>
+        <p class="text-xl text-slate-400 mb-4 leading-relaxed">
+          Plataforma integral de aprendizaje y operación de trading con opciones binarias.
+        </p>
+        <p class="text-lg text-slate-500 mb-8 leading-relaxed">
+          Educación estructurada, herramientas profesionales, inteligencia artificial, gestión de riesgo y comunidad activa. Todo en un solo ecosistema.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-12">
+          <a href="#inversion" class="btn-primary">Ver Inversión</a>
+          <a href="#plataforma" class="btn-secondary">Explorar Plataforma</a>
+        </div>
+        <div class="grid grid-cols-3 gap-6">
+          <div>
+            <div class="text-3xl font-black gold-text">133</div>
+            <div class="text-sm text-slate-500">Lecciones</div>
+          </div>
+          <div>
+            <div class="text-3xl font-black gold-text">30</div>
+            <div class="text-sm text-slate-500">Patrones</div>
+          </div>
+          <div>
+            <div class="text-3xl font-black gold-text">24/7</div>
+            <div class="text-sm text-slate-500">Mentor IA</div>
+          </div>
+        </div>
+      </div>
+      <div class="relative float">
+        <div class="terminal glow">
+          <div class="terminal-header flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="text-xs text-slate-500 ml-2">Dragón de Oro — Sistema</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="terminal-prompt">$</span> <span class="terminal-cmd">dragon-oro status</span></div>
+            <div class="terminal-output">Sistema integral operativo</div>
+            <div class="terminal-success">133 lecciones cargadas</div>
+            <div class="terminal-success">30 patrones activos</div>
+            <div class="terminal-success">IA en línea</div>
+            <div class="terminal-warning">Laboratorio de velas: listo</div>
+            <div class="terminal-info">Gestión de riesgo: activa</div>
+            <div class="terminal-success">Señales Binomo: conectadas</div>
+            <div class="terminal-info">Bot Telegram: operativo</div>
+            <div class="mt-4 pt-4 border-t border-slate-700">
+              <div class="text-xs text-slate-500 mb-2">Velas en tiempo real:</div>
+              <div class="candle-demo items-end">
+                <div class="candle green" style="height: 40px;"></div>
+                <div class="candle red" style="height: 25px;"></div>
+                <div class="candle green" style="height: 55px;"></div>
+                <div class="candle green" style="height: 35px;"></div>
+                <div class="candle red" style="height: 45px;"></div>
+                <div class="candle green" style="height: 60px;"></div>
+                <div class="candle red" style="height: 30px;"></div>
+                <div class="candle green" style="height: 50px;"></div>
+                <div class="candle green" style="height: 40px;"></div>
+                <div class="candle red" style="height: 35px;"></div>
+                <div class="candle green" style="height: 55px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="plataforma" class="py-24 bg-mesh">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">La <span class="gold-text">Plataforma</span></h2>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto">Un ecosistema completo que integra educación, práctica, análisis y gestión de riesgo.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="feature-card card-hover neuro-card">
+        <div class="icon-box gold mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">133 Lecciones</h3>
+        <p class="text-slate-400 text-sm">Curso completo de 3 niveles: desde velas japonesas hasta estrategias avanzadas de acción del precio. Videos privados sin descarga.</p>
+      </div>
+      <div class="feature-card card-hover neuro-card">
+        <div class="icon-box green mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Mentor IA 24/7</h3>
+        <p class="text-slate-400 text-sm">Asistente inteligente especializado en trading. Respuestas precisas con contexto completo del curso, disponible las 24 horas.</p>
+      </div>
+      <div class="feature-card card-hover neuro-card">
+        <div class="icon-box blue mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Laboratorio de Velas</h3>
+        <p class="text-slate-400 text-sm">30 patrones de velas japonesas interactivos con niveles clave SNR y variantes CALL/PUT. Visualización profesional.</p>
+      </div>
+      <div class="feature-card card-hover neuro-card">
+        <div class="icon-box purple mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Entrenador de Patrones</h3>
+        <p class="text-slate-400 text-sm">Simulador interactivo con 30 patrones "Sure Shots". Sistema de puntuación, rachas y panel de teoría integrado.</p>
+      </div>
+      <div class="feature-card card-hover neuro-card">
+        <div class="icon-box red mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Gestión de Riesgo</h3>
+        <p class="text-slate-400 text-sm">Calculadora de interés compuesto, estadísticas de operaciones, controles auditivos de advertencia, temporizador y botón de pánico.</p>
+      </div>
+      <div class="feature-card card-hover neuro-card">
+        <div class="icon-box orange mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Comunidad Telegram</h3>
+        <p class="text-slate-400 text-sm">Acceso exclusivo con señales reales de Binomo, análisis de mercado y soporte directo del equipo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="herramientas" class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Herramientas <span class="gold-text">Incluidas</span></h2>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto">Todo lo que necesitas para operar con profesionalismo y confianza.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-6">Protección de Contenido</h3>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Videos Privados</h4>
+              <p class="text-slate-400 text-sm">Contenido protegido sin opción de descarga. Los videos solo se pueden ver dentro de la plataforma.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Control de Links</h4>
+              <p class="text-slate-400 text-sm">Los enlaces de las master class se restringen para evitar que sean compartidos. Acceso único por usuario.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Master Class con OBS</h4>
+              <p class="text-slate-400 text-sm">Las transmisiones en vivo se realizan con OBS Studio y el link se restringe solo a usuarios autorizados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="terminal glow">
+        <div class="terminal-header flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="text-xs text-slate-500 ml-2">Protección de Contenido</span>
+        </div>
+        <div class="terminal-body">
+          <div class="text-xs text-slate-500 mb-4">Estado de seguridad:</div>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between p-2 rounded bg-slate-800">
+              <span class="text-xs text-slate-400">Videos privados</span>
+              <span class="badge badge-green">ACTIVO</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded bg-slate-800">
+              <span class="text-xs text-slate-400">Control de links</span>
+              <span class="badge badge-green">ACTIVO</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded bg-slate-800">
+              <span class="text-xs text-slate-400">Master class OBS</span>
+              <span class="badge badge-green">ACTIVO</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded bg-slate-800">
+              <span class="text-xs text-slate-400">Descarga bloqueada</span>
+              <span class="badge badge-green">ACTIVO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="terminal glow order-2 lg:order-1">
+        <div class="terminal-header flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="text-xs text-slate-500 ml-2">Gestión de Riesgo</span>
+        </div>
+        <div class="terminal-body">
+          <div class="text-xs text-slate-500 mb-4">Panel de control:</div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-slate-400">Capital protegido</span>
+                <span class="text-green-400">87%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 87%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-slate-400">Stop loss diario</span>
+                <span class="text-gold">Activo</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-slate-400">Sesión (60 min)</span>
+                <span class="text-blue-400">42:15</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 70%"></div></div>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-700">
+            <div class="text-xs text-slate-500 mb-2">Estadísticas de operaciones:</div>
+            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+              <div class="p-2 rounded bg-green-500/10">
+                <div class="text-green-400 font-bold">73%</div>
+                <div class="text-slate-500">Win Rate</div>
+              </div>
+              <div class="p-2 rounded bg-gold-10">
+                <div class="text-gold font-bold">12</div>
+                <div class="text-slate-500">Racha</div>
+              </div>
+              <div class="p-2 rounded bg-blue-500/10">
+                <div class="text-blue-400 font-bold">1:3</div>
+                <div class="text-slate-500">R:R</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <h3 class="text-2xl font-bold text-white mb-6">Gestión de Riesgo Avanzada</h3>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Calculadora de Interés Compuesto</h4>
+              <p class="text-slate-400 text-sm">Proyección de ganancias con payout 83% (Binomo). Conversión multi-moneda COP/USD.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Temporizador de Sesión</h4>
+              <p class="text-slate-400 text-sm">Sesiones de 60 minutos con alertas auditivas a los 5 minutos restantes. Control de tiempo de operación.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Controles Auditivos</h4>
+              <p class="text-slate-400 text-sm">Alertas de voz en español para advertencias de riesgo, stop loss y cierre de sesión.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-gold-10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold">Botón de Pánico</h4>
+              <p class="text-slate-400 text-sm">Cierre inmediato de sesión con alerta de voz: "Cerraré tu sesión, luego me lo agradecerás, calma tu sed de venganza".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="bot" class="py-24 bg-mesh">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Bot de <span class="gold-text">Telegram</span></h2>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto">Página de aterrizaje interactiva que guía al usuario en todo el proceso de inscripción y asignación de grupo.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-6">Flujo del Usuario</h3>
+        <div class="space-y-6">
+          <div class="timeline-item">
+            <div class="time">Paso 1</div>
+            <div class="title">Bienvenida</div>
+            <div class="desc">El bot recibe al usuario con un mensaje de bienvenida y le presenta la plataforma.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">Paso 2</div>
+            <div class="title">Selección de Grupo</div>
+            <div class="desc">El usuario selecciona su grupo de acuerdo al monto que depositó en el broker.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">Paso 3</div>
+            <div class="title">Solicitud de Aceptación</div>
+            <div class="desc">El bot envía la solicitud de aceptación e inscribe al usuario según las indicaciones.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">Paso 4</div>
+            <div class="title">Autorización y Validación</div>
+            <div class="desc">Una vez inscrito, recibe la autorización y validación correspondiente.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="time">Paso 5</div>
+            <div class="title">Asignación de Grupo</div>
+            <div class="desc">De forma semiautomática, el administrador asigna los grupos correspondientes y envía el link de aprobación.</div>
+          </div>
+        </div>
+      </div>
+      <div class="terminal glow">
+        <div class="terminal-header flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="text-xs text-slate-500 ml-2">Bot Telegram — Flujo</span>
+        </div>
+        <div class="terminal-body">
+          <div class="text-xs text-slate-500 mb-4">Proceso de inscripción:</div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 p-2 rounded bg-slate-800">
+              <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-xs text-green-400">1</div>
+              <span class="text-xs text-slate-300">Bienvenida</span>
+              <span class="badge badge-green ml-auto">OK</span>
+            </div>
+            <div class="flex items-center gap-3 p-2 rounded bg-slate-800">
+              <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-xs text-green-400">2</div>
+              <span class="text-xs text-slate-300">Selección de grupo</span>
+              <span class="badge badge-green ml-auto">OK</span>
+            </div>
+            <div class="flex items-center gap-3 p-2 rounded bg-slate-800">
+              <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-xs text-green-400">3</div>
+              <span class="text-xs text-slate-300">Solicitud enviada</span>
+              <span class="badge badge-green ml-auto">OK</span>
+            </div>
+            <div class="flex items-center gap-3 p-2 rounded bg-slate-800">
+              <div class="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-xs text-green-400">4</div>
+              <span class="text-xs text-slate-300">Validación</span>
+              <span class="badge badge-green ml-auto">OK</span>
+            </div>
+            <div class="flex items-center gap-3 p-2 rounded bg-slate-800">
+              <div class="w-6 h-6 rounded-full bg-gold-10 flex items-center justify-center text-xs text-gold">5</div>
+              <span class="text-xs text-slate-300">Asignación de grupo</span>
+              <span class="badge badge-gold ml-auto">AUTO</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-700">
+            <div class="text-xs text-slate-500 mb-2">Características del bot:</div>
+            <ul class="check-list">
+              <li>Interfaz web integrada</li>
+              <li>Proceso guiado paso a paso</li>
+              <li>Validación automática de depósitos</li>
+              <li>Asignación inteligente de grupos</li>
+              <li>Notificaciones en tiempo real</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="feature-card text-center">
+        <div class="icon-box gold mx-auto mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Interfaz Web</h3>
+        <p class="text-slate-400 text-sm">Diseño web integrado con experiencia de usuario fluida y profesional.</p>
+      </div>
+      <div class="feature-card text-center">
+        <div class="icon-box green mx-auto mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Validación Automática</h3>
+        <p class="text-slate-400 text-sm">Verificación automática de depósitos y asignación inteligente de grupos.</p>
+      </div>
+      <div class="feature-card text-center">
+        <div class="icon-box blue mx-auto mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Notificaciones</h3>
+        <p class="text-slate-400 text-sm">Notificaciones en tiempo real sobre el estado de la solicitud y asignación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="inversion" class="py-24">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Inversión <span class="gold-text">Única</span></h2>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto">Un solo pago, acceso de por vida. Sin mensualidades, sin costos ocultos.</p>
+    </div>
+    <div class="value-prop text-center mb-16">
+      <div class="text-sm text-slate-500 mb-2">Inversión única</div>
+      <div class="text-6xl md:text-7xl font-black gold-text mb-4">$2.400.000</div>
+      <div class="text-xl text-slate-400 mb-8">COP — Pesos Colombianos</div>
+      <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500/10 border border-green-500/30">
+        <svg class="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <span class="text-green-400 font-semibold">Acceso de por vida</span>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="feature-card">
+        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          Incluye
+        </h3>
+        <ul class="check-list">
+          <li>Capacitación completa (133 lecciones)</li>
+          <li>Actualizaciones de por vida</li>
+          <li>Implementación de nuevas herramientas</li>
+          <li>Plataforma de marketing WhatsApp (1 año)</li>
+          <li>Investigación e implementación de nuevas funciones</li>
+          <li>Chatbots personalizados</li>
+          <li>Webinar evergreen con público fantasma (beta)</li>
+          <li>Señales reales de Binomo (oficiales)</li>
+          <li>Plataforma de gestión de riesgo</li>
+          <li>Estadísticas de operaciones</li>
+          <li>Controles auditivos de advertencia</li>
+          <li>Laboratorio de velas (30 patrones)</li>
+          <li>Mentor IA 24/7</li>
+          <li>Comunidad Telegram exclusiva</li>
+          <li>Master class con OBS</li>
+          <li>Soporte técnico prioritario</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Beneficios Clave
+        </h3>
+        <div class="space-y-4">
+          <div class="p-4 rounded-lg bg-gold-5 border border-gold/20">
+            <h4 class="text-white font-semibold mb-1">Retorno de Inversión</h4>
+            <p class="text-slate-400 text-sm">Con solo 2-3 operaciones exitosas, la inversión se recupera. El conocimiento y las herramientas son para toda la vida.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-gold-5 border border-gold/20">
+            <h4 class="text-white font-semibold mb-1">Valor Real</h4>
+            <p class="text-slate-400 text-sm">Curso similar en el mercado cuesta $500.000+ COP mensuales. Aquí pagas una vez y tienes todo.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-gold-5 border border-gold/20">
+            <h4 class="text-white font-semibold mb-1">Herramientas Profesionales</h4>
+            <p class="text-slate-400 text-sm">Gestión de riesgo, laboratorio de velas y mentor IA herramientas que usarás todos los días.</p>
+          </div>
+          <div class="p-4 rounded-lg bg-gold-5 border border-gold/20">
+            <h4 class="text-white font-semibold mb-1">Comunidad y Networking</h4>
+            <p class="text-slate-400 text-sm">Acceso a traders con experiencia, señales reales y soporte directo del equipo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="comparativa" class="py-24 bg-mesh">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">¿Por qué <span class="gold-text">elegirnos</span>?</h2>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto">Comparación con otras opciones del mercado.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>Dragón de Oro</th>
+            <th>Otros</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modelo</td>
+            <td class="text-green-400">Pago único, por vida</td>
+            <td class="text-red-400">Mensualidades</td>
+          </tr>
+          <tr>
+            <td>Contenido</td>
+            <td class="text-green-400">133 lecciones + 30 patrones</td>
+            <td class="text-red-400">Cursos incompletos</td>
+          </tr>
+          <tr>
+            <td>Herramientas</td>
+            <td class="text-green-400">Laboratorio + gestión de riesgo</td>
+            <td class="text-red-400">Solo videos</td>
+          </tr>
+          <tr>
+            <td>IA</td>
+            <td class="text-green-400">Mentor 24/7 integrado</td>
+            <td class="text-red-400">No incluido</td>
+          </tr>
+          <tr>
+            <td>Comunidad</td>
+            <td class="text-green-400">Telegram + señales reales</td>
+            <td class="text-red-400">Sin comunidad</td>
+          </tr>
+          <tr>
+            <td>Actualizaciones</td>
+            <td class="text-green-400">De por vida</td>
+            <td class="text-red-400">Limitadas</td>
+          </tr>
+          <tr>
+            <td>Derechos</td>
+            <td class="text-green-400">Cedidos al propietario</td>
+            <td class="text-red-400">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="tutoriales" class="py-24">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Tutoriales y <span class="gold-text">Soporte</span></h2>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto">La plataforma cuenta con tutoriales de uso para que el usuario acceda a todas las funcionalidades de forma clara y sencilla.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="feature-card text-center">
+        <div class="icon-box gold mx-auto mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Guías Paso a Paso</h3>
+        <p class="text-slate-400 text-sm">Cada herramienta incluye guías detalladas con capturas de pantalla.</p>
+      </div>
+      <div class="feature-card text-center">
+        <div class="icon-box green mx-auto mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Soporte Visual</h3>
+        <p class="text-slate-400 text-sm">Videos tutoriales y soporte visual para cada funcionalidad.</p>
+      </div>
+      <div class="feature-card text-center">
+        <div class="icon-box blue mx-auto mb-4">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Soporte Técnico</h3>
+        <p class="text-slate-400 text-sm">Soporte técnico prioritario para resolver cualquier duda o problema.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="legal" class="py-24 bg-mesh">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Aspectos <span class="gold-text">Legales</span></h2>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto">La plataforma incluye las respectivas páginas legales para proteger tanto al usuario como al propietario.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="legal-card">
+        <div class="legal-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Política de Privacidad</h3>
+        <p class="text-slate-400 text-sm">Protección de datos personales y manejo de información confidencial.</p>
+      </div>
+      <div class="legal-card">
+        <div class="legal-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Términos de Uso</h3>
+        <p class="text-slate-400 text-sm">Condiciones de uso de la plataforma y responsabilidades del usuario.</p>
+      </div>
+      <div class="legal-card">
+        <div class="legal-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Descargo de Responsabilidad</h3>
+        <p class="text-slate-400 text-sm">Información sobre los riesgos del trading y limitaciones de responsabilidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="derechos" class="py-24">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Diseño y <span class="gold-text">Derechos</span></h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="feature-card">
+        <h3 class="text-lg font-bold text-white mb-4">Diseño Único</h3>
+        <p class="text-slate-400 text-sm mb-4">La plataforma cuenta con un diseño único y exclusivo, desarrollado específicamente para Dragón de Oro.</p>
+        <ul class="check-list">
+          <li>Interfaz personalizada</li>
+          <li>Experiencia de usuario optimizada</li>
+          <li>Identidad visual propia</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <h3 class="text-lg font-bold text-white mb-4">Derechos de Autor</h3>
+        <p class="text-slate-400 text-sm mb-4">Los derechos de autor son cedidos al propietario de la plataforma, garantizando protección legal.</p>
+        <ul class="check-list">
+          <li>Contenido protegido</li>
+          <li>Control de copias</li>
+          <li>Acceso por usuario</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="contacto" class="py-24 bg-mesh">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">¿Listo para <span class="gold-text">comenzar</span>?</h2>
+    <p class="text-xl text-slate-400 mb-8">Únete a Dragón de Oro y transforma tu forma de operar en los mercados.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="https://t.me/dragon_de_oro_bot" target="_blank" rel="noopener" class="btn-primary flex items-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Contactar por Telegram
+      </a>
+      <a href="/" class="btn-secondary">Ver Demo en Vivo</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-gold py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center">
+            <svg class="w-6 h-6 text-slate-950" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="text-lg font-bold text-white">Dragón de Oro</span>
+        </div>
+        <p class="text-sm text-slate-400">Plataforma integral de trading con IA. Educación, práctica y gestión de riesgo en un solo lugar.</p>
+      </div>
+      <div>
+        <h4 class="text-sm font-bold text-white mb-4">Plataforma</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li><a href="#plataforma" class="hover:text-gold transition">Características</a></li>
+          <li><a href="#herramientas" class="hover:text-gold transition">Herramientas</a></li>
+          <li><a href="#inversion" class="hover:text-gold transition">Inversión</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-bold text-white mb-4">Recursos</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li><a href="#bot" class="hover:text-gold transition">Bot Telegram</a></li>
+          <li><a href="#tutoriales" class="hover:text-gold transition">Tutoriales</a></li>
+          <li><a href="#legal" class="hover:text-gold transition">Legal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-bold text-white mb-4">Legal</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li><a href="#" class="hover:text-gold transition">Términos de Servicio</a></li>
+          <li><a href="#" class="hover:text-gold transition">Política de Privacidad</a></li>
+          <li><a href="#" class="hover:text-gold transition">Descargo de Responsabilidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gold pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-500">© 2026 Dragón de Oro. Todos los derechos reservados.</p>
+      <p class="text-sm text-slate-500">El trading conlleva riesgos. Invierte responsablemente.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrolled / max) * 100;
+    document.getElementById('scrollProgress').style.width = progress + '%';
+    document.getElementById('backToTop').classList.toggle('visible', scrolled > 500);
+  });
+
+  function toggleChat() {
+    const panel = document.getElementById('chatWidgetPanel');
+    panel.classList.toggle('open');
+  }
+
+  async function sendMessage() {
+    const input = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('chatSend');
+    const messagesDiv = document.getElementById('chatMessages');
+    const text = input.value.trim();
+    if (!text) return;
+
+    input.value = '';
+    sendBtn.disabled = true;
+
+    const userMsg = document.createElement('div');
+    userMsg.className = 'chat-message user';
+    userMsg.innerHTML = '<div class="bubble"></div>';
+    userMsg.querySelector('.bubble').textContent = text;
+    messagesDiv.appendChild(userMsg);
+
+    const typing = document.createElement('div');
+    typing.className = 'chat-message ai';
+    typing.innerHTML = '<div class="chat-typing"><span></span><span></span><span></span></div>';
+    messagesDiv.appendChild(typing);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: [{ role: 'user', content: text }] })
+      });
+      const data = await response.json();
+      typing.remove();
+
+      const aiMsg = document.createElement('div');
+      aiMsg.className = 'chat-message ai';
+      aiMsg.innerHTML = '<div class="bubble"></div>';
+      aiMsg.querySelector('.bubble').innerHTML = formatMessage(data.reply || 'No se pudo obtener respuesta.');
+      messagesDiv.appendChild(aiMsg);
+    } catch (e) {
+      typing.remove();
+      const errMsg = document.createElement('div');
+      errMsg.className = 'chat-message ai';
+      errMsg.innerHTML = '<div class="bubble">Error de conexión. Intenta de nuevo.</div>';
+      messagesDiv.appendChild(errMsg);
+    }
+
+    sendBtn.disabled = false;
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  function formatMessage(text) {
+    return text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+      .replace(/`(.*?)`/g, '<code>$1</code>')
+      .replace(/\n/g, '<br>');
+  }
+</script>
+
+</body>
+</html>

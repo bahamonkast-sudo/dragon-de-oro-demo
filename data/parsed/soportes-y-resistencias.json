@@ -1,0 +1,525 @@
+{
+  "url": "https://www.binaryteach.com/soportes-y-resistencias/",
+  "slug": "soportes-y-resistencias",
+  "depth": 1,
+  "title": "Soportes y Resistencias",
+  "description": "Hola Trader, he tenido algunos conflictos mientras preparaba este vídeo, estaba cargándolo de información y haciéndolo mucho más difícil de comprender. Creo que lo típico es […]",
+  "kind": "class",
+  "level": null,
+  "order": null,
+  "date_published": "2019-08-07T13:53:38+00:00",
+  "date_modified": "2020-04-12T19:49:34+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-accion-del-precio",
+    "tag-curso-nuevo"
+  ],
+  "word_count": 599,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "PATYWSz0uas",
+      "url": "https://www.youtube.com/embed/PATYWSz0uas?feature=oembed",
+      "title": "Soportes y Resistencias en 3 Minutos"
+    },
+    {
+      "provider": "youtube-playlist",
+      "id": "PLKVEzjo-d1qF4sYgzUeDuorO_mZYdfrX_",
+      "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qF4sYgzUeDuorO_mZYdfrX_",
+      "title": "Módulo 1 - Curso de Acción del Precio"
+    }
+  ],
+  "links": [
+    {
+      "text": "Click Aquí para acceder a la lista",
+      "url": "https://www.youtube.com/playlist",
+      "kind": "youtube"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/PATYWSz0uas/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/PATYWSz0uas/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/PATYWSz0uas/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/soportes-y-resistencias-01.jpg",
+      "status": "ok",
+      "bytes": 78520
+    },
+    {
+      "url": "https://i.ytimg.com/vi/PATYWSz0uas/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/PATYWSz0uas/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/PATYWSz0uas/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/PATYWSz0uas/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+          "width": 534
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1-1024x691.jpg",
+          "width": 534
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "status": "ok",
+      "bytes": 20671
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "status": "ok",
+      "bytes": 15354
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/soportes-y-resistencias-04.jpg",
+      "status": "ok",
+      "bytes": 20412
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/soportes-y-resistencias-05.jpg",
+      "status": "ok",
+      "bytes": 30797
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/soportes-y-resistencias-06.jpg",
+      "status": "ok",
+      "bytes": 25224
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3-1024x449.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/soportes-y-resistencias-07.png",
+      "status": "ok",
+      "bytes": 11671
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Hola Trader, he tenido algunos conflictos mientras preparaba este vídeo, estaba cargándolo de información y haciéndolo mucho más difícil de comprender.",
+      "html": "Hola Trader, he tenido algunos conflictos mientras preparaba este vídeo, estaba cargándolo de información y haciéndolo mucho más difícil de comprender."
+    },
+    {
+      "type": "paragraph",
+      "text": "Creo que lo típico es encontrarte con ese tipo de información que al final hace no comprendamos bien lo que son soportes y resistencias y no las usemos bien. Para nosotros que hacemos análisis técnico es importante que sepamos usar de manera adecuada estas zonas.",
+      "html": "Creo que lo típico es encontrarte con ese tipo de información que al final hace no comprendamos bien lo que son soportes y resistencias y no las usemos bien. Para nosotros que hacemos análisis técnico es importante que sepamos usar de manera adecuada estas zonas."
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación te dejo el vídeo con la clase, realmente una clase corta de menos de 4 minutos, que podrás complementarlas con otras clases que te dejaré más abajo. Pero antes continúa leyendo porque también dejo material de apoyo.",
+      "html": "A continuación te dejo el vídeo con la clase, realmente una clase corta de menos de 4 minutos, que podrás complementarlas con otras clases que te dejaré más abajo. Pero antes continúa leyendo porque también dejo material de apoyo."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "PATYWSz0uas",
+      "url": "https://www.youtube.com/embed/PATYWSz0uas?feature=oembed",
+      "title": "Soportes y Resistencias en 3 Minutos",
+      "caption": "",
+      "poster": "data/assets/images/soportes-y-resistencias-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Una resistencia o techo es el punto más alto al cual el precio pudo llegar tras un movimiento alcista, la fuerza de venta en este punto supera a la de compra haciendo que el precio baje.",
+      "html": "Una <strong>resistencia o techo</strong> es el punto más alto al cual el precio pudo llegar tras un movimiento alcista, la fuerza de venta en este punto supera a la de compra haciendo que el precio baje."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+          "width": 534
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1-1024x691.jpg",
+          "width": 534
+        }
+      ],
+      "alt": "",
+      "caption": "El precio no puede seguir subiendo por lo que ahí identificamos nuestra zona de resistencia.",
+      "width": 1080,
+      "height": 729,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Un soporte o suelo es el punto más bajo al cual el precio pudo llegar tras un movimiento bajista, la fuerza de compra en este punto supera a la de venta haciendo que el precio suba.",
+      "html": "Un <strong>soporte o suelo</strong> es el punto más bajo al cual el precio pudo llegar tras un movimiento bajista, la fuerza de compra en este punto supera a la de venta haciendo que el precio suba."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1080,
+      "height": 729,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Los soportes y resistencias son débiles cuando solo presentan un testeo o toque, cómo sucede en los ejemplos anteriores.",
+      "html": "Los soportes y resistencias son débiles cuando solo presentan un testeo o toque, cómo sucede en los ejemplos anteriores."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un nivel es fuerte cuando presenta dos testeos o un cambio de polaridad. Nuestras zonas de soportes y resistencias fuertes también pueden ser llamados nivel clave.",
+      "html": "Un nivel es fuerte cuando presenta dos testeos o un cambio de polaridad. Nuestras zonas de soportes y resistencias fuertes también pueden ser llamados nivel clave."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/soportes-y-resistencias-04.jpg",
+      "local": "data/assets/images/soportes-y-resistencias-04.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "En este ejemplo podemos ver un soporte fuerte, los primeros 2 testeos confirman la fuerza del soporte y vemos como el precio ha reaccionado a la zona en otras 3 ocasiones.",
+      "width": 1080,
+      "height": 729,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Los cambios de polaridad o Flip son zonas que en un principio eran utilizadas como soportes y luego han sido rotas y ahora pasan a ser usadas cómo resistencias o también pasa con resistencias que son rotas y pasan a ser soportes.",
+      "html": "Los cambios de polaridad o Flip son zonas que en un principio eran utilizadas como soportes y luego han sido rotas y ahora pasan a ser usadas cómo resistencias o también pasa con resistencias que son rotas y pasan a ser soportes."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente ejemplo podemos apreciar cómo es usada cómo resistencia (1), luego la vela (3) rompe la resistencia, en (2) podemos ver cómo el precio usa la zona que antes era resistencia ahora cómo un soporte.",
+      "html": "En el siguiente ejemplo podemos apreciar cómo es usada cómo resistencia (1), luego la vela (3) rompe la resistencia, en (2) podemos ver cómo el precio usa la zona que antes era resistencia ahora cómo un soporte."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/soportes-y-resistencias-05.jpg",
+      "local": "data/assets/images/soportes-y-resistencias-05.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1080,
+      "height": 729,
+      "index": 4,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "En ese momento se crea el cambio de polaridad o flip. Podemos observar que luego el precio rompe (3) la resistencia, varias velas más adelante el precio vuelve a interactuar con nuestra zona fuerte (4) usándolo como resistencia y más adelante creando un rompimiento falso.",
+      "html": "En ese momento se crea el cambio de polaridad o flip. Podemos observar que luego el precio rompe (3) la resistencia, varias velas más adelante el precio vuelve a interactuar con nuestra zona fuerte (4) usándolo como resistencia y más adelante creando un rompimiento falso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante que sepamos que los soportes y resistencias no son líneas, sino zonas, áreas donde el precio reacciona.",
+      "html": "Es importante que sepamos que los soportes y resistencias no son líneas, sino zonas, áreas donde el precio reacciona."
+    },
+    {
+      "type": "paragraph",
+      "text": "También podemos encontrar niveles inclinados, estos suelen ser llamados Soportes y Resistencias dinámicos. Se identifican a partir del segundo testeo, de estos niveles dinámicos solo podemos confiar una vez, cuando los niveles son rotos las probabilidades de que el precio lo vuelva a respetar en un futuro son muy escasas.",
+      "html": "También podemos encontrar niveles inclinados, estos suelen ser llamados Soportes y Resistencias dinámicos.  Se identifican a partir del segundo testeo, de estos niveles dinámicos solo podemos confiar una vez, cuando los niveles son rotos las probabilidades de que el precio lo vuelva a respetar en un futuro son muy escasas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/soportes-y-resistencias-06.jpg",
+      "local": "data/assets/images/soportes-y-resistencias-06.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Después del testeo 2 podemos confirmar nuestro nivel dinámico. Observamos cómo el precio ha reaccionado otras 4 veces al nivel. .",
+      "width": 1080,
+      "height": 729,
+      "index": 5,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Con esto hemos terminado la clase y hemos avanzado hasta éste importante tema, Para completar este camino recorrido con tips e información extra te invito a que veas las clases ordenadas en esta lista de reproducción: Click Aquí para acceder a la lista",
+      "html": "Con esto hemos terminado la clase y hemos avanzado hasta éste importante tema, Para completar este camino recorrido con tips e información extra te invito a que veas las clases ordenadas en esta lista de reproducción: <a class=\"external\" href=\"https://www.youtube.com/playlist\" rel=\"noopener nofollow\" target=\"_blank\">Click Aquí para acceder a la lista</a>"
+    },
+    {
+      "type": "video",
+      "provider": "youtube-playlist",
+      "id": "PLKVEzjo-d1qF4sYgzUeDuorO_mZYdfrX_",
+      "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qF4sYgzUeDuorO_mZYdfrX_",
+      "title": "Módulo 1 - Curso de Acción del Precio",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "text": "En la próxima clase resolveré las dudas sobre el tema, deja tus preguntas en los comentarios del vídeo o en el hilo del salón virtual.",
+      "html": "En la próxima clase resolveré las dudas sobre el tema, deja tus preguntas en los comentarios del vídeo o en el hilo del salón virtual."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Actividad #3",
+      "html": "<strong>Actividad #3</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La actividad para esta ocasión es simple, debes identificar Soportes y Resistencias en tu gráfico, tomarle una captura y subirlo al salón bajo la etiqueta «S/R» y el # Actividad 3",
+      "html": "La actividad para esta ocasión es simple, debes identificar Soportes y Resistencias en tu gráfico, tomarle una captura y subirlo al salón bajo la etiqueta «S/R» y el #<em>Actividad</em>3"
+    },
+    {
+      "type": "paragraph",
+      "text": "No solo debes identificarlo y compartirlo al grupo y preguntar «¿ están bien trazados? » tomate tu tiempo y espera a que el mercado llegue a tus niveles marcados y observa cómo reacciona el precio. De esta manera podrás experimentar y obtener la experiencia de ver cómo se mueve el precio en las zonas que tu identificas.",
+      "html": "No solo debes identificarlo y compartirlo al grupo y preguntar «¿<em>están bien trazados?</em>»   tomate tu tiempo y espera a que el mercado llegue a tus niveles marcados y observa cómo reacciona el precio. De esta manera podrás experimentar y obtener la experiencia de ver cómo se mueve el precio en las zonas que tu identificas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/soportes-y-resistencias-07.png",
+      "local": "data/assets/images/soportes-y-resistencias-07.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3-1024x449.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Ejemplo de la #Actividad3, el recuadro amarillo es la zona que se ha usado cómo referencia para trazar los S/R, en el recuadro azul podemos ver como el precio reacciona más adelante a los niveles previamente trazados. Trata de que en la imagen que compartas se puedan apreciar bien las velas y sus mechas.",
+      "width": 1130,
+      "height": 495,
+      "index": 6,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Gracias Trader por acompañarme en esta clase, Permanece atento a la próxima clase ya que en ella ¡se resolverán las dudas que tengas sobre el tema!",
+      "html": "Gracias Trader por acompañarme en esta clase, Permanece atento a la próxima clase ya que en ella ¡se resolverán las dudas que tengas sobre el tema!"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

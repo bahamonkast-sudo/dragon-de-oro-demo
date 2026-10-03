@@ -1,0 +1,304 @@
+{
+  "source": "https://www.binaryteach.com/",
+  "generated_at": "2026-09-30T15:07:52+00:00",
+  "course": {
+    "title": "Curso de Opciones Binarias con Acción del Precio",
+    "slug": "curso-de-opciones-binarias-con-accion-del-precio",
+    "url": "https://www.binaryteach.com/curso-de-opciones-binarias-con-accion-del-precio/",
+    "description": "En esta sección encontrarás el curso completo de trading para Opciones Binarias, con acción del precio. Es un curso bastante completo, sugiero avanzar con"
+  },
+  "stats": {
+    "pages": 40,
+    "ok": 39,
+    "failed": 0,
+    "not_found": 1,
+    "skipped": 0,
+    "blocks": 839,
+    "words": 17228,
+    "images": 71,
+    "assets": 105,
+    "videos": 74
+  },
+  "levels": [
+    {
+      "level": 1,
+      "title": "Curso de Opciones Binarias - Nivel 1",
+      "slug": "curso-de-opciones-binarias-nivel-1",
+      "url": "https://www.binaryteach.com/curso-de-opciones-binarias-nivel-1/",
+      "videos": [],
+      "class_count": 26,
+      "classes": [
+        {
+          "order": 1,
+          "title": "La volatilidad en el Mercado",
+          "anchor": "Volatilidad",
+          "slug": "la-volatilidad-en-el-mercado",
+          "url": "https://www.binaryteach.com/la-volatilidad-en-el-mercado/"
+        },
+        {
+          "order": 2,
+          "title": "Ciclo del Mercado -Tendencias",
+          "anchor": "Tendencias",
+          "slug": "ciclo-del-mercado-tendencias",
+          "url": "https://www.binaryteach.com/ciclo-del-mercado-tendencias/"
+        },
+        {
+          "order": 3,
+          "title": "Aceleración de la Tendencia",
+          "anchor": "Aceleración de una Tendencia",
+          "slug": "aceleracion-de-la-tendencia",
+          "url": "https://www.binaryteach.com/aceleracion-de-la-tendencia/"
+        },
+        {
+          "order": 4,
+          "title": "Soportes y Resistencias en el Trading",
+          "anchor": "Soportes y Resistencias",
+          "slug": "soportes-y-resistencias-techos-y-suelos",
+          "url": "https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/"
+        },
+        {
+          "order": 5,
+          "title": "Trading con Canales",
+          "anchor": "Canales Horizontales, Ascendentes y Descendentes.",
+          "slug": "trading-con-canales",
+          "url": "https://www.binaryteach.com/trading-con-canales/"
+        },
+        {
+          "order": 6,
+          "title": "Triángulos Simétricos",
+          "anchor": "Triángulos Simétricos",
+          "slug": "triangulos-simetricos",
+          "url": "https://www.binaryteach.com/triangulos-simetricos/"
+        },
+        {
+          "order": 7,
+          "title": "Triángulos Ascendente y Descendente",
+          "anchor": "Triángulos Ascendentes y Descendentes",
+          "slug": "triangulos-ascendente-y-descendente",
+          "url": "https://www.binaryteach.com/triangulos-ascendente-y-descendente/"
+        },
+        {
+          "order": 8,
+          "title": "Banderas Alcistas y Bajistas",
+          "anchor": "Banderas Alcistas y Bajistas",
+          "slug": "banderas-alcistas-y-bajistas",
+          "url": "https://www.binaryteach.com/banderas-alcistas-y-bajistas/"
+        },
+        {
+          "order": 9,
+          "title": "Banderín Alcista y Bajista",
+          "anchor": "Banderín Alcista y Bajista",
+          "slug": "banderin-alcista-y-bajista",
+          "url": "https://www.binaryteach.com/banderin-alcista-y-bajista/"
+        },
+        {
+          "order": 10,
+          "title": "Cuñas Alcistas y Bajistas",
+          "anchor": "Cuñas Alcistas y Bajistas",
+          "slug": "cunas-alcistas-y-bajistas",
+          "url": "https://www.binaryteach.com/cunas-alcistas-y-bajistas/"
+        },
+        {
+          "order": 11,
+          "title": "Rectángulo Ascendente y Descendente",
+          "anchor": "Rectángulo Ascendente y Descendente",
+          "slug": "rectangulo-ascendente-y-descendente",
+          "url": "https://www.binaryteach.com/rectangulo-ascendente-y-descendente/"
+        },
+        {
+          "order": 12,
+          "title": "Doble Techo y Doble Suelo",
+          "anchor": "Doble Techo y Doble Suelo",
+          "slug": "doble-techo-y-doble-suelo",
+          "url": "https://www.binaryteach.com/doble-techo-y-doble-suelo/"
+        },
+        {
+          "order": 13,
+          "title": "Hombro – Cabeza – Hombro y Hombro – Cabeza – Hombro Invertido",
+          "anchor": "Hombro – Cabeza – Hombro y Hombro – Cabeza – Hombro – Invertido",
+          "slug": "hombro-cabeza-hombro",
+          "url": "https://www.binaryteach.com/hombro-cabeza-hombro/"
+        },
+        {
+          "order": 14,
+          "title": "Introducción a Patrones de Velas Japonesas",
+          "anchor": "Introducción a Patrones de Velas Japonesas",
+          "slug": "introduccion-a-patrones-de-velas-japonesas",
+          "url": "https://www.binaryteach.com/introduccion-a-patrones-de-velas-japonesas/"
+        },
+        {
+          "order": 15,
+          "title": "Cómo operar con Doji – Patrones de Velas Japonesas",
+          "anchor": "Doji",
+          "slug": "como-operar-con-doji",
+          "url": "https://www.binaryteach.com/como-operar-con-doji/"
+        },
+        {
+          "order": 16,
+          "title": "¿Qué es un Doji Libélula y un Doji Lápida?",
+          "anchor": "Doji Líbelula y Doji Lápida",
+          "slug": "que-es-un-doji-libelula-y-un-doji-lapida",
+          "url": "https://www.binaryteach.com/que-es-un-doji-libelula-y-un-doji-lapida/"
+        },
+        {
+          "order": 17,
+          "title": "Cómo hacer Trading con el Martillo – Hammer y variaciones",
+          "anchor": "Martillo y Variaciones",
+          "slug": "hammer-martillo",
+          "url": "https://www.binaryteach.com/hammer-martillo/"
+        },
+        {
+          "order": 18,
+          "title": "Cómo analizar el PinBar",
+          "anchor": "PinBar",
+          "slug": "como-analizar-el-pinbar",
+          "url": "https://www.binaryteach.com/como-analizar-el-pinbar/"
+        },
+        {
+          "order": 19,
+          "title": "Cómo operar con Tweezer Top y Tweezer Bottom",
+          "anchor": "Techo en Pinzas y Suelo en Pinzas",
+          "slug": "tweezer-top-y-tweezer-bottom",
+          "url": "https://www.binaryteach.com/tweezer-top-y-tweezer-bottom/"
+        },
+        {
+          "order": 20,
+          "title": "Patrón Envolvente",
+          "anchor": "Envolvente",
+          "slug": "patron-envolvente",
+          "url": "https://www.binaryteach.com/patron-envolvente/"
+        },
+        {
+          "order": 21,
+          "title": "Cómo aprovechar una Barra Interna",
+          "anchor": "Barra Interna",
+          "slug": "como-aprovechar-una-barra-interna",
+          "url": "https://www.binaryteach.com/como-aprovechar-una-barra-interna/"
+        },
+        {
+          "order": 22,
+          "title": "Cómo operar un Harami",
+          "anchor": "Harami",
+          "slug": "como-operar-un-harami",
+          "url": "https://www.binaryteach.com/como-operar-un-harami/"
+        },
+        {
+          "order": 23,
+          "title": "Estrella de la Mañana y Estrella de la Tarde",
+          "anchor": "Estrella de la Mañana y Estrella de la Tarde",
+          "slug": "estrella-de-la-manana-y-estrella-de-la-tarde",
+          "url": "https://www.binaryteach.com/estrella-de-la-manana-y-estrella-de-la-tarde/"
+        },
+        {
+          "order": 24,
+          "title": "El patrón de vela Marubozu",
+          "anchor": "Marubozu",
+          "slug": "el-patron-de-vela-marubozu",
+          "url": "https://www.binaryteach.com/el-patron-de-vela-marubozu/"
+        },
+        {
+          "order": 25,
+          "title": "Patrones de velas con GAP",
+          "anchor": "Patrones con GAP",
+          "slug": "patrones-de-velas-con-gap",
+          "url": "https://www.binaryteach.com/patrones-de-velas-con-gap/"
+        },
+        {
+          "order": 26,
+          "title": "La Estrategia -Uniendo los conocimientos de trading",
+          "anchor": "La estrategia – Uniendo todo lo aprendido.",
+          "slug": "la-estrategia-uniendo-los-conocimientos-de-trading",
+          "url": "https://www.binaryteach.com/la-estrategia-uniendo-los-conocimientos-de-trading/"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "title": "Curso de Opciones Binarias -Nivel 2",
+      "slug": "curso-de-opciones-binarias-nivel-2",
+      "url": "https://www.binaryteach.com/curso-de-opciones-binarias-nivel-2/",
+      "videos": [
+        {
+          "provider": "youtube-playlist",
+          "id": "PLKVEzjo-d1qG_vLxYrru_sbOQ75WCVAZO",
+          "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qG_vLxYrru_sbOQ75WCVAZO",
+          "title": "🔴 Curso de Opciones Binarias - Nivel 2"
+        }
+      ],
+      "class_count": 0,
+      "classes": []
+    },
+    {
+      "level": 3,
+      "title": "Curso de Opciones Binarias -Nivel 3",
+      "slug": "curso-de-opciones-binarias-nivel-3",
+      "url": "https://www.binaryteach.com/curso-de-opciones-binarias-nivel-3/",
+      "videos": [
+        {
+          "provider": "youtube-playlist",
+          "id": "PLKVEzjo-d1qGx5osIvO9bk_Kgx3E_JTp0",
+          "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qGx5osIvO9bk_Kgx3E_JTp0",
+          "title": "🔴 Curso de Opciones Binarias - Nivel 3"
+        }
+      ],
+      "class_count": 0,
+      "classes": []
+    }
+  ],
+  "extras": [
+    {
+      "title": "Resumen del Curso de Opciones Binarias",
+      "slug": "accion-del-precio-opciones-binarias",
+      "url": "https://www.binaryteach.com/accion-del-precio-opciones-binarias/",
+      "kind": "resource"
+    },
+    {
+      "title": "Diccionario del Curso de Opciones Binarias",
+      "slug": "diccionario-del-curso-de-opciones-binarias",
+      "url": "https://www.binaryteach.com/diccionario-del-curso-de-opciones-binarias/",
+      "kind": "resource"
+    },
+    {
+      "title": "Mentalidad del Trader Exitoso",
+      "slug": "mentalidad-del-trader-exitoso",
+      "url": "https://www.binaryteach.com/mentalidad-del-trader-exitoso/",
+      "kind": "class"
+    },
+    {
+      "title": "Deja de pensar en el Dinero",
+      "slug": "deja-de-pensar-en-el-dinero",
+      "url": "https://www.binaryteach.com/deja-de-pensar-en-el-dinero/",
+      "kind": "class"
+    },
+    {
+      "title": "El Gráfico -Entendiendo nuestra área de Trabajo",
+      "slug": "el-grafico-entendiendo-nuestra-area-de-trabajo",
+      "url": "https://www.binaryteach.com/el-grafico-entendiendo-nuestra-area-de-trabajo/",
+      "kind": "class"
+    },
+    {
+      "title": "Tendencias y Fractales",
+      "slug": "tendencias-y-fractales",
+      "url": "https://www.binaryteach.com/tendencias-y-fractales/",
+      "kind": "class"
+    },
+    {
+      "title": "Soportes y Resistencias",
+      "slug": "soportes-y-resistencias",
+      "url": "https://www.binaryteach.com/soportes-y-resistencias/",
+      "kind": "class"
+    },
+    {
+      "title": "Figuras Chartistas",
+      "slug": "figuras-chartistas",
+      "url": "https://www.binaryteach.com/figuras-chartistas/",
+      "kind": "class"
+    },
+    {
+      "title": "Patrones de Velas Japonesas",
+      "slug": "patrones-de-velas-japonesas",
+      "url": "https://www.binaryteach.com/patrones-de-velas-japonesas/",
+      "kind": "class"
+    }
+  ]
+}

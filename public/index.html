@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curso de Opciones Binarias con Acción del Precio</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  :root { color-scheme: dark; }
+  [hidden] { display: none !important; }
+  body { font-family: Inter, system-ui, -apple-system, sans-serif; }
+  .sb { scrollbar-width: thin; scrollbar-color: #334155 transparent; }
+  .sb::-webkit-scrollbar { width: 6px; height: 6px; }
+  .sb::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+  .sb::-webkit-scrollbar-track { background: transparent; }
+  .yt { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: .75rem; background: #000; }
+  .yt > iframe, .yt > img { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .yt > img { object-fit: cover; }
+  .play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.35); border: 0; cursor: pointer; transition: background .2s; }
+  .play:hover { background: rgba(0,0,0,.5); }
+  .play span { display: flex; align-items: center; justify-content: center; width: 68px; height: 68px; border-radius: 9999px; background: rgba(239,68,68,.95); box-shadow: 0 10px 40px -10px rgba(239,68,68,.9); }
+  .fade { animation: fade .18s ease-out; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  .prose { max-width: 72ch; line-height: 1.75; color: #cbd5e1; }
+  .prose > * + * { margin-top: 1rem; }
+  .prose a { color: #38bdf8; text-decoration: none; }
+  .prose a:hover { text-decoration: underline; }
+  .prose h2 { color: #f1f5f9; font-size: 1.5rem; font-weight: 700; margin-top: 2rem; line-height: 1.3; }
+  .prose h3 { color: #f1f5f9; font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; }
+  .prose h4 { color: #e2e8f0; font-weight: 600; margin-top: 1.25rem; }
+  .prose ul, .prose ol { padding-left: 1.35rem; }
+  .prose ul { list-style: disc; }
+  .prose ol { list-style: decimal; }
+  .prose li + li { margin-top: .35rem; }
+  .prose blockquote { border-left: 3px solid #334155; padding-left: 1rem; color: #94a3b8; }
+  .prose pre { background: #0b1220; border: 1px solid #1e293b; border-radius: .5rem; padding: 1rem; overflow-x: auto; font-size: .85rem; }
+  .prose code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #7dd3fc; }
+  .prose pre code { color: #cbd5e1; }
+  .prose hr { border: 0; border-top: 1px solid #334155; margin: 2rem 0; }
+  .prose table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .prose th, .prose td { border: 1px solid #334155; padding: .5rem .7rem; text-align: left; }
+  .prose th { background: #0b1220; color: #e2e8f0; font-weight: 600; }
+  .prose figure { margin: 1.5rem 0; }
+  .prose figcaption { margin-top: .6rem; font-size: .875rem; color: #94a3b8; }
+  .prose img { border-radius: .75rem; cursor: zoom-in; max-width: 100%; height: auto; }
+  .nav-item { display: flex; gap: .5rem; align-items: flex-start; width: 100%; text-align: left; padding: .4rem .55rem; border-radius: .5rem; font-size: .82rem; line-height: 1.35; color: #cbd5e1; }
+  .nav-item:hover { background: #1e293b; }
+  .nav-item.on { background: rgba(51,65,85,.65); color: #f1f5f9; box-shadow: inset 2px 0 0 #38bdf8; }
+  .nav-item .n { flex: 0 0 auto; color: #64748b; font-variant-numeric: tabular-nums; font-size: .75rem; padding-top: .1rem; }
+  .nav-item .t { flex: 1 1 auto; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .nav-item .ck { flex: 0 0 auto; color: #22c55e; }
+  .chip { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .6rem; border-radius: 9999px; border: 1px solid #334155; background: #1e293b; font-size: .8rem; line-height: 1.3; color: #cbd5e1; text-align: left; }
+  .chip:hover { border-color: #475569; background: #263449; }
+  .chip b { font-weight: 500; }
+  .chip.off { opacity: .6; cursor: not-allowed; }
+  [data-lucide] { width: 1em; height: 1em; }
+  #lb[hidden] { display: none; }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+
+<div class="flex h-screen">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside id="side" class="w-[19rem] shrink-0 bg-slate-900 border-r border-slate-800 flex flex-col">
+    <div class="px-4 py-4 border-b border-slate-800">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-sky-500/15 text-sky-400 grid place-items-center shrink-0">
+          <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+        </div>
+        <div class="min-w-0">
+          <p class="text-[13px] font-semibold text-slate-100 leading-tight truncate">Acción del Precio</p>
+          <p class="text-[11px] text-slate-500 leading-tight" id="sideCount">cargando…</p>
+        </div>
+        <button id="btnClose" class="ml-auto md:hidden text-slate-500 hover:text-slate-200" aria-label="Cerrar menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="mt-3 relative">
+        <i data-lucide="search" class="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500"></i>
+        <input id="q" type="search" placeholder="Buscar en todo el curso…  ( / )" autocomplete="off"
+               class="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-2 py-1.5 text-[13px] placeholder:text-slate-600 focus:outline-none focus:border-sky-500">
+      </div>
+      <div id="filters" class="mt-2 flex flex-wrap gap-1"></div>
+    </div>
+    <div id="results" hidden class="sb border-b border-slate-800 max-h-[55%] overflow-y-auto"></div>
+    <nav id="tree" class="sb flex-1 overflow-y-auto p-2"></nav>
+    <div class="px-4 py-3 border-t border-slate-800 text-[11px] text-slate-500 flex items-center justify-between">
+      <span id="footStat">—</span>
+      <a href="portada.html" class="hover:text-sky-400 text-slate-400">índice simple</a>
+    </div>
+    <div id="docs" class="px-3 py-2.5 border-t border-slate-800 space-y-1"></div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="flex-1 flex flex-col min-w-0">
+    <header class="shrink-0 bg-slate-900/80 backdrop-blur border-b border-slate-800 px-4 sm:px-6 py-3 flex items-center gap-3">
+      <button id="btnMenu" class="md:hidden text-slate-400 hover:text-slate-100" aria-label="Abrir menu">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+      <div class="min-w-0 flex-1">
+        <p id="crumb" class="text-[11px] text-slate-500 truncate"></p>
+        <h1 id="title" class="text-[15px] sm:text-base font-semibold text-slate-50 truncate"></h1>
+      </div>
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button id="btnAccount" class="hidden max-w-40 truncate rounded-lg border border-slate-700 px-2.5 py-1.5 text-[11px] text-slate-400 hover:bg-slate-800" title="Cerrar sesión"></button>
+        <button id="btnPrev" class="p-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-slate-100 disabled:opacity-30 disabled:hover:bg-transparent" title="Anterior (←)">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <button id="btnPin" class="p-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-amber-300" title="Marcar como Favorita (P)">
+          <i data-lucide="pin" class="w-4 h-4"></i>
+        </button>
+        <button id="btnMark" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium border border-slate-700 text-slate-300 hover:bg-slate-800" title="Marcar como vista (Espacio)">
+          <i data-lucide="check" class="w-4 h-4"></i><span id="markTxt">Vista</span>
+        </button>
+        <button id="btnNext" class="p-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-slate-100 disabled:opacity-30 disabled:hover:bg-transparent" title="Siguiente (→)">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </header>
+
+    <div id="body" class="sb flex-1 overflow-y-auto">
+      <div class="px-4 sm:px-6 py-6 max-w-5xl mx-auto">
+        <div id="player"></div>
+        <div id="meta" class="mt-4 flex flex-wrap items-center gap-1.5 text-[11px]"></div>
+        <div id="tabs" class="mt-5 border-b border-slate-800 flex gap-1"></div>
+        <div id="pane" class="mt-6 fade"></div>
+        <div id="pager" class="mt-10 pt-6 border-t border-slate-800 grid sm:grid-cols-2 gap-3"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ================= LIGHTBOX ================= -->
+<div id="lb" hidden class="fixed inset-0 z-50 bg-black/92 grid place-items-center p-4 cursor-zoom-out">
+  <img id="lbImg" alt="" class="max-w-full max-h-full rounded-lg">
+</div>
+
+<div id="boot" class="fixed inset-0 bg-slate-950 grid place-items-center z-40 text-slate-500 text-sm">
+  Cargando curso…
+</div>
+
+<div id="gate" hidden class="fixed inset-0 z-[60] bg-black/75 grid place-items-center p-4">
+  <section class="w-full max-w-md rounded-2xl border border-slate-700 bg-slate-900 p-5 shadow-2xl">
+    <p class="text-[11px] uppercase tracking-wider text-amber-300">Nivel bloqueado</p>
+    <h2 id="gateTitle" class="mt-1 text-xl font-semibold text-white">Solicitar acceso</h2>
+    <p class="mt-2 text-sm text-slate-400">Completa las lecciones del nivel anterior o solicita autorización al administrador por WhatsApp.</p>
+    <form id="gateForm" class="mt-5 space-y-3">
+      <label class="block text-xs text-slate-400">Tu nombre<input id="gateName" required maxlength="100" autocomplete="name" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100"></label>
+      <label class="block text-xs text-slate-400">Tu WhatsApp<input id="gatePhone" required maxlength="30" type="tel" autocomplete="tel" placeholder="+57…" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100"></label>
+      <p id="gateStatus" class="min-h-5 text-xs text-slate-400" role="status"></p>
+      <div class="flex justify-end gap-2">
+        <button type="button" id="gateClose" class="rounded-lg border border-slate-700 px-3 py-2 text-sm text-slate-300 hover:bg-slate-800">Volver</button>
+        <button id="gateSubmit" class="rounded-lg bg-emerald-700 px-3 py-2 text-sm font-medium text-white hover:bg-emerald-600">Solicitar por WhatsApp</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+<div id="auth" hidden class="fixed inset-0 z-[70] bg-slate-950/95 grid place-items-center p-4">
+  <section class="w-full max-w-md rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl">
+    <div class="flex items-center gap-3">
+      <div class="grid h-10 w-10 place-items-center rounded-xl bg-sky-500/15 text-sky-300"><i data-lucide="graduation-cap" class="h-5 w-5"></i></div>
+      <div><p class="text-xs text-sky-300">BinaryTeach</p><h2 id="authTitle" class="text-xl font-semibold text-white">Ingresar al curso</h2></div>
+    </div>
+    <p class="mt-3 text-sm text-slate-400">Tu cuenta conserva el avance y los permisos aunque cambies de dispositivo.</p>
+    <div class="mt-5 grid grid-cols-2 rounded-lg border border-slate-800 p-1 text-sm">
+      <button type="button" data-auth-mode="login" class="rounded-md bg-sky-600 px-3 py-2 font-medium">Iniciar sesión</button>
+      <button type="button" data-auth-mode="signup" class="rounded-md px-3 py-2 text-slate-400 hover:text-white">Crear cuenta</button>
+    </div>
+    <form id="authForm" class="mt-4 space-y-3">
+      <label id="authNameWrap" class="hidden block text-xs text-slate-400">Nombre completo<input id="authName" maxlength="100" autocomplete="name" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100"></label>
+      <label id="authPhoneWrap" class="hidden block text-xs text-slate-400">WhatsApp (opcional)<input id="authPhone" maxlength="30" type="tel" autocomplete="tel" placeholder="+57…" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100"></label>
+      <label class="block text-xs text-slate-400">Correo<input id="authEmail" required maxlength="254" type="email" autocomplete="email" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100"></label>
+      <label class="block text-xs text-slate-400">Contraseña<input id="authPassword" required minlength="8" maxlength="200" type="password" autocomplete="current-password" class="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100"></label>
+      <p id="authStatus" class="min-h-5 text-xs text-slate-400" role="status"></p>
+      <button id="authSubmit" class="w-full rounded-lg bg-sky-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-sky-500">Iniciar sesión</button>
+    </form>
+  </section>
+</div>
+
+<script>
+'use strict';
+
+const K = { done: 'bt2.done.v3', last: 'bt2.last.v3', notes: 'bt2.notes.v1', pins: 'bt2.pins.v1', seek: 'bt2.seek.v1' };
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s == null ? '' : s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+
+const asset = (p) => (!p ? '' : p.startsWith('data/') ? '../' + p : p);
+// Corte SOLO por fragmento: mantener el query (?v=) es obligatorio, si no los
+// 107 videos de las playlists colapsarian todos a "watch/" y el ultimo ganaria.
+const norm = (u) => String(u || '').split('#')[0].replace(/\/+$/, '/');
+const hms = (s) => {
+  s = Math.max(0, Math.round(s || 0));
+  const h = Math.floor(s / 3600), m = Math.round((s % 3600) / 60);
+  return h ? h + ' h ' + m + ' min' : m + ' min';
+};
+
+let DATA = null, LESSONS = [], CUR = null;
+let BY_URL = new Map(), BY_SLUG = new Map();
+let INDEX = [];            // indice de texto completo (search_index.json)
+let done = new Set();
+let NOTES = {};            // url -> texto del alumno
+let PINS = new Set();      // url -> lesson marcada
+let SEEK = {};             // url -> {t: segundo, at: marca de tiempo}
+let openGroups = new Set();
+let hits = new Map();      // url -> numero de coincidencias
+let filterGroup = '';      // '' = todos los grupos
+try { done = new Set(JSON.parse(localStorage.getItem(K.done) || '[]')); } catch (e) { done = new Set(); }
+try { NOTES = JSON.parse(localStorage.getItem(K.notes) || '{}') || {}; } catch (e) { NOTES = {}; }
+try { PINS = new Set(JSON.parse(localStorage.getItem(K.pins) || '[]')); } catch (e) { PINS = new Set(); }
+try { SEEK = JSON.parse(localStorage.getItem(K.seek) || '{}') || {}; } catch (e) { SEEK = {}; }
+
+const store = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} };
+
+const AUTH_ENABLED = false;
+let SERVER_STATE = { available: false, doneUrls: [], unlockedLevels: [1], requests: [], levelGatingEnabled: true };
+let AUTH_MODE = 'login';
+function setAuthMode(mode) {
+  AUTH_MODE = mode === 'signup' ? 'signup' : 'login';
+  const signup = AUTH_MODE === 'signup';
+  $('#authTitle').textContent = signup ? 'Crear cuenta de alumno' : 'Ingresar al curso';
+  $('#authSubmit').textContent = signup ? 'Crear cuenta y entrar' : 'Iniciar sesión';
+  $('#authNameWrap').classList.toggle('hidden', !signup);
+  $('#authPhoneWrap').classList.toggle('hidden', !signup);
+  $('#authName').required = signup;
+  $('#authPassword').autocomplete = signup ? 'new-password' : 'current-password';
+  document.querySelectorAll('[data-auth-mode]').forEach((button) => {
+    const selected = button.dataset.authMode === AUTH_MODE;
+    button.className = 'rounded-md px-3 py-2 ' + (selected ? 'bg-sky-600 font-medium text-white' : 'text-slate-400 hover:text-white');
+  });
+}
+function showAuth(show, message = '') {
+  if (!AUTH_ENABLED) show = false;
+  $('#auth').hidden = !show;
+  $('#authStatus').textContent = message;
+  $('#btnAccount').classList.toggle('hidden', !SERVER_STATE.authenticated);
+  $('#btnAccount').textContent = SERVER_STATE.authenticated ? (SERVER_STATE.student?.name || SERVER_STATE.student?.email || 'Cuenta') + ' · Salir' : '';
+}
+document.querySelectorAll('[data-auth-mode]').forEach((button) => button.addEventListener('click', () => setAuthMode(button.dataset.authMode)));
+setAuthMode('login');
+$('#authForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const button = $('#authSubmit'), status = $('#authStatus');
+  button.disabled = true; status.textContent = 'Conectando…';
+  const payload = { email: $('#authEmail').value.trim(), password: $('#authPassword').value };
+  if (AUTH_MODE === 'signup') Object.assign(payload, { name: $('#authName').value.trim(), phone: $('#authPhone').value.trim() });
+  try {
+    const response = await fetch('/api/auth/' + AUTH_MODE, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || 'No se pudo acceder.');
+    location.reload();
+  } catch (error) { status.textContent = error.message; }
+  finally { button.disabled = false; }
+});
+$('#btnAccount').addEventListener('click', async () => {
+  await fetch('/api/auth/logout', { method: 'POST' }).catch(() => {});
+  location.reload();
+});
+let gateTargetLevel = 0;
+const isLevelLocked = (level) => SERVER_STATE.levelGatingEnabled !== false && Number(level) > 1 && !SERVER_STATE.unlockedLevels.includes(Number(level));
+
+async function syncServerState(migrateLocal = false) {
+  const localDone = [...done];
+  try {
+    const r = await fetch('/api/student', { cache: 'no-store' });
+    if (!r.ok) throw new Error('Servidor no disponible');
+    let snapshot = await r.json();
+    if (snapshot.authRequired && snapshot.authenticated === false) {
+      SERVER_STATE = { available: true, ...snapshot, unlockedLevels: [1] };
+      showAuth(true, 'Inicia sesión o crea una cuenta para cargar y guardar tu avance.');
+      paint();
+      return false;
+    }
+    const imported = localStorage.getItem('bt2.legacyProgressImported') === '1';
+    if (migrateLocal && localDone.length && !imported) {
+      const saved = await fetch('/api/progress', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ doneUrls: [...new Set([...snapshot.doneUrls, ...localDone])] })
+      });
+      if (saved.ok) { snapshot = await saved.json(); localStorage.setItem('bt2.legacyProgressImported', '1'); }
+    }
+    SERVER_STATE = { available: true, ...snapshot };
+    showAuth(false);
+    done = new Set(snapshot.doneUrls);
+    store(K.done, [...done]);
+    paint();
+    return true;
+  } catch (err) {
+    SERVER_STATE = { ...SERVER_STATE, available: false, unlockedLevels: [1] };
+    showAuth(true, 'No se pudo conectar con el backend local. Comprueba que Wrangler esté activo.');
+    paint();
+    return false;
+  }
+}
+
+async function syncProgress() {
+  if (!SERVER_STATE.available) return;
+  try {
+    const r = await fetch('/api/progress', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ doneUrls: [...done] })
+    });
+    if (!r.ok) throw new Error('No se guardó el progreso');
+    const snapshot = await r.json();
+    SERVER_STATE = { available: true, ...snapshot };
+    done = new Set(snapshot.doneUrls);
+    store(K.done, [...done]);
+    paint();
+  } catch (err) {
+    SERVER_STATE = { ...SERVER_STATE, available: false, unlockedLevels: [1] };
+    paint();
+  }
+}
+
+function showLevelGate(level) {
+  gateTargetLevel = Number(level);
+  $('#gateTitle').textContent = 'Solicitar acceso al Nivel ' + gateTargetLevel;
+  $('#gateName').value = SERVER_STATE.student?.name || '';
+  $('#gatePhone').value = SERVER_STATE.student?.phone || '';
+  $('#gateStatus').textContent = SERVER_STATE.available
+    ? 'El administrador revisará tu solicitud.'
+    : 'Conecta el LMS al backend para solicitar autorización.';
+  $('#gate').hidden = false;
+  $('#gateName').focus();
+}
+
+$('#gateClose').addEventListener('click', () => { $('#gate').hidden = true; });
+$('#gate').addEventListener('click', (ev) => { if (ev.target === $('#gate')) $('#gate').hidden = true; });
+$('#gateForm').addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  const button = $('#gateSubmit'), status = $('#gateStatus');
+  button.disabled = true; status.textContent = 'Enviando solicitud…';
+  try {
+    const r = await fetch('/api/requests', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ level: gateTargetLevel, name: $('#gateName').value.trim(), phone: $('#gatePhone').value.trim() })
+    });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || 'No se pudo enviar la solicitud.');
+    status.innerHTML = 'Solicitud guardada. <a class="text-emerald-300 underline" target="_blank" rel="noopener" href="' + esc(data.whatsappUrl) + '">Abrir WhatsApp para avisar al administrador</a>.';
+    syncServerState(false);
+  } catch (err) { status.textContent = err.message; }
+  finally { button.disabled = false; }
+});
+setInterval(() => { if (SERVER_STATE.available) syncServerState(false); }, 20000);
+
+const isDone = (u) => done.has(norm(u));
+function save() {
+  try {
+    localStorage.setItem(K.done, JSON.stringify([...done]));
+    localStorage.setItem(K.last, norm(CUR ? CUR.url : ''));
+  } catch (e) {}
+}
+function mark(u, v) {
+  if (v) done.add(norm(u)); else done.delete(norm(u));
+  save(); paint(); syncProgress();
+}
+
+function icons() { if (window.lucide) lucide.createIcons(); }
+
+/* ---------------- construcción del índice ---------------- */
+
+function add(o) { LESSONS.push(o); }
+
+function build(cd) {
+  LESSONS = []; BY_URL = new Map(); BY_SLUG = new Map();
+
+  if (cd.course_page) add({
+    group: 'Inicio', level: 0, order: 0, kind: 'course',
+    title: cd.course_page.title, url: cd.course_page.url, slug: cd.course_page.slug,
+    blocks: cd.course_page.blocks || [], videos: cd.course_page.videos || [],
+    links: cd.course_page.links || [], linked_images: cd.course_page.linked_images || [],
+    words: cd.course_page.word_count || 0
+  });
+
+  for (const lv of cd.levels || []) {
+    const g = 'Nivel ' + lv.level;
+    for (const c of lv.classes || []) add({
+      group: g, level: lv.level, order: c.order, kind: 'class',
+      title: c.title, url: c.url, slug: c.slug,
+      blocks: c.blocks || [], videos: c.videos || [],
+      links: c.links || [], linked_images: c.linked_images || [],
+      words: c.word_count || 0
+});
+    for (const c of lv.video_classes || []) {
+      const v = (c.videos || [])[0] || {};
+      add({
+        group: g, level: lv.level, order: c.order, kind: 'video',
+        title: c.title, url: c.url, slug: c.slug,
+        blocks: c.blocks || [], videos: c.videos || [],
+        links: [], linked_images: [], words: 0,
+        secs: c.duration_seconds || 0, dur: c.duration || '',
+        vid: v.id, thumb: c.thumbnail, embed: v.url
+      });
+    }
+  }
+
+  for (let i = 0; i < (cd.extras || []).length; i++) {
+    const c = cd.extras[i];
+    add({
+      group: 'Recursos', level: 0, order: i + 1, kind: 'resource',
+      title: c.title, url: c.url, slug: c.slug,
+      blocks: c.blocks || [], videos: c.videos || [],
+      links: c.links || [], linked_images: c.linked_images || [],
+      words: c.word_count || 0
+    });
+  }
+
+  for (const l of LESSONS) {
+    if (l.url) BY_URL.set(norm(l.url), l);
+    if (l.slug) BY_SLUG.set(l.slug, l);
+  }
+  if (!openGroups.size) {
+    const last = localStorage.getItem(K.last);
+    const g = last && BY_URL.get(norm(last)) ? BY_URL.get(norm(last)).group : null;
+    openGroups = new Set([g || (LESSONS[0] && LESSONS[0].group)]);
+  }
+}
+
+/* ---------------- sidebar ---------------- */
+
+function groupStats(items) {
+  let d = 0, s = 0;
+  for (const l of items) { if (isDone(l.url)) d++; s += l.secs || 0; }
+  return { d, t: items.length, s };
+}
+
+function navItem(l) {
+  const locked = isLevelLocked(l.level);
+  const ck = locked
+    ? '<i data-lucide="lock-keyhole" class="ck w-3.5 h-3.5 text-amber-400"></i>'
+    : isDone(l.url)
+      ? '<i data-lucide="check-circle" class="ck w-3.5 h-3.5"></i>' : '<span class="ck w-3.5 h-3.5"></span>';
+  const pin = PINS.has(norm(l.url))
+    ? '<i data-lucide="pin" class="w-3 h-3 text-amber-400 fill-amber-400/40 shrink-0"></i>' : '';
+  const meta = l.kind === 'video' && l.dur
+    ? ' <span class="text-slate-500 text-[11px] tabular-nums">' + esc(l.dur) + '</span>' : '';
+  const n = hits.size && hits.has(norm(l.url))
+    ? ' <span class="text-sky-400 text-[10px] tabular-nums">' + hits.get(norm(l.url)) + '</span>' : '';
+  return '<button class="nav-item' + (CUR && norm(CUR.url) === norm(l.url) ? ' on' : '') + (locked ? ' opacity-60' : '') +
+    '" ' + (locked ? 'data-request-level="' + Number(l.level) + '" title="Nivel bloqueado; pulsa para solicitar autorización"' : 'data-go="' + esc(norm(l.url)) + '"') + '>' +
+    '<span class="n">' + String(l.order).padStart(2, '0') + '</span>' +
+    '<span class="t">' + esc(l.title) + meta + n + '</span>' + pin + ck + '</button>';
+}
+
+/* ---------------- buscador ---------------- */
+
+const plain = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+// El buscador es por terminos, no por frase: "patron envolvente" debe
+// encontrar la leccion aunque el texto no las tenga seguidas. Todos los
+// terminos tienen que aparecer (AND); el titulo pesa el triple.
+function search(q) {
+  const terms = plain(q).split(/\s+/).filter((t) => t.length >= 2);
+  hits = new Map();
+  if (!terms.length) return;
+  for (const e of INDEX) {
+    const body = plain(e.text);
+    const title = plain(e.title);
+    let score = 0, okAll = true;
+    for (const t of terms) {
+      const n = occurrences(body, t);
+      if (!n && title.indexOf(t) === -1) { okAll = false; break; }
+      score += n + occurrences(title, t) * 3;
+    }
+    if (okAll && score) hits.set(norm(e.url), score);
+  }
+}
+
+// Cuenta coincidencias sin solaparse.
+function occurrences(hay, needle) {
+  if (!needle) return 0;
+  let n = 0, i = 0;
+  while ((i = hay.indexOf(needle, i)) !== -1) { n++; i += needle.length; }
+  return n;
+}
+
+// Trozo de 180 caracteres alrededor del primer hallazgo, con la coincidencia
+// resaltada. Se busca sobre el texto plano y se recorta el original en la
+// misma posicion, de modo que los indices siguen cuadrando.
+function snippet(text, q) {
+  const terms = plain(q).split(/\s+/).filter((t) => t.length >= 2);
+  const hay = plain(text);
+  let at = -1, len = 0;
+  for (const t of terms) {
+    const i = hay.indexOf(t);
+    if (i !== -1 && (at === -1 || i < at)) { at = i; len = t.length; }
+  }
+  if (at === -1) return esc(text.slice(0, 150)) + (text.length > 150 ? '…' : '');
+  const from = Math.max(0, at - 60);
+  const to = Math.min(text.length, at + len + 110);
+  return (from ? '…' : '') + esc(text.slice(from, at)) +
+    '<mark class="bg-sky-500/25 text-sky-200 rounded px-0.5">' + esc(text.slice(at, at + len)) + '</mark>' +
+    esc(text.slice(at + len, to)) + (to < text.length ? '…' : '');
+}
+
+function renderResults(q) {
+  const box = $('#results');
+  if (q.trim().length < 2) { box.hidden = true; box.innerHTML = ''; return; }
+  const rows = INDEX
+    .filter((e) => hits.has(norm(e.url)))
+    .filter((e) => !filterGroup || e.group === filterGroup)
+    .sort((a, b) => hits.get(norm(b.url)) - hits.get(norm(a.url)))
+    .slice(0, 40);
+
+  box.hidden = false;
+  if (!rows.length) {
+    box.innerHTML = '<p class="px-4 py-6 text-center text-[12px] text-slate-600">Sin coincidencias</p>';
+    return;
+  }
+  box.innerHTML = '<p class="px-3 py-1.5 text-[10px] uppercase tracking-wide text-slate-600">' +
+    rows.length + ' resultado' + (rows.length === 1 ? '' : 's') + '</p>' +
+    rows.map((e) =>
+      '<button class="w-full text-left px-3 py-2 hover:bg-slate-800/70 border-b border-slate-800/60 last:border-0" data-go="' +
+      esc(norm(e.url)) + '">' +
+      '<div class="flex items-center gap-1.5">' +
+      '<i data-lucide="' + (e.kind === 'video' ? 'play-circle' : 'file-text') +
+      '" class="w-3 h-3 ' + (e.kind === 'video' ? 'text-emerald-400' : 'text-slate-500') + ' shrink-0"></i>' +
+      '<span class="text-[12px] font-medium text-slate-200 truncate">' + esc(e.title) + '</span></div>' +
+      '<p class="text-[11px] text-slate-500 mt-0.5 line-clamp-2">' + snippet(e.text, q) + '</p>' +
+      '<span class="text-[10px] text-slate-600">' + esc(e.group) + ' · ' + hits.get(norm(e.url)) + ' coinc.</span>' +
+      '</button>').join('');
+  icons();
+}
+
+function renderFilters() {
+  const groups = [...new Set(LESSONS.map((l) => l.group))];
+  $('#filters').innerHTML = [''].concat(groups).map((g) =>
+    '<button class="px-2 py-0.5 rounded-md text-[10px] border transition ' +
+    (g === filterGroup
+      ? 'bg-sky-500/15 border-sky-500/50 text-sky-300'
+      : 'border-slate-800 text-slate-500 hover:border-slate-600') +
+    '" data-filter="' + esc(g) + '">' + (g || 'Todos') + '</button>').join('') +
+    (PINS.size
+      ? '<button class="px-2 py-0.5 rounded-md text-[10px] border transition ml-auto ' +
+        (filterGroup === '__pins'
+          ? 'bg-amber-500/15 border-amber-500/50 text-amber-300'
+          : 'border-slate-800 text-amber-500/70 hover:border-slate-600') +
+        '" data-filter="__pins" title="Solo lecciones marcadas">' +
+        '<i data-lucide="pin" class="w-2.5 h-2.5 inline"></i> ' + PINS.size + '</button>'
+      : '');
+}
+
+function renderTree() {
+  const q = $('#q').value;
+  const tree = $('#tree');
+  let html = '';
+  const groups = [];
+  for (const l of LESSONS) {
+    if (filterGroup === '__pins' && !PINS.has(norm(l.url))) continue;
+    if (filterGroup && filterGroup !== '__pins' && l.group !== filterGroup) continue;
+    if (q.trim().length >= 2 && !hits.has(norm(l.url))) continue;
+    let g = groups.find((x) => x.name === l.group);
+    if (!g) groups.push(g = { name: l.group, items: [] });
+    g.items.push(l);
+  }
+
+  for (const g of groups) {
+    const st = groupStats(g.items);
+    const pct = st.t ? Math.round((st.d / st.t) * 100) : 0;
+    const open = q ? true : openGroups.has(g.name);
+    html += '<div class="mb-1">';
+    const locked = /^Nivel ([0-9]+)$/.exec(g.name);
+    const gateButton = locked && isLevelLocked(Number(locked[1]))
+      ? '<button class="text-[10px] text-amber-300 hover:text-amber-200" data-request-level="' + Number(locked[1]) + '">Solicitar acceso</button>' : '';
+    html += '<div class="w-full flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-slate-800">' +
+      '<button class="flex items-center gap-1.5 flex-1 min-w-0 text-left" data-grp="' + esc(g.name) + '">' +
+      '<i data-lucide="' + (open ? 'chevron-down' : 'chevron-right') + '" class="w-3.5 h-3.5 text-slate-500"></i>' +
+      '<span class="text-[11px] font-semibold uppercase tracking-wide text-slate-400 flex-1">' + esc(g.name) + '</span>' +
+      '<span class="text-[10px] text-slate-500 tabular-nums">' + st.d + '/' + st.t + '</span></button>' + gateButton + '</div>';
+    html += '<div class="mx-2 mb-2 h-1 rounded-full bg-slate-800 overflow-hidden">' +
+      '<div class="h-full bg-emerald-500" style="width:' + pct + '%"></div></div>';
+    if (open) html += '<div class="space-y-0.5">' + g.items.map(navItem).join('') + '</div>';
+    html += '</div>';
+  }
+
+  if (!groups.length) html = '<p class="px-3 py-6 text-center text-[12px] text-slate-600">Sin resultados</p>';
+  tree.innerHTML = html;
+  icons();
+}
+
+function paint() {
+  const q = $('#q').value;
+  renderResults(q);
+  renderTree();
+  if (CUR) {
+    const st = groupStats(LESSONS.filter((l) => l.group === CUR.group));
+    $('#markTxt').textContent = isDone(CUR.url) ? 'Vista' : 'Marcar';
+    $('#btnMark').className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[12px] font-medium border ' +
+      (isDone(CUR.url)
+        ? 'border-emerald-600/60 text-emerald-300 bg-emerald-500/10'
+        : 'border-slate-700 text-slate-300 hover:bg-slate-800');
+    const pinned = PINS.has(norm(CUR.url));
+    $('#btnPin').className = 'p-2 rounded-lg ' + (pinned
+      ? 'text-amber-300 bg-amber-500/10' : 'text-slate-400 hover:bg-slate-800 hover:text-amber-300');
+    $('#btnPin').title = pinned ? 'Quitar de favoritas (P)' : 'Marcar como favorita (P)';
+    $('#sideCount').textContent = LESSONS.length + ' · ' + hms(st.s) + ' en ' + CUR.group;
+  }
+}
+
+/* ---------------- render de bloques ---------------- */
+
+function clean(html) {
+  // Los <a> que aun apunten al sitio original se dejan intactos en el DOM,
+  // pero el delegado de clicks los convierte en navegación interna.
+  return String(html || '');
+}
+
+function blockHtml(b, i) {
+  const t = b.type;
+  if (t === 'heading') {
+    const lv = Math.min(Math.max(parseInt(b.level || 2, 10), 2), 4);
+    return '<h' + lv + '>' + clean(b.html || esc(b.text || '')) + '</h' + lv + '>';
+  }
+  if (t === 'paragraph') return '<p>' + clean(b.html || esc(b.text || '')) + '</p>';
+  if (t === 'list') {
+    const tag = b.ordered ? 'ol' : 'ul';
+    return '<' + tag + '>' + (b.items || []).map((it) => '<li>' + clean(it.html || esc(it.text || '')) + '</li>').join('') + '</' + tag + '>';
+  }
+  if (t === 'quote') return '<blockquote>' + clean(b.html || esc(b.text || '')) + '</blockquote>';
+  if (t === 'code') return '<pre><code>' + esc(b.text) + '</code></pre>';
+  if (t === 'divider') return '<hr>';
+  if (t === 'table') {
+    const rows = b.rows || [];
+    let head = '';
+    if (b.header && rows.length) {
+      head = '<thead><tr>' + rows[0].map((c) => '<th>' + clean(c) + '</th>').join('') + '</tr></thead>';
+      rows.shift();
+    }
+    return '<table>' + head + '<tbody>' + rows.map((r) => '<tr>' + r.map((c) => '<td>' + clean(c) + '</td>').join('') + '</tr>').join('') + '</tbody></table>';
+  }
+  if (t === 'image') {
+    if (!(b.local || b.src)) return '';
+    const fig = '<figure><img src="' + esc(asset(b.local || b.src)) + '" alt="' + esc(b.alt || '') + '" loading="lazy" decoding="async" data-full="' + esc(asset(b.local || b.src)) + '">' +
+      (b.caption ? '<figcaption>' + esc(b.caption) + '</figcaption>' : '') + '</figure>';
+    return fig;
+  }
+  return '';
+}
+
+const TEXT_TYPES = { heading: 1, paragraph: 1, list: 1, quote: 1, code: 1, divider: 1, table: 1 };
+const isText = (b) => TEXT_TYPES[b.type] === 1;
+const isImg = (b) => b.type === 'image';
+
+/* ---------------- recursos / enlaces ---------------- */
+
+function linkChip(l) {
+  const kind = l.kind || 'external';
+  const text = esc(l.text || l.url || 'enlace');
+
+  if (kind === 'page') {
+    const target = BY_SLUG.get(l.slug) || BY_URL.get(norm(l.url));
+    if (target) {
+      return '<button class="chip hover:border-sky-500" data-go="' + esc(norm(target.url)) + '">' +
+        '<i data-lucide="book-open" class="w-3.5 h-3.5 text-sky-400"></i><b>' + text + '</b></button>';
+    }
+    return '<span class="chip off" title="No incluida en el clon"><i data-lucide="book-open" class="w-3.5 h-3.5"></i><b>' + text + '</b></span>';
+  }
+
+  if (kind === 'video') {
+    return '<button class="chip hover:border-emerald-500" data-play="' + esc(l.video_id || '') + '" data-title="' + esc(l.text || 'Video') + '">' +
+      '<i data-lucide="play-circle" class="w-3.5 h-3.5 text-emerald-400"></i><b>' + text + '</b></button>';
+  }
+
+  if (kind === 'doc') {
+    // PDF copiado al clon: se abre local, sin tocar la red.
+    return '<a class="chip hover:border-amber-500" href="' + esc(asset(l.local || l.url)) + '" target="_blank" rel="noopener">' +
+      '<i data-lucide="file-down" class="w-3.5 h-3.5 text-amber-400"></i><b>' + text + '</b>' +
+      '<span class="text-[10px] text-slate-500">local</span></a>';
+  }
+
+  if (kind === 'pdf') {
+    return '<a class="chip hover:border-amber-500" href="' + esc(l.url) + '" target="_blank" rel="noopener nofollow">' +
+      '<i data-lucide="file-text" class="w-3.5 h-3.5 text-amber-400"></i><b>' + text + '</b>' +
+      '<i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i></a>';
+  }
+
+  const ic = kind === 'youtube' ? 'youtube' : 'external-link';
+  const col = kind === 'youtube' ? 'text-red-400' : 'text-slate-400';
+  return '<a class="chip hover:border-slate-500" href="' + esc(l.url) + '" target="_blank" rel="noopener nofollow">' +
+    '<i data-lucide="' + ic + '" class="w-3.5 h-3.5 ' + col + '"></i><b>' + text + '</b></a>';
+}
+
+function videosSection(l) {
+  const vs = (l.videos || []).filter((v) => v.provider === 'youtube' && v.id && v.id !== (l.vid || ''));
+  if (!vs.length) return '';
+  return '<div class="space-y-4">' + vs.map((v) =>
+    '<div><div class="yt group" data-vid="' + esc(v.id) + '" data-title="' + esc(v.title || l.title) + '" data-poster="' + esc(v.poster_local || '') + '">' +
+    '<img src="' + esc(asset(v.poster_local || ('https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg'))) + '" alt="" loading="lazy">' +
+    '<button class="play" aria-label="Reproducir"><span><i data-lucide="play" class="w-7 h-7 text-white ml-0.5"></i></span></button>' +
+    '</div>' + (v.caption ? '<p class="mt-2 text-[12px] text-slate-500">' + esc(v.caption) + '</p>' : '') + '</div>'
+  ).join('') + '</div>';
+}
+
+function imgsSection(l) {
+  const extra = l.linked_images || [];
+  if (!extra.length) return '';
+  const cards = extra.map((im) => {
+    const src = im.local || im.src;
+    if (!src) return '';
+    return '<figure class="m-0"><a href="' + esc(asset(src)) + '" data-full="' + esc(asset(src)) + '">' +
+      '<img src="' + esc(asset(src)) + '" alt="' + esc(im.text || '') + '" loading="lazy" class="rounded-lg w-full">' +
+      '</a>' + (im.caption ? '<figcaption class="mt-1.5 text-[12px] text-slate-500">' + esc(im.caption) + '</figcaption>' : '') + '</figure>';
+  }).filter(Boolean).join('');
+  if (!cards) return '';
+  return '<div class="grid sm:grid-cols-2 gap-4">' + cards + '</div>';
+}
+
+function recursosSection(l) {
+  const links = l.links || [];
+  const vids = videosSection(l);
+  const imgs = imgsSection(l);
+  if (!links.length && !vids && !imgs) {
+    return '<p class="text-sm text-slate-500">Esta lección no tiene recursos enlazados.</p>';
+  }
+  let h = '';
+  if (vids) h += '<h3 class="text-sm font-semibold text-slate-200 mb-3">Video</h3>' + vids;
+  if (links.length) {
+    // Se avisa de los enlaces que se salen del clon: el curso se study sin
+    // red, pero un link externo es una excepcion y no debe surprises.
+    const out = links.filter((k) => ['external', 'pdf', 'youtube'].indexOf(k.kind) !== -1).length;
+    h += '<h3 class="text-sm font-semibold text-slate-200 mt-6 mb-3">Enlaces del artículo</h3>' +
+      (out ? '<p class="text-[11px] text-slate-500 mb-2.5 flex items-start gap-1.5">' +
+        '<i data-lucide="info" class="w-3.5 h-3.5 text-slate-600 shrink-0 mt-px"></i>' +
+        '<span>' + out + ' de ' + links.length + ' salen del clon y necesitan conexión.</span></p>' : '') +
+      '<div class="flex flex-wrap gap-2">' + links.map(linkChip).join('') + '</div>';
+  }
+  if (imgs) h += '<h3 class="text-sm font-semibold text-slate-200 mt-6 mb-3">Imágenes enlazadas</h3>' + imgs;
+  return h;
+}
+
+/* ---------------- player / tabs ---------------- */
+
+function mountPlayer(el, vid, poster, title) {
+  const saved = SEEK[seekKey(vid)];
+  const badge = saved && saved.t > 15
+    ? '<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-slate-950/85 text-[11px] ' +
+      'text-sky-300 border border-sky-500/40 tabular-nums" id="seekBadge">reanudar en ' + clock(saved.t) + '</span>'
+    : '';
+  el.innerHTML = '<div class="yt" data-vid="' + esc(vid) + '" data-title="' + esc(title || '') + '" data-poster="' + esc(poster || '') + '">' +
+    '<img src="' + esc(asset(poster) || ('https://i.ytimg.com/vi/' + vid + '/hqdefault.jpg')) + '" alt="">' +
+    badge +
+    '<button class="play" aria-label="Reproducir"><span><i data-lucide="play" class="w-7 h-7 text-white ml-0.5"></i></span></button></div>';
+}
+
+/* Reanudar video: la API de YouTube solo responde dentro de un iframe con
+   enablejsapi=1, y solo se le habla por postMessage. El minuto se guarda cada
+   10 s y se restaura al pulsar reproducir, nunca al montar (que solo descarga
+   la miniatura). */
+const seekKey = (vid) => 'yt:' + vid;
+const clock = (s) => {
+  s = Math.max(0, Math.round(s || 0));
+  const m = Math.floor(s / 60);
+  return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+};
+
+let YT_API = null;
+
+function loadYouTubeApi() {
+  if (YT_API) return Promise.resolve(YT_API);
+  return new Promise((resolve, reject) => {
+    const prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => {
+      if (prev) prev();
+      YT_API = new YT.Player;
+      resolve(YT_API);
+    };
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    tag.onerror = () => reject(new Error('no se pudo cargar la API de YouTube'));
+    document.head.appendChild(tag);
+  });
+}
+
+function seekTo(t) {
+  if (!t || t < 15) return;
+  try { $('#playerYT').contentWindow.postMessage(
+    JSON.stringify({ event: 'command', func: 'seekTo', args: [t, true] }), '*'); } catch (e) {}
+  const badge = $('#seekBadge');
+  if (badge) badge.textContent = 'reanudando en ' + clock(t);
+}
+
+// El reproductor embebido de la pagina ya trae enablejsapi=1; se le pide el
+// tiempo cada 10 s mientras se reproduce y se guarda por video.
+setInterval(() => {
+  if (!CUR || !CUR.vid || $('#playerYT') === null) return;
+  try {
+    $('#playerYT').contentWindow.postMessage(
+      JSON.stringify({ event: 'listening', id: 1, channel: 'widget' }), '*');
+  } catch (e) {}
+}, 10000);
+
+document.addEventListener('message', (ev) => {
+  if (ev.origin !== 'https://www.youtube.com' && ev.origin !== 'https://www.youtube-nocookie.com') return;
+  let msg;
+  try { msg = JSON.parse(ev.data); } catch (e) { return; }
+  if (!msg || !CUR || !CUR.vid) return;
+  if (msg.event === 'onReady' && msg.info && msg.info.currentTime > 15) seekTo(msg.info.currentTime);
+  if (msg.event === 'infoDelivery' && msg.info && msg.info.currentTime) {
+    const k = seekKey(CUR.vid);
+    if (Math.abs((SEEK[k] || {}).t - msg.info.currentTime) > 3) {
+      SEEK[k] = { t: Math.round(msg.info.currentTime), at: Date.now() };
+      store(K.seek, SEEK);
+    }
+  }
+}, false);
+
+function playTop(vid, title) {
+  const host = $('#player');
+  mountPlayer(host, vid, 'https://i.ytimg.com/vi/' + vid + '/hqdefault.jpg', title);
+  const box = host.querySelector('.yt');
+  box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  box.querySelector('.play').click();
+}
+
+const TABS = [
+  { id: 'notas', label: 'Notas', icon: 'notebook-pen' },
+  { id: 'diagr', label: 'Diagramas', icon: 'images' },
+  { id: 'rec', label: 'Recursos', icon: 'link' },
+  { id: 'mias', label: 'Mis notas', icon: 'pen-line' }
+];
+
+let activeTab = 'notas';
+
+function notesPane(l) {
+  const k = norm(l.url);
+  const val = NOTES[k] || '';
+  return '<div class="rounded-xl border border-slate-800 bg-slate-900/50 p-4">' +
+    '<div class="flex items-center gap-2 mb-2.5">' +
+    '<i data-lucide="pen-line" class="w-4 h-4 text-amber-400"></i>' +
+    '<h3 class="text-[13px] font-semibold text-slate-200">Tus notas</h3>' +
+    '<span class="text-[11px] text-slate-600 ml-auto" id="noteSaved">guardado automatico</span>' +
+    '<button id="btnExport" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] ' +
+    'border border-slate-700 text-slate-300 hover:bg-slate-800" title="Descargar estas notas en Markdown">' +
+    '<i data-lucide="download" class="w-3.5 h-3.5"></i>Exportar .md</button></div>' +
+    '<textarea id="noteBox" rows="12" placeholder="Escribe aqui tu resumen, dudas o ideas clave de “' +
+    esc(l.title) + '”…" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-[13px] ' +
+    'leading-relaxed text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-amber-500/60 ' +
+    'resize-y">' + esc(val) + '</textarea>' +
+    '<p class="text-[11px] text-slate-600 mt-2">Se guardan solo en este navegador. Usa Exportar para llevarlas contigo.</p>' +
+    '</div>';
+}
+
+// El textarea se escribe en cada pulsacion: guardar en cada tecla satura el
+// localStorage sin aportar nada, se guarda al salir del campo o cada 2 s.
+let noteTimer = null;
+function bindNotes(l) {
+  const box = $('#noteBox');
+  if (!box) return;
+  const k = norm(l.url);
+  const save = () => {
+    const v = box.value;
+    if (v.trim()) NOTES[k] = v; else delete NOTES[k];
+    store(K.notes, NOTES);
+    const flag = $('#noteSaved');
+    if (flag) flag.textContent = 'guardado ' + new Date().toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' });
+  };
+  box.addEventListener('input', () => {
+    if (noteTimer) clearTimeout(noteTimer);
+    noteTimer = setTimeout(save, 2000);
+  });
+  box.addEventListener('blur', () => { if (noteTimer) clearTimeout(noteTimer); save(); });
+  const ex = $('#btnExport');
+  if (ex) ex.addEventListener('click', () => exportNotes(l));
+}
+
+function exportNotes(l) {
+  const k = norm(l.url);
+  const mine = NOTES[k] || '';
+  const idx = INDEX.find((e) => norm(e.url) === k);
+  const body = [
+    '# ' + l.title, '',
+    '- Leccion: ' + l.group + (l.kind === 'class' ? ' · Clase ' + l.order : l.kind === 'video' ? ' · Video ' + l.order : ''),
+    '- URL original: ' + l.url,
+    l.dur ? '- Duracion: ' + l.dur : '',
+    isDone(l.url) ? '- Estado: vista' : '- Estado: pendiente', '',
+    '## Notas', '', mine || '_(sin notas)_', ''
+  ].filter((x) => x !== '').join('\n');
+  const blob = new Blob([body], { type: 'text/markdown;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = (l.slug || 'leccion') + '-notas.md';
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+}
+
+function renderPane(l) {
+  const pane = $('#pane');
+  if (activeTab === 'notas') {
+    const tb = (l.blocks || []).filter(isText);
+    if (l.kind === 'video') {
+      const d = (l.secs || 0)
+        ? '<p class="text-sm text-slate-400">Video de <b class="text-slate-200">' + esc(l.title) + '</b> · ' + hms(l.secs) + '</p>' +
+          '<p class="text-sm text-slate-500 mt-2">Los videos del curso se cargan bajo demanda: no se pide nada a YouTube hasta que pulses reproducir.</p>'
+        : '<p class="text-sm text-slate-500">Esta lección no tiene transcripción. El contenido está en el video.</p>';
+      pane.innerHTML = d;
+    } else if (tb.length) {
+      pane.innerHTML = '<div class="prose">' + tb.map(blockHtml).join('') + '</div>';
+    } else {
+      pane.innerHTML = '<p class="text-sm text-slate-500">Sin contenido de texto.</p>';
+    }
+  } else if (activeTab === 'diagr') {
+    const ims = (l.blocks || []).filter(isImg);
+    if (ims.length) {
+      pane.innerHTML = '<div class="prose">' + ims.map(blockHtml).join('') + '</div>';
+    } else {
+      pane.innerHTML = '<p class="text-sm text-slate-500">Sin diagramas en esta lección.</p>';
+    }
+  } else if (activeTab === 'mias') {
+    pane.innerHTML = notesPane(l);
+    bindNotes(l);
+  } else {
+    pane.innerHTML = recursosSection(l);
+  }
+  pane.classList.remove('fade'); void pane.offsetWidth; pane.classList.add('fade');
+  icons();
+}
+
+function renderTabs(l) {
+  const counts = {
+    notas: (l.blocks || []).filter(isText).length,
+    diagr: (l.blocks || []).filter(isImg).length,
+    rec: (l.links || []).length + (l.videos || []).filter((v) => v.id).length + (l.linked_images || []).length,
+    mias: NOTES[norm(l.url)] ? 1 : 0
+  };
+  if (!counts.notas) activeTab = counts.diagr ? 'diagr' : (counts.rec ? 'rec' : 'mias');
+  if (!counts.diagr && activeTab === 'diagr') activeTab = counts.notas ? 'notas' : 'rec';
+  if (activeTab === 'mias' && !counts.mias && (counts.notas || counts.diagr)) activeTab = counts.notas ? 'notas' : 'diagr';
+  $('#tabs').innerHTML = TABS.map((t) => {
+    const n = counts[t.id];
+    const on = t.id === activeTab;
+    return '<button class="px-3 py-2 text-[13px] -mb-px border-b-2 flex items-center gap-1.5 ' +
+      (on ? 'border-sky-400 text-slate-50' : 'border-transparent text-slate-500 hover:text-slate-300') +
+      '" data-tab="' + t.id + '"><i data-lucide="' + t.icon + '" class="w-4 h-4"></i>' + t.label +
+      (n ? '<span class="text-[10px] text-slate-600 tabular-nums">' + n + '</span>' : '') + '</button>';
+  }).join('');
+  icons();
+}
+
+/* ---------------- navegación ---------------- */
+
+function go(url) {
+  const l = BY_URL.get(norm(url)) || BY_SLUG.get(url);
+  if (!l) return false;
+  if (isLevelLocked(l.level)) { showLevelGate(l.level); return false; }
+  CUR = l;
+  openGroups.add(l.group);
+  try { history.replaceState(null, '', '#' + norm(l.url)); } catch (e) {}
+  $('#body').scrollTop = 0;
+  draw();
+  if (window.innerWidth < 768) $('#side').classList.add('-translate-x-full');
+  return true;
+}
+
+function draw() {
+  const l = CUR;
+  $('#crumb').textContent = l.group + (l.kind === 'class' ? ' · Clase ' + l.order : l.kind === 'video' ? ' · Video ' + l.order : '');
+  $('#title').textContent = l.title;
+  document.title = l.title + ' · Acción del Precio';
+
+  const i = LESSONS.indexOf(l);
+  $('#btnPrev').disabled = i <= 0;
+  $('#btnNext').disabled = i >= LESSONS.length - 1;
+
+  const host = $('#player');
+  if (l.kind === 'video' && l.vid) {
+    mountPlayer(host, l.vid, l.thumb, l.title);
+  } else {
+    const vs = (l.videos || []).filter((v) => v.provider === 'youtube' && v.id);
+    if (vs.length) mountPlayer(host, vs[0].id, vs[0].poster || vs[0].poster_local, vs[0].title || l.title);
+    else host.innerHTML = '';
+  }
+
+  const meta = [];
+  if (l.kind === 'video' && l.dur) meta.push(['clock', l.dur]);
+  if (l.words) meta.push(['text', l.words.toLocaleString('es') + ' palabras']);
+  if (l.kind !== 'video') meta.push(['file-text', l.kind === 'class' ? 'Clase' : l.kind === 'resource' ? 'Recurso' : 'Portada']);
+  if (isDone(l.url)) meta.push(['check-circle-2', 'vista']);
+  $('#meta').innerHTML = meta.map(([ic, t]) =>
+    '<span class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-slate-800/70 border border-slate-800 text-slate-400">' +
+    '<i data-lucide="' + ic + '" class="w-3 h-3"></i>' + esc(t) + '</span>').join('');
+
+  renderTabs(l);
+  renderPane(l);
+  paint();
+  icons();
+}
+
+/* ---------------- eventos ---------------- */
+
+document.addEventListener('click', (ev) => {
+  const requestLevel = ev.target.closest('[data-request-level]');
+  if (requestLevel) { ev.preventDefault(); ev.stopPropagation(); showLevelGate(requestLevel.getAttribute('data-request-level')); return; }
+  // play de cualquier reproductor
+  const play = ev.target.closest('.play');
+  if (play) {
+    ev.preventDefault();
+    const box = play.parentNode;
+    const vid = box.getAttribute('data-vid');
+    if (!vid) return;
+    box.innerHTML = '<iframe id="playerYT" src="https://www.youtube-nocookie.com/embed/' + vid +
+      '?autoplay=1&rel=0&playsinline=1&enablejsapi=1&origin=' + esc(location.origin) +
+      '" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    // La API avisa cuando el iframe esta listo; entonces se aplica el minuto
+    // guardado. Sin este handshake el seek se pierde.
+    const resume = SEEK[seekKey(vid)];
+    if (resume && resume.t > 15) {
+      setTimeout(() => seekTo(resume.t), 1200);
+      setTimeout(() => seekTo(resume.t), 3000);
+    }
+    return;
+  }
+
+  // navegación SPA por botones data-go
+  const goBtn = ev.target.closest('[data-go]');
+  if (goBtn) { ev.preventDefault(); go(goBtn.getAttribute('data-go')); return; }
+
+  // acordeón de grupos
+  const grp = ev.target.closest('[data-grp]');
+  if (grp) {
+    const g = grp.getAttribute('data-grp');
+    if (openGroups.has(g)) openGroups.delete(g); else openGroups.add(g);
+    paint(); return;
+  }
+
+  // tabs
+  const tab = ev.target.closest('[data-tab]');
+  if (tab && CUR) { activeTab = tab.getAttribute('data-tab'); renderTabs(CUR); renderPane(CUR); return; }
+
+  // vídeo suelto desde la pestaña Recursos
+  const pv = ev.target.closest('[data-play]');
+  if (pv) { playTop(pv.getAttribute('data-play'), pv.getAttribute('data-title')); return; }
+
+  // cualquier <a> interno al sitio original -> dentro del clon
+  const a = ev.target.closest('a[href]');
+  if (a) {
+    const href = a.getAttribute('href') || '';
+    if (/binaryteach\.com/i.test(href)) {
+      ev.preventDefault();
+      const t = BY_URL.get(norm(href)) || BY_SLUG.get(href.split('/').filter(Boolean).pop() || '');
+      if (t) go(t.url);
+      else window.open(href, '_blank', 'noopener');
+      return;
+    }
+  }
+
+  // lightbox de imágenes
+  const img = ev.target.closest('[data-full]');
+  if (img && !ev.target.closest('a[href^="http"]')) {
+    ev.preventDefault();
+    $('#lbImg').src = img.getAttribute('data-full');
+    $('#lb').hidden = false;
+  }
+});
+
+$('#lb').addEventListener('click', () => { $('#lb').hidden = true; $('#lbImg').src = ''; });
+
+$('#btnMark').addEventListener('click', () => { if (CUR) mark(CUR.url, !isDone(CUR.url)); });
+$('#btnPin').addEventListener('click', () => {
+  if (!CUR) return;
+  const k = norm(CUR.url);
+  if (PINS.has(k)) PINS.delete(k); else PINS.add(k);
+  store(K.pins, [...PINS]);
+  paint();
+});
+$('#btnPrev').addEventListener('click', () => { const i = LESSONS.indexOf(CUR); if (i > 0) go(LESSONS[i - 1].url); });
+$('#btnNext').addEventListener('click', () => { const i = LESSONS.indexOf(CUR); if (i < LESSONS.length - 1) go(LESSONS[i + 1].url); });
+$('#btnMenu').addEventListener('click', () => $('#side').classList.toggle('-translate-x-full'));
+$('#btnClose').addEventListener('click', () => $('#side').classList.add('-translate-x-full'));
+
+let tmr = null;
+$('#q').addEventListener('input', (e) => {
+  clearTimeout(tmr);
+  const q = e.target.value;
+  tmr = setTimeout(() => { search(q); paint(); }, 140);
+});
+
+// Los resultados y los filtros se reconstruyen en cada busqueda, asi que se
+// delegan en document: no hace falta volver a enganchar listeners.
+document.addEventListener('click', (e) => {
+  const f = e.target.closest('[data-filter]');
+  if (f) {
+    const g = f.getAttribute('data-filter');
+    filterGroup = g === filterGroup ? '' : g;
+    renderFilters();
+    paint();
+    return;
+  }
+  if (e.target.closest('#results [data-go]')) {
+    $('#q').value = '';
+    search('');
+    paint();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  const tag = (e.target.tagName || '').toLowerCase();
+  if (tag === 'input' || tag === 'textarea') {
+    if (e.key === 'Escape') { e.target.blur(); }
+    return;
+  }
+  if (e.key === '/' || e.key === 'k') { e.preventDefault(); $('#q').focus(); return; }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); $('#btnPrev').click(); return; }
+  if (e.key === 'ArrowRight') { e.preventDefault(); $('#btnNext').click(); return; }
+  if (e.key === ' ' || e.key === 'm' || e.key === 'M') {
+    if (tag === 'button') return;
+    e.preventDefault();
+    if (CUR) mark(CUR.url, !isDone(CUR.url));
+    return;
+  }
+  if (e.key === 'p' || e.key === 'P') { e.preventDefault(); $('#btnPin').click(); return; }
+  if (e.key === 'Escape' && !$('#lb').hidden) { $('#lb').hidden = true; }
+});
+
+/* ---------------- material descargable ---------------- */
+
+function renderDocs() {
+  const seen = new Map();
+  for (const l of LESSONS) {
+    for (const k of (l.links || [])) {
+      if (k.kind === 'doc' && k.local && !seen.has(k.local)) {
+        seen.set(k.local, k.text || 'Documento');
+      }
+    }
+  }
+  const box = $('#docs');
+  if (!seen.size) { box.innerHTML = ''; return; }
+  box.innerHTML = '<p class="text-[10px] uppercase tracking-wide text-slate-600 mb-1.5 px-1">Material</p>' +
+    [...seen].map(([local, text]) =>
+      '<a class="flex items-center gap-2 px-1 py-1 rounded text-[12px] text-slate-400 hover:text-amber-300" ' +
+      'href="' + esc(asset(local)) + '" target="_blank" rel="noopener">' +
+      '<i data-lucide="file-down" class="w-3.5 h-3.5 text-amber-400 shrink-0"></i>' +
+      '<span class="truncate">' + esc(text) + '</span></a>').join('');
+  icons();
+}
+
+/* ---------------- arranque ---------------- */
+
+(async function boot() {
+  try {
+    const res = await fetch('../data/parsed/course_data.json', { cache: 'no-cache' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    DATA = await res.json();
+  } catch (err) {
+    $('#boot').innerHTML =
+      '<div class="text-center px-6">' +
+      '<p class="text-rose-400 font-medium">No se pudo cargar el curso</p>' +
+      '<p class="text-slate-500 text-xs mt-2">' + esc(err.message) + '</p>' +
+      '<p class="text-slate-600 text-xs mt-3">Sirve la raíz del proyecto (donde están <code>data/</code> y <code>public/</code>), no la carpeta public/.</p>' +
+      '</div>';
+    return;
+  }
+
+  build(DATA);
+  $('#footStat').textContent = LESSONS.length + ' lecciones · ' + hms(DATA.stats && DATA.stats.video_seconds) + ' de vídeo';
+  renderDocs();
+  renderFilters();
+
+  // El indice va aparte: pesa 118 KB y solo se usa al buscar.
+  fetch('../data/parsed/search_index.json', { cache: 'no-cache' })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((ix) => { if (ix && ix.entries) { INDEX = ix.entries; } })
+    .catch(() => {});
+
+  await syncServerState(true);
+  const hash = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+  const hashed = hash && (BY_URL.get(norm(hash)) || BY_SLUG.get(hash));
+  const requestedStart = hashed && !isLevelLocked(hashed.level) ? hashed : null;
+  const start = requestedStart
+    ? null
+    : (BY_URL.get(norm(localStorage.getItem(K.last) || '')) && !isLevelLocked(BY_URL.get(norm(localStorage.getItem(K.last) || '')).level)
+      ? BY_URL.get(norm(localStorage.getItem(K.last) || ''))
+      : LESSONS.find((l) => !isLevelLocked(l.level)));
+  const initial = start || requestedStart || LESSONS.find((l) => !isLevelLocked(l.level));
+  if (initial) { CUR = initial; openGroups.add(initial.group); }
+  if (CUR) draw(); else renderTree();
+
+  $('#boot').remove();
+  icons();
+})();
+</script>
+</body>
+</html>

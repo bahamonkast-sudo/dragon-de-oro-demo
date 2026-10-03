@@ -1,0 +1,183 @@
+{
+  "url": "https://www.binaryteach.com/hombro-cabeza-hombro/",
+  "slug": "hombro-cabeza-hombro",
+  "depth": 1,
+  "title": "Hombro – Cabeza – Hombro y Hombro – Cabeza – Hombro Invertido",
+  "description": "El Hombro – Cabeza – Hombro y su contratarte el HCH invertido, son patrones que nos indican una reversión de la tendencia, son bastante similares a […]",
+  "kind": "class",
+  "level": 1,
+  "order": 13,
+  "date_published": "2020-02-05T21:38:20+00:00",
+  "date_modified": "2020-04-12T21:49:19+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 298,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "xF7sLaRsvNE",
+      "url": "https://www.youtube.com/embed/xF7sLaRsvNE?feature=oembed",
+      "title": "Hombro Cabeza Hombro -Opciones Binarias- Figuras Chartistas"
+    }
+  ],
+  "links": [
+    {
+      "text": "los doble techo y doble suelo.",
+      "url": "https://www.binaryteach.com/doble-techo-y-doble-suelo/",
+      "kind": "page",
+      "slug": "doble-techo-y-doble-suelo"
+    },
+    {
+      "text": "resumen de Chartismo",
+      "url": "https://www.binaryteach.com/figuras-chartistas/",
+      "kind": "page",
+      "slug": "figuras-chartistas"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-13-hombro-cabeza-hombro-y-hombro-cabeza-hombro-in-01.jpg",
+      "status": "ok",
+      "bytes": 120260
+    },
+    {
+      "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "El Hombro – Cabeza – Hombro y su contratarte el HCH invertido, son patrones que nos indican una reversión de la tendencia, son bastante similares a sus hermanos, los doble techo y doble suelo.",
+      "html": "El Hombro – Cabeza – Hombro y su contratarte el HCH invertido, son patrones que nos indican una reversión de la tendencia, son bastante similares a sus hermanos, <a class=\"internal\" href=\"https://www.binaryteach.com/doble-techo-y-doble-suelo/\">los doble techo y doble suelo.</a>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Al ser una figura que indica reversión de la tendencia es muy importante encontrarla al final de la misma. Un Hombro Cabeza Hombro se encuentra al final de una tendencia alcista, y un Hombro Cabeza Hombro Invertido, se encuentra al final de una tendencia bajista.",
+      "html": "Al ser una figura que indica reversión de la tendencia es muy importante encontrarla al final de la misma. Un Hombro Cabeza Hombro se encuentra al final de una tendencia alcista, y un Hombro  Cabeza Hombro Invertido, se encuentra al final de una tendencia bajista."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta figura chartista cómo podrás notar en su nombre, se asemeja mucho a una figura Humana, comprendida en dos hombros y una cabeza, por lo que esa es su característica principal",
+      "html": "Esta figura chartista cómo podrás notar en su nombre, se asemeja mucho a una figura Humana, comprendida en dos hombros y una cabeza, por lo que esa es su característica principal"
+    },
+    {
+      "type": "paragraph",
+      "text": "Entre las características que nos ayudarán a identificar un HCH podemos mencionar:",
+      "html": "Entre las características que nos ayudarán a identificar un HCH podemos mencionar:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Para un Hombro, Cabeza, Hombro, el primer y tercer máximo deben ser más bajos que el segundo.",
+          "html": "Para un Hombro, Cabeza, Hombro, el primer y tercer máximo deben ser más bajos que el segundo."
+        },
+        {
+          "text": "Para un Hombro, Cabeza, Hombro invertido, el primer y tercer mínimo deben ser más altos que el segundo.",
+          "html": "Para un Hombro, Cabeza, Hombro invertido, el primer y tercer mínimo deben ser más altos que el segundo."
+        },
+        {
+          "text": "Los Hombros y la Cabeza comparten un área horizontal en común, el cuello.",
+          "html": "Los Hombros y la Cabeza comparten un área horizontal en común, el cuello."
+        },
+        {
+          "text": "La distancia entre la cabeza y el cuello define el nivel objetivo al que el precio puede llegar.",
+          "html": "La distancia entre la cabeza y el cuello define el nivel objetivo al que el precio puede llegar."
+        },
+        {
+          "text": "La figura se forma cuando el precio rompe el cuello.",
+          "html": "La figura se forma cuando el precio rompe el cuello."
+        },
+        {
+          "text": "Tras la ruptura del cuello el precio busca llegar al nivel objetivo para luego hacer un pullback a la zona rota.",
+          "html": "Tras la ruptura del cuello el precio busca llegar al nivel objetivo para luego hacer un pullback a la zona rota."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "El HCH a diferencia del doble techo y suelo, se forman con menos regularidad, sin embargo al formarse los podemos aprovechar.",
+      "html": "El HCH a diferencia del doble techo y suelo, se forman con menos regularidad, sin embargo al formarse los podemos aprovechar."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico cómo operar un hombro – cabeza- hombro:",
+      "html": "En el siguiente vídeo explico cómo operar un hombro – cabeza- hombro:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "xF7sLaRsvNE",
+      "url": "https://www.youtube.com/embed/xF7sLaRsvNE?feature=oembed",
+      "title": "Hombro Cabeza Hombro -Opciones Binarias- Figuras Chartistas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-13-hombro-cabeza-hombro-y-hombro-cabeza-hombro-in-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Este es el ultimo capitulo sobre figuras chartistas, hay muchas más que hacen falta reconocer, las estaremos compartiendo más adelante.",
+      "html": "Este es el ultimo capitulo sobre figuras chartistas, hay muchas más que hacen falta reconocer, las estaremos compartiendo más adelante."
+    },
+    {
+      "type": "paragraph",
+      "text": "Te recuerdo de ver el resumen de Chartismo , en el encontrarás las actividades que debes realizar para reafirmar tus conocimientos.",
+      "html": "Te recuerdo de ver el <a class=\"internal\" href=\"https://www.binaryteach.com/figuras-chartistas/\">resumen de Chartismo</a>, en el encontrarás las actividades que debes realizar para reafirmar tus conocimientos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Resumen de Chartismo + Actividades",
+      "html": "<strong><a class=\"internal\" href=\"https://www.binaryteach.com/figuras-chartistas/\">Resumen de Chartismo  + Actividades</a></strong>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia de Visionarios de Oro - Acción del Precio & Velas</title>
+  
+  <!-- Premium Typography and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-darker: #0d0f12;
+      --bg-dark: #12151a;
+      --bg-card: #181c24;
+      --accent-gold: #ffd700;
+      --accent-gold-dark: #d4af37;
+      --success-green: #00b074;
+      --alert-red: #ff4a4a;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-color: rgba(255, 215, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      background-color: var(--bg-darker);
+      background-image: radial-gradient(circle at 50% 50%, #171d26 0%, #0c0e12 100%);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-gold-dark);
+      border-radius: 3px;
+    }
+
+    /* Header Nav Bar */
+    header {
+      background: rgba(15, 18, 25, 0.95);
+      border-bottom: 2px solid rgba(212, 175, 55, 0.35);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+      z-index: 10;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-gold);
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+      object-fit: cover;
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #fff 30%, var(--accent-gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+    }
+
+    .back-button {
+      background: linear-gradient(135deg, var(--alert-red), #991b1b);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      font-weight: 700;
+      padding: 0.65rem 1.3rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 10px rgba(153, 27, 27, 0.4), inset 1px 1px 1px rgba(255,255,255,0.2);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(239, 68, 68, 0.6);
+    }
+
+    .back-button:active {
+      transform: translateY(0);
+    }
+
+    /* Main Dashboard Layout */
+    .dashboard-container {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 70px);
+      overflow: hidden;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 380px;
+      min-width: 380px;
+      background: rgba(18, 22, 30, 0.95);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .sidebar-headline {
+      font-family: 'Outfit', sans-serif;
+      color: var(--accent-gold);
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+      padding-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .session-item {
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.01);
+      overflow: hidden;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .session-header {
+      padding: 0.9rem 1.15rem;
+      background: rgba(212, 175, 55, 0.03);
+      color: var(--accent-gold);
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      letter-spacing: 0.5px;
+      transition: background 0.2s ease;
+    }
+
+    .session-header:hover {
+      background: rgba(212, 175, 55, 0.08);
+    }
+
+    .concepts-list {
+      padding: 0.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .concept-tab {
+      padding: 0.6rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .concept-tab:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff;
+    }
+
+    .concept-tab.active {
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--accent-gold);
+      border-left: 4px solid var(--accent-gold-dark);
+      font-weight: 800;
+      text-shadow: 0 0 4px rgba(255, 215, 0, 0.25);
+    }
+
+    /* Accordion Utility */
+    .session-item.collapsed .concepts-list {
+      display: none;
+    }
+    .session-item.collapsed .collapse-icon::before {
+      content: "▶";
+    }
+    .session-item .collapse-icon::before {
+      content: "▼";
+    }
+
+    /* Right Main Viewer */
+    .main-viewer {
+      flex: 1;
+      padding: 3rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.25rem;
+    }
+
+    .detail-display {
+      width: 100%;
+      max-width: 880px;
+      background: rgba(18, 22, 28, 0.9);
+      border: 2px solid rgba(212, 175, 55, 0.25);
+      border-radius: 14px;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.75), inset 1px 1px 3px rgba(255,255,255,0.05);
+    }
+
+    .detail-svg-container {
+      width: 100%;
+      height: 390px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #090b0e;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      box-shadow: inset 3px 3px 12px rgba(0, 0, 0, 0.85);
+    }
+
+    .detail-text {
+      text-align: center;
+      width: 100%;
+    }
+
+    .detail-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+      margin-bottom: 0.85rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
+    }
+
+    .detail-desc {
+      font-size: 0.98rem;
+      color: #e2e8f0;
+      line-height: 1.65;
+      padding: 0 1.5rem;
+      max-width: 740px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Premium Top Header -->
+  <header>
+    <div class="brand-section">
+      <img src="ui/golden_visionarios_logo.png" class="brand-logo" alt="Logo Visionarios de Oro">
+      <h1 class="brand-title">ACADEMIA DE VISIONARIOS DE ORO</h1>
+    </div>
+    <button class="back-button" onclick="closeAcademy()">
+      <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 20 20">
+        <path d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"/>
+      </svg>
+      Volver a la Consola
+    </button>
+  </header>
+
+  <!-- Dashboard -->
+  <div class="dashboard-container">
+    
+    <!-- Sidebar Index Left -->
+    <div class="sidebar">
+      <div class="sidebar-headline">🎓 Temario y Sesiones</div>
+      <div id="sessions-accordion-wrapper" style="display: flex; flex-direction: column; gap: 0.65rem;">
+        <!-- Dynamically loaded from visionarios_knowledge.js -->
+      </div>
+    </div>
+
+    <!-- Main Cinematic Viewer Right -->
+    <div class="main-viewer">
+      <div class="detail-display">
+        <div class="detail-svg-container" id="view-screen-svg">
+          <!-- Dynamic SVG diagram loaded here -->
+        </div>
+        <div class="detail-text">
+          <h2 class="detail-name" id="view-screen-name">Cargando Academia...</h2>
+          <p class="detail-desc" id="view-screen-desc">
+            Cargando la base de conocimientos teóricos y visuales del Guardián Visionarios de Oro.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Loading script dynamically -->
+  <script src="ui/components/visionarios_knowledge.js"></script>
+  
+  <script>
+    // Navigation routing logic
+    function closeAcademy() {
+      // If opened in a blank tab, close it. Otherwise redirect to index.html
+      if (window.opener || window.history.length === 1) {
+        window.close();
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Extract curriculum database from loaded window.VisionariosKnowledge module
+      if (!window.VisionariosKnowledge) {
+        console.error("No se pudo cargar la base de conocimientos de Acción del Precio.");
+        return;
+      }
+
+      const sessions = [
+        {
+          id: 1,
+          title: "SESIÓN 1: ESTRUCTURA Y CICLOS",
+          subtitle: "Price Action Puro",
+          concepts: [
+            {
+              name: "Tendencia Alcista",
+              desc: "Sucesión armónica de máximos y mínimos cada vez más altos. Control comprador absoluto y dirección prioritaria alcista.",
+              svg: `<!-- Grid Lines -->
+                <svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="10" y1="100" x2="190" y2="100" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+                <line x1="10" y1="60" x2="190" y2="60" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+                <line x1="10" y1="20" x2="190" y2="20" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+                <path d="M 20 100 L 60 70 L 50 85 L 100 50 L 90 65 L 140 30 L 130 45 L 180 15" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <path d="M 20 100 L 60 70" fill="none" stroke="#00b074" stroke-width="3.5" marker-end="url(#arrow)"/>
+                <path d="M 60 70 L 50 85" fill="none" stroke="#ff4a4a" stroke-width="2"/>
+                <path d="M 50 85 L 100 50" fill="none" stroke="#00b074" stroke-width="3.5"/>
+                <path d="M 100 50 L 90 65" fill="none" stroke="#ff4a4a" stroke-width="2"/>
+                <path d="M 90 65 L 140 30" fill="none" stroke="#00b074" stroke-width="3.5"/>
+                <path d="M 140 30 L 130 45" fill="none" stroke="#ff4a4a" stroke-width="2"/>
+                <path d="M 130 45 L 180 15" fill="none" stroke="#00b074" stroke-width="3.5"/>
+                <circle cx="50" cy="85" r="4" fill="#00b074"/>
+                <text x="50" y="98" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">HL (Mín Alto)</text>
+                <circle cx="100" cy="50" r="4" fill="#ffd700"/>
+                <text x="100" y="42" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">HH (Máx Alto)</text>
+                </svg>`
+            },
+            {
+              name: "Tendencia Bajista",
+              desc: "Sucesión armónica de máximos y mínimos cada vez más bajos. Control vendedor dominante en el flujo de órdenes.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="10" y1="100" x2="190" y2="100" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+                <line x1="10" y1="60" x2="190" y2="60" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+                <line x1="10" y1="20" x2="190" y2="20" stroke="rgba(255,255,255,0.05)" stroke-dasharray="2 2"/>
+                <path d="M 20 20 L 60 50 L 50 35 L 100 70 L 90 55 L 140 90 L 130 75 L 180 105" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <path d="M 20 20 L 60 50" fill="none" stroke="#ff4a4a" stroke-width="3.5"/>
+                <path d="M 60 50 L 50 35" fill="none" stroke="#00b074" stroke-width="2"/>
+                <path d="M 50 35 L 100 70" fill="none" stroke="#ff4a4a" stroke-width="3.5"/>
+                <path d="M 100 70 L 90 55" fill="none" stroke="#00b074" stroke-width="2"/>
+                <path d="M 90 55 L 140 90" fill="none" stroke="#ff4a4a" stroke-width="3.5"/>
+                <path d="M 140 90 L 130 75" fill="none" stroke="#00b074" stroke-width="2"/>
+                <path d="M 130 75 L 180 105" fill="none" stroke="#ff4a4a" stroke-width="3.5"/>
+                <circle cx="50" cy="35" r="4" fill="#ff4a4a"/>
+                <text x="50" y="27" fill="#ff4a4a" font-size="8" text-anchor="middle" font-family="monospace">LH (Máx Bajo)</text>
+                <circle cx="100" cy="70" r="4" fill="#ffd700"/>
+                <text x="100" y="82" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">LL (Mín Bajo)</text>
+                </svg>`
+            },
+            {
+              name: "Acumulación / Rango",
+              desc: "Precio encerrado horizontalmente entre un soporte y resistencia. Fuerzas en equilibrio temporal antes de una gran explosión.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="10" y="20" width="180" height="8" fill="rgba(255, 74, 74, 0.15)" stroke="#ff4a4a" stroke-width="1"/>
+                <rect x="10" y="92" width="180" height="8" fill="rgba(0, 176, 116, 0.15)" stroke="#00b074" stroke-width="1"/>
+                <path d="M 20 92 L 50 28 L 80 92 L 110 28 L 140 92 L 170 28" fill="none" stroke="#ffd700" stroke-width="2.5" stroke-linejoin="round"/>
+                <text x="100" y="15" fill="#ff4a4a" font-size="8" text-anchor="middle" font-family="monospace">Resistencia (Techo)</text>
+                <text x="100" y="112" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Soporte (Piso)</text>
+                <circle cx="50" cy="28" r="3" fill="#ff4a4a"/>
+                <circle cx="80" cy="92" r="3" fill="#00b074"/>
+                </svg>`
+            },
+            {
+              name: "Retroceso (Pullback)",
+              desc: "Descanso corto o movimiento temporal en contra de la tendencia principal para buscar liquidez en zonas rotas.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="10" y1="60" x2="190" y2="60" stroke="#00b074" stroke-width="1.5" stroke-dasharray="4 2"/>
+                <path d="M 20 25 L 70 60" fill="none" stroke="#ff4a4a" stroke-width="3" stroke-linecap="round"/>
+                <path d="M 70 60 L 100 60 L 120 40" fill="none" stroke="#00b074" stroke-width="3" stroke-linecap="round"/>
+                <path d="M 120 40 L 170 95" fill="none" stroke="#ff4a4a" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="120" cy="40" r="6" fill="none" stroke="#ffd700" stroke-width="1.5"/>
+                <text x="120" y="30" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">Test/Pullback</text>
+                <text x="145" y="55" fill="#00b074" font-size="7" font-family="monospace">Soporte roto es Resistencia</text>
+                </svg>`
+            },
+            {
+              name: "Continuidad",
+              desc: "Ruptura del máximo/mínimo anterior que confirma que la tendencia principal reanuda su marcha con fuerza.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="20" y1="50" x2="180" y2="50" stroke="#ff4a4a" stroke-width="1" stroke-dasharray="3 3"/>
+                <path d="M 20 90 L 60 50 L 50 65 L 120 20" fill="none" stroke="#00b074" stroke-width="3"/>
+                <circle cx="60" cy="50" r="3" fill="#ff4a4a"/>
+                <text x="60" y="44" fill="#ff4a4a" font-size="7" font-family="monospace">Máximo previo</text>
+                <path d="M 85 40 L 100 25 M 100 25 L 90 25 M 100 25 L 100 35" fill="none" stroke="#00b074" stroke-width="2.5"/>
+                <text x="115" y="40" fill="#00b074" font-size="8" font-family="monospace" font-weight="bold">Ruptura (Confirmación)</text>
+                </svg>`
+            },
+            {
+              name: "Corrección Mayor",
+              desc: "Movimiento profundo que rompe la estructura de la tendencia anterior y avisa el fin de un ciclo o rango mayor.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="20" y1="80" x2="150" y2="20" stroke="#00b074" stroke-width="1.5" stroke-dasharray="4 2"/>
+                <path d="M 20 85 L 60 65 L 85 55 L 120 40 L 110 50 L 160 100" fill="none" stroke="#ff4a4a" stroke-width="3"/>
+                <text x="60" y="45" fill="#00b074" font-size="8" font-family="monospace">Línea de Tendencia</text>
+                <circle cx="115" cy="42" r="7" fill="none" stroke="#ff4a4a" stroke-width="2"/>
+                <text x="155" y="35" fill="#ff4a4a" font-size="8" text-anchor="middle" font-family="monospace">Quiebre Estructural</text>
+                </svg>`
+            }
+          ]
+        },
+        {
+          id: 2,
+          title: "SESIÓN 2: ZONAS DE REACCIÓN",
+          subtitle: "El precio tiene memoria",
+          concepts: [
+            {
+              name: "Líneas de Soporte",
+              desc: "Pisos del pasado donde la demanda supera a la oferta, deteniendo y rebotando la caída de las cotizaciones.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <path d="M 20 20 L 50 90 L 80 40 L 110 90 L 140 50 L 170 90 L 190 60" fill="none" stroke="#ffd700" stroke-width="2"/>
+                <rect x="10" y="90" width="180" height="5" fill="#00b074"/>
+                <circle cx="50" cy="90" r="4" fill="#00b074"/>
+                <circle cx="110" cy="90" r="4" fill="#00b074"/>
+                <circle cx="170" cy="90" r="4" fill="#00b074"/>
+                <text x="100" y="110" fill="#00b074" font-size="9" text-anchor="middle" font-family="monospace" font-weight="bold">ZONA DE SOPORTE (COMPRAS)</text>
+                </svg>`
+            },
+            {
+              name: "Líneas de Resistencia",
+              desc: "Techos del pasado donde la oferta supera a la demanda, deteniendo y rebotando el ascenso del precio.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <path d="M 20 100 L 50 30 L 80 80 L 110 30 L 140 70 L 170 30 L 190 80" fill="none" stroke="#ffd700" stroke-width="2"/>
+                <rect x="10" y="25" width="180" height="5" fill="#ff4a4a"/>
+                <circle cx="50" cy="30" r="4" fill="#ff4a4a"/>
+                <circle cx="110" cy="30" r="4" fill="#ff4a4a"/>
+                <circle cx="170" cy="30" r="4" fill="#ff4a4a"/>
+                <text x="100" y="15" fill="#ff4a4a" font-size="9" text-anchor="middle" font-family="monospace" font-weight="bold">ZONA DE RESISTENCIA (VENTAS)</text>
+                </svg>`
+            },
+            {
+              name: "Línea de Tendencia",
+              desc: "Diagonales de soporte o resistencia móvil siguiendo dinámicamente el flujo de órdenes en el mercado.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="15" y1="105" x2="185" y2="35" stroke="#00b074" stroke-width="2.5"/>
+                <path d="M 25 101 L 50 60 L 70 83 L 110 40 L 130 57 L 170 20" fill="none" stroke="#ffd700" stroke-width="1.5"/>
+                <circle cx="25" cy="101" r="3.5" fill="#ffd700"/>
+                <circle cx="70" cy="83" r="3.5" fill="#ffd700"/>
+                <circle cx="130" cy="57" r="3.5" fill="#ffd700"/>
+                <text x="100" y="110" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Línea de Tendencia Alcista (Dinámica)</text>
+                </svg>`
+            }
+          ]
+        },
+        {
+          id: 3,
+          title: "SESIÓN 3: ANATOMÍA Y VELAS GATILLO",
+          subtitle: "Velas Individuales",
+          concepts: [
+            {
+              name: "Anatomía de la Vela",
+              desc: "Cuerpo real representa apertura y cierre. Las mechas (sombras) marcan el máximo y mínimo de la sesión.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="100" y1="15" x2="100" y2="105" stroke="#ffd700" stroke-width="2"/>
+                <rect x="80" y="35" width="40" height="55" fill="rgba(0,176,116,0.85)" stroke="#00b074" stroke-width="2"/>
+                <text x="65" y="20" fill="#ffd700" font-size="7" font-family="monospace">Máximo (Sombra)</text>
+                <text x="60" y="40" fill="#00b074" font-size="7" font-family="monospace">Cierre (Bullish)</text>
+                <text x="60" y="88" fill="#00b074" font-size="7" font-family="monospace">Apertura</text>
+                <text x="65" y="108" fill="#ffd700" font-size="7" font-family="monospace">Mínimo (Sombra)</text>
+                <line x1="75" y1="35" x2="98" y2="35" stroke="#00b074" stroke-dasharray="1 1"/>
+                <line x1="75" y1="90" x2="98" y2="90" stroke="#00b074" stroke-dasharray="1 1"/>
+                </svg>`
+            },
+            {
+              name: "Marubozu",
+              desc: "Vela con cuerpo completo sin mechas superiores o inferiores. Fuerza absoluta y continuidad de tendencia.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="40" y="20" width="35" height="80" fill="#00b074" stroke="#fff" stroke-width="1"/>
+                <text x="57" y="112" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Alcista</text>
+                <rect x="125" y="20" width="35" height="80" fill="#ff4a4a" stroke="#fff" stroke-width="1"/>
+                <text x="142" y="112" fill="#ff4a4a" font-size="8" text-anchor="middle" font-family="monospace">Bajista</text>
+                <text x="100" y="15" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">100% Cuerpo - Sin Mecha</text>
+                </svg>`
+            },
+            {
+              name: "Peonza y Onda Alta",
+              desc: "Cuerpo real pequeño en el centro con mechas extremadamente largas. Gran volatilidad e indecisión extrema.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="100" y1="10" x2="100" y2="110" stroke="#ffd700" stroke-width="1.5"/>
+                <rect x="85" y="50" width="30" height="20" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1"/>
+                <text x="100" y="85" fill="#b0b0b0" font-size="7" text-anchor="middle" font-family="monospace">Cuerpo Pequeño</text>
+                <text x="135" y="30" fill="#ffd700" font-size="7" font-family="monospace">Mechas largas</text>
+                <text x="135" y="100" fill="#ffd700" font-size="7" font-family="monospace">Mechas largas</text>
+                </svg>`
+            },
+            {
+              name: "Dojis (Varios tipos)",
+              desc: "Apertura y cierre en el mismo nivel exacto de precio. Neutralidad absoluta o rechazo extremo en zona clave.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="40" y1="20" x2="40" y2="100" stroke="#ffd700" stroke-width="2"/>
+                <line x1="25" y1="20" x2="55" y2="20" stroke="#00b074" stroke-width="3"/>
+                <text x="40" y="112" fill="#ffd700" font-size="7" text-anchor="middle" font-family="monospace">Libélula (Rechazo Suelos)</text>
+                <line x1="100" y1="20" x2="100" y2="100" stroke="#ffd700" stroke-width="2"/>
+                <line x1="85" y1="60" x2="115" y2="60" stroke="#ffffff" stroke-width="3"/>
+                <text x="100" y="112" fill="#ffd700" font-size="7" text-anchor="middle" font-family="monospace">Estándar (Cruz)</text>
+                <line x1="160" y1="20" x2="160" y2="100" stroke="#ffd700" stroke-width="2"/>
+                <line x1="145" y1="100" x2="175" y2="100" stroke="#ff4a4a" stroke-width="3"/>
+                <text x="160" y="112" fill="#ffd700" font-size="7" text-anchor="middle" font-family="monospace">Lápida (Rechazo Techos)</text>
+                </svg>`
+            },
+            {
+              name: "Martillo (Hammer)",
+              desc: "Cuerpo real pequeño en el extremo superior con mecha inferior muy larga (Giro Alcista en soporte).",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="10" y1="95" x2="190" y2="95" stroke="#00b074" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <line x1="100" y1="35" x2="100" y2="95" stroke="#00b074" stroke-width="2"/>
+                <rect x="88" y="20" width="24" height="15" fill="#00b074" stroke="#fff" stroke-width="1"/>
+                <text x="100" y="110" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Soporte/Suelo: Frena y Rebota</text>
+                <text x="140" y="60" fill="#ffd700" font-size="7" font-family="monospace">Mecha = 2x Cuerpo</text>
+                </svg>`
+            },
+            {
+              name: "Estrella Fugaz",
+              desc: "Cuerpo real pequeño en el extremo inferior con mecha superior muy larga (Rechazo de resistencia bajista).",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="10" y1="25" x2="190" y2="25" stroke="#ff4a4a" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <line x1="100" y1="25" x2="100" y2="85" stroke="#ff4a4a" stroke-width="2"/>
+                <rect x="88" y="85" width="24" height="15" fill="#ff4a4a" stroke="#fff" stroke-width="1"/>
+                <text x="100" y="110" fill="#ff4a4a" font-size="8" text-anchor="middle" font-family="monospace">Resistencia/Techo: Gran Rechazo</text>
+                <text x="140" y="55" fill="#ffd700" font-size="7" font-family="monospace">Rechazo de oferta</text>
+                </svg>`
+            }
+          ]
+        },
+        {
+          id: 4,
+          title: "SESIÓN 4: PATRONES COMPUESTOS",
+          subtitle: "Combinaciones de Velas",
+          concepts: [
+            {
+              name: "Envolvente Alcista",
+              desc: "Vela bajista pequeña es envuelta y superada por completo por el cuerpo de una gran vela alcista verde.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="60" y1="40" x2="60" y2="80" stroke="#ff4a4a" stroke-width="1.5"/>
+                <rect x="50" y="48" width="20" height="24" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <line x1="120" y1="20" x2="120" y2="100" stroke="#00b074" stroke-width="2"/>
+                <rect x="105" y="28" width="30" height="64" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <line x1="45" y1="28" x2="145" y2="28" stroke="#ffd700" stroke-width="1" stroke-dasharray="2 2"/>
+                <line x1="45" y1="92" x2="145" y2="92" stroke="#ffd700" stroke-width="1" stroke-dasharray="2 2"/>
+                <text x="100" y="112" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Envoltura completa (Giro Alcista)</text>
+                </svg>`
+            },
+            {
+              name: "Harami Alcista",
+              desc: "Vela grande bajista de rango amplio contiene dentro de su cuerpo a una vela alcista pequeña (Pausa de tendencia).",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="60" y1="20" x2="60" y2="100" stroke="#ff4a4a" stroke-width="2"/>
+                <rect x="45" y="28" width="30" height="64" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <line x1="130" y1="40" x2="130" y2="80" stroke="#00b074" stroke-width="1.5"/>
+                <rect x="120" y="48" width="20" height="24" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <rect x="110" y="38" width="40" height="44" fill="none" stroke="#ffd700" stroke-width="1" stroke-dasharray="2 2"/>
+                <text x="100" y="112" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">Harami / Pausa de Fuerza</text>
+                </svg>`
+            },
+            {
+              name: "Pinzas (Tweezers)",
+              desc: "Dos o más velas consecutivas cuyas mechas frenan exactamente en el mismo nivel milimétrico en soportes.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="10" y1="95" x2="190" y2="95" stroke="#00b074" stroke-width="2"/>
+                <line x1="70" y1="40" x2="70" y2="95" stroke="#ff4a4a" stroke-width="1.5"/>
+                <rect x="60" y="45" width="20" height="35" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <line x1="130" y1="40" x2="130" y2="95" stroke="#00b074" stroke-width="1.5"/>
+                <rect x="120" y="55" width="20" height="25" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <circle cx="70" cy="95" r="3" fill="#ffd700"/>
+                <circle cx="130" cy="95" r="3" fill="#ffd700"/>
+                <text x="100" y="112" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Tweezers Bottom (Rechazo exacto)</text>
+                </svg>`
+            },
+            {
+              name: "Pauta Penetrante",
+              desc: "Vela verde abre con gap bajista y cierra superando con fuerza el 50% del cuerpo de la vela roja previa.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="40" y1="60" x2="160" y2="60" stroke="#ffd700" stroke-width="1" stroke-dasharray="3 3"/>
+                <rect x="50" y="25" width="28" height="70" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <rect x="110" y="40" width="28" height="65" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <text x="100" y="15" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">Nivel 50% superado</text>
+                <text x="100" y="115" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Fuerte Presión Compradora</text>
+                </svg>`
+            },
+            {
+              name: "Estrella de la Mañana",
+              desc: "Giro limpio de tres velas: Gran roja de fuerza, vela pequeña indecisa (Estrella) y vela verde con cierre fuerte alcista.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="35" y="25" width="20" height="50" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <rect x="88" y="85" width="20" height="12" fill="rgba(255,255,255,0.3)" stroke="#fff" stroke-width="0.5"/>
+                <line x1="98" y1="75" x2="98" y2="105" stroke="#fff" stroke-width="1"/>
+                <rect x="140" y="35" width="20" height="45" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <text x="100" y="15" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Mañana: Fuerza -> Freno -> Reversión</text>
+                </svg>`
+            },
+            {
+              name: "Tres Soldados",
+              desc: "Tres velas verdes consecutivas con cuerpos grandes y mechas cortas, confirmando momentum alcista fortísimo.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="35" y="70" width="24" height="35" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <rect x="85" y="45" width="24" height="40" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <rect x="135" y="15" width="24" height="45" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <text x="100" y="112" fill="#00b074" font-size="8" text-anchor="middle" font-family="monospace">Tres Soldados Blancos (Continuidad)</text>
+                </svg>`
+            },
+            {
+              name: "Suelo de Escalera",
+              desc: "Patrón de 5 velas: Tres velas bajistas continuas, una cuarta con mecha superior y quinta vela verde explosiva.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <rect x="15" y="20" width="18" height="25" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <rect x="45" y="40" width="18" height="25" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <rect x="75" y="60" width="18" height="25" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <line x1="115" y1="50" x2="115" y2="95" stroke="#ff4a4a" stroke-width="1.5"/>
+                <rect x="106" y="80" width="18" height="15" fill="#ff4a4a" stroke="#fff" stroke-width="0.5"/>
+                <rect x="145" y="30" width="24" height="65" fill="#00b074" stroke="#fff" stroke-width="0.5"/>
+                <text x="100" y="112" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">Agotamiento extremo y Giro Alcista</text>
+                </svg>`
+            }
+          ]
+        },
+        {
+          id: 5,
+          title: "SESIÓN 5: GEOMETRÍA CHARTISTA",
+          subtitle: "Patrones del Precio",
+          concepts: [
+            {
+              name: "Hombro Cabeza Hombro",
+              desc: "Figura clásica de reversión bajista compuesta por tres picos sucesivos. El pico central (cabeza) es el más alto, y los hombros denotan agotamiento institucional.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="15" y1="85" x2="185" y2="85" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <path d="M 20 85 L 50 45 L 75 85 L 100 20 L 125 85 L 150 45 L 180 110" fill="none" stroke="#ff4a4a" stroke-width="3" stroke-linejoin="round"/>
+                <text x="50" y="38" fill="#e0e0e0" font-size="7" text-anchor="middle" font-family="monospace">H. Izq</text>
+                <text x="100" y="13" fill="#ff4a4a" font-size="8" text-anchor="middle" font-family="monospace" font-weight="bold">Cabeza</text>
+                <text x="150" y="38" fill="#e0e0e0" font-size="7" text-anchor="middle" font-family="monospace">H. Der</text>
+                <text x="100" y="98" fill="#ffd700" font-size="7" text-anchor="middle" font-family="monospace">Línea de Cuello (Neckline)</text>
+                </svg>`
+            },
+            {
+              name: "Doble Techo (M)",
+              desc: "Estructura de reversión bajista en forma de 'M'. El precio intenta superar una resistencia dos veces sin éxito, confirmando fuerza vendedora.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="15" y1="40" x2="185" y2="40" stroke="#ff4a4a" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <line x1="15" y1="90" x2="185" y2="90" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <path d="M 30 110 L 65 40 L 100 90 L 135 40 L 170 115" fill="none" stroke="#ff4a4a" stroke-width="3" stroke-linejoin="round"/>
+                <circle cx="65" cy="40" r="4" fill="#ff4a4a"/>
+                <circle cx="135" cy="40" r="4" fill="#ff4a4a"/>
+                <text x="100" y="105" fill="#ffd700" font-size="7" text-anchor="middle" font-family="monospace">Cuello Roto (Ventas)</text>
+                </svg>`
+            },
+            {
+              name: "Doble Suelo (W)",
+              desc: "Estructura de reversión alcista en forma de 'W'. El precio testea dos veces un soporte clave donde la demanda detiene las caídas e inicia el rebote.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="15" y1="90" x2="185" y2="90" stroke="#00b074" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <line x1="15" y1="45" x2="185" y2="45" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <path d="M 30 20 L 65 90 L 100 45 L 135 90 L 170 15" fill="none" stroke="#00b074" stroke-width="3" stroke-linejoin="round"/>
+                <circle cx="65" cy="90" r="4" fill="#00b074"/>
+                <circle cx="135" cy="90" r="4" fill="#00b074"/>
+                <text x="100" y="35" fill="#ffd700" font-size="7" text-anchor="middle" font-family="monospace">Cuello Roto (Compras)</text>
+                </svg>`
+            },
+            {
+              name: "Bandera Alcista",
+              desc: "Patrón de continuación de tendencia que consiste en una fuerte subida (mástil) y un canal de consolidación descendente que rompe al alza.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="50" y1="110" x2="90" y2="40" stroke="#00b074" stroke-width="4" stroke-linecap="round"/>
+                <line x1="85" y1="35" x2="150" y2="60" stroke="#ffd700" stroke-width="2"/>
+                <line x1="90" y1="50" x2="155" y2="75" stroke="#ffd700" stroke-width="2"/>
+                <path d="M 90 40 L 105 60 L 120 48 L 135 68 L 150 56" fill="none" stroke="#e0e0e0" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M 150 56 L 180 20" fill="none" stroke="#00b074" stroke-width="3" stroke-dasharray="2 2"/>
+                <text x="70" y="85" fill="#00b074" font-size="7" font-family="monospace" font-weight="bold">Mástil</text>
+                <text x="120" y="88" fill="#ffd700" font-size="7" font-family="monospace">Consolidación</text>
+                </svg>`
+            },
+            {
+              name: "Triángulo Simétrico",
+              desc: "Líneas de soporte y resistencia convergentes que comprimen el precio previo a una ruptura explosiva.",
+              svg: `<svg viewBox="0 0 200 120" width="100%" height="100%">
+                <line x1="15" y1="15" x2="160" y2="60" stroke="#ff4a4a" stroke-width="2"/>
+                <line x1="15" y1="105" x2="160" y2="60" stroke="#00b074" stroke-width="2"/>
+                <path d="M 20 20 L 50 90 L 80 35 L 110 75 L 130 50 L 175 50 L 190 20" fill="none" stroke="#ffd700" stroke-width="2"/>
+                <path d="M 160 50 L 185 25" fill="none" stroke="#00b074" stroke-width="3"/>
+                <text x="100" y="115" fill="#ffd700" font-size="8" text-anchor="middle" font-family="monospace">Compresión de Volumen y Quiebre</text>
+                </svg>`
+            }
+          ]
+        }
+      ];
+
+      // Bind dynamic rendering in DOM
+      const container = document.getElementById("sessions-accordion-wrapper");
+      const svgScreen = document.getElementById("view-screen-svg");
+      const nameScreen = document.getElementById("view-screen-name");
+      const descScreen = document.getElementById("view-screen-desc");
+
+      function selectConcept(concept, element) {
+        // Clear all previous actives
+        document.querySelectorAll(".concept-tab").forEach(tab => tab.classList.remove("active"));
+        element.classList.add("active");
+
+        // Display contents
+        svgScreen.innerHTML = concept.svg;
+        nameScreen.innerText = concept.name.toUpperCase();
+        descScreen.innerText = concept.desc;
+      }
+
+      sessions.forEach(sess => {
+        const item = document.createElement("div");
+        item.className = "session-item collapsed";
+
+        const header = document.createElement("div");
+        header.className = "session-header";
+        header.innerHTML = `
+          <span>${sess.title} <span style="font-size: 0.65rem; color: var(--text-muted); font-weight: normal; margin-left: 4px;">(${sess.subtitle})</span></span>
+          <span class="collapse-icon" style="font-size: 0.6rem;"></span>
+        `;
+
+        header.addEventListener("click", () => {
+          const isCollapsed = item.classList.contains("collapsed");
+          // Collapse all others
+          document.querySelectorAll(".session-item").forEach(el => el.classList.add("collapsed"));
+          
+          if (isCollapsed) {
+            item.classList.remove("collapsed");
+          }
+        });
+
+        const list = document.createElement("div");
+        list.className = "concepts-list";
+
+        sess.concepts.forEach(concept => {
+          const tab = document.createElement("div");
+          tab.className = "concept-tab";
+          tab.innerHTML = `🎓 ${concept.name}`;
+          tab.addEventListener("click", (e) => {
+            e.stopPropagation();
+            selectConcept(concept, tab);
+          });
+          list.appendChild(tab);
+        });
+
+        item.appendChild(header);
+        item.appendChild(list);
+        container.appendChild(item);
+      });
+
+      // Render the very first concept on start
+      const firstConcept = sessions[0].concepts[0];
+      const firstSessionItem = container.querySelector(".session-item");
+      if (firstSessionItem) {
+        firstSessionItem.classList.remove("collapsed");
+        const firstTab = firstSessionItem.querySelector(".concept-tab");
+        if (firstTab) {
+          selectConcept(firstConcept, firstTab);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

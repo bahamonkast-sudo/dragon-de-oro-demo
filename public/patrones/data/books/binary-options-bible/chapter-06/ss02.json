@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss02",
+  "code": "SS02",
+  "name": "Patrón de Tiro Seguro 2 (Magic V con Espera)",
+  "classification": {
+    "market": "Tendencia o Buen Rango",
+    "tradeType": "Continuación según Color de Espera",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia o en un buen movimiento de rango.",
+    "Busque 1 vela verde y 2 velas rojas consecutivas (o 1 roja y 2 verdes).",
+    "Trace una línea horizontal sobre las velas (unión/apertura).",
+    "Espere a que el mercado llegue y rompa la línea horizontal (Vela de Ruptura).",
+    "A continuación, ESPERE a que aparezca una vela, sea del color que sea, y realice la operación en la misma dirección.",
+    "Si la vela de espera es VERDE -> Opere CALL en la siguiente vela. Si es ROJA -> Opere PUT en la siguiente vela.",
+    "Oscilador estocástico predeterminado: para CALL línea verde sobre roja; para PUT línea roja sobre verde."
+  ],
+  "precautions": [
+    "Asegúrese de realizar prueba retrospectiva en el par de divisas antes de operar en real.",
+    "Siga siempre la tendencia, nunca opere en contra de ella.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 8,
+    "triggerIndex": 6
+  }
+}

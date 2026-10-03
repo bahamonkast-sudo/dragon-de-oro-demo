@@ -1,0 +1,25 @@
+{
+  "id": "engulfing-bullish",
+  "code": "ENG_BULL",
+  "name": "Engullimiento Alcista",
+  "classification": {
+    "market": "TRENDING",
+    "tradeType": "CALL"
+  },
+  "requirements": [
+    "La vela actual cubre completamente la vela anterior",
+    "Cierre de la vela actual por encima del apertura de la vela anterior",
+    "Color de la vela actual diferente al anterior (verde sobre roja)"
+  ],
+  "snrRule": {
+    "nivel": "soporte dinámico",
+    "tipoRuptura": "body"
+  },
+  "stochRule": "%K > %D y ambos por encima de 50",
+  "mtgPolicy": "1_STEP",
+  "simulation": {
+    "velasBase": 3,
+    "triggerIndex": 1,
+    "resolutionCandle": 5
+  }
+}

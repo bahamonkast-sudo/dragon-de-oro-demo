@@ -1,0 +1,25 @@
+{
+  "id": "pin-bar-bullish",
+  "code": "PIN_BULL",
+  "name": "Pin Bar Alcista",
+  "classification": {
+    "market": "RANGED",
+    "tradeType": "CALL"
+  },
+  "requirements": [
+    "Cuerpo pequeño en la parte inferior de la vela",
+    "Sombra superior larga al menos 2x el cuerpo",
+    "Sombra inferior mínima o nula"
+  ],
+  "snrRule": {
+    "nivel": "resistencia",
+    "tipoRuptura": "wick"
+  },
+  "stochRule": "k > d y %K > 80",
+  "mtgPolicy": "NO_MTG",
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 2,
+    "resolutionCandle": 7
+  }
+}

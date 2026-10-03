@@ -1,0 +1,132 @@
+{
+  "url": "https://www.binaryteach.com/patron-envolvente/",
+  "slug": "patron-envolvente",
+  "depth": 1,
+  "title": "Patrón Envolvente",
+  "description": "Este es un patrón de reversión de tendencia, similar al patrón Suelo/Techo en pinzas, el patrón envolvente esta compuesto por dos velas. La segunda vela del […]",
+  "kind": "class",
+  "level": 1,
+  "order": 20,
+  "date_published": "2020-02-19T18:02:30+00:00",
+  "date_modified": "2020-02-19T18:02:32+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 194,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "Mjus3wUr5Hg",
+      "url": "https://www.youtube.com/embed/Mjus3wUr5Hg?feature=oembed",
+      "title": "Trading con velas ENVOLVENTES -opciones binarias- PATRONES DE VELAS JAPONESAS"
+    }
+  ],
+  "links": [
+    {
+      "text": "Suelo/Techo en pinzas",
+      "url": "https://www.binaryteach.com/tweezer-top-y-tweezer-bottom/",
+      "kind": "page",
+      "slug": "tweezer-top-y-tweezer-bottom"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-20-patron-envolvente-01.jpg",
+      "status": "ok",
+      "bytes": 140611
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Este es un patrón de reversión de tendencia, similar al patrón Suelo/Techo en pinzas , el patrón envolvente esta compuesto por dos velas.",
+      "html": "Este es un patrón de reversión de tendencia, similar al patrón <a class=\"internal\" href=\"https://www.binaryteach.com/tweezer-top-y-tweezer-bottom/\">Suelo/Techo en pinzas</a>, el patrón envolvente esta compuesto por dos velas."
+    },
+    {
+      "type": "paragraph",
+      "text": "La segunda vela del patrón envuelve por completo a la primera, la segunda vela es en dirección contraria a la tendencia y dirección contraria a la primer vela.",
+      "html": "La segunda vela del patrón envuelve por completo a la primera, la segunda vela es en dirección contraria a la tendencia y dirección contraria a la primer vela."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ejemplo, en una tendencia alcista nosotros esperamos que el precio llegue a una resistencia, la primer vela del patrón es alcista, la segunda vela abre con un pequeño GAP por encima de la primera y baja. La segunda vela es bajista y cierra por debajo del la primer vela, envolviéndola.",
+      "html": "Por ejemplo, en una tendencia alcista nosotros esperamos que el precio llegue a una resistencia, la primer vela del patrón es alcista, la segunda vela abre con un pequeño GAP por encima de la primera y baja. La segunda vela es bajista y cierra por debajo del la primer vela, envolviéndola."
+    },
+    {
+      "type": "paragraph",
+      "text": "En una tendencia bajista ocurre lo contrario, la primer vela es bajista, la segunda vela es alcista y abre con un gap y cierra por encima del punto de apertura de la primer vela, envolviéndola por completo.",
+      "html": "En una tendencia bajista ocurre lo contrario, la primer vela es bajista, la segunda vela es alcista y abre con un gap y cierra por encima del punto de apertura de la primer vela, envolviéndola por completo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este patrón puede ser engañoso, ya que en tendencias fuertes solo podría significar un retroceso para continuar con la tendencia. Puede darse también que la siguiente vela tras el patrón sea un retroceso pequeño antes de continuar con la reversión.",
+      "html": "Este patrón puede ser engañoso, ya que en tendencias fuertes solo podría significar un retroceso para continuar con la tendencia. Puede darse también que la siguiente vela tras el patrón sea un retroceso pequeño antes de continuar con la reversión."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explicamos cómo identificar y operar este patrón envolvente en Opciones Binarias.",
+      "html": "En el siguiente vídeo explicamos cómo identificar y operar este patrón envolvente en Opciones Binarias."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "Mjus3wUr5Hg",
+      "url": "https://www.youtube.com/embed/Mjus3wUr5Hg?feature=oembed",
+      "title": "Trading con velas ENVOLVENTES -opciones binarias- PATRONES DE VELAS JAPONESAS",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-20-patron-envolvente-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

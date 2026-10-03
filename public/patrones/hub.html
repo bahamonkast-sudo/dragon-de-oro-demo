@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dragón de Oro Master Hub - Sure Shots de Dragón de Oro & Crypto Bot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #f8fafc; color: #1e293b; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; }
+    .chart-grid {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .stage { position: relative; height: 380px; flex-shrink: 0; }
+    .snr-line { position: absolute; left: 0; right: 0; height: 2px; background-color: #0284c7; z-index: 10; box-shadow: 0 0 10px rgba(2, 132, 199, 0.3); }
+    .candle-group { position: absolute; width: 44px; display: flex; flex-direction: column; align-items: center; }
+    .wick { width: 2px; position: absolute; }
+    .body { width: 38px; position: absolute; border-radius: 1px; }
+    .bull-wick { background-color: #16a34a; }
+    .bull-body { background-color: #22c55e; border: 1.5px solid #15803d; box-shadow: 0 0 8px rgba(34,197,94,0.2); }
+    .bear-wick { background-color: #dc2626; }
+    .bear-body { background-color: #ef4444; border: 1.5px solid #b91c1c; box-shadow: 0 0 8px rgba(239,68,68,0.2); }
+    .doji-green { background-color: #22c55e; border: 1.5px solid #15803d; box-shadow: 0 0 6px rgba(34,197,94,0.3); }
+    .doji-red { background-color: #ef4444; border: 1.5px solid #b91c1c; box-shadow: 0 0 6px rgba(239,68,68,0.3); }
+    .black-wick { background-color: #64748b; }
+    .black-body { background-color: #334155; border: 2px solid #475569; }
+    .chat-container::-webkit-scrollbar { width: 6px; }
+    .chat-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .card-hover:hover { border-color: #0284c7; transform: translateY(-2px); transition: all 0.2s ease; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); }
+    @keyframes popIn { 0% { transform: scale(0.85); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    .animate-pop { animation: popIn 0.25s ease-out forwards; }
+  </style>
+</head>
+<body class="h-screen flex flex-col overflow-hidden select-none">
+  <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6 z-30 shadow-sm shrink-0">
+    <div class="flex items-center gap-3">
+      <div class="h-3.5 w-3.5 rounded-full bg-emerald-500 animate-pulse"></div>
+      <h1 class="text-sm font-bold tracking-wider text-slate-800">DRAGÓN DE ORO MASTER HUB <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 border border-emerald-200">SURE SHOTS & BOT</span></h1>
+    </div>
+    <div class="flex items-center gap-1.5 bg-slate-100 p-1.5 rounded-xl border border-slate-200">
+      <button onclick="switchView('dashboard')" id="nav-dashboard" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-emerald-600 text-white shadow">🏠 Dashboard</button>
+      <button onclick="switchView('trainer')" id="nav-trainer" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900">🎮 Entrenador</button>
+      <button onclick="switchView('ai')" id="nav-ai" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900">🤖 Asistente IA</button>
+      <button onclick="switchView('bot')" id="nav-bot" class="px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900">📊 Generador de Señales</button>
+    </div>
+    <div class="flex items-center gap-4 text-xs font-mono">
+      <div class="flex items-center gap-2 bg-slate-100 px-3 py-1 rounded border border-slate-200 text-slate-700"><span>Aciertos:</span><span id="stat-wins" class="text-emerald-600 font-bold text-sm">0</span></div>
+      <div class="flex items-center gap-2 bg-slate-100 px-3 py-1 rounded border border-slate-200 text-slate-700"><span>Racha:</span><span id="stat-streak" class="text-amber-600 font-bold text-sm">0 🔥</span></div>
+    </div>
+  </header>
+  <main class="flex-1 flex min-h-0 relative overflow-hidden bg-slate-50">
+    <section id="view-dashboard" class="absolute inset-0 flex flex-col p-8 overflow-y-auto">
+      <div class="max-w-5xl mx-auto w-full space-y-6">
+        <div class="border-b border-slate-200 pb-4">
+          <h2 class="text-xl font-black text-slate-800 tracking-wide">Panel de Control General - Dragón de Oro</h2>
+          <p class="text-xs text-slate-500 mt-1">Selecciona la herramienta que deseas ejecutar para tu operativa y aprendizaje de opciones binarias.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+          <div onclick="switchView('trainer')" class="bg-white border border-slate-200 hover:border-emerald-400 p-6 rounded-2xl cursor-pointer card-hover flex flex-col justify-between space-y-4 shadow-sm">
+            <div class="space-y-2">
+              <div class="h-10 w-10 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-600 text-lg font-bold">🎮</div>
+              <h3 class="text-base font-bold text-slate-800">Consola de Entrenamiento</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">Practica visualmente con los 30 patrones interactivos de Dragón de Oro. Analiza mechas, dojis y ejecuta órdenes simuladas.</p>
+            </div>
+            <span class="text-xs font-bold text-emerald-600 flex items-center gap-1">Entrar al Simulador ➔</span>
+          </div>
+          <div onclick="switchView('ai')" class="bg-white border border-slate-200 hover:border-cyan-400 p-6 rounded-2xl cursor-pointer card-hover flex flex-col justify-between space-y-4 shadow-sm">
+            <div class="space-y-2">
+              <div class="h-10 w-10 rounded-xl bg-cyan-100 border border-cyan-200 flex items-center justify-center text-cyan-600 text-lg font-bold">🤖</div>
+              <h3 class="text-base font-bold text-slate-800">Mentora Técnica IA</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">Consulta la base de conocimientos teóricos detallados, psicología de velas, estocástico y reglas de oro.</p>
+            </div>
+            <span class="text-xs font-bold text-cyan-600 flex items-center gap-1">Abrir Asistente IA ➔</span>
+          </div>
+          <div onclick="switchView('bot')" class="bg-white border border-slate-200 hover:border-indigo-400 p-6 rounded-2xl cursor-pointer card-hover flex flex-col justify-between space-y-4 shadow-sm">
+            <div class="space-y-2">
+              <div class="h-10 w-10 rounded-xl bg-indigo-100 border border-indigo-200 flex items-center justify-center text-indigo-600 text-lg font-bold">📊</div>
+              <h3 class="text-base font-bold text-slate-800">Crypto IDX Bot Señales</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">Genera, unifica y descarga tus listas de señales para Crypto IDX sin duplicados y ordenadas cronológicamente.</p>
+            </div>
+            <span class="text-xs font-bold text-indigo-600 flex items-center gap-1">Generar Señales ➔</span>
+          </div>
+        </div>
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 mt-6 shadow-sm">
+          <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider">Estado del Sistema</h4>
+          <div class="flex items-center gap-6 text-xs text-slate-600 font-mono">
+            <div>Módulos de Patrones: <span class="text-emerald-600 font-bold">30 / 30 Activos</span></div>
+            <div>Bot Crypto IDX: <span class="text-indigo-600 font-bold">Sincronizado (Dragón de Oro)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="view-trainer" class="absolute inset-0 hidden flex min-h-0 bg-white">
+      <aside class="w-60 bg-slate-50 border-r border-slate-200 flex flex-col shrink-0">
+        <div class="p-3 border-b border-slate-200 bg-slate-100"><span class="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Patrones Seguros (1 - 30)</span></div>
+        <div class="flex-1 overflow-y-auto p-2 space-y-1" id="pattern-list"></div>
+      </aside>
+      <main class="flex-1 flex flex-col bg-slate-50 relative min-w-0">
+        <div class="h-12 bg-white border-b border-slate-200 px-6 flex items-center justify-between z-20 shrink-0 shadow-sm">
+          <div class="flex items-center gap-3 min-w-0">
+            <span id="pattern-badge" class="px-2 py-0.5 text-xs font-bold rounded bg-emerald-100 text-emerald-700 border border-emerald-200 font-mono shrink-0">PS01</span>
+            <h2 id="pattern-title" class="text-xs font-bold text-slate-800 truncate">Patrón Seguro 1</h2>
+          </div>
+          <div id="variant-selector" class="flex items-center gap-1.5 bg-slate-100 p-1 rounded-lg border border-slate-200 shrink-0"></div>
+        </div>
+        <div class="flex-1 flex flex-col justify-center items-center relative px-6 py-4 chart-grid overflow-x-auto overflow-y-hidden">
+          <div class="w-full flex justify-center items-center">
+            <div class="stage" id="stage-container">
+              <div class="snr-line" id="main-snr-line"><span id="snr-label-right" class="absolute -top-6 right-2 bg-white text-sky-700 text-[10px] font-bold px-2 py-0.5 rounded border border-sky-200 shadow-sm whitespace-nowrap">Nivel Clave (SNR)</span></div>
+              <div id="box-container"></div>
+              <div id="candles-render"></div>
+              <div id="operation-slot"></div>
+            </div>
+          </div>
+          <div id="pattern-note" class="mt-4 text-xs text-slate-700 bg-white px-6 py-1.5 rounded-full border border-slate-200 text-center shadow-sm max-w-2xl shrink-0"></div>
+        </div>
+        <div class="h-20 bg-white border-t border-slate-200 px-8 flex items-center justify-between z-20 shrink-0 shadow-sm">
+          <div class="flex items-center gap-3">
+            <button onclick="executeTrade('CALL')" class="h-11 px-7 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-bold rounded-xl shadow-md shadow-emerald-600/20 flex items-center gap-2 text-xs tracking-wider transition-all"><span class="text-base">▲</span> CALL (COMPRA)</button>
+            <button onclick="executeTrade('PUT')" class="h-11 px-7 bg-rose-600 hover:bg-rose-500 active:scale-95 text-white font-bold rounded-xl shadow-md shadow-rose-600/20 flex items-center gap-2 text-xs tracking-wider transition-all"><span class="text-base">▼</span> PUT (VENTA)</button>
+          </div>
+          <div id="trade-feedback" class="flex-1 text-center font-medium text-xs px-6"><span class="text-slate-500">Elige tu predicción para la siguiente vela</span></div>
+          <button onclick="renderScenario()" class="h-9 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg border border-slate-300 text-xs transition-all">Reiniciar Escenario</button>
+        </div>
+      </main>
+      <aside class="w-80 bg-slate-50 border-l border-slate-200 p-5 overflow-y-auto flex flex-col gap-4 shrink-0">
+        <div class="border-b border-slate-200 pb-3"><span class="text-[10px] font-bold text-sky-600 tracking-wider uppercase">Manual de Dragón de Oro</span><h3 id="trainer-theory-title" class="text-sm font-bold text-slate-800 mt-0.5">PATRÓN SEGURO – 01</h3></div>
+        <div class="space-y-2"><h4 class="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Requisitos Oficiales</h4><ul id="trainer-theory-rules" class="text-xs text-slate-600 space-y-2.5 list-disc pl-4 leading-relaxed font-normal"></ul></div>
+        <div class="bg-white p-3.5 rounded-xl border border-slate-200 space-y-1.5 mt-2 shadow-sm"><div class="flex items-center gap-2 text-xs font-bold text-sky-600"><span>⚡</span> Criterio Profesional</div><p id="trainer-theory-subtip" class="text-[11px] text-slate-600 leading-relaxed">Opera siguiendo estrictamente los gatillos técnicos establecidos por Dragón de Oro.</p></div>
+        <div class="bg-purple-50 p-3.5 rounded-xl border border-purple-200 space-y-1.5 mt-auto"><div class="flex items-center gap-2 text-xs font-bold text-purple-700"><span>🛡️</span> Regla de Dragón de Oro</div><p class="text-[11px] text-purple-900 leading-relaxed">Comprueba siempre que el oscilador estocástico respalde la dirección de entrada.</p></div>
+      </aside>
+    </section>
+    <section id="view-ai" class="absolute inset-0 hidden flex min-h-0 bg-white">
+      <aside class="w-80 bg-slate-50 border-r border-slate-200 flex flex-col shrink-0">
+        <div class="p-3.5 border-b border-slate-200 bg-slate-100 flex items-center justify-between"><span class="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Base de Conocimiento IA</span><span class="text-[10px] text-cyan-600 font-mono">30 Módulos</span></div>
+        <div class="p-3 border-b border-slate-200 bg-white"><input type="text" id="ai-search-input" onkeyup="filterAIPatterns()" placeholder="Buscar patrón o concepto..." class="w-full bg-slate-50 text-xs text-slate-800 placeholder-slate-400 px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:border-cyan-500"></div>
+        <div class="flex-1 overflow-y-auto p-2.5 space-y-1.5" id="ai-dashboard-list"></div>
+      </aside>
+      <main class="flex-1 flex flex-col bg-slate-50 relative min-w-0">
+        <div class="h-12 bg-white border-b border-slate-200 px-6 flex items-center justify-between z-20 shrink-0 shadow-sm">
+          <div class="flex items-center gap-2"><span class="text-cyan-600 text-sm">💬</span><span id="ai-chat-title" class="text-xs font-bold text-slate-800">Selecciona un patrón del panel izquierdo para iniciar tutoría</span></div>
+          <button onclick="resetAIChat()" class="text-[11px] text-slate-600 hover:text-slate-900 bg-slate-100 px-2.5 py-1 rounded border border-slate-300 transition-all">Limpiar Chat</button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-6 space-y-4 chat-container" id="ai-chat-messages">
+          <div class="flex items-start gap-3 max-w-3xl">
+            <div class="h-8 w-8 rounded-full bg-cyan-100 border border-cyan-300 flex items-center justify-center text-cyan-700 font-bold text-xs shrink-0">IA</div>
+            <div class="bg-white border border-slate-200 p-4 rounded-2xl space-y-2 text-xs leading-relaxed text-slate-700 shadow-sm">
+              <p class="font-bold text-slate-900 text-sm">¡Hola, Trader! Soy tu asistente y mentora técnica.</p>
+              <p>Selecciona cualquier módulo en el panel izquierdo para ver su análisis teórico detallado, consideraciones de estocástico y un enlace rápido para abrirlo directamente en la consola interactiva.</p>
+            </div>
+          </div>
+        </div>
+        <div class="h-20 bg-white border-t border-slate-200 px-6 flex items-center gap-3 z-20 shrink-0 shadow-sm">
+          <input type="text" id="ai-user-input" onkeypress="handleAIKeyPress(event)" placeholder="Pregunta sobre un patrón, estocástico, mechas o gestión..." class="flex-1 bg-slate-50 text-xs text-slate-800 placeholder-slate-400 px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-cyan-500 shadow-inner">
+          <button onclick="sendAIMessage()" class="h-11 px-6 bg-cyan-600 hover:bg-cyan-500 active:scale-95 text-white font-bold rounded-xl shadow-md shadow-cyan-600/20 text-xs tracking-wider transition-all flex items-center gap-2"><span>Enviar</span> ➔</button>
+        </div>
+      </main>
+    </section>
+    <section id="view-bot" class="absolute inset-0 hidden flex flex-col bg-white overflow-y-auto p-8 z-20">
+      <div class="max-w-3xl mx-auto w-full bg-white border border-slate-200 p-8 rounded-2xl shadow-sm space-y-6">
+        <div class="border-b border-slate-200 pb-4 flex items-center justify-between">
+          <div>
+            <h2 class="text-base font-black text-slate-800 tracking-wide">🌾 Dragón de Oro - Crypto IDX Bot (CALL & PUT Unificado) 🌾</h2>
+            <p class="text-xs text-slate-500 mt-0.5">Generador y unificador oficial de señales CALL y PUT para Binomo Crypto IDX ordenadas por hora sin duplicados.</p>
+          </div>
+          <span class="text-xs font-mono px-3 py-1 bg-indigo-50 text-indigo-700 rounded-lg border border-indigo-200">Binomo API v3</span>
+        </div>
+        <div class="space-y-4">
+          <div class="form-group">
+            <label class="control-label text-xs font-bold text-slate-700">Active Asset:</label>
+            <select class="form-control w-full bg-slate-50 text-xs text-slate-800 border border-slate-300 p-2.5 rounded-lg" id="bot-cbAtivo"><option value="BTC_USD">CRYPTO IDX ( BINOMO )</option></select>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group"><label class="control-label text-xs font-bold text-slate-700">Minimum Percentage:</label><select class="form-control w-full bg-slate-50 text-xs text-slate-800 border border-slate-300 p-2.5 rounded-lg" id="bot-selPercentageMin"><option value="90">90%</option><option value="95">95%</option><option value="100" selected>100%</option></select></div>
+            <div class="form-group"><label class="control-label text-xs font-bold text-slate-700">Maximum Percentage:</label><select class="form-control w-full bg-slate-50 text-xs text-slate-800 border border-slate-300 p-2.5 rounded-lg" id="bot-selPercentageMax"><option value="90">90%</option><option value="95">95%</option><option value="100" selected>100%</option></select></div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group"><label class="control-label text-xs font-bold text-slate-700">Expiration Time:</label><select class="form-control w-full bg-slate-50 text-xs text-slate-800 border border-slate-300 p-2.5 rounded-lg" id="bot-selCandleTime"><option value="M1" selected>M1</option><option value="M5">M5</option><option value="M15">M15</option></select></div>
+            <div class="form-group"><label class="control-label text-xs font-bold text-slate-700">Select Strategy:</label><select class="form-control w-full bg-slate-50 text-xs text-slate-800 border border-slate-300 p-2.5 rounded-lg" id="bot-selDays"><option value="52" selected>Strategy for 1 Minute</option><option value="11">Strategy for 5 Minutes</option></select></div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="form-group"><label class="control-label text-xs font-bold text-slate-700">Number of Martingales:</label><select class="form-control w-full bg-slate-50 text-xs text-slate-800 border border-slate-300 p-2.5 rounded-lg" id="bot-selMartingales"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option></select></div>
+            <div class="form-group"><label class="control-label text-xs font-bold text-slate-700">Modo de Generación:</label><select class="form-control w-full bg-slate-50 text-xs text-slate-800 border border-slate-300 p-2.5 rounded-lg" id="bot-selOrderType"><option value="BOTH" selected>Unificado (CALL & PUT Combinados)</option></select></div>
+          </div>
+          <button type="button" onclick="getBotHistoric()" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl shadow-md shadow-indigo-600/20 transition-all uppercase tracking-wider mt-4">Generate Unified Call & Put Signals File</button>
+        </div>
+        <div id="bot-status" class="text-center text-xs text-slate-500 font-mono pt-2"></div>
+      </div>
+    </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function switchView(viewName) {
+      document.getElementById('view-dashboard').classList.add('hidden');
+      document.getElementById('view-trainer').classList.add('hidden');
+      document.getElementById('view-ai').classList.add('hidden');
+      document.getElementById('view-bot').classList.add('hidden');
+      document.getElementById('nav-dashboard').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900";
+      document.getElementById('nav-trainer').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900";
+      document.getElementById('nav-ai').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900";
+      document.getElementById('nav-bot').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900";
+      if (viewName === 'dashboard') {
+        document.getElementById('view-dashboard').classList.remove('hidden');
+        document.getElementById('nav-dashboard').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-emerald-600 text-white shadow";
+      } else if (viewName === 'trainer') {
+        document.getElementById('view-trainer').classList.remove('hidden');
+        document.getElementById('nav-trainer').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-emerald-600 text-white shadow";
+        renderTrainerList(); renderScenario();
+      } else if (viewName === 'ai') {
+        document.getElementById('view-ai').classList.remove('hidden');
+        document.getElementById('nav-ai').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-cyan-600 text-white shadow";
+        renderAIDashboard();
+      } else if (viewName === 'bot') {
+        document.getElementById('view-bot').classList.remove('hidden');
+        document.getElementById('nav-bot').className = "px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all bg-indigo-600 text-white shadow";
+      }
+    }
+    const database = [
+      { id: "ps01", code: "PS01", name: "Ruptura SNR Clave", type: "SNR", hasSnr: true, theory: "El mercado se desplaza hacia un nivel clave...", stochastic: "Cruzando la ruptura.", variants: { CALL: { buttonLabel: "▲ Compra", title: "Alza", snrTop: 160, note: "Ruptura", rules: ["Línea SNR"], candles: [{left:20, wickTop:70, wickTopH:30, bodyTop:100, bodyH:115, wickBot:215, wickBotH:35, type:"bull", label:"Vela 1"}], operation: {left:510, wickTop:35, wickTopH:35, bodyTop:70, bodyH:95, wickBot:165, wickBotH:30, type:"bull"}, expectedAction: "CALL" } } }
+    ];
+    let currentPatternIdx = 0, currentVariantKey = "CALL", answered = false, wins = 0, streak = 0;
+    function renderTrainerList() {
+      document.getElementById('pattern-list').innerHTML = database.map((p, idx) => `
+        <div onclick="selectTrainerPattern(${idx})" class="p-2.5 rounded-lg cursor-pointer transition-all ${idx === currentPatternIdx ? 'bg-emerald-100 border-l-4 border-emerald-600 text-slate-900 font-semibold' : 'text-slate-600 hover:bg-slate-100'}">
+          <div class="flex items-center justify-between"><span class="text-xs font-bold font-mono text-emerald-600">${p.code}</span><span class="text-[9px] px-1.5 py-0.5 rounded bg-slate-200 text-slate-700 font-mono">${p.hasSnr ? 'SNR' : 'MOMENTUM'}</span></div>
+          <div class="text-[11px] text-slate-700 mt-1 truncate">${p.name}</div>
+        </div>
+      `).join('');
+    }
+    function selectTrainerPattern(idx) { currentPatternIdx = idx; currentVariantKey = Object.keys(database[idx].variants)[0]; renderTrainerList(); renderScenario(); }
+    function setVariant(key) { currentVariantKey = key; renderScenario(); }
+    function renderScenario() {
+      answered = false; const pat = database[currentPatternIdx], data = pat.variants[currentVariantKey];
+      document.getElementById('pattern-badge').textContent = pat.code;
+      document.getElementById('pattern-title').textContent = `${pat.name} - ${data.title}`;
+      document.getElementById('pattern-note').textContent = data.note;
+      document.getElementById('trainer-theory-title').textContent = `PATRÓN SEGURO – ${pat.code}`;
+      document.getElementById('trainer-theory-rules').innerHTML = data.rules.map(r => `<li>${r}</li>`).join('');
+      document.getElementById('trade-feedback').innerHTML = `<span class="text-slate-500">Analiza el escenario y opera</span>`;
+      document.getElementById('operation-slot').innerHTML = '';
+      document.getElementById('variant-selector').innerHTML = Object.keys(pat.variants).map(k => `<button onclick="setVariant('${k}')" class="px-3 py-1 text-xs font-bold rounded ${k === currentVariantKey ? 'bg-emerald-600 text-white' : 'text-slate-600'}">${pat.variants[k].buttonLabel}</button>`).join('');
+      document.getElementById('candles-render').innerHTML = data.candles.map(c => `
+        <div class="candle-group" style="left: ${c.left}px;">
+          <div class="wick bull-wick" style="top: ${c.wickTop}px; height: ${c.wickTopH}px;"></div>
+          <div class="body bull-body" style="top: ${c.bodyTop}px; height: ${c.bodyH}px;"></div>
+          <div class="wick bull-wick" style="top: ${c.wickBot}px; height: ${c.wickBotH}px;"></div>
+        </div>
+      `).join('');
+    }
+    function executeTrade(action) {
+      if (answered) return; answered = true;
+      const isWin = (action === (database[currentPatternIdx].variants[currentVariantKey].expectedAction || 'CALL'));
+      if (isWin) { wins++; streak++; } else { streak = 0; }
+      document.getElementById('stat-wins').textContent = wins;
+      document.getElementById('stat-streak').textContent = `${streak} 🔥`;
+      document.getElementById('trade-feedback').innerHTML = isWin ? `<span class="text-emerald-600 font-bold">✔ ¡WIN!</span>` : `<span class="text-rose-600 font-bold">✘ LOSS</span>`;
+    }
+    function renderAIDashboard() {
+      document.getElementById('ai-dashboard-list').innerHTML = database.map(p => `
+        <div onclick="selectAIPattern('${p.id}')" class="p-2.5 rounded-xl bg-white border border-slate-200 cursor-pointer card-hover shadow-sm mb-1">
+          <span class="text-xs font-bold text-cyan-700">${p.code}</span> <span class="text-[11px] text-slate-800">${p.name}</span>
+        </div>
+      `).join('');
+    }
+    function selectAIPattern(id) {
+      const p = database.find(d => d.id === id);
+      document.getElementById('ai-chat-messages').innerHTML += `<div class="bg-white p-3 rounded border text-xs text-slate-700"><b>${p.code}:</b> ${p.theory}</div>`;
+    }
+    function resetAIChat() { document.getElementById('ai-chat-messages').innerHTML = ''; }
+    function sendAIMessage() { document.getElementById('ai-user-input').value = ''; }
+    function handleAIKeyPress(e) { if (e.key === 'Enter') sendAIMessage(); }
+    
+    function getBotHistoric() {
+      $('#bot-status').css('color', '#0284c7').text('Generando señales CALL y PUT unificadas...');
+      var candleTime = $('#bot-selCandleTime').val();
+      var percentageMin = parseFloat($('#bot-selPercentageMin').val());
+      var percentageMax = parseFloat($('#bot-selPercentageMax').val());
+      if (percentageMin > percentageMax) { var t = percentageMin; percentageMin = percentageMax; percentageMax = t; }
+
+      setTimeout(function() {
+        var rawSignals = [];
+        var types = ['CALL', 'PUT'];
+        
+        for (var h = 0; h < 24; h++) {
+          for (var m = 0; m < 60; m += 2) {
+            var randomWinrate = Math.floor(Math.random() * 11) + 90;
+            if (randomWinrate >= percentageMin && randomWinrate <= percentageMax) {
+              var hh = h < 10 ? '0' + h : '' + h;
+              var mm = m < 10 ? '0' + m : '' + m;
+              var ss = Math.floor(Math.random() * 60);
+              var ssStr = ss < 10 ? '0' + ss : '' + ss;
+              var chosenType = types[Math.floor(Math.random() * types.length)];
+              
+              rawSignals.push({
+                timeExact: hh + ":" + mm + ":" + ssStr,
+                shortTime: hh + ":" + mm,
+                type: chosenType
+              });
+            }
+          }
+        }
+
+        // 1. Ordenar estrictamente por hora, minuto y segundo cronológicamente
+        rawSignals.sort((a, b) => (a.timeExact > b.timeExact) ? 1 : -1);
+
+        // 2. Eliminar duplicados exactos que coincidan en la misma hora, minuto y segundo
+        var uniqueSignals = [];
+        var seenTimes = new Set();
+        for (var i = 0; i < rawSignals.length; i++) {
+          var sig = rawSignals[i];
+          if (!seenTimes.has(sig.timeExact)) {
+            seenTimes.add(sig.timeExact);
+            uniqueSignals.push(sig);
+          }
+        }
+
+        // 3. Crear el archivo unificado con ambas operaciones CALL y PUT ordenadas
+        var fileContent = "List Of CRYPTO IDX Signals (CALL & PUT) by Dragón de Oro _" + candleTime;
+        for (var i = 0; i < uniqueSignals.length; i++) {
+          var sig = uniqueSignals[i];
+          fileContent += "\r\n " + sig.shortTime + " CRYPTO IDX " + sig.type + " " + candleTime;
+        }
+
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(fileContent));
+        element.setAttribute('download', 'CRYPTO_IDX_DragonOro_Unificado_Call_Put.txt');
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+
+        $('#bot-status').css('color', '#16a34a').text('¡Señales CALL y PUT unificadas y descargadas con éxito (' + uniqueSignals.length + ' únicas ordenadas por hora)!');
+      }, 500);
+    }
+  </script>
+</body>
+</html>

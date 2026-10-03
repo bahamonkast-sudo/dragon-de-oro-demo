@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss10",
+  "code": "SS10",
+  "name": "Patrón Seguro 10 (Gap Up y Gap Down - Operación Doble)",
+  "classification": {
+    "market": "Todo tipo de mercado (Tendencia o Rango)",
+    "tradeType": "Impulso por Gap + Reversión por Relleno",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "No importa si el mercado está en tendencia, rango o movimiento apilado. Este patrón funciona en todo tipo de mercados.",
+    "Para dirección ALCISTA: espere a que una vela forme un GAP UP (salto hacia arriba al abrir).",
+    "1ª OPERACIÓN (A favor del Gap): Realice la operación en dirección ALZA (CALL).",
+    "2ª OPERACIÓN (Relleno del Gap): Después de la operación en dirección alcista, se realiza una operación en dirección BAJISTA (PUT), ya que el mercado creará una vela roja para llenar el gap.",
+    "Para dirección BAJISTA: espere a que una vela forme un GAP DOWN (salto hacia abajo al abrir). Realice la 1ª operación en BAJA (PUT) y la 2ª operación en ALZA (CALL) para el relleno.",
+    "Oscilador estocástico: línea verde sobre roja para compras; roja sobre verde para ventas."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de operar en real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación.",
+    "Compruebe que el gap sea un salto real de cotización visible entre el cierre de una vela y la apertura de la siguiente."
+  ],
+  "simulation": {
+    "velasBase": 3,
+    "triggerIndex": 0
+  }
+}

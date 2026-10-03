@@ -1,0 +1,154 @@
+{
+  "url": "https://www.binaryteach.com/cunas-alcistas-y-bajistas/",
+  "slug": "cunas-alcistas-y-bajistas",
+  "depth": 1,
+  "title": "Cuñas Alcistas y Bajistas",
+  "description": "Las cuñas son figuras chartistas que cumplen con funciones similares a las de el banderín. Es un patrón que nos indica un ligero descanso del precio, […]",
+  "kind": "class",
+  "level": 1,
+  "order": 10,
+  "date_published": "2020-02-05T20:47:15+00:00",
+  "date_modified": "2020-02-05T20:47:17+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 200,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "wa0NPtQyvsM",
+      "url": "https://www.youtube.com/embed/wa0NPtQyvsM?feature=oembed",
+      "title": "Cuñas Alcistas/Bajistas -Opciones Binarias- Figuras Chartistas"
+    }
+  ],
+  "links": [
+    {
+      "text": "banderín.",
+      "url": "https://www.binaryteach.com/banderin-alcista-y-bajista/",
+      "kind": "page",
+      "slug": "banderin-alcista-y-bajista"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-10-cunas-alcistas-y-bajistas-01.jpg",
+      "status": "ok",
+      "bytes": 94978
+    },
+    {
+      "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Las cuñas son figuras chartistas que cumplen con funciones similares a las de el banderín.",
+      "html": "Las cuñas son figuras chartistas que cumplen con funciones similares a las de el <a class=\"internal\" href=\"https://www.binaryteach.com/banderin-alcista-y-bajista/\">banderín. </a>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Es un patrón que nos indica un ligero descanso del precio, antes de continuar con la tendencia. Hay que tener espacial atención a la cuña, pues apunta en dirección contraría al movimiento tras la ruptura.",
+      "html": "Es un patrón que nos indica un ligero descanso del precio, antes de continuar con la tendencia. Hay que tener espacial atención a  la cuña, pues apunta en dirección contraría al movimiento tras la ruptura."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este patrón forma una figura que se asemeja a una cuña (cómo su nombre lo indica), y para ello debe cumplir con ciertas caracteristicas:",
+      "html": "Este patrón forma una figura que se asemeja a una cuña (cómo su nombre lo indica), y para ello debe cumplir con ciertas caracteristicas:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Encontrarse en una tendencia definida.",
+          "html": "Encontrarse en una tendencia definida."
+        },
+        {
+          "text": "Formación de una pequeña consolidación en forma de cuña.",
+          "html": "Formación de una pequeña consolidación en forma de cuña."
+        },
+        {
+          "text": "Al menos dos testeos en los soportes y dos testeos en las resistencias.",
+          "html": "Al menos dos testeos en los soportes y dos testeos en las resistencias."
+        },
+        {
+          "text": "La distancia en la tendencia previa nos indica la altura del nivel objetivo tras la ruptura.",
+          "html": "La distancia en la tendencia previa nos indica la altura del nivel objetivo tras la ruptura."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de que surja el patrón es necesario identificar una tendencia previa. Es importante que sepas que estos patrones que estamos mencionando en las ultimas clases, reducen su efectividad si el mercado esta plano o sin tendencia.",
+      "html": "Antes de que surja el patrón es necesario identificar una tendencia previa. Es importante que sepas que estos patrones que estamos mencionando en las ultimas clases, reducen su efectividad si el mercado esta plano o sin tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las cuñas suelen ser de un tamaño bastante reducido, y se forman cuando el precio consolida. Si la consolidación es muy pequeña puede ser difícil llegar a detectar esta figura.",
+      "html": "Las cuñas suelen ser de un tamaño bastante reducido,  y se forman cuando el precio consolida. Si la consolidación es muy pequeña puede ser difícil llegar a detectar esta figura."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico cómo identificar y cómo operar una cuña. Así como algunos ejemplos.",
+      "html": "En el siguiente vídeo explico cómo identificar y cómo operar una cuña. Así como algunos ejemplos."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "wa0NPtQyvsM",
+      "url": "https://www.youtube.com/embed/wa0NPtQyvsM?feature=oembed",
+      "title": "Cuñas Alcistas/Bajistas -Opciones Binarias- Figuras Chartistas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-10-cunas-alcistas-y-bajistas-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

@@ -1,0 +1,569 @@
+{
+  "url": "https://www.binaryteach.com/ciclo-del-mercado-tendencias/",
+  "slug": "ciclo-del-mercado-tendencias",
+  "depth": 1,
+  "title": "Ciclo del Mercado -Tendencias",
+  "description": "El mercado de divisas realiza diferentes movimientos, estos movimientos se pueden catalogar en fases. Cuatro fases comunes que formal el ciclo completo del mercado. Generalmente es […]",
+  "kind": "class",
+  "level": 1,
+  "order": 2,
+  "date_published": "2020-02-01T21:32:46+00:00",
+  "date_modified": "2020-04-12T22:46:10+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 422,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "Uo3Jr6XhJk4",
+      "url": "https://www.youtube.com/embed/Uo3Jr6XhJk4?feature=oembed",
+      "title": "Ciclos del PRECIO y ESTRUCTURA del MERCADO -Opciones Binarias-"
+    },
+    {
+      "provider": "youtube",
+      "id": "VvA0dfzDyEQ",
+      "url": "https://www.youtube.com/embed/VvA0dfzDyEQ?feature=oembed",
+      "title": "Qué son las TENDENCIAS en el Trading -Opciones Binarias-"
+    },
+    {
+      "provider": "youtube",
+      "id": "5eOhZcnvre4",
+      "url": "https://www.youtube.com/embed/5eOhZcnvre4?feature=oembed",
+      "title": "Condiciones del Mercado en el TRADING -TENDENCIAS- Opciones Binarias"
+    }
+  ],
+  "links": [
+    {
+      "text": "Resumen El Gráfico + Actividad",
+      "url": "https://www.binaryteach.com/el-grafico-entendiendo-nuestra-area-de-trabajo/",
+      "kind": "page",
+      "slug": "el-grafico-entendiendo-nuestra-area-de-trabajo"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-01.jpg",
+      "status": "ok",
+      "bytes": 93955
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "status": "ok",
+      "bytes": 33859
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "status": "ok",
+      "bytes": 41592
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "original",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg",
+          "width": 0
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-04.jpg",
+      "status": "ok",
+      "bytes": 35762
+    },
+    {
+      "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-05.jpg",
+      "status": "ok",
+      "bytes": 102839
+    },
+    {
+      "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "status": "ok",
+      "bytes": 44914
+    },
+    {
+      "url": "https://i.ytimg.com/vi/5eOhZcnvre4/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/5eOhZcnvre4/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/5eOhZcnvre4/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-07.jpg",
+      "status": "ok",
+      "bytes": 61252
+    },
+    {
+      "url": "https://i.ytimg.com/vi/5eOhZcnvre4/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/5eOhZcnvre4/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/5eOhZcnvre4/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/5eOhZcnvre4/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "El mercado de divisas realiza diferentes movimientos, estos movimientos se pueden catalogar en fases. Cuatro fases comunes que formal el ciclo completo del mercado.",
+      "html": "El mercado de divisas realiza diferentes movimientos, estos movimientos se pueden catalogar en fases.  Cuatro fases  comunes que formal el ciclo completo del mercado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Generalmente es difícil identificar las fases del mercado hasta que ya hayan terminado de crearse. Cuando nosotros analizamos para poder tomar una operación, leemos la historia del precio, donde estuvo antes para saber a donde podría moverse ahora. Esa historia la podemos entender mucho mejor si seguimos las fases del mercado para saber en que parte del ciclo se encuentra.",
+      "html": "Generalmente es difícil identificar las fases del mercado hasta que ya hayan terminado de crearse. Cuando nosotros analizamos para poder tomar una operación, leemos la historia del precio, donde estuvo antes para saber a donde podría moverse ahora. Esa historia la podemos entender mucho mejor si seguimos las fases del mercado para saber en que parte del ciclo se encuentra."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico a detalle los diferentes ciclos del mercado:",
+      "html": "En el siguiente vídeo explico a detalle los diferentes ciclos del mercado:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "Uo3Jr6XhJk4",
+      "url": "https://www.youtube.com/embed/Uo3Jr6XhJk4?feature=oembed",
+      "title": "Ciclos del PRECIO y ESTRUCTURA del MERCADO -Opciones Binarias-",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo podemos ver, el mercado se mueve en diferentes direcciones, estas direcciones nos muestran tendencias.",
+      "html": "Cómo podemos ver, el mercado se mueve en diferentes direcciones, estas direcciones nos muestran tendencias."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos identificar las siguientes tendencias o fases:",
+      "html": "Podemos identificar las siguientes tendencias o fases:"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Alcista / Fase Alcista",
+      "html": "<strong>Tendencia Alcista</strong> <strong>/ Fase Alcista</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decimos que es una tendencia alcista cuando el precio a subido. En tendencias generales podemos ver que el precio se mueve creando máximos y mínimos más altos.",
+      "html": "Decimos que es una tendencia alcista cuando el precio a subido. En tendencias generales podemos ver que el precio se mueve creando máximos y mínimos más altos."
+    },
+    {
+      "type": "paragraph",
+      "text": "A medida que esta tendencia se va desarrollando, van entrando más inversores en compra, quienes continúan empujando el precio hacia arriba.",
+      "html": "A medida que esta tendencia se va desarrollando, van entrando más inversores en compra, quienes continúan empujando el precio hacia arriba."
+    },
+    {
+      "type": "paragraph",
+      "text": "La fase que antecede a una tendencia alcista suele ser una consolidación, también conocida como acumulación.",
+      "html": "La fase que antecede a una tendencia alcista suele ser una consolidación, también conocida como acumulación."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Tendencia Alcista, la flecha blanca nos muestra la dirección alcista del precio. Los círculos amarillos nos muestran los máximos (círculos por encima) y mínimos (círculos por debajo) que va haciendo el precio, en este caso máximos y mínimos más altos.",
+      "width": 1280,
+      "height": 720,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Bajista / Fase Bajista",
+      "html": "<strong>Tendencia Bajista</strong> <strong>/ Fase Bajista</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decimos que es una tendencia bajista cuando el precio a bajado. En tendencias generales podemos ver que el precio se mueve creando máximos y mínimos más bajos.",
+      "html": "Decimos que es una tendencia bajista cuando el precio a bajado. En tendencias generales podemos ver que el precio se mueve creando máximos y mínimos más bajos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cuando el precio empieza a mostrar sus nuevos movimientos se van uniendo inversores para tratar de seguir la corriente del precio, haciendo que el precio continúe su camino bajista.",
+      "html": "Cuando el precio empieza a mostrar sus nuevos movimientos se van uniendo inversores para tratar de seguir la corriente del precio, haciendo que el precio continúe su camino bajista."
+    },
+    {
+      "type": "paragraph",
+      "text": "La fase que antecede a este movimiento suele ser una consolidación, también conocida como distribución.",
+      "html": "La fase que antecede a este movimiento suele ser una consolidación, también conocida como distribución."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Tendencia Bajista, la flecha blanca nos muestra la dirección bajista del precio. Los círculos amarillos nos muestran los máximos (círculos por encima) y mínimos (círculos por debajo) que va haciendo el precio, en este caso máximos y mínimos son cada vez más bajos.",
+      "width": 1280,
+      "height": 720,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Consolidación / Lateralización",
+      "html": "<strong>Consolidación / Lateralización</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Decimos que es una lateralización cuando el precio se esta moviendo de manera horizontal y los máximos y mínimos los crea al mismo nivel. Dependiendo de donde se cree esta fase, puede ser conocida como acumulación (en la parte baja del gráfico, o al final de una tendencia bajista) y distribución (en la parte alta del gráfico, o al final de una tendencia alcista).",
+      "html": "Decimos que es una lateralización cuando el precio se esta moviendo de manera horizontal y los máximos y mínimos los crea al mismo nivel. Dependiendo de donde se cree esta fase, puede ser conocida como acumulación (en la parte baja del gráfico, o al final de una tendencia bajista) y distribución (en la parte alta del gráfico, o al final de una tendencia alcista)."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-04.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-04.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg",
+      "candidates": [
+        {
+          "role": "original",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg",
+          "width": 0
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Movimiento horizontal del precio, los máximos y mínimos están a un mismo nivel.",
+      "width": 1280,
+      "height": 720,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase se explican las diferentes tendencias:",
+      "html": "En la siguiente clase se explican las diferentes tendencias:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "VvA0dfzDyEQ",
+      "url": "https://www.youtube.com/embed/VvA0dfzDyEQ?feature=oembed",
+      "title": "Qué son las TENDENCIAS en el Trading -Opciones Binarias-",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-05.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante aprender que las tendencias se dividen en tendencias generales y tendencias secundarias.",
+      "html": "Es importante aprender que las tendencias se dividen en tendencias generales y tendencias secundarias."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencias generales o primarias",
+      "html": "<strong>Tendencias generales o primarias</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas tendencias están vistas desde “lejos”, y cómo su nombre lo indica nos muestra la información general del mercado (tipo de tendencia).",
+      "html": "Estas tendencias están vistas desde “lejos”, y cómo su nombre lo indica nos muestra la información general del mercado (tipo de tendencia)."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Tendencia Secundaria",
+      "html": "<strong>Tendencia Secundaria</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las tendencias generales están compuestas de tendencias secundarias, es decir son movimientos más pequeños del precio.",
+      "html": "Las tendencias generales están compuestas de tendencias secundarias, es decir son movimientos más pequeños del precio."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "En color Gris podemos identificar la tendencia general, en este caso es una tendencia general bajista. En blanco podemos identificar las tendencias secundarias, cómo puedes observar tenemos tendencias secundarias bajistas, alcistas y consolidaciones.",
+      "width": 1280,
+      "height": 720,
+      "index": 4,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos complementar lo aprendido con la siguiente clase:",
+      "html": "Podemos complementar lo aprendido con la siguiente clase:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "5eOhZcnvre4",
+      "url": "https://www.youtube.com/embed/5eOhZcnvre4?feature=oembed",
+      "title": "Condiciones del Mercado en el TRADING -TENDENCIAS- Opciones Binarias",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-07.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Te recomiendo ver el resumen de «Gráfico», encontrarás la primer actividad técnica.",
+      "html": "Te recomiendo ver el resumen de «Gráfico», encontrarás la primer actividad técnica."
+    },
+    {
+      "type": "paragraph",
+      "text": "Resumen El Gráfico + Actividad",
+      "html": "<a class=\"internal\" href=\"https://www.binaryteach.com/el-grafico-entendiendo-nuestra-area-de-trabajo/\"><strong>Resumen El Gráfico + Actividad</strong></a>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

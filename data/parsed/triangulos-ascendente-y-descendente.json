@@ -1,0 +1,142 @@
+{
+  "url": "https://www.binaryteach.com/triangulos-ascendente-y-descendente/",
+  "slug": "triangulos-ascendente-y-descendente",
+  "depth": 1,
+  "title": "Triángulos Ascendente y Descendente",
+  "description": "Al igual que su hermano el triangulo simétrico, El triangulo ascendente y descendente nos muestra un descanso lateral del precio antes de continuar con la tendencia. […]",
+  "kind": "class",
+  "level": 1,
+  "order": 7,
+  "date_published": "2020-02-05T04:27:26+00:00",
+  "date_modified": "2020-02-05T04:27:28+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 205,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "MrhLV9rDGX8",
+      "url": "https://www.youtube.com/embed/MrhLV9rDGX8?feature=oembed",
+      "title": "Triangulos Ascendentes y Descendentes -Opciones Binarias- Figuras Chartistas"
+    }
+  ],
+  "links": [
+    {
+      "text": "hermano el triangulo simétrico",
+      "url": "https://www.binaryteach.com/triangulos-simetricos/",
+      "kind": "page",
+      "slug": "triangulos-simetricos"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-07-triangulos-ascendente-y-descendente-01.jpg",
+      "status": "ok",
+      "bytes": 113899
+    },
+    {
+      "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Al igual que su hermano el triangulo simétrico , El triangulo ascendente y descendente nos muestra un descanso lateral del precio antes de continuar con la tendencia.",
+      "html": "Al igual que su<a class=\"internal\" href=\"https://www.binaryteach.com/triangulos-simetricos/\"> hermano el triangulo simétrico</a>,  El triangulo ascendente y descendente nos muestra un descanso lateral del precio antes de continuar con la tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para identificar un triangulo ascendente debemos encontrar que el precio se va moviendo en forma de zigzag. Este movimiento nos debe deja una resistencia horizontal y un soporte dinámico.",
+      "html": "Para identificar un triangulo ascendente debemos encontrar que el precio se va moviendo en forma de zigzag. Este movimiento nos debe deja una resistencia horizontal y un soporte dinámico."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por otra parte, el triangulo descendente nos deja un soporte horizontal y un soporte dinámico, siempre moviéndose en forma de zigzag.",
+      "html": "Por otra parte, el triangulo descendente nos deja un soporte horizontal y un soporte dinámico, siempre moviéndose en forma de zigzag."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta figura chartista esta nuevamente delimitada por soportes y resistencias, en este caso, uno de ellos es dinámico y el otro es horizontal.",
+      "html": "Esta figura chartista esta nuevamente delimitada por soportes y resistencias, en este caso, uno de ellos es dinámico y el otro es horizontal."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante que esta figura se de en una tendencia, ya que es un patrón de continuidad, por lo que debemos tener una tendencia definida.",
+      "html": "Es importante que esta figura se de en una tendencia, ya que es un patrón de continuidad, por lo que debemos tener una tendencia definida."
+    },
+    {
+      "type": "paragraph",
+      "text": "Lo ideal es que cada nivel (soporte o resistencia) que delimita la figura chartista haya sido testeado por lo menos dos veces.",
+      "html": "Lo ideal es que cada nivel (soporte o resistencia) que delimita la figura chartista haya sido testeado por lo menos dos veces."
+    },
+    {
+      "type": "paragraph",
+      "text": "La figura se confirma tras romper alguno de los niveles que la componen. También podemos utilizar el nivel objetivo, la parte abierta del triangulo o la base del triangulo, que nos permite identificar la posible distancia que el precio pueda recorrer.",
+      "html": "La figura se confirma tras romper alguno de los niveles que la componen. También podemos utilizar el nivel objetivo, la parte abierta del triangulo o la base del triangulo, que nos permite identificar la posible distancia que el precio pueda recorrer."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico de forma más detallada y con ejemplos, los triángulos descendentes y ascendentes.",
+      "html": "En el siguiente vídeo explico de forma más detallada y con ejemplos, los triángulos descendentes y ascendentes."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "MrhLV9rDGX8",
+      "url": "https://www.youtube.com/embed/MrhLV9rDGX8?feature=oembed",
+      "title": "Triangulos Ascendentes y Descendentes -Opciones Binarias- Figuras Chartistas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-07-triangulos-ascendente-y-descendente-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

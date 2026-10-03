@@ -1,0 +1,143 @@
+{
+  "url": "https://www.binaryteach.com/el-patron-de-vela-marubozu/",
+  "slug": "el-patron-de-vela-marubozu",
+  "depth": 1,
+  "title": "El patrón de vela Marubozu",
+  "description": "Este es un patrón bastante efectivo pero debe darse en el contexto ideal para poder aprovecharlo al máximo. El patrón Marubozu se caracteriza por ser una […]",
+  "kind": "class",
+  "level": 1,
+  "order": 24,
+  "date_published": "2020-02-19T23:43:11+00:00",
+  "date_modified": "2020-02-19T23:43:13+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 188,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "Ahm58jcL5HY",
+      "url": "https://www.youtube.com/embed/Ahm58jcL5HY?feature=oembed",
+      "title": "Cómo Analizar un Marubozu (Vela de Agotamiento) -Opciones Binarias- Velas Japonesas"
+    }
+  ],
+  "links": [
+    {
+      "text": "tendencia alcista",
+      "url": "https://www.binaryteach.com/ciclo-del-mercado-tendencias/",
+      "kind": "page",
+      "slug": "ciclo-del-mercado-tendencias"
+    },
+    {
+      "text": "tendencia es fuerte,",
+      "url": "https://www.binaryteach.com/aceleracion-de-la-tendencia/",
+      "kind": "page",
+      "slug": "aceleracion-de-la-tendencia"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-24-el-patron-de-vela-marubozu-01.jpg",
+      "status": "ok",
+      "bytes": 96146
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Este es un patrón bastante efectivo pero debe darse en el contexto ideal para poder aprovecharlo al máximo.",
+      "html": "Este es un patrón bastante efectivo pero debe darse en el contexto ideal para poder aprovecharlo al máximo."
+    },
+    {
+      "type": "paragraph",
+      "text": "El patrón Marubozu se caracteriza por ser una vela con un cuerpo grande y de no tener mechas. En algunos casos podemos encontrarlo con mechas realmente pequeñas.",
+      "html": "El patrón Marubozu se caracteriza por ser una vela con un cuerpo grande y de no tener mechas. En algunos casos podemos encontrarlo con mechas realmente pequeñas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para que podamos operar este patrón cómo reversión debemos encontrarlo al final de una tendencia y a favor de la misma. Esta vela nos indicará el ultimo empuje por parte de los compradores en tendencia alcista y por parte de los vendedores en tendencia bajista.",
+      "html": "Para que podamos operar este patrón cómo reversión debemos encontrarlo al final de una tendencia y a favor de la misma. Esta vela nos indicará el ultimo empuje por parte de los compradores en <a class=\"internal\" href=\"https://www.binaryteach.com/ciclo-del-mercado-tendencias/\">tendencia alcista </a>y por parte de los vendedores en tendencia bajista."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para que sea un patrón efectivo de reversión es importante que lo encontremos en una tendencia que ya haya perdido fuerza o que sea saludable.",
+      "html": "Para que sea un patrón efectivo de reversión es importante que lo encontremos en una tendencia que ya haya perdido fuerza o que sea saludable."
+    },
+    {
+      "type": "paragraph",
+      "text": "También lo podemos operar cómo un patrón de continuidad si la tendencia es fuerte, y las velas previas muestran decisión. Recordemos que en una tendencia bajista debe ser un patrón bajista y en una tendencia alcista un patrón alcista.",
+      "html": "También lo podemos operar cómo un patrón de continuidad si la <a class=\"internal\" href=\"https://www.binaryteach.com/aceleracion-de-la-tendencia/\">tendencia es fuerte,</a> y las velas previas muestran decisión. Recordemos que en una tendencia bajista debe ser un patrón bajista y en una tendencia alcista un patrón alcista."
+    },
+    {
+      "type": "paragraph",
+      "text": "La vela Marubozu al igual que todos los patrones de velas mencionados con anterioridad deben darse en los contextos ideales.",
+      "html": "La vela Marubozu al igual que todos los patrones de velas mencionados con anterioridad deben darse en los contextos ideales."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo puedes aprender a cómo identificar el patrón y cómo operarlo:",
+      "html": "En el siguiente vídeo puedes aprender a cómo identificar el patrón y cómo operarlo:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "Ahm58jcL5HY",
+      "url": "https://www.youtube.com/embed/Ahm58jcL5HY?feature=oembed",
+      "title": "Cómo Analizar un Marubozu (Vela de Agotamiento) -Opciones Binarias- Velas Japonesas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-24-el-patron-de-vela-marubozu-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

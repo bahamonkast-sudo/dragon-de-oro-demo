@@ -1,0 +1,419 @@
+{
+  "url": "https://www.binaryteach.com/patrones-de-velas-con-gap/",
+  "slug": "patrones-de-velas-con-gap",
+  "depth": 1,
+  "title": "Patrones de velas con GAP",
+  "description": "Cuando estamos analizando la gráfica con patrones de velas japonesas, podemos encontrarnos con algunos espacios vacíos entre una vela y otra, estos espacios o «saltos» son […]",
+  "kind": "class",
+  "level": 1,
+  "order": 25,
+  "date_published": "2020-02-20T00:05:25+00:00",
+  "date_modified": "2020-04-12T21:54:07+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 514,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "p5ZohjUJ-NM",
+      "url": "https://www.youtube.com/embed/p5ZohjUJ-NM?feature=oembed",
+      "title": "¿Qué es un GAP? ¿Cuáles TIPOS de GAP podemos encontrar? - Opciones Binarias -"
+    },
+    {
+      "provider": "youtube",
+      "id": "t6P2wuo5D-Q",
+      "url": "https://www.youtube.com/embed/t6P2wuo5D-Q?feature=oembed",
+      "title": "Cómo operar una Ventana Alcista / Bajista - Patrones de velas con GAP"
+    },
+    {
+      "provider": "youtube",
+      "id": "8Y0XXW_MiIQ",
+      "url": "https://www.youtube.com/embed/8Y0XXW_MiIQ?feature=oembed",
+      "title": "Operar un Dark Cloud Cover y Piercing Line - Patrones de velas con GAP"
+    },
+    {
+      "provider": "youtube",
+      "id": "_7BfQzWRL1Y",
+      "url": "https://www.youtube.com/embed/_7BfQzWRL1Y?feature=oembed",
+      "title": "Cómo operar una DESERCIÓN ALCISTA Y BAJISTA - Patrones de velas con GAP"
+    }
+  ],
+  "links": [
+    {
+      "text": "envolvente",
+      "url": "https://www.binaryteach.com/patron-envolvente/",
+      "kind": "page",
+      "slug": "patron-envolvente"
+    },
+    {
+      "text": "Harami",
+      "url": "https://www.binaryteach.com/como-operar-un-harami/",
+      "kind": "page",
+      "slug": "como-operar-un-harami"
+    },
+    {
+      "text": "RESUMEN DE VELAS JAPONESAS",
+      "url": "https://www.binaryteach.com/patrones-de-velas-japonesas/",
+      "kind": "page",
+      "slug": "patrones-de-velas-japonesas"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-01.jpg",
+      "status": "ok",
+      "bytes": 81732
+    },
+    {
+      "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-02.jpg",
+      "status": "ok",
+      "bytes": 46892
+    },
+    {
+      "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-03.jpg",
+      "status": "ok",
+      "bytes": 49303
+    },
+    {
+      "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-04.jpg",
+      "status": "ok",
+      "bytes": 51792
+    },
+    {
+      "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Cuando estamos analizando la gráfica con patrones de velas japonesas, podemos encontrarnos con algunos espacios vacíos entre una vela y otra, estos espacios o «saltos» son conocidos como GAP.",
+      "html": "Cuando estamos analizando la gráfica con patrones de velas japonesas, podemos encontrarnos con algunos espacios vacíos entre una vela y otra, estos espacios o «saltos» son conocidos como GAP."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un Gap no es más que un salto de la vela al momento que cierra y abre una nueva, dejando un espacio vació entre cierre y apertura de la vela.",
+      "html": "Un Gap no es más que un salto de la vela al momento que cierra y abre una nueva, dejando un espacio vació entre cierre y apertura de la vela."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este salto puede ser hacia arriba o hacia abajo de manera indiferente. Por ejemplo en el patrón envolvente alcista, el salto de la vela es hacia arriba. Mientras que en un Harami bajista el salto es hacia abajo.",
+      "html": "Este salto puede ser hacia arriba o hacia abajo de manera indiferente. Por ejemplo en el patrón <a class=\"internal\" href=\"https://www.binaryteach.com/patron-envolvente/\">envolvente </a>alcista, el salto de la vela es hacia arriba. Mientras que en un <a class=\"internal\" href=\"https://www.binaryteach.com/como-operar-un-harami/\">Harami </a>bajista el salto es hacia abajo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nostros cómo traders de opciones binarias podemos aprovechar los GAP a nuestro favor, claro, siempre que se den en el contexto adecuado.",
+      "html": "Nostros cómo traders de opciones binarias podemos aprovechar los GAP a nuestro favor, claro, siempre que se den en el contexto adecuado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Primero es importante que aprendamos a identificar cómo identificar un GAP y cuales tipos hay:",
+      "html": "Primero es importante que aprendamos a identificar cómo identificar un GAP y  cuales tipos hay:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "p5ZohjUJ-NM",
+      "url": "https://www.youtube.com/embed/p5ZohjUJ-NM?feature=oembed",
+      "title": "¿Qué es un GAP? ¿Cuáles TIPOS de GAP podemos encontrar? - Opciones Binarias -",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Ahora que podemos identificar los diferentes tipos de GAP en el mercado, podemos operar algunas situaciones que comentaremos a continuación.",
+      "html": "Ahora que podemos identificar los diferentes tipos de GAP en el mercado, podemos operar algunas situaciones que comentaremos a continuación."
+    },
+    {
+      "type": "paragraph",
+      "text": "La Ventana Alcista y Ventana Bajista , es un patrón de continuidad, tenemos que encontrarlo en una tendencia que presente fuerza.",
+      "html": "<strong>La Ventana Alcista y Ventana Bajista</strong>, es un patrón de continuidad, tenemos que encontrarlo en una tendencia que presente fuerza."
+    },
+    {
+      "type": "paragraph",
+      "text": "Después de crearse el Gap debemos esperar que el precio avance un poco y luego tenga un retroceso a la zona del salto, usaremos este espacio cómo una zona de Soporte y Resistencia para operar una continuidad de la tendencia.",
+      "html": "Después de crearse el Gap debemos esperar que el precio avance un poco y luego tenga un retroceso a la zona del salto, usaremos este espacio cómo una zona de Soporte y Resistencia para operar una continuidad de la tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Se que todo eso puede parecer un poco confuso, así que en la siguiente clase explico cómo identificar adecuadamente la ventana alcista y cómo operarla:",
+      "html": "Se que todo eso puede parecer un poco confuso, así que en la siguiente clase explico cómo identificar adecuadamente la ventana alcista y cómo operarla:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "t6P2wuo5D-Q",
+      "url": "https://www.youtube.com/embed/t6P2wuo5D-Q?feature=oembed",
+      "title": "Cómo operar una Ventana Alcista / Bajista - Patrones de velas con GAP",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-02.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Ahora veamos un patrón con GAP, pero en esta ocasión , uno de reversión.",
+      "html": "Ahora veamos un patrón con GAP, pero en esta ocasión , uno de reversión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dark Cloud Cover y Piercing Line , estos son patrones que nos indican un cambio de tendencia, es importante que estos se den en tendencias saludables.",
+      "html": "<strong>Dark Cloud Cover y Piercing Line</strong>, estos son patrones que nos indican un cambio de tendencia, es importante que estos se den en tendencias saludables."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Dark Cloud Cover es un patrón de vela que se da al final de una tendencia alcista y nos muestra la reversión a bajista, es más efectivo si tenemos el apoyo de una resistencia.",
+      "html": "El Dark Cloud Cover es un patrón de vela que se da al final de una tendencia alcista y nos muestra la reversión a bajista, es más efectivo si tenemos el apoyo de una resistencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "El patrón Piercing Line se forma al final de una tendencia bajista y nos indica la perdida de fuerza de los vendedores. Es más efectivo si lo identificamos con el apoyo de un soporte.",
+      "html": "El patrón Piercing Line se forma al final de una tendencia bajista y nos indica la perdida de fuerza de los vendedores. Es más efectivo si lo identificamos con el apoyo de un soporte."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase te explico cómo puedes identificarlo y operarlo:",
+      "html": "En la siguiente clase te explico cómo puedes identificarlo y operarlo:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "8Y0XXW_MiIQ",
+      "url": "https://www.youtube.com/embed/8Y0XXW_MiIQ?feature=oembed",
+      "title": "Operar un Dark Cloud Cover y Piercing Line - Patrones de velas con GAP",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-03.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Y por ultimo veamos lo que es un patrón de continuidad tras una reversión.",
+      "html": "Y por ultimo veamos lo que es un patrón de continuidad tras una reversión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Deserción Alcista y Bajista , este patrón aprovecha el gap creado antes de la reversión de la tendencia.",
+      "html": "<strong>Deserción Alcista y Bajista</strong>, este patrón aprovecha el gap creado antes de la reversión de la tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo ya habrás identificado, podemos utilizar estos espacios vacíos dejados por los GAP cómo zonas de soporte y resistencia, y lo que hacemos con la deserción alcista y bajista es exactamente eso.",
+      "html": "Cómo ya habrás identificado, podemos utilizar estos espacios vacíos dejados por los GAP cómo zonas de soporte y resistencia, y lo que hacemos con la deserción alcista y bajista es exactamente eso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tras terminar de formarse la reversión, esperamos que la vela rompa la zona del gap y luego seguimos sus movimientos naturales de impulso y retroceso.",
+      "html": "Tras terminar de formarse la reversión, esperamos que la vela rompa la zona del gap y luego seguimos sus movimientos naturales de impulso y retroceso."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase explico más a detalle cómo identificarlo y operarlo:",
+      "html": "En la siguiente clase explico más a detalle cómo identificarlo y operarlo:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "_7BfQzWRL1Y",
+      "url": "https://www.youtube.com/embed/_7BfQzWRL1Y?feature=oembed",
+      "title": "Cómo operar una DESERCIÓN ALCISTA Y BAJISTA - Patrones de velas con GAP",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-04.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo puedes darte cuenta, podemos aprovechar de múltiples formas estos espacios vacíos, siempre teniendo en consideración el contexto.",
+      "html": "Cómo puedes darte cuenta, podemos aprovechar de múltiples formas estos espacios vacíos, siempre teniendo en consideración el contexto."
+    },
+    {
+      "type": "paragraph",
+      "text": "Con esta clase finalizamos los patrones de velas japonesas. Te invito a que pases por el RESUMEN DE VELAS JAPONESAS para refrescar todo lo aprendido y realizar algunas actividades.",
+      "html": "Con esta clase finalizamos los patrones de velas japonesas. Te invito a que pases por el <a class=\"internal\" href=\"https://www.binaryteach.com/patrones-de-velas-japonesas/\">RESUMEN DE VELAS JAPONESAS</a> para refrescar todo lo aprendido y realizar algunas actividades."
+    },
+    {
+      "type": "paragraph",
+      "text": "Resumen de Velas Japonesas + Actividad",
+      "html": "<a class=\"internal\" href=\"https://www.binaryteach.com/patrones-de-velas-japonesas/\"><strong>Resumen de Velas Japonesas + Actividad</strong></a>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

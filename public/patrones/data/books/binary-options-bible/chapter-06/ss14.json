@@ -1,0 +1,30 @@
+﻿{
+  "id": "ss14",
+  "code": "SS14",
+  "name": "Patrón Seguro 14 (Ruptura de Mecha en Alternancia)",
+  "classification": {
+    "market": "Buen Rango de Movimiento",
+    "tradeType": "Operación tras Ruptura de Mecha Extrema",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en un buen rango de movimiento.",
+    "Primero, espere a que se formen una vela verde y una roja consecutivas.",
+    "A continuación, espere a que se forme una vela verde (segunda verde).",
+    "REGLA CRÍTICA: Si la última vela verde rompe el mínimo inferior de la vela roja anterior con su mecha inferior, prepare la entrada.",
+    "NOTA IMPORTANTE: La mecha verde debe romper la mecha/cuerpo de la vela roja hacia abajo.",
+    "Al cierre de esa vela verde con mecha perforante, coloque la operación en dirección BAJISTA (PUT) en la siguiente vela.",
+    "Para configuración simétrica de compra (Roja -> Verde -> Roja): si la mecha superior de la roja rompe el techo de la verde, opere ALZA (CALL).",
+    "Además, comprueba que el indicador estocástico respalda tu dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación.",
+    "La ruptura inferior debe ser evidente a través de la mecha de rechazo."
+  ],
+  "simulation": {
+    "velasBase": 4,
+    "triggerIndex": 2
+  }
+}

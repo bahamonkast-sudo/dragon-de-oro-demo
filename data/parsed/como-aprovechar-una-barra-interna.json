@@ -1,0 +1,144 @@
+{
+  "url": "https://www.binaryteach.com/como-aprovechar-una-barra-interna/",
+  "slug": "como-aprovechar-una-barra-interna",
+  "depth": 1,
+  "title": "Cómo aprovechar una Barra Interna",
+  "description": "s importante para este patrón Barra Interna encontrarse en una tendencia fuerte, puesto que lo que nos indica es un pequeño retroceso o descanso de la tendencia antes de continuar.",
+  "kind": "class",
+  "level": 1,
+  "order": 21,
+  "date_published": "2020-02-19T22:54:03+00:00",
+  "date_modified": "2020-02-19T23:08:53+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 170,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "ZVRK8S4Ix0g",
+      "url": "https://www.youtube.com/embed/ZVRK8S4Ix0g?feature=oembed",
+      "title": "Patrón de BARRA INTERNA -opciones binarias- PATRONES DE VELAS JAPONESAS"
+    }
+  ],
+  "links": [
+    {
+      "text": "Martillo y sus Variantes",
+      "url": "https://www.binaryteach.com/hammer-martillo/",
+      "kind": "page",
+      "slug": "hammer-martillo"
+    },
+    {
+      "text": "PinBar",
+      "url": "https://www.binaryteach.com/como-analizar-el-pinbar/",
+      "kind": "page",
+      "slug": "como-analizar-el-pinbar"
+    },
+    {
+      "text": "Harami",
+      "url": "https://www.binaryteach.com/como-operar-un-harami/",
+      "kind": "page",
+      "slug": "como-operar-un-harami"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-21-como-aprovechar-una-barra-interna-01.jpg",
+      "status": "ok",
+      "bytes": 115116
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Te acuerdas de los primeros patrones que vimos ¿cómo el Martillo y sus Variantes y el PinBar ? En esta ocasión aprenderemos a operar utilizando un patrón de continuidad, La Barra Interna.",
+      "html": "Te acuerdas de los primeros patrones que vimos ¿cómo el <a class=\"internal\" href=\"https://www.binaryteach.com/hammer-martillo/\">Martillo y sus Variantes</a> y el <a class=\"internal\" href=\"https://www.binaryteach.com/como-analizar-el-pinbar/\">PinBar</a>? En esta ocasión aprenderemos a operar utilizando un patrón de continuidad, La Barra Interna."
+    },
+    {
+      "type": "paragraph",
+      "text": "La barra interna es un patrón de vela que se encuentra dentro de la vela anterior, la vela va en dirección contraria a la tendencia que estamos analizando.",
+      "html": "La barra interna es un patrón de vela que se encuentra dentro de la vela anterior, la vela va en dirección contraria a la tendencia que estamos analizando."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante para este patrón encontrarse en una tendencia fuerte, puesto que lo que nos indica es un pequeño retroceso (pullback) o descanso de la tendencia antes de continuar.",
+      "html": "Es importante para este patrón encontrarse en una tendencia fuerte, puesto que lo que nos indica es un pequeño retroceso (pullback) o descanso de la tendencia antes de continuar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este patrón de vela puede llegar a confundirse con el Harami que veremos en la siguiente clase, pero cómo siempre, tenemos que tener bien a consideración el contexto donde se encuentra la vela.",
+      "html": "Este patrón de vela puede llegar a confundirse con el <a class=\"internal\" href=\"https://www.binaryteach.com/como-operar-un-harami/\">Harami </a>que veremos en la siguiente clase, pero cómo siempre, tenemos que tener bien a consideración el contexto donde se encuentra la vela."
+    },
+    {
+      "type": "paragraph",
+      "text": "De preferencia debemos apoyarnos en un nivel previamente roto, así, esta vela nos indicara el retroceso del precio a ese nivel y nos permitirá continuar operando en dirección de la tendencia mayor confianza.",
+      "html": "De preferencia debemos apoyarnos en un nivel previamente roto, así, esta vela nos indicara el retroceso del precio a ese nivel y nos permitirá continuar operando en dirección de la tendencia mayor confianza."
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación explico las caracteristicas del patrón Barra Interna y cómo operarlo en Opciones Binarias.",
+      "html": "A continuación explico las caracteristicas del patrón Barra Interna y cómo operarlo en Opciones Binarias."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "ZVRK8S4Ix0g",
+      "url": "https://www.youtube.com/embed/ZVRK8S4Ix0g?feature=oembed",
+      "title": "Patrón de BARRA INTERNA -opciones binarias- PATRONES DE VELAS JAPONESAS",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-21-como-aprovechar-una-barra-interna-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

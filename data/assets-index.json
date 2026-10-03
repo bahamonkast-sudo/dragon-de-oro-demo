@@ -1,0 +1,1162 @@
+{
+  "generated_at": "2026-09-30T15:07:52+00:00",
+  "assets_dir": "data/assets/images",
+  "assets": {
+    "https://i.ytimg.com/vi/0p-RxGcKe8k/maxresdefault.jpg": {
+      "file": "nivel-1-clase-05-trading-con-canales-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-05-trading-con-canales-01.jpg",
+      "status": "ok",
+      "bytes": 111965,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/4rbWKoiF3_I/maxresdefault.jpg": {
+      "file": "nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-01.jpg",
+      "status": "ok",
+      "bytes": 102580,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/5eOhZcnvre4/maxresdefault.jpg": {
+      "file": "nivel-1-clase-02-ciclo-del-mercado-tendencias-07.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-07.jpg",
+      "status": "ok",
+      "bytes": 61252,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/5eOhZcnvre4/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/8Y0XXW_MiIQ/maxresdefault.jpg": {
+      "file": "nivel-1-clase-25-patrones-de-velas-con-gap-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-03.jpg",
+      "status": "ok",
+      "bytes": 49303,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/8Y0XXW_MiIQ/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/9CL4pA78yWI/maxresdefault.jpg": {
+      "file": "nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-02.jpg",
+      "status": "ok",
+      "bytes": 120013,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/9CL4pA78yWI/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/Ahm58jcL5HY/maxresdefault.jpg": {
+      "file": "nivel-1-clase-24-el-patron-de-vela-marubozu-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-24-el-patron-de-vela-marubozu-01.jpg",
+      "status": "ok",
+      "bytes": 96146,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Ahm58jcL5HY/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/F0LWGy2-eMs/maxresdefault.jpg": {
+      "file": "nivel-1-clase-19-como-operar-con-tweezer-top-y-tweezer-bottom-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-19-como-operar-con-tweezer-top-y-tweezer-bottom-01.jpg",
+      "status": "ok",
+      "bytes": 125962,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/J8JMrPUUb3w/maxresdefault.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-08.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-08.jpg",
+      "status": "ok",
+      "bytes": 85200,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/Kz5pUuyIM7w/maxresdefault.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-05.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-05.jpg",
+      "status": "ok",
+      "bytes": 120624,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/Mjus3wUr5Hg/maxresdefault.jpg": {
+      "file": "nivel-1-clase-20-patron-envolvente-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-20-patron-envolvente-01.jpg",
+      "status": "ok",
+      "bytes": 140611,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Mjus3wUr5Hg/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/MnXaRCtdDjQ/maxresdefault.jpg": {
+      "file": "nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-02.jpg",
+      "status": "ok",
+      "bytes": 118265,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/MnXaRCtdDjQ/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/MrhLV9rDGX8/maxresdefault.jpg": {
+      "file": "nivel-1-clase-07-triangulos-ascendente-y-descendente-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-07-triangulos-ascendente-y-descendente-01.jpg",
+      "status": "ok",
+      "bytes": 113899,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/MrhLV9rDGX8/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/PATYWSz0uas/maxresdefault.jpg": {
+      "file": "soportes-y-resistencias-01.jpg",
+      "local": "data/assets/images/soportes-y-resistencias-01.jpg",
+      "status": "ok",
+      "bytes": 78520,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/PATYWSz0uas/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/TF0P_opMAQ4/maxresdefault.jpg": {
+      "file": "nivel-1-clase-11-rectangulo-ascendente-y-descendente-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-11-rectangulo-ascendente-y-descendente-01.jpg",
+      "status": "ok",
+      "bytes": 106788,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/TF0P_opMAQ4/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/Taa9-BPBARo/maxresdefault.jpg": {
+      "file": "nivel-1-clase-12-doble-techo-y-doble-suelo-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-12-doble-techo-y-doble-suelo-01.jpg",
+      "status": "ok",
+      "bytes": 120449,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Taa9-BPBARo/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/Tgig6dSvcds/maxresdefault.jpg": {
+      "file": "nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-02.jpg",
+      "status": "ok",
+      "bytes": 120633,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Tgig6dSvcds/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/Uo3Jr6XhJk4/maxresdefault.jpg": {
+      "file": "nivel-1-clase-02-ciclo-del-mercado-tendencias-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-01.jpg",
+      "status": "ok",
+      "bytes": 93955,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Uo3Jr6XhJk4/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/VCdV0SQvabs/maxresdefault.jpg": {
+      "file": "nivel-1-clase-14-introduccion-a-patrones-de-velas-japonesas-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-14-introduccion-a-patrones-de-velas-japonesas-01.jpg",
+      "status": "ok",
+      "bytes": 141961,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/VCdV0SQvabs/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/VvA0dfzDyEQ/maxresdefault.jpg": {
+      "file": "nivel-1-clase-02-ciclo-del-mercado-tendencias-05.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-05.jpg",
+      "status": "ok",
+      "bytes": 102839,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/VvA0dfzDyEQ/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/WimeBmFsWi4/maxresdefault.jpg": {
+      "file": "patrones-de-velas-japonesas-01.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-01.jpg",
+      "status": "ok",
+      "bytes": 149924,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/WimeBmFsWi4/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/ZVRK8S4Ix0g/maxresdefault.jpg": {
+      "file": "nivel-1-clase-21-como-aprovechar-una-barra-interna-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-21-como-aprovechar-una-barra-interna-01.jpg",
+      "status": "ok",
+      "bytes": 115116,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/ZVRK8S4Ix0g/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/_7BfQzWRL1Y/maxresdefault.jpg": {
+      "file": "nivel-1-clase-25-patrones-de-velas-con-gap-04.jpg",
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-04.jpg",
+      "status": "ok",
+      "bytes": 51792,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/_7BfQzWRL1Y/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/ac4M_sk2biA/maxresdefault.jpg": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-01.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-01.jpg",
+      "status": "ok",
+      "bytes": 117164,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/ac4M_sk2biA/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/cWwy0DmHShc/maxresdefault.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-03.jpg",
+      "status": "ok",
+      "bytes": 144250,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/cWwy0DmHShc/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/e2qF6abMrAI/maxresdefault.jpg": {
+      "file": "deja-de-pensar-en-el-dinero-01.jpg",
+      "local": "data/assets/images/deja-de-pensar-en-el-dinero-01.jpg",
+      "status": "ok",
+      "bytes": 166839,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/e2qF6abMrAI/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/ign6Kd7JBhw/maxresdefault.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-04.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-04.jpg",
+      "status": "ok",
+      "bytes": 112358,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/jUkT9gNdtz4/maxresdefault.jpg": {
+      "file": "nivel-1-clase-09-banderin-alcista-y-bajista-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-09-banderin-alcista-y-bajista-01.jpg",
+      "status": "ok",
+      "bytes": 103349,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/jUkT9gNdtz4/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/kWEd5AE16FY/maxresdefault.jpg": {
+      "file": "mentalidad-del-trader-exitoso-01.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-01.jpg",
+      "status": "ok",
+      "bytes": 168190,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/kWEd5AE16FY/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/mCcSblfQMxk/maxresdefault.jpg": {
+      "file": "nivel-1-clase-22-como-operar-un-harami-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-22-como-operar-un-harami-01.jpg",
+      "status": "ok",
+      "bytes": 97431,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/mCcSblfQMxk/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/mefrrYM1Wi0/maxresdefault.jpg": {
+      "file": "tendencias-y-fractales-01.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-01.jpg",
+      "status": "ok",
+      "bytes": 69279,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/mefrrYM1Wi0/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/mhwwkwblebE/maxresdefault.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-07.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-07.jpg",
+      "status": "ok",
+      "bytes": 124087,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/mhwwkwblebE/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/p5ZohjUJ-NM/maxresdefault.jpg": {
+      "file": "nivel-1-clase-25-patrones-de-velas-con-gap-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-01.jpg",
+      "status": "ok",
+      "bytes": 81732,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/p5ZohjUJ-NM/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/rcNoisaTSmg/maxresdefault.jpg": {
+      "file": "nivel-1-clase-18-como-analizar-el-pinbar-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-18-como-analizar-el-pinbar-01.jpg",
+      "status": "ok",
+      "bytes": 99784,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/rcNoisaTSmg/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/rfhsMrzxRI8/maxresdefault.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-06.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-06.jpg",
+      "status": "ok",
+      "bytes": 145321,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/rfvIQcuXKGw/maxresdefault.jpg": {
+      "file": "nivel-1-clase-03-aceleracion-de-la-tendencia-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-01.jpg",
+      "status": "ok",
+      "bytes": 64376,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/rfvIQcuXKGw/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/t4RwxS4dYhg/maxresdefault.jpg": {
+      "file": "nivel-1-clase-08-banderas-alcistas-y-bajistas-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-08-banderas-alcistas-y-bajistas-01.jpg",
+      "status": "ok",
+      "bytes": 103903,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/t6P2wuo5D-Q/maxresdefault.jpg": {
+      "file": "nivel-1-clase-25-patrones-de-velas-con-gap-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-25-patrones-de-velas-con-gap-02.jpg",
+      "status": "ok",
+      "bytes": 46892,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/t6P2wuo5D-Q/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/vVw8k_awiac/maxresdefault.jpg": {
+      "file": "figuras-chartistas-01.jpg",
+      "local": "data/assets/images/figuras-chartistas-01.jpg",
+      "status": "ok",
+      "bytes": 171911,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/vVw8k_awiac/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/wa0NPtQyvsM/maxresdefault.jpg": {
+      "file": "nivel-1-clase-10-cunas-alcistas-y-bajistas-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-10-cunas-alcistas-y-bajistas-01.jpg",
+      "status": "ok",
+      "bytes": 94978,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/wa0NPtQyvsM/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/wx0L4ua4zoQ/maxresdefault.jpg": {
+      "file": "nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-02.jpg",
+      "status": "ok",
+      "bytes": 91602,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/xF7sLaRsvNE/maxresdefault.jpg": {
+      "file": "nivel-1-clase-13-hombro-cabeza-hombro-y-hombro-cabeza-hombro-in-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-13-hombro-cabeza-hombro-y-hombro-cabeza-hombro-in-01.jpg",
+      "status": "ok",
+      "bytes": 120260,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/xF7sLaRsvNE/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/y21Yd8B49SA/maxresdefault.jpg": {
+      "file": "nivel-1-clase-06-triangulos-simetricos-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-06-triangulos-simetricos-01.jpg",
+      "status": "ok",
+      "bytes": 106198,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/y21Yd8B49SA/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://i.ytimg.com/vi/zZZ0pHNiCsg/maxresdefault.jpg": {
+      "file": "nivel-1-clase-26-la-estrategia-uniendo-los-conocimientos-de-tra-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-26-la-estrategia-uniendo-los-conocimientos-de-tra-01.jpg",
+      "status": "ok",
+      "bytes": 113113,
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/maxresdefault.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/%C3%81ngulo-de-Consolidaci%C3%B3n.jpg": {
+      "file": "nivel-1-clase-03-aceleracion-de-la-tendencia-05.jpg",
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-05.jpg",
+      "status": "ok",
+      "bytes": 169983,
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/%C3%81ngulo-de-Consolidaci%C3%B3n.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg": {
+      "file": "mentalidad-del-trader-exitoso-05.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-05.jpg",
+      "status": "ok",
+      "bytes": 87590,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-04.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-04.jpg",
+      "status": "ok",
+      "bytes": 26923,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Formación-de-velas-japonesas.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-02.png",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-02.png",
+      "status": "ok",
+      "bytes": 14509,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-lineas-EURUSD-e1563811158532.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-05.png",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-05.png",
+      "status": "ok",
+      "bytes": 6751,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-de-velas-japonesas-EURUSD.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-03.png",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-03.png",
+      "status": "ok",
+      "bytes": 10485,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Grafico-lineas-eurusd-segundo.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg": {
+      "file": "mentalidad-del-trader-exitoso-04.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-04.jpg",
+      "status": "ok",
+      "bytes": 213099,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg": {
+      "file": "nivel-1-clase-03-aceleracion-de-la-tendencia-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-03.jpg",
+      "status": "ok",
+      "bytes": 34196,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista-Saludable.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg": {
+      "file": "nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-02.jpg",
+      "status": "ok",
+      "bytes": 33859,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Alcista.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg": {
+      "file": "nivel-1-clase-03-aceleracion-de-la-tendencia-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-02.jpg",
+      "status": "ok",
+      "bytes": 28830,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista-Fuerte.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg": {
+      "file": "nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-03.jpg",
+      "status": "ok",
+      "bytes": 41592,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Bajista.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg": {
+      "file": "nivel-1-clase-02-ciclo-del-mercado-tendencias-04.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-04.jpg",
+      "status": "ok",
+      "bytes": 35762,
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidaci%C3%B3n.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-08.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-08.jpg",
+      "status": "ok",
+      "bytes": 35762,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-Consolidación.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg": {
+      "file": "nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "local": "data/assets/images/nivel-1-clase-02-ciclo-del-mercado-tendencias-06.jpg",
+      "status": "ok",
+      "bytes": 44914,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-General-y-Secundaria.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-D%C3%A9bil.jpg": {
+      "file": "nivel-1-clase-03-aceleracion-de-la-tendencia-04.jpg",
+      "local": "data/assets/images/nivel-1-clase-03-aceleracion-de-la-tendencia-04.jpg",
+      "status": "ok",
+      "bytes": 28156,
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-D%C3%A9bil.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-12.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-12.jpg",
+      "status": "ok",
+      "bytes": 28156,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Tendencia-alcista-Débil.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png": {
+      "file": "mentalidad-del-trader-exitoso-02.png",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-02.png",
+      "status": "ok",
+      "bytes": 13931,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg": {
+      "file": "nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "status": "ok",
+      "bytes": 26390,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg": {
+      "file": "nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "status": "ok",
+      "bytes": 31564,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg": {
+      "file": "nivel-1-clase-01-la-volatilidad-en-el-mercado-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-01.jpg",
+      "status": "ok",
+      "bytes": 20573,
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-14.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-14.jpg",
+      "status": "ok",
+      "bytes": 20573,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-débil.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png": {
+      "file": "mentalidad-del-trader-exitoso-06.png",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-06.png",
+      "status": "ok",
+      "bytes": 9252,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png": {
+      "file": "mentalidad-del-trader-exitoso-08.png",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-08.png",
+      "status": "ok",
+      "bytes": 8989,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg": {
+      "file": "tendencias-y-fractales-07.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-07.jpg",
+      "status": "ok",
+      "bytes": 98555,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/asceleradavslenta.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg": {
+      "file": "tendencias-y-fractales-06.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-06.jpg",
+      "status": "ok",
+      "bytes": 30061,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgconteovelas.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg": {
+      "file": "tendencias-y-fractales-02.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-02.jpg",
+      "status": "ok",
+      "bytes": 30702,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg": {
+      "file": "tendencias-y-fractales-03.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-03.jpg",
+      "status": "ok",
+      "bytes": 27006,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/dgimpulso_retroceso1.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg": {
+      "file": "tendencias-y-fractales-05.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-05.jpg",
+      "status": "ok",
+      "bytes": 281749,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/fractal.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg": {
+      "file": "tendencias-y-fractales-04.jpg",
+      "local": "data/assets/images/tendencias-y-fractales-04.jpg",
+      "status": "ok",
+      "bytes": 31076,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/impulsoretro.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg": {
+      "file": "deja-de-pensar-en-el-dinero-02.jpg",
+      "local": "data/assets/images/deja-de-pensar-en-el-dinero-02.jpg",
+      "status": "ok",
+      "bytes": 49271,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg": {
+      "file": "mentalidad-del-trader-exitoso-03.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-03.jpg",
+      "status": "ok",
+      "bytes": 91143,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg": {
+      "file": "mentalidad-del-trader-exitoso-07.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-07.jpg",
+      "status": "ok",
+      "bytes": 29813,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg": {
+      "file": "el-grafico-entendiendo-nuestra-area-de-trabajo-13.jpg",
+      "local": "data/assets/images/el-grafico-entendiendo-nuestra-area-de-trabajo-13.jpg",
+      "status": "ok",
+      "bytes": 169983,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Ángulo-de-Consolidación.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png": {
+      "file": "soportes-y-resistencias-07.png",
+      "local": "data/assets/images/soportes-y-resistencias-07.png",
+      "status": "ok",
+      "bytes": 11671,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Ejemplo-Actividad-3.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "status": "ok",
+      "bytes": 20671,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg": {
+      "file": "nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "status": "ok",
+      "bytes": 15354,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg": {
+      "file": "soportes-y-resistencias-06.jpg",
+      "local": "data/assets/images/soportes-y-resistencias-06.jpg",
+      "status": "ok",
+      "bytes": 25224,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Dínamico.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg": {
+      "file": "soportes-y-resistencias-04.jpg",
+      "local": "data/assets/images/soportes-y-resistencias-04.jpg",
+      "status": "ok",
+      "bytes": 20412,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-Fuerte.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg": {
+      "file": "soportes-y-resistencias-05.jpg",
+      "local": "data/assets/images/soportes-y-resistencias-05.jpg",
+      "status": "ok",
+      "bytes": 30797,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/cambio-polaridad.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg": {
+      "file": "figuras-chartistas-10.jpg",
+      "local": "data/assets/images/figuras-chartistas-10.jpg",
+      "status": "ok",
+      "bytes": 13771,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg": {
+      "file": "figuras-chartistas-11.jpg",
+      "local": "data/assets/images/figuras-chartistas-11.jpg",
+      "status": "ok",
+      "bytes": 16343,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg": {
+      "file": "figuras-chartistas-13.jpg",
+      "local": "data/assets/images/figuras-chartistas-13.jpg",
+      "status": "ok",
+      "bytes": 19876,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg": {
+      "file": "figuras-chartistas-12.jpg",
+      "local": "data/assets/images/figuras-chartistas-12.jpg",
+      "status": "ok",
+      "bytes": 17680,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg": {
+      "file": "figuras-chartistas-03.jpg",
+      "local": "data/assets/images/figuras-chartistas-03.jpg",
+      "status": "ok",
+      "bytes": 26466,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg": {
+      "file": "figuras-chartistas-14.jpg",
+      "local": "data/assets/images/figuras-chartistas-14.jpg",
+      "status": "ok",
+      "bytes": 42150,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg": {
+      "file": "figuras-chartistas-05.jpg",
+      "local": "data/assets/images/figuras-chartistas-05.jpg",
+      "status": "ok",
+      "bytes": 14733,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg": {
+      "file": "figuras-chartistas-04.jpg",
+      "local": "data/assets/images/figuras-chartistas-04.jpg",
+      "status": "ok",
+      "bytes": 26324,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png": {
+      "file": "figuras-chartistas-15.png",
+      "local": "data/assets/images/figuras-chartistas-15.png",
+      "status": "ok",
+      "bytes": 15836,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg": {
+      "file": "figuras-chartistas-02.jpg",
+      "local": "data/assets/images/figuras-chartistas-02.jpg",
+      "status": "ok",
+      "bytes": 32837,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg": {
+      "file": "figuras-chartistas-07.jpg",
+      "local": "data/assets/images/figuras-chartistas-07.jpg",
+      "status": "ok",
+      "bytes": 28227,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg": {
+      "file": "figuras-chartistas-06.jpg",
+      "local": "data/assets/images/figuras-chartistas-06.jpg",
+      "status": "ok",
+      "bytes": 20575,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg": {
+      "file": "figuras-chartistas-08.jpg",
+      "local": "data/assets/images/figuras-chartistas-08.jpg",
+      "status": "ok",
+      "bytes": 15779,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg": {
+      "file": "figuras-chartistas-09.jpg",
+      "local": "data/assets/images/figuras-chartistas-09.jpg",
+      "status": "ok",
+      "bytes": 14754,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg": {
+      "file": "patrones-de-velas-japonesas-07.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-07.jpg",
+      "status": "ok",
+      "bytes": 96461,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/Ejemplo-Actividad-Vela-Japonesa.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png": {
+      "file": "patrones-de-velas-japonesas-02.png",
+      "local": "data/assets/images/patrones-de-velas-japonesas-02.png",
+      "status": "ok",
+      "bytes": 11646,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/creacion-vela-japonesa.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg": {
+      "file": "patrones-de-velas-japonesas-04.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-04.jpg",
+      "status": "ok",
+      "bytes": 17473,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/cuerpo-y-mechas.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg": {
+      "file": "patrones-de-velas-japonesas-05.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-05.jpg",
+      "status": "ok",
+      "bytes": 22508,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/partes-de-la-vela.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg": {
+      "file": "patrones-de-velas-japonesas-06.jpg",
+      "local": "data/assets/images/patrones-de-velas-japonesas-06.jpg",
+      "status": "ok",
+      "bytes": 52851,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/tipos-de-velas.jpg",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png": {
+      "file": "patrones-de-velas-japonesas-03.png",
+      "local": "data/assets/images/patrones-de-velas-japonesas-03.png",
+      "status": "ok",
+      "bytes": 28145,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/10/vela-partes.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png": {
+      "file": "nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-01.png",
+      "local": "data/assets/images/nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-01.png",
+      "status": "ok",
+      "bytes": 12120,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png": {
+      "file": "nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-01.png",
+      "local": "data/assets/images/nivel-1-clase-23-estrella-de-la-manana-y-estrella-de-la-tarde-01.png",
+      "status": "ok",
+      "bytes": 13828,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/estrella-de-la-tarde-y-estrella-de-la-mañana.png",
+        "resolved": true
+      }
+    },
+    "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png": {
+      "file": "nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-01.png",
+      "local": "data/assets/images/nivel-1-clase-16-que-es-un-doji-libelula-y-un-doji-lapida-01.png",
+      "status": "ok",
+      "bytes": 3266,
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/gravestone-y-dragonfly.png",
+        "resolved": true
+      }
+    }
+  },
+  "missing": []
+}

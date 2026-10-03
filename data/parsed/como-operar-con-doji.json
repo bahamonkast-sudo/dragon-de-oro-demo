@@ -1,0 +1,183 @@
+{
+  "url": "https://www.binaryteach.com/como-operar-con-doji/",
+  "slug": "como-operar-con-doji",
+  "depth": 1,
+  "title": "Cómo operar con Doji – Patrones de Velas Japonesas",
+  "description": "El Doji es un tipo de Vela Japonesa que nos muestra indecisión en el mercado por parte de los compradores y vendedores. Estos no logran definir […]",
+  "kind": "class",
+  "level": 1,
+  "order": 15,
+  "date_published": "2020-02-12T04:41:19+00:00",
+  "date_modified": "2020-02-12T04:56:44+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 175,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "wx0L4ua4zoQ",
+      "url": "https://www.youtube.com/embed/wx0L4ua4zoQ?feature=oembed",
+      "title": "Cómo hacer trading con DOJI -Patrones de Velas Opciones Binarias- Acción del precio"
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos-1024x347.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-01.png",
+      "status": "ok",
+      "bytes": 12120
+    },
+    {
+      "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-02.jpg",
+      "status": "ok",
+      "bytes": 91602
+    },
+    {
+      "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/wx0L4ua4zoQ/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "El Doji es un tipo de Vela Japonesa que nos muestra indecisión en el mercado por parte de los compradores y vendedores. Estos no logran definir una dirección, generalmente la vela se representa cono una línea gris con mechas.",
+      "html": "El Doji es un tipo de Vela Japonesa que nos muestra indecisión en el mercado por parte de los compradores y vendedores. Estos no logran definir una dirección, generalmente la vela se representa cono una línea gris con mechas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta vela se caracteriza porque posee un cuerpo muy pequeño, o no tiene cuerpo (el cuerpo sería una línea gris cómo podrás ver en los ejemplos más abajo).",
+      "html": "Esta vela se caracteriza porque posee un cuerpo muy pequeño, o no tiene cuerpo (el cuerpo sería una línea gris cómo podrás ver en los ejemplos más abajo)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tenemos que observar muy bien la fuerza de la tendencia y el contexto completo, porque esta vela puede indicarnos una reversión de la tendencia o un pequeño descanso para continuar en su misma dirección.",
+      "html": "Tenemos que observar muy bien la fuerza de la tendencia y el contexto completo, porque esta vela puede indicarnos una reversión de la tendencia o un pequeño descanso para continuar en su misma dirección."
+    },
+    {
+      "type": "paragraph",
+      "text": "Existen varios tipos de dojis, cómo podemos apreciar en la siguiente imagen:",
+      "html": "Existen varios tipos de dojis, cómo podemos apreciar en la siguiente imagen:"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-01.png",
+      "local": "data/assets/images/nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-01.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos-1024x347.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1288,
+      "height": 437,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2020/02/dojistipos.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo puedes darte cuenta tenemos varios Doji, Doji Neutral, Doji Piernas Largas (Long-Legged Doji), Doji Lápida (Gravestone Doji), Doji Libélula, (Dragonfly Doji) y Doji con pequeños cuerpos, los cuales podemos encontrar en las variaciones anteriormente mencionadas.",
+      "html": "Cómo puedes darte cuenta tenemos varios Doji, Doji Neutral, Doji Piernas Largas (Long-Legged Doji), Doji Lápida (Gravestone Doji), Doji Libélula, (Dragonfly Doji) y Doji con pequeños cuerpos, los cuales podemos encontrar en las variaciones anteriormente mencionadas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Empezaremos estudiando los Doji Neutrales, y Doji piernas largas.",
+      "html": "Empezaremos estudiando los Doji Neutrales, y Doji piernas largas."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase de patrones de velas veremos la explicación detallada de como operar un doji.",
+      "html": "En la siguiente clase de patrones de velas veremos la explicación detallada de como operar un doji."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "wx0L4ua4zoQ",
+      "url": "https://www.youtube.com/embed/wx0L4ua4zoQ?feature=oembed",
+      "title": "Cómo hacer trading con DOJI -Patrones de Velas Opciones Binarias- Acción del precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-15-como-operar-con-doji-patrones-de-velas-japones-02.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

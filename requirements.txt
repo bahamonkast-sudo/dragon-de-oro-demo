@@ -1,0 +1,2 @@
+# BinaryTeach demo — solo stdlib de Python, sin dependencias externas.
+# Este archivo existe para que Railway/Nixpacks detecte el runtime Python.

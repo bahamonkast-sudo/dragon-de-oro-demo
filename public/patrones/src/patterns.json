@@ -1,0 +1,44 @@
+﻿[
+  {
+    "id": "SET_01",
+    "title": "Martillo Alcista (Hammer)",
+    "direction": "COMPRA (CALL)",
+    "page": 35,
+    "image_hd": "pattern_003_p8_hd.webp",
+    "winrate": "84%",
+    "description": "Patron de reversion alcista en zona de soporte clave. Indica rechazo contundente del precio a seguir bajando.",
+    "steps": [
+      "Paso 1: Localizar nivel de soporte critico en el grafico.",
+      "Paso 2: Confirmar mecha inferior de al menos el doble del cuerpo sin mecha superior relevante.",
+      "Paso 3: Abrir operacion en CALL con expiracion de 1 a 3 velas al cierre del martillo."
+    ]
+  },
+  {
+    "id": "SET_02",
+    "title": "Estrella Fugaz (Shooting Star)",
+    "direction": "VENTA (PUT)",
+    "page": 39,
+    "image_hd": "pattern_003_p8_hd.webp",
+    "winrate": "82%",
+    "description": "Patron de agotamiento comprador en zona de resistencia. La mecha superior larga muestra rechazo institucional de precios altos.",
+    "steps": [
+      "Paso 1: Identificar tendencia previa alcista que impacta contra resistencia.",
+      "Paso 2: Esperar confirmacion de mecha superior prominente y cuerpo pequeno en la parte baja.",
+      "Paso 3: Abrir operacion en PUT a la siguiente vela."
+    ]
+  },
+  {
+    "id": "SET_03",
+    "title": "Vela Envolvente Alcista (Bullish Engulfing)",
+    "direction": "COMPRA (CALL)",
+    "page": 44,
+    "image_hd": "pattern_003_p8_hd.webp",
+    "winrate": "86%",
+    "description": "El cuerpo de la vela verde envuelve totalmente a la vela roja previa, demostrando entrada masiva de volumen comprador.",
+    "steps": [
+      "Paso 1: Validar fin de retroceso bajista sobre soporte dinamico o fijo.",
+      "Paso 2: Esperar que el cuerpo alcista cubra por completo el cuerpo de la vela anterior.",
+      "Paso 3: Entrada inmediata en CALL al inicio de la siguiente vela."
+    ]
+  }
+]

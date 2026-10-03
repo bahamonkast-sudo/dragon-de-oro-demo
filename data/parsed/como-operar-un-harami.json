@@ -1,0 +1,138 @@
+{
+  "url": "https://www.binaryteach.com/como-operar-un-harami/",
+  "slug": "como-operar-un-harami",
+  "depth": 1,
+  "title": "Cómo operar un Harami",
+  "description": "Este patrón de vela es muy característico y bastante efectivo, esta compuesto de dos velas y nos indica un patrón de reversión. Tenemos que tener cuidado […]",
+  "kind": "class",
+  "level": 1,
+  "order": 22,
+  "date_published": "2020-02-19T23:08:16+00:00",
+  "date_modified": "2020-02-19T23:08:17+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 177,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "mCcSblfQMxk",
+      "url": "https://www.youtube.com/embed/mCcSblfQMxk?feature=oembed",
+      "title": "Trading con HARAMI -opciones binarias- Patrones de Velas Japonesas"
+    }
+  ],
+  "links": [
+    {
+      "text": "barra interna",
+      "url": "https://www.binaryteach.com/como-aprovechar-una-barra-interna/",
+      "kind": "page",
+      "slug": "como-aprovechar-una-barra-interna"
+    },
+    {
+      "text": "soporte y resistencia",
+      "url": "https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/",
+      "kind": "page",
+      "slug": "soportes-y-resistencias-techos-y-suelos"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/mCcSblfQMxk/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mCcSblfQMxk/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/mCcSblfQMxk/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-22-como-operar-un-harami-01.jpg",
+      "status": "ok",
+      "bytes": 97431
+    },
+    {
+      "url": "https://i.ytimg.com/vi/mCcSblfQMxk/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mCcSblfQMxk/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/mCcSblfQMxk/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mCcSblfQMxk/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Este patrón de vela es muy característico y bastante efectivo, esta compuesto de dos velas y nos indica un patrón de reversión.",
+      "html": "Este patrón de vela es muy característico y bastante efectivo, esta compuesto de dos velas y nos indica un patrón de reversión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tenemos que tener cuidado al operar este patrón de vela japonesa porque lo podemos confundir con la barra interna , de hecho es el mismo patrón pero en diferente contexto.",
+      "html": "Tenemos que tener cuidado al operar este patrón de vela japonesa porque lo podemos confundir con la<a class=\"internal\" href=\"https://www.binaryteach.com/como-aprovechar-una-barra-interna/\"> barra interna</a>, de hecho es el mismo patrón pero en diferente contexto."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Harami es un patrón de reversión compuesto por dos velas, la primer vela es más grande y a favor de la tendencia. La segunda vela (Harami) es más pequeña (aproximadamente 1/3 de la vela anterior), va en dirección contraria a la tendencia y suele presentar un GAP en la apertura, dejándola completamente en el interior de la vela previa.",
+      "html": "El Harami es un patrón de reversión compuesto por dos velas, la primer vela es más grande y a favor de la tendencia. La segunda vela (Harami) es más pequeña (aproximadamente 1/3 de la vela anterior), va en dirección contraria a la tendencia y suele presentar un GAP en la apertura, dejándola completamente en el interior de la vela previa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tenemos que operar este patrón en el contexto ideal, una tendencia saludable, un nivel de soporte y resistencia que impida el paso del precio para apoyarnos en la reversión.",
+      "html": "Tenemos que operar este patrón en el contexto ideal, una tendencia saludable, un nivel de <a class=\"internal\" href=\"https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/\">soporte y resistencia</a> que impida el paso del precio para apoyarnos en la reversión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nos da mayor probabilidad de éxito si el cierre de la vela Harami se encuentra cercano a la apertura de la vela previa, claro, sin romperlo.",
+      "html": "Nos da mayor probabilidad de éxito si el cierre de la vela Harami se encuentra cercano a la apertura de la vela previa, claro, sin romperlo."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo te explico cómo identificarlo y operarlo.",
+      "html": "En el siguiente vídeo te explico cómo identificarlo y operarlo."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "mCcSblfQMxk",
+      "url": "https://www.youtube.com/embed/mCcSblfQMxk?feature=oembed",
+      "title": "Trading con HARAMI -opciones binarias- Patrones de Velas Japonesas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-22-como-operar-un-harami-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

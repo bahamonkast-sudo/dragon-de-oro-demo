@@ -1,0 +1,147 @@
+{
+  "url": "https://www.binaryteach.com/la-estrategia-uniendo-los-conocimientos-de-trading/",
+  "slug": "la-estrategia-uniendo-los-conocimientos-de-trading",
+  "depth": 1,
+  "title": "La Estrategia -Uniendo los conocimientos de trading",
+  "description": "Hola Trader, has logrado avanzar en el curso y en este momento ya tienes buenos conocimientos tanto teóricos cómo habilidades prácticas (espero que hayas estado practicando). […]",
+  "kind": "class",
+  "level": 1,
+  "order": 26,
+  "date_published": "2020-02-20T05:05:10+00:00",
+  "date_modified": "2020-02-20T05:05:12+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-accion-del-precio"
+  ],
+  "word_count": 263,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "zZZ0pHNiCsg",
+      "url": "https://www.youtube.com/embed/zZZ0pHNiCsg?feature=oembed",
+      "title": "La ESTRATEGIA -Opciones Binarias- Acción del Precio"
+    }
+  ],
+  "links": [
+    {
+      "text": "Resumen del Curso",
+      "url": "https://www.binaryteach.com/curso-de-accion-del-precio-para-opciones-binarias/",
+      "kind": "page",
+      "slug": "curso-de-accion-del-precio-para-opciones-binarias"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-26-la-estrategia-uniendo-los-conocimientos-de-tra-01.jpg",
+      "status": "ok",
+      "bytes": 113113
+    },
+    {
+      "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/zZZ0pHNiCsg/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Hola Trader, has logrado avanzar en el curso y en este momento ya tienes buenos conocimientos tanto teóricos cómo habilidades prácticas (espero que hayas estado practicando).",
+      "html": "Hola Trader,  has logrado avanzar en el curso y en este momento ya tienes buenos conocimientos tanto teóricos cómo habilidades prácticas (espero que hayas estado practicando)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hemos visto ya los temas de estructura del mercado cómo tendencias y soportes y resistencias, también hemos aprendido sobre chartismo y sobre patrones de velas.",
+      "html": "Hemos visto ya los temas de estructura del mercado cómo tendencias y soportes y resistencias, también hemos aprendido sobre chartismo y sobre patrones de velas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de continuar te invito a ver el Resumen del Curso , una versión resumida del curso de acción del precio para opciones binarias, para que tengas más fresco todo lo visto y puedas avanzar en el próximo tema.",
+      "html": "Antes de continuar te invito a ver el <a class=\"internal\" href=\"https://www.binaryteach.com/curso-de-accion-del-precio-para-opciones-binarias/\">Resumen del Curso</a>, una versión resumida del curso de acción del precio para opciones  binarias, para que tengas más fresco todo lo visto y puedas avanzar en el próximo tema."
+    },
+    {
+      "type": "paragraph",
+      "text": "En este punto te habrás dado cuenta que todos los temas vistos con anterioridad no se pueden aplicar en la práctica de manera aislada.",
+      "html": "En este punto te habrás dado cuenta que todos los temas vistos con anterioridad no se pueden aplicar en la práctica de manera aislada."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es necesario tener el conocimiento de estructura del mercado para poder hacer un buen seguimiento del precio y tener todas las probabilidades a nuestro favor.",
+      "html": "Es necesario tener el conocimiento de estructura del mercado para poder hacer un buen seguimiento del precio y tener todas las probabilidades a nuestro favor."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nosotros cómo traders cometemos el error que muchas veces solo nos enfocamos en lo que pasa en la vela actual y nos olvidamos de todo lo que sucede en el contexto.",
+      "html": "Nosotros cómo traders cometemos el error que muchas veces solo nos enfocamos en lo que pasa en la vela actual y nos olvidamos de todo lo que sucede en el contexto."
+    },
+    {
+      "type": "paragraph",
+      "text": "El contexto es importante, es la historia previa que nos ayuda a entender mejor lo que esta haciendo el precio actualmente.",
+      "html": "El contexto es importante, es la historia previa que nos ayuda a entender mejor lo que esta haciendo el precio actualmente."
+    },
+    {
+      "type": "paragraph",
+      "text": "Imaginalo de la siguiente forma, es cómo empezar a ver una película a la mitad, en un principio no entiendes que esta pasando y quien es el protagonista. Pues igual ocurre con el análisis técnico, si solo te enfocas en la vela actual, no entenderás la historia.",
+      "html": "Imaginalo de la siguiente forma, es cómo empezar a ver una película a la mitad, en un principio  no entiendes que esta pasando y quien es el protagonista. Pues igual ocurre con el análisis técnico, si solo te enfocas en la vela actual, no entenderás la historia."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase explico reglas fundamentales que utilizo en mis operativas y también explico cómo utilizo todo el contexto para apoyarme en los análisis.",
+      "html": "En la siguiente clase explico reglas fundamentales que utilizo en mis operativas y también explico cómo utilizo todo el contexto para apoyarme en los análisis."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "zZZ0pHNiCsg",
+      "url": "https://www.youtube.com/embed/zZZ0pHNiCsg?feature=oembed",
+      "title": "La ESTRATEGIA -Opciones Binarias- Acción del Precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-26-la-estrategia-uniendo-los-conocimientos-de-tra-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

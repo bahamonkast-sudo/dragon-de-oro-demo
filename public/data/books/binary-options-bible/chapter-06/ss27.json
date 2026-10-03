@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss27",
+  "code": "SS27",
+  "name": "Patrón Seguro 27 (Patrón Brasileño - 1V, 1R, 2V)",
+  "classification": {
+    "market": "Movimiento Oscilante (Mercado en Tiempo Real)",
+    "tradeType": "Ciclo Probabilístico de Giro Bajista",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Patrón brasileño: FUNCIONA MEJOR EN EL MERCADO EN TIEMPO REAL (EN VIVO).",
+    "El mercado debe estar en movimiento oscilante.",
+    "Espere la secuencia estricta de 4 velas: 1 verde, 1 rojo, 2 verdes.",
+    "REGLA DE ENTRADA: A continuación, al cerrar la segunda vela verde, coloque la operación en DIRECCIÓN BAJISTA (PUT) en la vela de operación siguiente.",
+    "Para configuración simétrica alcista: 1 rojo, 1 verde, 2 rojos -> colocar operación en ALZA (CALL).",
+    "Compruebe que el indicador estocástico respalda su dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Funciona con mayor efectividad en mercados en tiempo real que en condiciones de baja liquidez u OTC.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "mtgNote": "MTG – 1 PASO permitido.",
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 3
+  }
+}

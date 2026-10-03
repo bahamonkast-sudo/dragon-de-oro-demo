@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss09",
+  "code": "SS09",
+  "name": "Patrón Seguro 9 (Sure Shot 8 Avanzado)",
+  "classification": {
+    "market": "Tendencia o Rango tras SS08",
+    "tradeType": "Reversión tras Continuación del Mismo Color",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Es un patrón avanzado de Sure Shot - 8.",
+    "Espere a que se forme perfectamente el patrón Sure Shot 8.",
+    "Para configuración tras SS8 alcista: una vez formado SS8 (operación verde ganada), si el mercado forma otra vela verde seguida del mismo color, entonces tome una posición BAJISTA (PUT) en la vela de operación siguiente.",
+    "Para configuración tras SS8 bajista: una vez formado SS8 (operación roja ganada), si el mercado forma otra vela roja seguida del mismo color, entonces tome una posición ALCISTA (CALL) en la vela de operación siguiente.",
+    "Oscilador estocástico con valor predeterminado respaldando el giro."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón Sure Shot en la cuenta real.",
+    "REGLA CRÍTICA: El mercado solo te permitirá operar con SS9 si tu SS8 es una operación segura (ganada limpia sin MTG).",
+    "Solo si se cumplen todas las condiciones anteriores, entonces realiza la operación."
+  ],
+  "mtgNote": "En Sure Shot 9, puedes usar 1-Step MTG si la primera entrada se pierde.",
+  "simulation": {
+    "velasBase": 11,
+    "triggerIndex": 9
+  }
+}

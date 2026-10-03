@@ -1,0 +1,30 @@
+﻿{
+  "id": "ss06",
+  "code": "SS06",
+  "name": "Patrón Seguro 6 (Ruptura Estricta con Cuerpo tras 4 Velas)",
+  "classification": {
+    "market": "Tendencia Alcista o Bajista",
+    "tradeType": "Continuación por Ruptura con Cuerpo",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "NO_MTG",
+  "requirements": [
+    "El mercado debe estar en tendencia, ya sea alcista o bajista.",
+    "Espere a que se produzcan cuatro velas verdes consecutivas (mínimo 4 velas del mismo color) o cuatro velas rojas consecutivas.",
+    "Después, espere UNA vela del color opuesto (retroceso de 1 vela).",
+    "Coloque una línea horizontal en el nivel extremo (en la parte superior de la vela opuesta/4ª vela para compras, o en la parte inferior para ventas que siempre es el punto más bajo).",
+    "REGLA CRÍTICA DE LA GRÁFICA: Espere la Vela de Ruptura. SOLO CON EL CUERPO ES VÁLIDA (la mecha sola no es válida, debe cerrar con cuerpo rompiendo el nivel).",
+    "Coloque la operación en la siguiente vela en la misma dirección de la ruptura (CALL para compras, PUT para ventas).",
+    "Oscilador estocástico con valor predeterminado: para operaciones alcistas línea verde sobre roja; para operaciones bajistas línea roja sobre verde."
+  ],
+  "precautions": [
+    "Asegúrese de realizar pruebas retrospectivas con el par de divisas antes de utilizar el patrón Sure Shot en la cuenta real.",
+    "Siga siempre la tendencia, nunca opere en contra de ella.",
+    "Si la vela rompe únicamente con mecha y el cuerpo queda dentro o sobre la línea, el patrón queda invalidado.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 7,
+    "triggerIndex": 5
+  }
+}

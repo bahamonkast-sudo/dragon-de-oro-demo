@@ -1,0 +1,30 @@
+﻿{
+  "id": "ss19",
+  "code": "SS19",
+  "name": "Patrón Seguro 19 (Ruptura de Línea Horizontal Doji)",
+  "classification": {
+    "market": "Tendencia Alcista o Bajista previa",
+    "tradeType": "Continuación de Giro tras Romper Nivel Doji",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia, ya sea alcista o bajista.",
+    "Espere a que se formen velas consecutivas de la tendencia y compruebe si se forma una vela Doji.",
+    "Coloque una línea horizontal sobre la vela Doji (nivel de soporte/resistencia clave).",
+    "Ahora espere a que el mercado haga un giro/inversión y rompa esa línea horizontal con una vela de ruptura.",
+    "REGLA DE OPERACIÓN: Una vez que se rompa la línea con la vela de ruptura, realice la operación en la misma dirección de la ruptura en la siguiente vela de comercio.",
+    "Para configuración de compra (CALL): ruptura hacia arriba del nivel Doji -> operar CALL.",
+    "Para configuración de venta (PUT): ruptura hacia abajo del nivel Doji -> operar PUT.",
+    "Utilice un oscilador estocástico con valor predeterminado respaldando la dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación.",
+    "La vela de ruptura debe cerrar claramente perforando el nivel trazado en el Doji."
+  ],
+  "simulation": {
+    "velasBase": 7,
+    "triggerIndex": 5
+  }
+}

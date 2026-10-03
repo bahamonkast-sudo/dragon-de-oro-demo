@@ -1,0 +1,215 @@
+{
+  "url": "https://www.binaryteach.com/hammer-martillo/",
+  "slug": "hammer-martillo",
+  "depth": 1,
+  "title": "Cómo hacer Trading con el Martillo – Hammer y variaciones",
+  "description": "Este es un patrón de vela bastante común, suele encontrarse fácilmente pero hay que tener una buena perspectiva cada vez que lo analicemos, ya que puede […]",
+  "kind": "class",
+  "level": 1,
+  "order": 17,
+  "date_published": "2020-02-14T18:11:37+00:00",
+  "date_modified": "2020-02-14T18:11:39+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 326,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "4rbWKoiF3_I",
+      "url": "https://www.youtube.com/embed/4rbWKoiF3_I?feature=oembed",
+      "title": "Trading con Martillo o con Hombre Ahorcado -Patrones de Velas Opciones Binarias- Acción del precio"
+    },
+    {
+      "provider": "youtube",
+      "id": "Tgig6dSvcds",
+      "url": "https://www.youtube.com/embed/Tgig6dSvcds?feature=oembed",
+      "title": "Trading con Martillo Invertido y Estrella Fugaz -Patrones de Velas- Opciones Binarias"
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-01.jpg",
+      "status": "ok",
+      "bytes": 102580
+    },
+    {
+      "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/4rbWKoiF3_I/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Tgig6dSvcds/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Tgig6dSvcds/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Tgig6dSvcds/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-02.jpg",
+      "status": "ok",
+      "bytes": 120633
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Tgig6dSvcds/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Tgig6dSvcds/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Tgig6dSvcds/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Tgig6dSvcds/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Este es un patrón de vela bastante común, suele encontrarse fácilmente pero hay que tener una buena perspectiva cada vez que lo analicemos, ya que puede ser de continuidad o reversión.",
+      "html": "Este es un patrón de vela bastante común, suele encontrarse fácilmente pero hay que tener una buena perspectiva cada vez que lo analicemos, ya que puede ser de continuidad o reversión."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo siempre, para conocer el posible movimiento de la siguiente vela es necesario tomar en cuenta el contexto completo junto con el análisis de este patrón.",
+      "html": "Cómo siempre, para conocer el posible movimiento de la siguiente vela es necesario tomar en cuenta el contexto completo junto con el análisis de este patrón."
+    },
+    {
+      "type": "paragraph",
+      "text": "La característica principal del patrón Hammer o Martillo, es que la mecha es dos veces el tamaño del cuerpo.",
+      "html": "La característica principal del patrón Hammer o Martillo, es que la mecha es dos veces el tamaño del cuerpo."
+    },
+    {
+      "type": "paragraph",
+      "text": "En primer lugar podemos identificar al Hammer (Martillo) que es un patrón de vela alcista, el cuerpo se ubica en la parte superior y la mecha en la parte inferior, nos muestra presión por parte de los compradores.",
+      "html": "En primer lugar podemos identificar al Hammer (Martillo) que es un patrón de vela alcista, el cuerpo se ubica en la parte superior y la mecha en la parte inferior, nos muestra presión por parte de los compradores."
+    },
+    {
+      "type": "paragraph",
+      "text": "Después del Martillo podemos identificar al Hanging Man (Hombre Ahorcado), que es un patrón bajista, el cuerpo se ubica en la parte superior y la mecha en la parte inferior. Dependiendo del contexto puede indicarnos desde presión alcista (empuje de la mecha hacia arriba) o presión bajita (Vendedores intentando empujar hacia abajo).",
+      "html": "Después del Martillo podemos identificar al Hanging Man (Hombre Ahorcado), que es un patrón bajista, el cuerpo se ubica en la parte superior y la mecha en la parte inferior. Dependiendo del contexto puede indicarnos desde presión alcista (empuje de la mecha hacia arriba) o presión bajita (Vendedores intentando empujar hacia abajo)."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase explico mejor cómo podemos operar con el patrón Hammer y Hanging Man:",
+      "html": "En la siguiente clase explico mejor cómo podemos operar con el patrón Hammer y Hanging Man:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "4rbWKoiF3_I",
+      "url": "https://www.youtube.com/embed/4rbWKoiF3_I?feature=oembed",
+      "title": "Trading con Martillo o con Hombre Ahorcado -Patrones de Velas Opciones Binarias- Acción del precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Existen otras variaciones más de este patrón de vela japonesa, aún falta el Inverted Hammer.",
+      "html": "Existen otras variaciones más de este patrón de vela japonesa, aún falta el Inverted Hammer."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Martillo Invertido o Inverted Hammer es un patrón de vela alcista, tiene el cuerpo en la parte inferior y la mecha en la parte superior. Dependiendo del contexto nos muestra presión por parte de los vendedores, o presión por parte de los compradores.",
+      "html": "El Martillo Invertido o Inverted Hammer es un patrón de vela alcista, tiene el cuerpo en la parte inferior y la mecha en la parte superior. Dependiendo del contexto nos muestra presión por parte de los vendedores, o presión por parte de los compradores."
+    },
+    {
+      "type": "paragraph",
+      "text": "Por ultimo tenemos la Shooting Star o Estrella Fugaz, este patrón de vela es bajista, tiene el cuerpo en la parte inferior y la mecha en la parte superior, nos indica presión por parte de los vendedores.",
+      "html": "Por ultimo tenemos la Shooting Star o Estrella Fugaz, este patrón de vela es bajista, tiene el cuerpo en la parte inferior y la mecha en la parte superior, nos indica presión por parte de los vendedores."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico a detalle cómo identificarlo y como operar estos patrones de velas:",
+      "html": "En el siguiente vídeo explico a detalle cómo identificarlo y como operar estos patrones de velas:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "Tgig6dSvcds",
+      "url": "https://www.youtube.com/embed/Tgig6dSvcds?feature=oembed",
+      "title": "Trading con Martillo Invertido y Estrella Fugaz -Patrones de Velas- Opciones Binarias",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-17-como-hacer-trading-con-el-martillo-hammer-y-va-02.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo puedes observar, en tendencias fuertes este patrón puede indicar continuidad, y en tendencias que han perdido fuerza y que no han logrado pasar un nivel de S/R pueden indicar una reversión.",
+      "html": "Cómo puedes observar, en tendencias fuertes este patrón puede indicar continuidad, y en tendencias que han perdido fuerza y que no han logrado pasar un nivel de S/R pueden indicar una reversión."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

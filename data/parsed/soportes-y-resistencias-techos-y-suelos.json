@@ -1,0 +1,613 @@
+{
+  "url": "https://www.binaryteach.com/soportes-y-resistencias-techos-y-suelos/",
+  "slug": "soportes-y-resistencias-techos-y-suelos",
+  "depth": 1,
+  "title": "Soportes y Resistencias en el Trading",
+  "description": "La mayoría de cursos de trading empiezan enseñando lo más básico, esto incluye por supuesto, los soportes y resistencias, o, los techos y suelos cómo también […]",
+  "kind": "class",
+  "level": 1,
+  "order": 4,
+  "date_published": "2020-02-01T22:03:45+00:00",
+  "date_modified": "2020-04-12T21:46:26+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 470,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "cWwy0DmHShc",
+      "url": "https://www.youtube.com/embed/cWwy0DmHShc?feature=oembed",
+      "title": "¿Qué son SOPORTES y RESISTENCIAS en el Trading? -Opciones Binarias-"
+    },
+    {
+      "provider": "youtube",
+      "id": "ign6Kd7JBhw",
+      "url": "https://www.youtube.com/embed/ign6Kd7JBhw?feature=oembed",
+      "title": "Cómo TRAZAR Soportes y Resistencias -Opciones Binarias- Operaciones Turbo"
+    },
+    {
+      "provider": "youtube",
+      "id": "Kz5pUuyIM7w",
+      "url": "https://www.youtube.com/embed/Kz5pUuyIM7w?feature=oembed",
+      "title": "Soportes y Resistencias FUERTES en el Trading -Opciones Binarias- Acción del Precio"
+    },
+    {
+      "provider": "youtube",
+      "id": "rfhsMrzxRI8",
+      "url": "https://www.youtube.com/embed/rfhsMrzxRI8?feature=oembed",
+      "title": "Cómo USAR los Soportes y Resistencias II - Opciones Binarias - Acción del Precio"
+    },
+    {
+      "provider": "youtube",
+      "id": "mhwwkwblebE",
+      "url": "https://www.youtube.com/embed/mhwwkwblebE?feature=oembed",
+      "title": "Cómo USAR los Soportes y Resistencias III - Opciones Binarias - Acción del Precio"
+    },
+    {
+      "provider": "youtube",
+      "id": "J8JMrPUUb3w",
+      "url": "https://www.youtube.com/embed/J8JMrPUUb3w?feature=oembed",
+      "title": "Cómo usar los Round Number en Binarias -Opciones Binarias Numero Redondo-"
+    }
+  ],
+  "links": [
+    {
+      "text": "YouTube de Binary",
+      "url": "https://youtube.com/c/binaryteach",
+      "kind": "youtube"
+    },
+    {
+      "text": "Resumen de Soportes y Resistencias + Actividades",
+      "url": "https://www.binaryteach.com/soportes-y-resistencias/",
+      "kind": "page",
+      "slug": "soportes-y-resistencias"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "status": "ok",
+      "bytes": 20671
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "status": "ok",
+      "bytes": 15354
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cWwy0DmHShc/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/cWwy0DmHShc/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/cWwy0DmHShc/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-03.jpg",
+      "status": "ok",
+      "bytes": 144250
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cWwy0DmHShc/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/cWwy0DmHShc/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/cWwy0DmHShc/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/cWwy0DmHShc/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-04.jpg",
+      "status": "ok",
+      "bytes": 112358
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/ign6Kd7JBhw/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-05.jpg",
+      "status": "ok",
+      "bytes": 120624
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/Kz5pUuyIM7w/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-06.jpg",
+      "status": "ok",
+      "bytes": 145321
+    },
+    {
+      "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/rfhsMrzxRI8/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/mhwwkwblebE/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mhwwkwblebE/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/mhwwkwblebE/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-07.jpg",
+      "status": "ok",
+      "bytes": 124087
+    },
+    {
+      "url": "https://i.ytimg.com/vi/mhwwkwblebE/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mhwwkwblebE/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/mhwwkwblebE/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/mhwwkwblebE/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-08.jpg",
+      "status": "ok",
+      "bytes": 85200
+    },
+    {
+      "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/J8JMrPUUb3w/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "La mayoría de cursos de trading empiezan enseñando lo más básico, esto incluye por supuesto, los soportes y resistencias, o, los techos y suelos cómo también se le suele conocer.",
+      "html": "La mayoría de cursos de trading empiezan enseñando lo más básico, esto incluye por supuesto, los soportes y resistencias, o, los techos y suelos cómo también se le suele conocer."
+    },
+    {
+      "type": "paragraph",
+      "text": "Y tiene toda la razón, puesto que los soportes y resistencias son un tema bastante básico, y mucho ojo aquí de no confundir lo básico, con lo no necesario.",
+      "html": "Y tiene toda la razón, puesto que los soportes y resistencias son un tema bastante básico, y mucho ojo aquí de no confundir lo básico, con lo no necesario."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este tema es sumamente importante y necesario para nosotros que somos traders que realizamos análisis técnico para operar.",
+      "html": "Este tema es sumamente importante y necesario para nosotros que somos traders que realizamos análisis técnico para operar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Los soportes y resistencias no son tema solo para futuros o CFD’s, es un tema importante que tiene que saber manejar cualquier trader, independientemente del activo con el que trabaje, forex, criptos u Opciones Binarias como es nuestro caso.",
+      "html": "Los soportes y resistencias no son tema solo para futuros o CFD’s, es un tema importante que tiene que saber manejar cualquier trader, independientemente del activo con el que trabaje, forex, criptos u Opciones Binarias como es nuestro caso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Los soportes o techos y las resistencias o suelo, forman parte fundamental del análisis técnico y de la acción del precio. Podría decirse con exactitud que son un pilar fundamental en el trading. Nunca subestimes la importancia de un nivel de S/R mientras analizas el gráfico.",
+      "html": "Los soportes o techos y las resistencias o suelo, forman parte fundamental del análisis técnico y de la acción del precio. Podría decirse con exactitud que son un pilar fundamental en el trading. Nunca subestimes la importancia de un nivel de S/R mientras analizas el gráfico."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una resistencia o techo es el punto más alto al cual el precio pudo llegar tras un movimiento alcista, la fuerza de venta en este punto supera a la de compra haciendo que el precio baje.",
+      "html": "Una <strong>resistencia o techo</strong> es el punto más alto al cual el precio pudo llegar tras un movimiento alcista, la fuerza de venta en este punto supera a la de compra haciendo que el precio baje."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-01.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "El precio no puede seguir subiendo por lo que ahí identificamos nuestra zona de resistencia.",
+      "width": 1080,
+      "height": 729,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Resistencia-1.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Un soporte o suelo es el punto más bajo al cual el precio pudo llegar tras un movimiento bajista, la fuerza de compra en este punto supera a la de venta haciendo que el precio suba.",
+      "html": "Un <strong>soporte o suelo</strong> es el punto más bajo al cual el precio pudo llegar tras un movimiento bajista, la fuerza de compra en este punto supera a la de venta haciendo que el precio suba."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1-1024x691.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "El precio no puede seguir bajando por lo que ahí identificamos nuestra zona de soporte.",
+      "width": 1080,
+      "height": 729,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/08/Soporte-1.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "He dedicado varios vídeos del curso a explicar a detalle lo que son estas zonas y cómo poder identificarlas en el gráfico, a continuación te dejo las clases respectivas para que puedas avanzar de una mejor manera en este aprendizaje.",
+      "html": "He dedicado varios vídeos del curso a explicar a detalle lo que son estas zonas y cómo poder identificarlas en el gráfico, a continuación te dejo las clases respectivas para que puedas avanzar de una mejor manera en este aprendizaje."
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta primer clase te explico qué son los soportes y resistencias:",
+      "html": "En esta primer clase te explico qué son los soportes y resistencias:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "cWwy0DmHShc",
+      "url": "https://www.youtube.com/embed/cWwy0DmHShc?feature=oembed",
+      "title": "¿Qué son SOPORTES y RESISTENCIAS en el Trading? -Opciones Binarias-",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-03.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta otra serie de clases explico cómo identificarlas en el mercado y cómo trazarlas correctamente:",
+      "html": "En esta otra serie de clases explico cómo identificarlas en el mercado y cómo trazarlas correctamente:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "ign6Kd7JBhw",
+      "url": "https://www.youtube.com/embed/ign6Kd7JBhw?feature=oembed",
+      "title": "Cómo TRAZAR Soportes y Resistencias -Opciones Binarias- Operaciones Turbo",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-04.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Tenemos que saber identificar también entre las zonas de soporte y resistencia fuertes y las débiles.",
+      "html": "Tenemos que saber identificar también entre las zonas de soporte y resistencia fuertes y las débiles."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "Kz5pUuyIM7w",
+      "url": "https://www.youtube.com/embed/Kz5pUuyIM7w?feature=oembed",
+      "title": "Soportes y Resistencias FUERTES en el Trading -Opciones Binarias- Acción del Precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-05.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Al final de estas clases a nuestros compañeros que nos siguen en el canal de YouTube de Binary Teach, les quedaron muchas dudas sobre este importante tema, por lo que a continuación te dejo un par de clases más donde cubro todas las dudas surgidas en esos momentos.",
+      "html": "Al final de estas clases a nuestros compañeros que nos siguen en el canal de <a class=\"external\" href=\"https://youtube.com/c/binaryteach\" rel=\"noopener nofollow\" target=\"_blank\">YouTube de Binary</a> Teach, les quedaron muchas dudas sobre este importante tema, por lo que a continuación te dejo un par de clases más donde cubro todas las dudas surgidas en esos momentos."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "rfhsMrzxRI8",
+      "url": "https://www.youtube.com/embed/rfhsMrzxRI8?feature=oembed",
+      "title": "Cómo USAR los Soportes y Resistencias II - Opciones Binarias - Acción del Precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-06.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "mhwwkwblebE",
+      "url": "https://www.youtube.com/embed/mhwwkwblebE?feature=oembed",
+      "title": "Cómo USAR los Soportes y Resistencias III - Opciones Binarias - Acción del Precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-07.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Para terminar, en muchas de las clases y vídeos de operativa, suelo mencionar los números redondos, o zonas institucionales, este es un tema también bastante importante el cual tenemos que tener conocimiento, el no identificar estas zonas pueden traernos resultados negativos en nuestras operativas. No hace falta que identifiques todos los números redondos, pero si tienes que tenerlos en consideración al momento de operar por que el precio podría reaccionar a ellos.",
+      "html": "Para terminar, en muchas de las clases y vídeos de operativa, suelo mencionar los números redondos, o zonas institucionales, este es un tema también bastante importante el cual tenemos que tener conocimiento, el no identificar estas zonas pueden traernos resultados negativos en nuestras operativas. No hace falta que identifiques todos los números redondos, pero si tienes que tenerlos en consideración al momento de operar por que el precio podría reaccionar a ellos."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "J8JMrPUUb3w",
+      "url": "https://www.youtube.com/embed/J8JMrPUUb3w?feature=oembed",
+      "title": "Cómo usar los Round Number en Binarias -Opciones Binarias Numero Redondo-",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-04-soportes-y-resistencias-en-el-trading-08.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Ya para finalizar te recomiendo que te pases a ver este resumen, donde dejo algunas actividades que puedes realizar para compartir en el salón virtual:",
+      "html": "Ya para finalizar te recomiendo que te pases a ver este resumen, donde dejo algunas actividades que puedes realizar para compartir en el salón virtual:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Resumen de Soportes y Resistencias + Actividades",
+      "html": "<strong><a class=\"internal\" href=\"https://www.binaryteach.com/soportes-y-resistencias/\">Resumen de Soportes y Resistencias + Actividades</a></strong>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

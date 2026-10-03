@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragón de Oro - Control Táctico Binomo</title>
+  <style>
+    :root {
+      --bg-dark: #0f1218;
+      --card-bg: #181d26;
+      --accent-gold: #e5b94c;
+      --neon-green: #00b074;
+      --neon-red: #ff4a4a;
+      --text-gray: #8892b0;
+      --text-white: #f8fafc;
+      --row-bg: #191e29;
+    }
+
+    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: var(--bg-dark); color: var(--text-white); margin: 0; padding: 22px; }
+
+    /* Barra Superior Métricas */
+    .metrics-header {
+      background: var(--card-bg);
+      border: 1px solid rgba(229,185,76,0.25);
+      border-radius: 12px;
+      padding: 16px 22px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .metric-item { border-right: 1px dashed rgba(255,255,255,0.08); padding-right: 10px; }
+    .metric-item:last-child { border-right: none; }
+    .metric-lbl { font-size: 0.65rem; color: var(--text-gray); font-weight: 700; text-transform: uppercase; }
+    .metric-val { font-size: 1.25rem; font-family: monospace; font-weight: 800; margin-top: 5px; }
+
+    /* Tarjetas de Estadísticas */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .stat-icon { font-size: 1.5rem; background: #0e121a; padding: 8px; border-radius: 8px; }
+    .stat-info { display: flex; flex-direction: column; }
+    .stat-lbl { font-size: 0.65rem; color: var(--text-gray); font-weight: 700; text-transform: uppercase; }
+    .stat-val { font-size: 1.15rem; font-weight: 800; color: var(--accent-gold); font-family: monospace; margin-top: 2px; }
+
+    /* Selector de Sesión y Acciones */
+    .session-creator-bar {
+      background: #141720;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .bar-title { font-size: 0.9rem; font-weight: bold; color: var(--accent-gold); }
+    .bar-controls { display: flex; align-items: center; gap: 10px; }
+    .bar-input { background: #080a0f; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: var(--accent-gold); padding: 5px 8px; font-family: monospace; font-size: 0.85rem; }
+    
+    .btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.82rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-start { background: transparent; border: 1px solid var(--accent-gold); color: var(--accent-gold); }
+    .btn-start:hover { background: var(--accent-gold); color: #000; }
+    .btn-rule { background: rgba(229,185,76,0.15); border: 1px solid var(--accent-gold); color: var(--accent-gold); }
+    .btn-rule:hover { background: var(--accent-gold); color: #000; }
+    .btn-cfg { background: #232a3b; color: #fff; border: 1px solid rgba(255,255,255,0.1); }
+
+    /* Grilla de Bitácora Continua */
+    .bitacora-grid {
+      display: grid;
+      grid-template-columns: 140px 110px 110px 60px 1fr 140px 150px;
+      padding: 8px 14px;
+      align-items: center;
+      gap: 10px;
+    }
+    .bitacora-header-row {
+      color: var(--accent-gold);
+      font-size: 0.7rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 6px;
+    }
+    .fila-minuto {
+      background: var(--row-bg);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 6px;
+      margin-bottom: 4px;
+    }
+    .fila-minuto:hover { background: #202736; }
+    .min-label { font-size: 0.82rem; font-weight: bold; color: #a0aec0; }
+    .min-time { font-size: 0.68rem; color: var(--text-gray); display: block; font-family: monospace; }
+    .input-monto {
+      width: 95px;
+      background: #0b0e14;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+      color: #fff;
+      padding: 5px 8px;
+      font-family: monospace;
+      font-weight: bold;
+      text-align: center;
+    }
+    .input-estrategia {
+      width: 100%;
+      background: #0b0e14;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      color: #e2e8f0;
+      padding: 5px 10px;
+      font-size: 0.78rem;
+    }
+    .btn-action {
+      background: #0b0e14;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .btn-win-action { border: 1px solid var(--neon-green); color: var(--neon-green); margin-right: 4px; }
+    .btn-win-action.active { background: var(--neon-green); color: #fff; }
+    .btn-loss-action { border: 1px solid var(--neon-red); color: var(--neon-red); }
+    .btn-loss-action.active { background: var(--neon-red); color: #fff; }
+    .val-dinamico { font-family: monospace; font-size: 0.92rem; font-weight: bold; text-align: right; }
+
+    /* Modales */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .modal-overlay.active { opacity: 1; pointer-events: auto; }
+    .modal-card {
+      background: #141720;
+      border: 1px solid rgba(229,185,76,0.3);
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 440px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .modal-title { font-size: 1.1rem; font-weight: 900; color: var(--accent-gold); margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+    .rule-item { margin-bottom: 10px; font-size: 0.85rem; line-height: 1.4; display: flex; align-items: center; gap: 8px; }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-size: 0.7rem; color: var(--text-gray); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
+    .form-group input, .form-group select {
+      width: 100%;
+      background: #080a0f;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 6px;
+      color: #fff;
+      padding: 7px 10px;
+      font-size: 0.85rem;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Métricas Superiores -->
+  <div class="metrics-header">
+    <div class="metric-item">
+      <div class="metric-lbl">Saldo Inicial</div>
+      <div class="metric-val" id="disp-capital">$0</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-lbl">Nuevo Saldo</div>
+      <div class="metric-val" id="disp-balance">$0</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-lbl">Ganancia Día</div>
+      <div class="metric-val" id="disp-pnl" style="color: var(--text-gray);">$0</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-lbl">Meta Sesión</div>
+      <div class="metric-val" id="disp-session-goal" style="color: var(--accent-gold);">$0</div>
+    </div>
+    <div class="metric-item">
+      <div class="metric-lbl">Meta Día</div>
+      <div class="metric-val" id="disp-day-goal" style="color: var(--accent-gold);">$0</div>
+    </div>
+  </div>
+
+  <!-- 2. Tarjetas de Estadísticas Tácticas -->
+  <div class="stats-strip">
+    <div class="stat-card">
+      <div class="stat-icon">🔥</div>
+      <div class="stat-info">
+        <span class="stat-lbl">Racha Activa</span>
+        <span class="stat-val" id="stat-racha">Neutral</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🛡️</div>
+      <div class="stat-info">
+        <span class="stat-lbl">Índice de Disciplina</span>
+        <span class="stat-val" id="stat-disciplina">100%</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🎯</div>
+      <div class="stat-info">
+        <span class="stat-lbl">Win Rate (Efectividad)</span>
+        <span class="stat-val" id="stat-winrate">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Selector de Sesión y Acciones -->
+  <div class="session-creator-bar">
+    <div class="bar-title">🕒 Bloque Horario (60 Minutos)</div>
+    <div class="bar-controls">
+      <span style="font-size: 0.78rem; color: var(--text-gray);">Fecha:</span>
+      <input type="date" id="ses-date" class="bar-input">
+      <span style="font-size: 0.78rem; color: var(--text-gray);">Hora:</span>
+      <input type="time" id="ses-time" class="bar-input">
+      <button class="btn btn-start" onclick="iniciarSesion60Min()">⚡ INICIAR SESIÓN</button>
+      <button class="btn btn-rule" onclick="abrirModalRegla()">📜 REGLA DRAGÓN DE ORO</button>
+      <button class="btn btn-cfg" onclick="abrirModalConfig()">⚙️ CONFIGURACIÓN</button>
+    </div>
+  </div>
+
+  <!-- 4. Cabecera de Columnas -->
+  <div class="bitacora-grid bitacora-header-row">
+    <div>MINUTO</div>
+    <div>MONTO</div>
+    <div>RESULTADO</div>
+    <div>ESTRATEGIA?</div>
+    <div>GATILLO TÁCTICO</div>
+    <div>GANANCIA / PÉRDIDA</div>
+    <div style="text-align: right;">SALDO ACTUALIZADO</div>
+  </div>
+
+  <!-- 5. Contenedor de 60 Operaciones -->
+  <div id="bitacora-container"></div>
+
+  <!-- MODAL: REGLA DRAGÓN DE ORO -->
+  <div id="modal-regla" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-title">
+        <span>REGLA DRAGÓN DE ORO 🚀 :</span>
+        <span style="cursor: pointer;" onclick="cerrarModalRegla()">✕</span>
+      </div>
+      <hr style="border: none; border-top: 1px dashed rgba(255,255,255,0.1); margin-bottom: 14px;">
+      <div class="rule-item"><span>✔️</span> <span><b>1 a 2 %</b> Riesgo a Capital 💵💵</span></div>
+      <div class="rule-item"><span>✔️</span> <span><b>3 a 5%</b> Pérdidas a Capital y STOP 🛑</span></div>
+      <div class="rule-item"><span>✔️</span> <span><b>50%</b> Pérdidas a Ganancias y STOP 🛑</span></div>
+      <div class="rule-item"><span>✔️</span> <span><b>1 hora máximo</b> por sesión y STOP 🛑</span></div>
+      <div class="rule-item"><span>✔️</span> <span>Operar solo <b>CONFIRMACIONES</b>.</span></div>
+      <button class="btn btn-rule" style="width: 100%; margin-top: 16px;" onclick="cerrarModalRegla()">ENTENDIDO Y COMPROMETIDO</button>
+    </div>
+  </div>
+
+  <!-- MODAL: CONFIGURACIÓN -->
+  <div id="modal-config" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-title">
+        <span>⚙️ Configuración del Riesgo</span>
+        <span style="cursor: pointer;" onclick="cerrarModalConfig()">✕</span>
+      </div>
+      <div class="form-group">
+        <label>Divisa de Broker</label>
+        <select id="cfg-cur" onchange="cambiarDivisaModal()">
+          <option value="COP">COP (Pesos Colombianos)</option>
+          <option value="USD">USD (Dólares)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Monto Mínimo de Operación</label>
+        <input type="number" id="cfg-min" value="4000" readonly>
+      </div>
+      <div class="form-group">
+        <label>Capital Inicial de Trabajo</label>
+        <input type="number" id="cfg-cap" value="40000">
+      </div>
+      <div class="form-group">
+        <label>Meta Diaria Máxima (%)</label>
+        <input type="number" id="cfg-meta" value="15">
+      </div>
+      <div class="form-group">
+        <label>Número de Sesiones Diarias</label>
+        <input type="number" id="cfg-ses" value="3">
+      </div>
+      <div class="form-group">
+        <label>Máximo de Pérdidas Permitidas (Stop Loss)</label>
+        <input type="number" id="cfg-max-loss" value="3" title="Número de fallos consecutivos o totales antes de parar">
+      </div>
+      <button class="btn btn-rule" style="width: 100%; margin-top: 10px;" onclick="guardarConfigModal()">GUARDAR Y CERRAR</button>
+    </div>
+  </div>
+
+  <script>
+    let appConfig = {
+      moneda: 'COP',
+      capitalInicial: 40000,
+      montoMinimo: 4000,
+      metaDiariaPct: 15,
+      sesionesDia: 3,
+      maxPerdidasPermitidas: 3,
+      payout: 0.83,
+      alertaVozEmitida: false,
+      alertaEuforiaEmitida: false,
+      alerta10WinsEmitida: false,
+      stopLossVozEmitida: false
+    };
+
+    let filasOperaciones = [];
+
+    function fmt(val) {
+      if (appConfig.moneda === 'COP') {
+        return '$' + Math.round(val).toLocaleString('es-CO') + ' COP';
+      } else {
+        return '$' + Number(val).toFixed(2) + ' USD';
+      }
+    }
+
+    // Sistema de Voz Sintetizada Nativa
+    function hablar(texto) {
+      if (!window.speechSynthesis) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(texto);
+      utter.lang = 'es-ES';
+      utter.rate = 0.95;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function initFechaHora() {
+      const now = new Date();
+      document.getElementById('ses-date').value = now.toISOString().split('T')[0];
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mm = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById('ses-time').value = `${hh}:${mm}`;
+    }
+
+    // Control de Modales
+    function abrirModalRegla() { document.getElementById('modal-regla').classList.add('active'); }
+    function cerrarModalRegla() { document.getElementById('modal-regla').classList.remove('active'); }
+    function abrirModalConfig() {
+      document.getElementById('cfg-cur').value = appConfig.moneda;
+      document.getElementById('cfg-min').value = appConfig.montoMinimo;
+      document.getElementById('cfg-cap').value = appConfig.capitalInicial;
+      document.getElementById('cfg-meta').value = appConfig.metaDiariaPct;
+      document.getElementById('cfg-ses').value = appConfig.sesionesDia;
+      document.getElementById('cfg-max-loss').value = appConfig.maxPerdidasPermitidas;
+      document.getElementById('modal-config').classList.add('active');
+    }
+    function cerrarModalConfig() { document.getElementById('modal-config').classList.remove('active'); }
+
+    function cambiarDivisaModal() {
+      const cur = document.getElementById('cfg-cur').value;
+      if (cur === 'COP') {
+        document.getElementById('cfg-min').value = 4000;
+        if (Number(document.getElementById('cfg-cap').value) < 1000) document.getElementById('cfg-cap').value = 40000;
+      } else {
+        document.getElementById('cfg-min').value = 1;
+        if (Number(document.getElementById('cfg-cap').value) > 1000) document.getElementById('cfg-cap').value = 10;
+      }
+    }
+
+    function guardarConfigModal() {
+      appConfig.moneda = document.getElementById('cfg-cur').value;
+      appConfig.montoMinimo = (appConfig.moneda === 'COP') ? 4000 : 1;
+      document.getElementById('cfg-min').value = appConfig.montoMinimo;
+      appConfig.capitalInicial = parseFloat(document.getElementById('cfg-cap').value) || 0;
+      appConfig.metaDiariaPct = parseFloat(document.getElementById('cfg-meta').value) || 15;
+      appConfig.sesionesDia = parseFloat(document.getElementById('cfg-ses').value) || 3;
+      appConfig.maxPerdidasPermitidas = parseInt(document.getElementById('cfg-max-loss').value) || 3;
+
+      cerrarModalConfig();
+      recalcularTodo();
+    }
+
+    function iniciarSesion60Min() {
+      const fechaBase = document.getElementById('ses-date').value;
+      const horaBase = document.getElementById('ses-time').value;
+      if (!fechaBase || !horaBase) return;
+
+      const [h, m] = horaBase.split(':').map(Number);
+      filasOperaciones = [];
+      appConfig.alertaVozEmitida = false;
+      appConfig.alertaEuforiaEmitida = false;
+      appConfig.alerta10WinsEmitida = false;
+      appConfig.stopLossVozEmitida = false;
+
+      for (let i = 0; i < 60; i++) {
+        const fechaMin = new Date(fechaBase + 'T' + horaBase);
+        fechaMin.setMinutes(m + i);
+        const timeStr = fechaMin.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const dateStr = fechaMin.toLocaleDateString('es-CO');
+
+        filasOperaciones.push({
+          idx: i + 1,
+          timestamp: `(${dateStr} ${timeStr})`,
+          monto: Math.max(appConfig.montoMinimo, Math.round(appConfig.capitalInicial * (appConfig.metaDiariaPct / 100 / 10))),
+          resultado: null,
+          estrategiaCheck: false,
+          estrategiaTxt: '',
+          pnl: 0,
+          saldoActualizado: appConfig.capitalInicial
+        });
+      }
+
+      renderizarBitacora();
+      recalcularTodo();
+    }
+
+    function renderizarBitacora() {
+      const cont = document.getElementById('bitacora-container');
+      cont.innerHTML = '';
+
+      filasOperaciones.forEach((row, i) => {
+        const filaEl = document.createElement('div');
+        filaEl.className = 'bitacora-grid fila-minuto';
+        filaEl.innerHTML = `
+          <div>
+            <span class="min-label">Minuto ${String(row.idx).padStart(2, '0')}</span>
+            <span class="min-time">${row.timestamp}</span>
+          </div>
+          <div>
+            <input type="number" class="input-monto" value="${row.monto}" onchange="cambiarMontoFila(${i}, this.value)">
+          </div>
+          <div>
+            <button class="btn-action btn-win-action ${row.resultado === 'WIN' ? 'active' : ''}" onclick="marcarFila(${i}, 'WIN')">[+]</button>
+            <button class="btn-action btn-loss-action ${row.resultado === 'LOSS' ? 'active' : ''}" onclick="marcarFila(${i}, 'LOSS')">[-]</button>
+          </div>
+          <div style="text-align: center;">
+            <input type="checkbox" ${row.estrategiaCheck ? 'checked' : ''} style="cursor: pointer; width: 16px; height: 16px; accent-color: #00b074;" onchange="toggleDisciplina(${i}, this.checked)">
+          </div>
+          <div>
+            <input type="text" class="input-estrategia" placeholder="Gatillo: Rebote, Rompimiento, Vela..." value="${row.estrategiaTxt}" oninput="filasOperaciones[${i}].estrategiaTxt = this.value">
+          </div>
+          <div id="pnl-fila-${i}" style="font-family: monospace; font-weight: bold; color: ${row.pnl > 0 ? 'var(--neon-green)' : (row.pnl < 0 ? 'var(--neon-red)' : 'var(--text-gray)')};">
+            ${row.resultado ? (row.pnl >= 0 ? '+' : '') + fmt(row.pnl) : '-'}
+          </div>
+          <div class="val-dinamico" id="saldo-fila-${i}">
+            ${fmt(row.saldoActualizado)}
+          </div>
+        `;
+        cont.appendChild(filaEl);
+      });
+    }
+
+    function cambiarMontoFila(index, nuevoMonto) {
+      filasOperaciones[index].monto = parseFloat(nuevoMonto) || appConfig.montoMinimo;
+      recalcularTodo();
+    }
+
+    function marcarFila(index, tipo) {
+      filasOperaciones[index].resultado = (filasOperaciones[index].resultado === tipo) ? null : tipo;
+      recalcularTodo();
+      renderizarBitacora();
+    }
+
+    function toggleDisciplina(index, checked) {
+      filasOperaciones[index].estrategiaCheck = checked;
+      recalcularTodo();
+    }
+
+    function recalcularTodo() {
+      let runningBalance = appConfig.capitalInicial;
+      let pnlTotalAcumulado = 0;
+      let wins = 0;
+      let losses = 0;
+      let operadas = 0;
+      let conEstrategia = 0;
+
+      // Calcular racha activa
+      let streakType = null;
+      let streakCount = 0;
+
+      filasOperaciones.forEach(row => {
+        if (row.resultado === 'WIN') {
+          row.pnl = row.monto * appConfig.payout;
+          runningBalance += row.pnl;
+          pnlTotalAcumulado += row.pnl;
+          wins++;
+          operadas++;
+          if (row.estrategiaCheck) conEstrategia++;
+          if (streakType === 'WIN') streakCount++; else { streakType = 'WIN'; streakCount = 1; }
+        } else if (row.resultado === 'LOSS') {
+          row.pnl = -row.monto;
+          runningBalance += row.pnl;
+          pnlTotalAcumulado += row.pnl;
+          losses++;
+          operadas++;
+          if (row.estrategiaCheck) conEstrategia++;
+          if (streakType === 'LOSS') streakCount++; else { streakType = 'LOSS'; streakCount = 1; }
+        } else {
+          row.pnl = 0;
+        }
+        row.saldoActualizado = runningBalance;
+      });
+
+      // 1. Métricas Superiores
+      const saldoInicial = appConfig.capitalInicial;
+      const nuevoSaldo = runningBalance;
+      const metaDiaTotal = saldoInicial * (appConfig.metaDiariaPct / 100);
+      let metaSesion = metaDiaTotal / (appConfig.sesionesDia || 1);
+      metaSesion = Math.max(appConfig.montoMinimo, metaSesion);
+
+      document.getElementById('disp-capital').textContent = fmt(saldoInicial);
+      const elBal = document.getElementById('disp-balance');
+      elBal.textContent = fmt(nuevoSaldo);
+      elBal.style.color = (nuevoSaldo > saldoInicial) ? 'var(--neon-green)' : (nuevoSaldo < saldoInicial ? 'var(--neon-red)' : 'var(--text-white)');
+
+      const elPnl = document.getElementById('disp-pnl');
+      elPnl.textContent = (pnlTotalAcumulado >= 0 ? '+' : '') + fmt(pnlTotalAcumulado);
+      elPnl.style.color = (pnlTotalAcumulado > 0) ? 'var(--neon-green)' : (pnlTotalAcumulado < 0 ? 'var(--neon-red)' : 'var(--text-gray)');
+
+      document.getElementById('disp-session-goal').textContent = fmt(metaSesion);
+      document.getElementById('disp-day-goal').textContent = fmt(metaDiaTotal);
+
+      // 2. Tarjetas de Estadísticas
+      const elRacha = document.getElementById('stat-racha');
+      if (!streakType || streakCount === 0) {
+        elRacha.textContent = 'Neutral';
+        elRacha.style.color = 'var(--accent-gold)';
+      } else if (streakType === 'WIN') {
+        elRacha.textContent = `🔥 ${streakCount} WIN`;
+        elRacha.style.color = 'var(--neon-green)';
+      } else {
+        elRacha.textContent = `❄️ ${streakCount} LOSS`;
+        elRacha.style.color = 'var(--neon-red)';
+      }
+
+      const discPct = operadas > 0 ? Math.round((conEstrategia / operadas) * 100) : 100;
+      const elDisc = document.getElementById('stat-disciplina');
+      elDisc.textContent = `${discPct}%`;
+      elDisc.style.color = (discPct >= 80) ? 'var(--neon-green)' : (discPct >= 50 ? 'var(--accent-gold)' : 'var(--neon-red)');
+
+      const wrPct = operadas > 0 ? Math.round((wins / operadas) * 100) : 0;
+      document.getElementById('stat-winrate').textContent = `${wrPct}%`;
+
+      // 3. Sistema de Advertencia por Voz (Antieuforia y Stop Loss)
+
+      // Regla Antieuforia: 5 WIN consecutivos
+      if (streakType === 'WIN' && streakCount >= 5 && !appConfig.alertaEuforiaEmitida) {
+        hablar("Vas muy bien. Recuerda tu plan de trading, no caigas en euforia, no arriesgues tu capital.");
+        appConfig.alertaEuforiaEmitida = true;
+      } else if (streakType !== 'WIN' || streakCount < 5) {
+        appConfig.alertaEuforiaEmitida = false;
+      appConfig.alerta10WinsEmitida = false;
+      }
+
+      // Regla de Pérdidas Tácticas (1 antes del límite y Stop)
+      const umbralAlerta = appConfig.maxPerdidasPermitidas - 1;
+
+      if (losses >= umbralAlerta && losses < appConfig.maxPerdidasPermitidas && !appConfig.alertaVozEmitida) {
+        hablar(`Atención. Has acumulado ${losses} pérdidas. Estás a una operación de tu límite máximo. Aplica disciplina.`);
+        appConfig.alertaVozEmitida = true;
+      }
+
+      if (losses >= appConfig.maxPerdidasPermitidas && !appConfig.stopLossVozEmitida) {
+        hablar(`Límite de pérdida alcanzado. ${losses} operaciones fallidas. Detén la operativa inmediatamente según la Regla Dragón de Oro.`);
+        appConfig.stopLossVozEmitida = true;
+      }
+
+      if (losses < umbralAlerta) {
+        appConfig.alertaVozEmitida = false;
+      appConfig.alertaEuforiaEmitida = false;
+      appConfig.alerta10WinsEmitida = false;
+        appConfig.stopLossVozEmitida = false;
+      }
+    }
+
+    initFechaHora();
+    iniciarSesion60Min();
+  </script>
+</body>
+</html>
+
+
+
+

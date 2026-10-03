@@ -1,0 +1,816 @@
+{
+  "url": "https://www.binaryteach.com/mentalidad-del-trader-exitoso/",
+  "slug": "mentalidad-del-trader-exitoso",
+  "depth": 1,
+  "title": "Mentalidad del Trader Exitoso",
+  "description": "Para empezar con este curso de trading es necesario que sepas cual debe ser la mentalidad que debemos tener en todo momento. Es importante estar preparado […]",
+  "kind": "class",
+  "level": null,
+  "order": null,
+  "date_published": "2019-07-10T01:10:03+00:00",
+  "date_modified": "2020-04-12T19:49:43+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-accion-del-precio",
+    "tag-psicologia"
+  ],
+  "word_count": 1641,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "kWEd5AE16FY",
+      "url": "https://www.youtube.com/embed/kWEd5AE16FY?feature=oembed",
+      "title": "Mentalidad del Trader Exitoso -Binary Teach"
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/kWEd5AE16FY/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/kWEd5AE16FY/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/kWEd5AE16FY/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-01.jpg",
+      "status": "ok",
+      "bytes": 168190
+    },
+    {
+      "url": "https://i.ytimg.com/vi/kWEd5AE16FY/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/kWEd5AE16FY/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/kWEd5AE16FY/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/kWEd5AE16FY/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional-1024x359.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-02.png",
+      "status": "ok",
+      "bytes": 13931
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota-1024x605.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-03.jpg",
+      "status": "ok",
+      "bytes": 91143
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion-1024x682.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-04.jpg",
+      "status": "ok",
+      "bytes": 213099
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina-1024x681.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-05.jpg",
+      "status": "ok",
+      "bytes": 87590
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png",
+          "width": 529
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-06.png",
+      "status": "ok",
+      "bytes": 9252
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg",
+          "width": 156
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona-216x300.jpg",
+          "width": 156
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-07.jpg",
+      "status": "ok",
+      "bytes": 29813
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png",
+          "width": 506
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-08.png",
+      "status": "ok",
+      "bytes": 8989
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Para empezar con este curso de trading es necesario que sepas cual debe ser la mentalidad que debemos tener en todo momento.",
+      "html": "Para empezar con este curso de trading es necesario que\nsepas cual debe ser la mentalidad que debemos tener en todo momento."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante estar preparado pues como ya te lo he explicado con anterioridad este no será un camino sencillo. El trading no es apto para aquellos que son débiles mentalmente y tienden a sufrir demasiado cuando todo se les va en contra.",
+      "html": "Es importante estar preparado pues como ya te lo he\nexplicado con anterioridad este no será un camino sencillo. El trading no es\napto para aquellos que son débiles mentalmente y tienden a sufrir demasiado\ncuando todo se les va en contra."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "kWEd5AE16FY",
+      "url": "https://www.youtube.com/embed/kWEd5AE16FY?feature=oembed",
+      "title": "Mentalidad del Trader Exitoso -Binary Teach",
+      "caption": "Primero mira la clase y luego lee el complemento 🙂",
+      "poster": "data/assets/images/mentalidad-del-trader-exitoso-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Realmente me impresionas Trader, has decidido enfrentarte a uno de los procesos de aprendizaje más complicados que pueda existir, romperás paradigmas y romperás tus propias creencias.",
+      "html": "<strong>Realmente me impresionas Trader,</strong> has decidido enfrentarte a uno de los procesos de aprendizaje más complicados que pueda existir, romperás paradigmas y romperás tus propias creencias."
+    },
+    {
+      "type": "paragraph",
+      "text": "Empezaremos modificando una idea que tenemos en nuestras cabezas, algunos creen que existe un santo grial, un indicador, plantilla o bot mágico que les permitirá ganar miles de dólares. Otros están convencidos que no existe ningún santo grial y que todo esto del trading simplemente es estafa.",
+      "html": "Empezaremos modificando una idea que tenemos en nuestras cabezas, algunos creen que existe un santo grial, un indicador, plantilla o bot mágico que les permitirá ganar miles de dólares. Otros están convencidos que no existe ningún santo grial y que todo esto del trading simplemente es estafa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Déjame decirte amigo y amiga Trader que el santo grial eres tú. Esta dentro de ti, solo tú tienes el poder de encontrarlo.",
+      "html": "Déjame decirte amigo y amiga Trader que el santo grial eres tú. Esta dentro de ti, solo tú tienes el poder de encontrarlo."
+    },
+    {
+      "type": "paragraph",
+      "text": "El problema es que no lo sabes, tampoco sabes exactamente qué es lo que buscas, y creo que tampoco sabes que es lo que esperas. Entonces, ¿Cómo piensas encontrarlo?",
+      "html": "El problema es que no lo sabes, tampoco sabes exactamente qué es lo que buscas, y creo que tampoco sabes que es lo que esperas.  Entonces,  ¿Cómo piensas encontrarlo?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para entender mejor que es lo que queremos alcanzar dividamos nuestro proceso de aprendizaje en dos partes.",
+      "html": "Para entender mejor que es lo que queremos alcanzar\ndividamos nuestro proceso de aprendizaje en dos partes."
+    },
+    {
+      "type": "paragraph",
+      "text": "El trader novato y el trader profesional.",
+      "html": "El trader novato y el trader profesional."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/mentalidad-del-trader-exitoso-02.png",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-02.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional-1024x359.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1060,
+      "height": 372,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Trader-Novato-Vs-Profesional.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mentalidad de un Trader Novato",
+      "html": "<strong>Mentalidad de un Trader\nNovato</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mientras menos disciplina tengas más tiempo pasaras en esta etapa. El trader novato tiene entre sus cualidades el deseo de conseguir grandes cantidades de dinero de manera rápida y sencilla.",
+      "html": "Mientras menos disciplina tengas más tiempo pasaras en esta\netapa. El trader novato tiene entre sus cualidades el deseo de conseguir\ngrandes cantidades de dinero de manera rápida y sencilla."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ve al trading como la solución a todos sus problemas. El trader novato no asume responsabilidad, culpa a todos, al bróker, al horario, al internet, menos a sí mismo y a su falta de conocimiento y experiencia.",
+      "html": "Ve al trading como la solución a todos sus problemas. El\ntrader novato no asume responsabilidad, culpa a todos, al bróker, al horario,\nal internet, menos a sí mismo y a su falta de conocimiento y experiencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un trader indisciplinado siempre busca vengarse del mercado, no sabe controlarse y se enoja con las pérdidas. No se detiene ni cuando pierde ni cuando ha ganado y llegado a su objetivo.",
+      "html": "Un trader indisciplinado siempre busca vengarse del mercado,\nno sabe controlarse y se enoja con las pérdidas. No se detiene ni cuando pierde\nni cuando ha ganado y llegado a su objetivo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este trader inexperto se deja engañar fácilmente, confía de cualquiera y de cualquier imagen con resultados llamativos que vea. Se interesa más por los montos de las operaciones que por los fundamentos de los análisis.",
+      "html": "Este trader inexperto se deja engañar fácilmente, confía de\ncualquiera y de cualquier imagen con resultados llamativos que vea. Se interesa\nmás por los montos de las operaciones que por los fundamentos de los análisis."
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación te presento las cualidades más comunes que presentamos cuando somos nuevos en el trading:",
+      "html": "A continuación te presento las cualidades más comunes que presentamos\ncuando somos nuevos en el trading:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Millonario en 3 meses",
+          "html": "Millonario en 3 meses"
+        },
+        {
+          "text": "No sabe usar la cuenta DEMO",
+          "html": "No sabe usar la cuenta DEMO"
+        },
+        {
+          "text": "No tiene disciplina",
+          "html": "No tiene disciplina"
+        },
+        {
+          "text": "Busca el camino fácil El indicador Sagrado: El Ladrón de estrategias: El Plantillero Señal SUPER VIP TRADER PRO versión diamante. El Reclutador",
+          "html": "Busca el camino fácilEl indicador Sagrado:El Ladrón de estrategias:El PlantilleroSeñal SUPER VIP TRADER PRO versión diamante.El Reclutador"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ahora veamos las características que tiene un trader profesional, y con profesional no me refiero a alguien que haya estudiado en una universidad, con profesional me refiero a alguien que sabe hacer su trabajo, que opera en modo francotirador y dispara a su presa sin miedo.",
+      "html": "Ahora veamos las características que tiene un trader\nprofesional, y con profesional no me refiero a alguien que haya estudiado en\nuna universidad, con profesional me refiero a alguien que sabe hacer su trabajo,\nque opera en modo francotirador y dispara a su presa sin miedo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para hacerlo más sencillo voy a agrupar todo en 2 cualidades.",
+      "html": "Para hacerlo más sencillo voy a agrupar todo en 2\ncualidades."
+    },
+    {
+      "type": "paragraph",
+      "text": "Confío que será fácil para ti, tú tienes el poder de hacerlo, después de todo por eso estas acá, por decisión propia, confianza y control.",
+      "html": "Confío que será fácil para ti, tú tienes el poder de\nhacerlo, después de todo por eso estas acá, por decisión propia, confianza y\ncontrol."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mentalidad de un Trader Profesional:",
+      "html": "<strong>Mentalidad de un\nTrader Profesional: </strong>"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/mentalidad-del-trader-exitoso-03.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota-1024x605.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 756,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tomar-nota.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Sabe lo que hace. El trader profesional conoce su trabajo, ha operado tantas veces un mismo patrón de velas que sabe en qué momentos es engañoso y en cuales puede confiar completamente. Este trader confía en sus análisis, sabe que la experiencia que tiene es la que le ha permitido llegar hasta donde se encuentra y reconoce que para mantenerse en donde esta debe seguir haciendo los mismos análisis que ya conoce. Es responsable de mejorar constantemente y seguir con mucha disciplina su gestión de Riesgo. Al saber lo que hace el Trader profesional tiene la paciencia de esperar los momentos precisos cuyos movimientos pueda reconocer y le permitan realizar una operación limpia. La paciencia del buen trader paga.",
+          "html": "<strong>Sabe lo que hace.</strong> El trader profesional conoce su trabajo, ha operado tantas veces un mismo patrón de velas que sabe en qué momentos es engañoso y en cuales puede confiar completamente. Este trader confía en sus análisis, sabe que la experiencia que tiene es la que le ha permitido llegar hasta donde se encuentra y reconoce que para mantenerse en donde esta debe seguir haciendo los mismos análisis que ya conoce. Es responsable de mejorar constantemente y seguir con mucha disciplina su gestión de Riesgo.<br/><br/>Al saber lo que hace el Trader profesional tiene la paciencia de esperar los momentos precisos cuyos movimientos pueda reconocer y le permitan realizar una operación limpia. <br/><br/>La paciencia del buen trader paga."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Se conoce. El trader profesional se conoce perfectamente, hace auto análisis constantemente para saber cómo se encuentra, reconoce que le hace falta mejorar, cuáles son sus debilidades y fortalezas. El trader profesional se toma el tiempo de aprender de sus errores y de corregirlos. Conoce sus límites y sabe a donde podrían llevarlo sus malos hábitos. Trabaja diariamente con la disciplina necesaria para mantenerse constante, apegado a las reglas de trabajo que ha construido para sí mismo. Cómo puedes ver, el buen trader no necesita aprobación de nadie, él se conoce y sabe en qué tipos de mercado y horarios le va mejor. No opera todos los días puesto que sabe que no es una obligación, asume sus pérdidas y no le afectan puesto que están dentro del margen que tiene permitido perder. Confía en sí mismo y en su experiencia. El buen trader no se enoja al perder una operación, analiza su perdida, aprende y corrige y en una próxima ocasión sabe qué decisión debe tomar.",
+          "html": "<strong>Se conoce. </strong>El trader profesional se conoce perfectamente, hace auto análisis constantemente para saber cómo se encuentra, reconoce que le hace falta mejorar, cuáles son sus debilidades y fortalezas. El trader profesional se toma el tiempo de aprender de sus errores y de corregirlos.<br/><br/>Conoce sus límites y sabe a donde podrían llevarlo sus malos hábitos. Trabaja diariamente con la disciplina necesaria para mantenerse constante, apegado a las reglas de trabajo que ha construido para sí mismo. <br/><br/>Cómo puedes ver, el buen trader no necesita aprobación de nadie, él se conoce y sabe en qué tipos de mercado y horarios le va mejor. No opera todos los días puesto que sabe que no es una obligación, asume sus pérdidas y no le afectan puesto que están dentro del margen que tiene permitido perder. Confía en sí mismo y en su experiencia. <br/><br/>El buen trader no se enoja al perder una operación, analiza su perdida, aprende y corrige y en una próxima ocasión sabe qué decisión debe tomar."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/mentalidad-del-trader-exitoso-04.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-04.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion-1024x682.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 853,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Meditacion.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Si quieres ser un trader rentable debes comportarte como un profesional.",
+      "html": "Si quieres ser un trader rentable debes comportarte como un\nprofesional."
+    },
+    {
+      "type": "paragraph",
+      "text": "Primero debes tener experiencia, para tener experiencia debes practicar. Para poder practicar con bases sólidas debes estudiar.",
+      "html": "Primero debes tener experiencia, para tener experiencia\ndebes practicar. Para poder practicar con bases sólidas debes estudiar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es todo un proceso el que vas a seguir, necesitas constancia y determinación. Esto va a llevarte tiempo, y no vas a ver frutos rápidamente, ten paciencia.",
+      "html": "Es todo un proceso el que vas a seguir, necesitas constancia\ny determinación. Esto va a llevarte tiempo, y no vas a ver frutos rápidamente,\nten paciencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Trading es un trabajo muy estresante y exigente, si haces un buen trabajo analizando bien y comportándote como un profesional esperando el momento adecuado recibirás una paga.",
+      "html": "El Trading es un trabajo muy estresante y exigente, si haces\nun buen trabajo analizando bien y comportándote como un profesional esperando\nel momento adecuado recibirás una paga."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pero si haces todo con desesperación tendrás análisis de mala calidad y entonces no te van a pagar, es más, te van a descontar dinero.",
+      "html": "Pero si haces todo con desesperación tendrás análisis de\nmala calidad y entonces no te van a pagar, es más, te van a descontar dinero."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aprende a hacer un buen análisis, has un buen trabajo y busca siempre la calidad.",
+      "html": "Aprende a hacer un buen análisis, has un buen trabajo y\nbusca siempre la calidad."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Cómo usar el Demo:",
+      "html": "<strong>Cómo usar el Demo: </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Identifiquemos las dos formas en que podemos usar la cuenta DEMO:",
+      "html": "Identifiquemos las dos formas en que podemos usar la cuenta\nDEMO:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Explorar : Aquí usaras tu cuenta demo para aprender del mercado, tu intensión en esta etapa no es saber cuánto dinero puedes hacer o ver tu historial verde y todo bonito.",
+          "html": "<strong>Explorar</strong>:\nAquí usaras tu cuenta demo para aprender del mercado, tu intensión en esta\netapa no es saber cuánto dinero puedes hacer o ver tu historial verde y todo\nbonito."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Tu trabajo acá es aprender de tus errores, agarrar experiencia de cada operación que hagas. No importa la cantidad de dinero, no le prestes atención a eso, todas tus operaciones pueden ser de 1$.",
+      "html": "Tu trabajo acá es aprender de tus errores,\nagarrar experiencia de cada operación que hagas. No importa la cantidad de\ndinero, no le prestes atención a eso, todas tus operaciones pueden ser de 1$."
+    },
+    {
+      "type": "paragraph",
+      "text": "No le des importancia al dinero demo en esta etapa, no cometas el error de aquellos que le temen al demo. Aprende a usarlo.",
+      "html": "No le des importancia al dinero demo en\nesta etapa, no cometas el error de aquellos que le temen al demo. <em>Aprende a usarlo.</em>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Aquí no hay un límite de operaciones al día puesto que tu misión es aprender del mercado, aquí no importa cuántas operaciones ganes o pierdas, importa la experiencia que estas adquiriendo con cada operación que realices.",
+      "html": "Aquí no hay \nun límite de operaciones al día puesto que tu misión es aprender del\nmercado, aquí no importa cuántas operaciones ganes o pierdas, importa la\nexperiencia que estas adquiriendo con cada operación que realices."
+    },
+    {
+      "type": "paragraph",
+      "text": "Cada resultado debes analizarlo, corroborar tu análisis y corregirlo en caso de que tu operativa sea perdedora.",
+      "html": "Cada resultado debes analizarlo, corroborar\ntu análisis y corregirlo en caso de que tu operativa sea perdedora."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Evaluar: En este proceso debes bajar tu cuenta demo a 10$. En la etapa anterior ya exploramos y aprendimos, ahora en esta nueva etapa debemos de poner evaluar toda nuestra experiencia.",
+          "html": "<strong>Evaluar:</strong> En este proceso debes bajar tu cuenta demo a 10$.  En la etapa anterior ya exploramos y\naprendimos, ahora en esta nueva etapa debemos de poner evaluar toda nuestra\nexperiencia."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Opera sin ningún temor, si pierdes la operación debes aprovechar la oportunidad y en lugar de enojarte porque no funcionó algo que siempre te funciona, aprende del error y así aumentaras las probabilidades de éxito cada vez que operes esas situaciones.",
+      "html": "Opera sin ningún temor, si pierdes la\noperación debes aprovechar la oportunidad y en lugar de enojarte porque no\nfuncionó algo que siempre te funciona, aprende del error y así aumentaras las\nprobabilidades de éxito cada vez que operes esas situaciones."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aquí operas con mucha paciencia, buscas las mejores operaciones y solo entras en situaciones que tengas experiencia.",
+      "html": "Aquí operas con mucha paciencia, buscas las\nmejores operaciones y solo entras en situaciones que tengas experiencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tu objetivo es evaluar tu operativa, conocer tu porcentaje de acierto y así finalmente crear una gestión de riesgo acorde a tus avances y poder dar el salto a real.",
+      "html": "Tu objetivo es evaluar tu operativa,\nconocer tu porcentaje de acierto y así finalmente crear una gestión de riesgo\nacorde a tus avances y poder dar el salto a real."
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Actividades de disciplina:",
+      "html": "<strong>Actividades de\ndisciplina:</strong>"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/mentalidad-del-trader-exitoso-05.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-05.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina-1024x681.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 851,
+      "index": 4,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Actividad-de-disciplina.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "La disciplina desde mi punto de vista es algo de lo más complicado de poder alcanzar cómo traders.",
+      "html": "La disciplina desde mi punto de vista es algo de lo más complicado de poder alcanzar cómo traders."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tenemos que romper las cadenas de la mediocridad que nos atan a querer las cosas rápido y sin esfuerzo, debemos ofrecer nuestro mejor trabajo.",
+      "html": "Tenemos que romper las cadenas de la mediocridad que nos atan a querer las cosas rápido y sin esfuerzo, debemos ofrecer nuestro mejor trabajo."
+    },
+    {
+      "type": "paragraph",
+      "text": "La disciplina es difícil de mantener, tenemos que trabajar mucho y los resultados no son notables en los primeros días, incluso meses. Pero debemos ser constantes y tener presente que es muy fácil destruir lo que nos ha llevado tanto tiempo crear.",
+      "html": "La disciplina es difícil de mantener, tenemos que trabajar\nmucho y los resultados no son notables en los primeros días, incluso meses.\nPero debemos ser constantes y tener presente que es muy fácil destruir lo que\nnos ha llevado tanto tiempo crear."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para ayudar a mejorar nuestra disciplina haremos el reto de los 30 días .",
+      "html": "Para ayudar a mejorar nuestra disciplina haremos el <strong>reto de los 30 días</strong>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Actividad #1 Disciplina",
+      "html": "<strong>Actividad #1 Disciplina </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este Actividad/Reto consiste en que elijas una tarea que te sea muy trabajosa de realizar, por ejemplo: Levantarte más temprano, hacer deporte, dejar de tomar gaseosas, dejar de fumar, leer un libro, etc.",
+      "html": "Este Actividad/Reto consiste en que elijas una tarea que te\nsea muy trabajosa de realizar, por ejemplo: Levantarte más temprano, hacer\ndeporte, dejar de tomar gaseosas, dejar de fumar, leer un libro, etc."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una vez tengas elegido que vas a hacer debes empezar inmediatamente, no es algo que lo empiezas “la otra semana”, es algo que debes empezar a hacer desde Ya.",
+      "html": "Una vez tengas elegido que vas a hacer debes empezar\ninmediatamente, no es algo que lo empiezas “la otra semana”, es algo que debes\nempezar a hacer desde Ya."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para llevar un registro y a modo de motivación puedes compartir tu actividad de disciplina en el grupo del salón virtual.",
+      "html": "Para llevar un registro y a modo de motivación puedes\ncompartir tu actividad de disciplina en el grupo del salón virtual."
+    },
+    {
+      "type": "paragraph",
+      "text": "Compártelo cómo #actividad1 y la descripción de tu actividad, puedes añadir fotos o algo que te motive a seguir compartiendo tus avances, ¡nosotros te apoyaremos!",
+      "html": "Compártelo cómo <em>#actividad1</em> y la descripción de tu actividad, puedes añadir fotos o algo que te motive a seguir compartiendo tus avances, ¡nosotros te apoyaremos!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Asegúrate de colocar todas tus dudas y actividades de esta clase bajo la etiqueta Psicología del Trader.",
+      "html": "Asegúrate de colocar todas tus dudas y actividades de esta\nclase bajo la etiqueta Psicología del Trader."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/mentalidad-del-trader-exitoso-06.png",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-06.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png",
+          "width": 529
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 529,
+      "height": 213,
+      "index": 5,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividad1ejemplo.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Recomendación de Lectura:",
+      "html": "<strong>Recomendación de\nLectura:</strong>"
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/mentalidad-del-trader-exitoso-07.jpg",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-07.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg",
+          "width": 156
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona-216x300.jpg",
+          "width": 156
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 360,
+      "height": 499,
+      "index": 6,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/trading-e-nla-zona.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Durante este mes (Julio 2019) leeremos el libro de Trading en la Zona , es casi cómo la biblia del trader, en algún momento de su proceso de aprendizaje el trader lo leerá.",
+      "html": "Durante este mes (Julio 2019) leeremos el libro de <strong>Trading en la Zona</strong>, es casi cómo la biblia del trader, en algún momento de su proceso de aprendizaje el trader lo leerá."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta comprobado (por mi mismo) que tenemos un mal habito de lectura. Para mejorar este hábito vamos a estar trabajando actividades de lectura en el salón virtual.",
+      "html": "Esta comprobado (por mi mismo) que tenemos un mal habito de lectura. Para mejorar este hábito vamos a estar trabajando actividades de lectura en el salón virtual."
+    },
+    {
+      "type": "paragraph",
+      "text": "Te pediré que compartas en el salón tus conclusiones tras haber terminado un capitulo de lectura.",
+      "html": "Te pediré que compartas en el salón tus conclusiones tras haber terminado un capitulo de lectura."
+    },
+    {
+      "type": "paragraph",
+      "text": "Compártelo bajo el #Lectura1 , todos tenemos diferentes puntos de vista y será interesante saber cómo abordamos los diferentes temas que nos presenta el autor Mark Douglas.",
+      "html": "Compártelo bajo el <em>#Lectura1</em>, todos tenemos diferentes puntos de vista y será interesante saber cómo abordamos los diferentes temas que nos presenta el autor Mark Douglas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/mentalidad-del-trader-exitoso-08.png",
+      "local": "data/assets/images/mentalidad-del-trader-exitoso-08.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png",
+          "width": 506
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 506,
+      "height": 196,
+      "index": 7,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/actividadLecturaejemplo.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "paragraph",
+      "text": "Te comparto algunas preguntas que puedes hacerte para saber que tanto te conoces hasta el momento.",
+      "html": "Te comparto algunas preguntas que puedes hacerte para saber que tanto te conoces hasta el momento."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "¿Por qué quieres ser un trader rentable? Define tu motivación.",
+          "html": "¿Por qué quieres ser un trader rentable? Define tu motivación."
+        },
+        {
+          "text": "¿Cuál es tu objetivo en el trading?",
+          "html": "¿Cuál es tu objetivo en el trading?"
+        },
+        {
+          "text": "¿Cuánto tiempo, dinero y esfuerzo estas dispuesto a dar a cambio de alcanzar tu objetivo? Cuantificalo.",
+          "html": "¿Cuánto tiempo, dinero y esfuerzo estas dispuesto a dar a cambio de alcanzar tu objetivo? Cuantificalo."
+        },
+        {
+          "text": "¿Cómo es tu estilo de vida actualmente y cómo es el que quieres tener cuando seas rentable?",
+          "html": "¿Cómo es tu estilo de vida actualmente y cómo es el que quieres tener cuando seas rentable?"
+        },
+        {
+          "text": "¿Por qué quieres obtener resultados rápido? ¿Qué puedes hacer para evitarlo?",
+          "html": "¿Por qué quieres obtener resultados rápido? ¿Qué puedes hacer para evitarlo?"
+        },
+        {
+          "text": "¿Le tienes miedo a perder una operación? ¿Trabajas con dinero que no puedes permitirte perder?",
+          "html": "¿Le tienes miedo a perder una operación? ¿Trabajas con dinero que no puedes permitirte perder?"
+        },
+        {
+          "text": "Si no logras tus objetivos en el trading ¿A quiénes estarías decepcionando?",
+          "html": "Si no logras tus objetivos en el trading ¿A quiénes estarías decepcionando?"
+        },
+        {
+          "text": "Si ya tienes un poco de experiencia en el trading menciona cuáles son tus errores más comunes.",
+          "html": "Si ya tienes un poco de experiencia en el trading menciona cuáles son tus errores más comunes."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Gracias por acompañarme en esta clase, ¡te veo pronto Trader!",
+      "html": "<strong>Gracias por acompañarme en esta clase, ¡te veo pronto Trader!</strong>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

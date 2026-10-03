@@ -1,0 +1,140 @@
+{
+  "url": "https://www.binaryteach.com/triangulos-simetricos/",
+  "slug": "triangulos-simetricos",
+  "depth": 1,
+  "title": "Triángulos Simétricos",
+  "description": "El triangulo simétrico forma parte del análisis chartista, Este patrón suele formarse durante una tendencia y suele ser un patrón de continuidad. Esta clase de patrones […]",
+  "kind": "class",
+  "level": 1,
+  "order": 6,
+  "date_published": "2020-02-05T04:17:16+00:00",
+  "date_modified": "2020-02-05T04:17:18+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 242,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "y21Yd8B49SA",
+      "url": "https://www.youtube.com/embed/y21Yd8B49SA?feature=oembed",
+      "title": "Triángulos Simétricos -Opciones Binarias- Figuras Chartistas"
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/y21Yd8B49SA/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/y21Yd8B49SA/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/y21Yd8B49SA/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-06-triangulos-simetricos-01.jpg",
+      "status": "ok",
+      "bytes": 106198
+    },
+    {
+      "url": "https://i.ytimg.com/vi/y21Yd8B49SA/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/y21Yd8B49SA/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/y21Yd8B49SA/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/y21Yd8B49SA/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "El triangulo simétrico forma parte del análisis chartista, Este patrón suele formarse durante una tendencia y suele ser un patrón de continuidad.",
+      "html": "El triangulo simétrico forma parte del análisis chartista, Este patrón suele formarse durante una tendencia y suele ser un patrón de continuidad."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta clase de patrones nos muestran un pequeño descanso del precio, antes de continuar con la tendencia.",
+      "html": "Esta clase de patrones nos muestran un pequeño descanso del precio, antes de continuar con la tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "El patrón consiste en que el precio crea máximos más bajos y mínimos más altos. Cuando trazamos líneas tocando los extremos de estos máximos y mínimos obtenemos dos líneas que convergen y forman un triangulo.",
+      "html": "El patrón consiste en que el precio crea máximos más bajos y mínimos más altos. Cuando trazamos líneas tocando los extremos de estos máximos y mínimos obtenemos dos líneas que convergen y forman un triangulo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta figura chartista se confirma cuando se rompe una de las dos líneas dinámicas, indicándonos los posibles movimientos futuros del mercado.",
+      "html": "Esta figura chartista se confirma cuando se rompe una de las dos líneas dinámicas,  indicándonos los posibles movimientos futuros del mercado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante tener en consideración ciertos aspectos al momento de detectar esta figura, por ejemplo es importante identificar una tendencia, puesto que es un patrón de continuidad.",
+      "html": "Es importante tener en consideración ciertos aspectos al momento de detectar esta figura, por ejemplo es importante identificar una tendencia, puesto que es un patrón de continuidad."
+    },
+    {
+      "type": "paragraph",
+      "text": "No podemos operar un triangulo simétrico por ejemplo si estamos atrapados en una consolidación o lateralización, donde no se ha definido una tendencia.",
+      "html": "No podemos operar un triangulo simétrico por ejemplo si estamos atrapados en una consolidación o lateralización, donde no se ha definido una tendencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Es importante que para la creación del triangulo simétrico tengamos dos líneas dinámicas, cada una de ellas (superior e inferior) debe tener por lo menos dos testeos.",
+      "html": "Es importante que para la creación del triangulo simétrico tengamos dos líneas dinámicas, cada una de ellas (superior e inferior) debe tener por lo menos dos testeos."
+    },
+    {
+      "type": "paragraph",
+      "text": "También podemos utilizar el nivel objetivo, una posible distancia la cual el precio puede recorrer tras la ruptura del triangulo. Para identificar esta distancia objetivo debemos trazar una línea en la base del triangulo (las partes abiertas) y esa misma distancia es la que el precio puede recorrer tras la ruptura .",
+      "html": "También podemos utilizar el nivel objetivo, una posible distancia la cual el precio puede recorrer tras la ruptura del triangulo. Para identificar esta distancia objetivo debemos trazar una línea en la base del triangulo (las partes abiertas) y esa misma distancia es la que el precio puede recorrer tras la ruptura ."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente vídeo explico a detalle cómo identificar el triangulo simétrico, así como también comparto unos ejemplos.",
+      "html": "En el siguiente vídeo explico a detalle cómo identificar el triangulo simétrico, así como también comparto unos ejemplos."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "y21Yd8B49SA",
+      "url": "https://www.youtube.com/embed/y21Yd8B49SA?feature=oembed",
+      "title": "Triángulos Simétricos -Opciones Binarias- Figuras Chartistas",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-06-triangulos-simetricos-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

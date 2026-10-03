@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss04",
+  "code": "SS04",
+  "name": "Patrón Seguro 4 (Engullimiento + Vela Sin Cola)",
+  "classification": {
+    "market": "Tendencia",
+    "tradeType": "Continuación tras Engullimiento y Vela Sin Cola",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia.",
+    "Engullimiento alcista: cuando una vela verde cubre completamente la vela roja anterior, se denomina vela de engullamiento alcista.",
+    "A continuación, una vez formada la envolvente alcista, debería aparecer inmediatamente una vela verde sin cola.",
+    "Engullimiento bajista: cuando una vela roja cubre completamente la vela verde anterior, se denomina vela de engullamiento bajista.",
+    "A continuación, después de la envolvente bajista, debería aparecer inmediatamente una vela roja sin cola.",
+    "Realice la operación en la misma dirección de la tendencia (al cierre de la vela sin cola).",
+    "Oscilador estocástico con valor predeterminado: para operaciones alcistas, la línea verde debe estar por encima de la roja; para operaciones bajistas, la línea roja debe estar por encima de la verde."
+  ],
+  "precautions": [
+    "Asegúrese de realizar pruebas retrospectivas con el par de divisas antes de utilizar el patrón Sure Shot en la cuenta real para comprobar si este patrón Sure Shot funciona ese día en concreto o no.",
+    "Siga siempre la tendencia, nunca opere en contra de ella.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 3
+  }
+}

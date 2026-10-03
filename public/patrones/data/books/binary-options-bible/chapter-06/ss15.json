@@ -1,0 +1,27 @@
+﻿{
+  "id": "ss15",
+  "code": "SS15",
+  "name": "Patrón Seguro 15 (Martillo + Martillo Invertido)",
+  "classification": {
+    "market": "Todo tipo de mercado",
+    "tradeType": "Reversión por Pinzas de Rechazo",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Busque una vela martillo (cuerpo arriba y mecha inferior larga).",
+    "Si el mercado forma una vela martillo invertida (cuerpo abajo y mecha superior larga) inmediatamente después de la vela martillo.",
+    "REGLA DE OPERACIÓN BAJISTA: Entonces podemos realizar una operación en dirección BAJISTA (PUT) en la siguiente vela.",
+    "Para configuración simétrica alcista: Martillo Invertido seguido de Martillo clásico habilita entrada en dirección ALCISTA (CALL).",
+    "Compruebe si el estocástico respalda su dirección o no."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en cuenta real.",
+    "Solo si se cumplen todas las condiciones, realice la operación.",
+    "Las mechas de rechazo deben ser desproporcionadamente largas respecto al cuerpo de las velas."
+  ],
+  "simulation": {
+    "velasBase": 3,
+    "triggerIndex": 1
+  }
+}

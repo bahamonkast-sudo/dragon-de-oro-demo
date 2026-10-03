@@ -1,0 +1,25 @@
+{
+  "id": "pin-bar-bearish",
+  "code": "PIN_BEAR",
+  "name": "Pin Bar Bajista",
+  "classification": {
+    "market": "RANGED",
+    "tradeType": "PUT"
+  },
+  "requirements": [
+    "Cuerpo pequeño en la parte superior de la vela",
+    "Sombra inferior larga al menos 2x el cuerpo",
+    "Sombra superior mínima o nula"
+  ],
+  "snrRule": {
+    "nivel": "soporte",
+    "tipoRuptura": "wick"
+  },
+  "stochRule": "k < d y %K < 20",
+  "mtgPolicy": "NO_MTG",
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 2,
+    "resolutionCandle": 7
+  }
+}

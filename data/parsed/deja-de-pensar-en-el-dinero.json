@@ -1,0 +1,262 @@
+{
+  "url": "https://www.binaryteach.com/deja-de-pensar-en-el-dinero/",
+  "slug": "deja-de-pensar-en-el-dinero",
+  "depth": 1,
+  "title": "Deja de pensar en el Dinero",
+  "description": "Probablemente en algún momento vas a escuchar esta frase «no hagas trading por dinero«, esto puede llegar a confundirte si no lo escuchas en el contexto […]",
+  "kind": "class",
+  "level": null,
+  "order": null,
+  "date_published": "2019-07-15T00:03:26+00:00",
+  "date_modified": "2019-07-15T14:05:22+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-curso-nuevo",
+    "tag-psicologia"
+  ],
+  "word_count": 693,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "e2qF6abMrAI",
+      "url": "https://www.youtube.com/embed/e2qF6abMrAI?feature=oembed",
+      "title": "Deja de PENSAR en el Dinero - Vuelvete Rentable."
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/e2qF6abMrAI/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/e2qF6abMrAI/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/e2qF6abMrAI/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/deja-de-pensar-en-el-dinero-01.jpg",
+      "status": "ok",
+      "bytes": 166839
+    },
+    {
+      "url": "https://i.ytimg.com/vi/e2qF6abMrAI/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/e2qF6abMrAI/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/e2qF6abMrAI/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/e2qF6abMrAI/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo-1024x682.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/deja-de-pensar-en-el-dinero-02.jpg",
+      "status": "ok",
+      "bytes": 49271
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "e2qF6abMrAI",
+      "url": "https://www.youtube.com/embed/e2qF6abMrAI?feature=oembed",
+      "title": "Deja de PENSAR en el Dinero - Vuelvete Rentable.",
+      "caption": "Primero mira la clase y luego lee el complemento 🙂",
+      "poster": "data/assets/images/deja-de-pensar-en-el-dinero-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Probablemente en algún momento vas a escuchar esta frase « no hagas trading por dinero «, esto puede llegar a confundirte si no lo escuchas en el contexto adecuado.",
+      "html": "Probablemente en algún momento vas a escuchar esta frase «<strong>no hagas trading por dinero</strong>«,  esto puede llegar a confundirte si no lo escuchas en el contexto adecuado."
+    },
+    {
+      "type": "paragraph",
+      "text": "¿Te soy sincero? yo era una de esas personas que pensaba « si no hago trading por dinero ¿entonces por que? «, pero no fue hasta algunos años después que me di cuenta que esa frase tiene un significado mucho más poderoso que el que yo le estaba dando.",
+      "html": "¿Te soy sincero? yo era una de esas personas que pensaba «<em>si no hago trading por dinero ¿entonces por que?</em>«, pero no fue hasta algunos años después que me di cuenta que esa frase tiene un significado mucho más poderoso que el que yo le estaba dando."
+    },
+    {
+      "type": "paragraph",
+      "text": "Que no hagas trading por dinero no quiere decir que operes por diversión « jaja que bien perdí una operación, ¡eeh! esto es super divertido «. ¿No verdad? algo no encaja en esto.",
+      "html": "Que no hagas trading por dinero no quiere decir que operes por diversión «<em>jaja que bien perdí una operación, ¡eeh! esto es super divertido</em>«. ¿No verdad? algo no encaja en esto."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Esto no es un juego.",
+      "html": "Esto no es un juego."
+    },
+    {
+      "type": "paragraph",
+      "text": "Considero que todo es causa de nuestra mala disciplina. Si no fuéramos tan indisciplinados no nos tomaríamos el trading a la ligera, entenderíamos que para un trabajo que te ofrece la capacidad de ganar el mismo sueldo que un doctor o un ingeniero trabajando unas cuantas horas desde tu casa no se puede conseguir con 20 minutos de práctica y un libro de teoría.",
+      "html": "Considero que todo es causa de nuestra mala disciplina. Si no fuéramos tan indisciplinados no nos tomaríamos el trading a la ligera, entenderíamos que para un trabajo que te ofrece la capacidad de ganar el <em>mismo sueldo que un doctor o un ingeniero</em> trabajando unas cuantas horas desde tu casa no se puede conseguir con 20 minutos de práctica y un libro de teoría."
+    },
+    {
+      "type": "paragraph",
+      "text": "¡Vamos Trader! Esto no es un juego, esto es una profesión y cómo cualquier otra profesión si quieres tener tu paga debes desempeñarte bien, hacer un análisis de calidad, de esos análisis en los cuales te sientes orgulloso por el buen trabajo que has hecho.",
+      "html": "¡Vamos Trader! Esto no es un juego,  esto es una profesión y cómo cualquier otra profesión si quieres tener tu paga debes desempeñarte bien, hacer un análisis de calidad, de esos análisis en los cuales te sientes orgulloso por el buen trabajo que has hecho."
+    },
+    {
+      "type": "paragraph",
+      "text": "Enfoque en: Buen análisis, el resultado es: Ganar Dinero.",
+      "html": "Enfoque en: Buen análisis, el resultado es: Ganar Dinero."
+    },
+    {
+      "type": "paragraph",
+      "text": "Enfoque en: Ganar Dinero, el resultado es: Mal análisis y un Mal análisis te lleva a: Perder dinero.",
+      "html": "Enfoque en: Ganar Dinero, el resultado es: Mal análisis y un Mal análisis te lleva a: Perder dinero."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tomate tu tiempo.",
+      "html": "Tomate tu tiempo."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/deja-de-pensar-en-el-dinero-02.jpg",
+      "local": "data/assets/images/deja-de-pensar-en-el-dinero-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo-1024x682.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 853,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/tiempo.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Comprende que esto no es una carrera, nadie te esta obligando a operar, nadie te esta apuntando con una pistola para que hagas una operación en 15 minutos.",
+      "html": "Comprende que esto no es una carrera, nadie te esta obligando a operar, nadie te esta apuntando con una pistola para que hagas una operación en 15 minutos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tomate tu tiempo para aprender y asegúrate que realmente estas entendiendo el tema, no leas una página de un libro o veas el vídeo de un curso solo para poder avanzar al siguiente, creyendo que con eso ya se te ha quedado toda la información.",
+      "html": "Tomate tu tiempo para aprender y asegúrate que realmente estas entendiendo el tema,  no leas una página de un libro o veas el vídeo de un curso solo para poder avanzar al siguiente, creyendo que con eso ya se te ha quedado toda la información."
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes tomarte el tiempo para estudiar, para analizar y sacar tus conclusiones de lo aprendido.",
+      "html": "Debes tomarte el tiempo para estudiar, para  analizar y sacar tus conclusiones de lo aprendido."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hay una persona que ha visto las 70 clases de la versión antigua del curso, y en varios de los vídeos técnicos ha dejado un comentario con una conclusión de lo aprendido. Un extracto de la esencia de cada clase. Es alguien que se toma su tiempo para analizar lo que ha estudiado y dejar plasmado lo que ha comprendido de la clase.",
+      "html": "Hay una persona que ha visto las 70 clases de la versión antigua del curso, y en varios de los vídeos técnicos ha dejado un comentario con una conclusión de lo aprendido. Un extracto de la esencia de cada clase. Es alguien que se toma su tiempo para analizar lo que ha estudiado y dejar plasmado lo que ha comprendido de la clase."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Conoce y acepta las reglas del juego.",
+      "html": "Conoce y acepta las reglas del juego."
+    },
+    {
+      "type": "paragraph",
+      "text": "Con esto no estoy diciendo que el trading sea un juego (ya vas con tus malas ideas 😮 )",
+      "html": "Con esto no estoy diciendo que el trading sea un juego (ya vas con tus malas ideas 😮 )"
+    },
+    {
+      "type": "paragraph",
+      "text": "Con esto me refiero a que debes aceptar y reconocer que en algún momento aunque ya te hayas vuelto un trader profesional habrán operaciones con resultados negativos. Esto es parte del trading, recuerda que solo podemos aproximamos un 80% de probabilidades de éxito en cada trade que hagamos.",
+      "html": "Con esto me refiero a que debes aceptar y reconocer que en algún momento aunque ya te hayas vuelto un trader profesional habrán operaciones con resultados negativos. Esto es parte del trading, recuerda que solo podemos aproximamos un 80% de probabilidades de éxito en cada trade que hagamos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si aceptas las reglas no debes de enojarte por una operación perdida, de hecho debes de tener un plan que te diga cuanto es el límite de pérdidas y ganancias que tienes permitido hacer por día .",
+      "html": "Si aceptas las reglas no debes de enojarte por una operación perdida, de hecho debes de tener un plan que te diga cuanto es el<strong> límite de pérdidas y ganancias que tienes permitido hacer por día</strong>."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto obviamente aplica si estas en real ( si o si debes tener una gestión en real si no quieres perder tu dinero), o si estas en la etapa de evaluación en tu cuenta demo.",
+      "html": "Esto obviamente aplica si estas en real (<strong>si o si</strong> debes tener una gestión en real si no quieres perder tu dinero),  o si estas en la etapa de evaluación en tu cuenta demo."
+    },
+    {
+      "type": "paragraph",
+      "text": "El límite de pérdidas que tu te permites tener por día es tu freno de emergencia, cuando sientas que te empiezas a salir de camino, cuando sientas la ansiedad de sobreoperar para recuperar tu dinero perdido, en ese momento aplica el freno de emergencia.",
+      "html": "El límite de pérdidas que tu te permites tener por día es tu freno de emergencia, cuando sientas que te empiezas a salir de camino, cuando sientas la ansiedad de sobreoperar para recuperar tu dinero perdido, en ese momento aplica el freno de emergencia."
+    },
+    {
+      "type": "paragraph",
+      "text": "¡Se fuerte! cierra la plataforma, apaga tu computadora, sal a hacer algo que te distraiga y luego cuando ya hayas asumido la pérdida entonces vuelve, estudia tus errores y aprende de ellos , mejora para el próximo día.",
+      "html": "¡Se fuerte! cierra la plataforma, apaga tu computadora, sal a hacer algo que te distraiga y luego cuando ya hayas asumido la pérdida entonces vuelve, <strong>estudia tus errores y aprende de ellos</strong>, mejora para el próximo día."
+    },
+    {
+      "type": "paragraph",
+      "text": "Debes ser fuerte Trader, se que es muy fácil de decir pero realmente es difícil pelear y pretender destruir un mal hábito en cuestión de minutos. Debes ser fuerte y perseverar en esta batalla, ser constante, entenderte, perdonarte y mejorar.",
+      "html": "Debes ser fuerte Trader, se que es muy fácil de decir pero realmente es difícil pelear y pretender destruir un mal hábito en cuestión de minutos. Debes ser fuerte y perseverar en esta batalla, ser constante, entenderte, perdonarte y mejorar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Si quieres ser rentable en el trading no debes enfocarte en el dinero, dime entonces ¿En que debes enfocarte?",
+      "html": "Si quieres ser rentable en el trading no debes enfocarte en el dinero, dime entonces <strong>¿En que debes enfocarte? </strong>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

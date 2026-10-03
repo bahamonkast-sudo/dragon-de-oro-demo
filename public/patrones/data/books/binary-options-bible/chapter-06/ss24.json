@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss24",
+  "code": "SS24",
+  "name": "Patrón Seguro 24 (Agotamiento por 4 Velas Crecientes)",
+  "classification": {
+    "market": "Movimiento de Tendencia Fuerte",
+    "tradeType": "Reversión Inmediata por Clímax de Agotamiento",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debería estar en movimiento de tendencia.",
+    "Configuración obligatoria de 4 velas del mismo color.",
+    "REGLA GEOMÉTRICA: El tamaño de las velas debería seguir aumentando de forma progresiva (Vela 1 < Vela 2 < Vela 3 < Vela 4).",
+    "REGLA DE ENTRADA: A continuación, al cerrar la 4ª vela clímax, realice una operación en la dirección opuesta en la vela comercial siguiente.",
+    "Para compras: 4 velas rojas crecientes -> operar ALZA (CALL).",
+    "Para ventas: 4 velas verdes crecientes -> operar BAJA (PUT)."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de operar en real.",
+    "REGLA CRÍTICA DE PRECAUCIÓN: Evite las velas Hammer y Doji en la secuencia.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 3
+  }
+}

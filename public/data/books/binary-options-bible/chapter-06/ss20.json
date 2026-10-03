@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss20",
+  "code": "SS20",
+  "name": "Patrón Seguro 20 (Continuación tras Doji y Vela del Mismo Color)",
+  "classification": {
+    "market": "Tendencia Alcista o Bajista",
+    "tradeType": "Continuación Tendencial post-Doji",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia, ya sea alcista o bajista.",
+    "A continuación, espere a que se formen velas consecutivas de la tendencia (mínimo velas del mismo color).",
+    "Compruebe si se forma una vela doji en plena tendencia y coloque una línea horizontal en ella.",
+    "Si después del doji se forma inmediatamente una vela del mismo color de la tendencia original, realice la operación en la misma dirección.",
+    "Para compras (CALL): tras el doji, aparece vela verde que supera el doji -> operar CALL en la siguiente vela.",
+    "Para ventas (PUT): tras el doji, aparece vela roja que supera el doji hacia abajo -> operar PUT en la siguiente vela.",
+    "Utilice un oscilador estocástico con el valor predeterminado respaldando la dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "REGLA CRÍTICA DE PRECAUCIÓN: La última vela (vela de confirmación) NO debe ser un martillo, una vela anómala ni una vela excesivamente grande.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 3
+  }
+}

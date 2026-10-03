@@ -1,0 +1,29 @@
+﻿{
+  "id": "ss26",
+  "code": "SS26",
+  "name": "Patrón Seguro 26 (Patrón Brasileño - 1R, 2V, 1R, 1V)",
+  "classification": {
+    "market": "Movimiento Oscilante (Mercado en Vivo)",
+    "tradeType": "Ciclo Probabilístico de Giro Bajista",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "2_STEP",
+  "requirements": [
+    "Patrón brasileño: FUNCIONA MEJOR EN EL MERCADO EN VIVO.",
+    "El mercado debe estar en movimiento oscilante.",
+    "Espere la secuencia estricta de 5 velas: 1 rojo, 2 verdes, 1 rojo, 1 verde.",
+    "REGLA DE ENTRADA: A continuación, al cerrar la última vela verde del ciclo, coloque la operación en DIRECCIÓN BAJISTA (PUT) en la vela de operación siguiente.",
+    "Para configuración simétrica alcista (SS25): 1 verde, 2 rojos, 1 verde, 1 rojo -> operar ALZA (CALL).",
+    "Compruebe que el indicador estocástico respalda su dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Funciona con mayor fiabilidad en mercado en vivo que en OTC.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "mtgNote": "MTG - 2 PASOS permitido en este patrón si el estocástico mantiene el respaldo.",
+  "simulation": {
+    "velasBase": 6,
+    "triggerIndex": 4
+  }
+}

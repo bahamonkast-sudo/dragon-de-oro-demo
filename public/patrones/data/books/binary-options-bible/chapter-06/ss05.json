@@ -1,0 +1,31 @@
+﻿{
+  "id": "ss05",
+  "code": "SS05",
+  "name": "Patrón Seguro 5 (Rebote tras 4 Velas + 1 o 2 Opuestas)",
+  "classification": {
+    "market": "Tendencia Alcista o Bajista",
+    "tradeType": "Continuación de Tendencia (Respeto de Nivel)",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en tendencia, ya sea alcista o bajista.",
+    "Espere a que se produzcan mínimo 4 velas consecutivas del mismo color (4 verdes para compra o 4 rojas para venta; pueden ser más).",
+    "Después de eso, espere 1 o 2 velas de color opuesto (retroceso).",
+    "Coloque una línea horizontal en el nivel extremo (en la parte superior de la vela opuesta para compras, o inferior para ventas).",
+    "Espere a que aparezca la siguiente vela en la dirección original de la tendencia.",
+    "REGLA CRÍTICA: Si esa vela NO rompe la línea horizontal, coloque la operación en la siguiente vela a favor de la tendencia (CALL para compras, PUT para ventas).",
+    "Oscilador estocástico predeterminado: línea verde sobre roja para alcistas; roja sobre verde para bajistas."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón Sure Shot en cuenta real.",
+    "Siga siempre la tendencia, nunca opere en contra de ella.",
+    "NOTA IMPORTANTE DEL LIBRO: Si aparecen 3 velas de retroceso, el patrón NO es válido.",
+    "Si después del retroceso las velas rompen la línea horizontal, el patrón NO es válido.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 8,
+    "triggerIndex": 6
+  }
+}

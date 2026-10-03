@@ -1,0 +1,33 @@
+{
+  "url": "https://www.binaryteach.com/dudas-aula/",
+  "slug": "dudas-aula",
+  "depth": 2,
+  "title": "Dudas sobre las reglas del Aula Interactiva",
+  "description": "Si tienes dudas sobre alguna regla, sugerencias o comentarios, puedes escribirnos por este medio: En caso de presentar dificultades, también puedes",
+  "kind": "resource",
+  "level": null,
+  "order": null,
+  "date_published": null,
+  "date_modified": "2020-10-22T02:40:52+00:00",
+  "author": null,
+  "categories": [],
+  "tags": [],
+  "word_count": 29,
+  "videos": [],
+  "links": [],
+  "assets": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Si tienes dudas sobre alguna regla, sugerencias o comentarios, puedes escribirnos por este medio:",
+      "html": "Si tienes dudas sobre alguna regla, sugerencias o comentarios, puedes escribirnos por este medio:"
+    },
+    {
+      "type": "paragraph",
+      "text": "En caso de presentar dificultades, también puedes escribirnos directamente a: ai@binaryteach.com, con el asunto «Dudas».",
+      "html": "En caso de presentar dificultades, también puedes escribirnos directamente a: ai@binaryteach.com, con el asunto «Dudas»."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

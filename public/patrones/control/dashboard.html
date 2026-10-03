@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragón de Oro - Dashboard Maestro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0d1117;
+      --panel-dark: #161b22;
+      --accent-gold: #e5b94c;
+      --neon-green: #00b074;
+      --text-white: #f0f6fc;
+      --border-color: #30363d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Barra Superior de Navegación */
+    header {
+      background-color: var(--panel-dark);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      color: var(--accent-gold);
+    }
+
+    /* Selector de Aplicaciones */
+    .view-selector {
+      display: flex;
+      gap: 8px;
+      background: #090d12;
+      padding: 4px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .selector-btn {
+      background: transparent;
+      border: none;
+      color: #8b949e;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .selector-btn:hover {
+      color: var(--text-white);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .selector-btn.active {
+      background: #21262d;
+      color: var(--neon-green);
+      box-shadow: inset 0 0 0 1px var(--neon-green);
+    }
+
+    /* Contenedor de Frames */
+    .viewport-container {
+      flex: 1;
+      display: flex;
+      position: relative;
+      background: #000;
+      width: 100%;
+      height: calc(100vh - 61px);
+    }
+
+    .app-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: none;
+    }
+
+    .app-frame.visible {
+      display: block;
+    }
+
+    /* Modo Pantalla Dividida */
+    .viewport-container.split .app-frame {
+      display: block;
+      width: 50%;
+      border-right: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <span>📊 DRAGÓN DE ORO TRADERS</span>
+      <span style="font-size: 0.75rem; color: #8b949e; font-weight: normal;">| Centro Táctico</span>
+    </div>
+
+    <!-- Cajas de Selección -->
+    <div class="view-selector">
+      <button class="selector-btn" id="btn-velas" onclick="mostrarVista('velas')">
+        🕯️ Patrones de Velas
+      </button>
+      <button class="selector-btn active" id="btn-control" onclick="mostrarVista('control')">
+        🛡️ Control de Entradas
+      </button>
+      <button class="selector-btn" id="btn-split" onclick="mostrarVista('split')">
+        🔲 Pantalla Dividida
+      </button>
+    </div>
+  </header>
+
+  <main class="viewport-container" id="viewport">
+    <!-- Frame 1: Patrones de Velas -->
+    <iframe class="app-frame" id="frame-velas" src="http://localhost:5173/"></iframe>
+    
+    <!-- Frame 2: Control de Entradas -->
+    <iframe class="app-frame visible" id="frame-control" src="http://localhost:8088/test_consola.html"></iframe>
+  </main>
+
+  <script>
+    function mostrarVista(vista) {
+      const frameVelas = document.getElementById('frame-velas');
+      const frameControl = document.getElementById('frame-control');
+      const viewport = document.getElementById('viewport');
+
+      const btnVelas = document.getElementById('btn-velas');
+      const btnControl = document.getElementById('btn-control');
+      const btnSplit = document.getElementById('btn-split');
+
+      // Limpiar estados
+      [btnVelas, btnControl, btnSplit].forEach(b => b.classList.remove('active'));
+      viewport.classList.remove('split');
+      frameVelas.classList.remove('visible');
+      frameControl.classList.remove('visible');
+
+      if (vista === 'velas') {
+        frameVelas.classList.add('visible');
+        btnVelas.classList.add('active');
+      } else if (vista === 'control') {
+        frameControl.classList.add('visible');
+        btnControl.classList.add('active');
+      } else if (vista === 'split') {
+        viewport.classList.add('split');
+        frameVelas.classList.add('visible');
+        frameControl.classList.add('visible');
+        btnSplit.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+{
+  "url": "https://www.binaryteach.com/banderas-alcistas-y-bajistas/",
+  "slug": "banderas-alcistas-y-bajistas",
+  "depth": 1,
+  "title": "Banderas Alcistas y Bajistas",
+  "description": "Continuamos con las figuras chartistas, esta figura pertenece a la clasificación de figuras o patrones chartistas de continuidad. Este es un patrón bastante sencillo de reconocer, […]",
+  "kind": "class",
+  "level": 1,
+  "order": 8,
+  "date_published": "2020-02-05T18:13:35+00:00",
+  "date_modified": "2020-02-05T18:13:37+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 245,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "t4RwxS4dYhg",
+      "url": "https://www.youtube.com/embed/t4RwxS4dYhg?feature=oembed",
+      "title": "Bandera Alcista/Bajista -Opciones binarias- Figuras Chartistas-"
+    }
+  ],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-08-banderas-alcistas-y-bajistas-01.jpg",
+      "status": "ok",
+      "bytes": 103903
+    },
+    {
+      "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/t4RwxS4dYhg/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Continuamos con las figuras chartistas, esta figura pertenece a la clasificación de figuras o patrones chartistas de continuidad.",
+      "html": "Continuamos con las figuras chartistas, esta figura pertenece a la clasificación de figuras o patrones chartistas de continuidad."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este es un patrón bastante sencillo de reconocer, tiene mucha similitud a un canal bajista / alcista, pero a diferencia de estos las banderas suelen ser patrones mucho más pequeños.",
+      "html": "Este es un patrón bastante sencillo de reconocer, tiene mucha similitud a un canal bajista / alcista,  pero a diferencia de estos las banderas suelen ser patrones mucho más pequeños."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dentro de las caracteristicas que representan a las banderas podemos mencionar:",
+      "html": "Dentro de las caracteristicas que representan a las banderas podemos mencionar:"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "La bandera se forma con una ligera inclinación en sentido contrario a la tendencia.",
+          "html": "La bandera se forma con una ligera inclinación en sentido contrario a la tendencia."
+        },
+        {
+          "text": "La bandera esta formada por dos partes, mástil o asta y la bandera.",
+          "html": "La bandera esta formada por dos partes, mástil o asta y la bandera."
+        },
+        {
+          "text": "El mástil es la tendencia previa a que aparezca la bandera.",
+          "html": "El mástil es la tendencia previa a que aparezca la bandera."
+        },
+        {
+          "text": "La bandera es la parte donde el precio descansa, con una ligera inclinación al sentido contrario de la tendencia.",
+          "html": "La bandera es la parte donde el precio descansa, con una ligera inclinación al sentido contrario de la tendencia."
+        },
+        {
+          "text": "Para delimitar la bandera es necesario que el precio toque dos veces la parte superior y dos veces la parte inferior de los soportes y resistencias formados.",
+          "html": "Para delimitar la bandera es necesario que el precio toque dos veces la parte superior y dos veces la parte inferior de los soportes y resistencias formados."
+        },
+        {
+          "text": "El nivelo objetivo, tras la ruptura de los soportes y resistencias, el precio buscará llegar a un siguiente nivel, este nivel tiene la misma distancia que el mástil.",
+          "html": "El nivelo objetivo, tras la ruptura de los soportes y resistencias, el precio buscará llegar a un siguiente nivel, este nivel tiene la misma distancia que el mástil."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Bueno, se que a simple vista todas estas características parecen muy confusas, pero en el siguiente vídeo explico a detalle cómo identificar las figuras y cómo podemos operarlas. También te muestro unos ejemplos.",
+      "html": "Bueno, se que a simple vista todas estas características parecen muy confusas, pero en el siguiente vídeo explico a detalle cómo identificar las figuras y cómo podemos operarlas. También te muestro unos ejemplos."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "t4RwxS4dYhg",
+      "url": "https://www.youtube.com/embed/t4RwxS4dYhg?feature=oembed",
+      "title": "Bandera Alcista/Bajista -Opciones binarias- Figuras Chartistas-",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-08-banderas-alcistas-y-bajistas-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "El conocimiento de estos patrones no es indispensable para nuestro trading. Pero cómo siempre, tener éste conocimiento nos permite aprovechar más oportunidades en el mercado.",
+      "html": "El conocimiento de estos patrones no es indispensable para nuestro trading. Pero cómo siempre, tener éste conocimiento nos permite aprovechar más oportunidades en el mercado."
+    },
+    {
+      "type": "paragraph",
+      "text": "Recuerda que todos estos conceptos son aplicables tanto para Opciones Binarias, cómo para Forex, Futuros, Criptomendas.",
+      "html": "Recuerda que todos estos conceptos son aplicables tanto para Opciones Binarias, cómo para Forex, Futuros, Criptomendas."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

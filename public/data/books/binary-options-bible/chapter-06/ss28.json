@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss28",
+  "code": "SS28",
+  "name": "Patrón Seguro 28 (Patrón Brasileño - 1R, 1V, 2R)",
+  "classification": {
+    "market": "Movimiento Oscilante (Mercado en Vivo)",
+    "tradeType": "Ciclo Probabilístico de Giro Alcista",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Patrón brasileño: FUNCIONA MEJOR EN EL MERCADO EN VIVO.",
+    "El mercado debe estar en movimiento oscilante.",
+    "Espere la secuencia estricta de 4 velas: 1 rojo, 1 verde, 2 rojos.",
+    "REGLA DE ENTRADA: A continuación, al cerrar la segunda vela roja del ciclo, coloque la operación en DIRECCIÓN ALCISTA (CALL) en la vela de operación siguiente.",
+    "Para configuración simétrica bajista (SS27): 1 verde, 1 rojo, 2 verdes -> colocar operación en BAJA (PUT).",
+    "Compruebe que el indicador estocástico respalda su dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Funciona con mayor fiabilidad en mercado en vivo que en OTC.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 5,
+    "triggerIndex": 3
+  }
+}

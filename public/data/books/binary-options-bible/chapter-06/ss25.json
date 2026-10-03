@@ -1,0 +1,28 @@
+﻿{
+  "id": "ss25",
+  "code": "SS25",
+  "name": "Patrón Seguro 25 (Patrón Brasileño - 1V, 2R, 1V, 1R)",
+  "classification": {
+    "market": "Movimiento Lateral (Mercado en Vivo)",
+    "tradeType": "Ciclo Probabilístico de Rango",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Patrón brasileño: FUNCIONA MEJOR EN EL MERCADO EN VIVO.",
+    "El mercado debe estar en movimiento lateral.",
+    "Espere la secuencia estricta de 5 velas: 1 Verde, 2 Rojas, 1 Verde, 1 Roja.",
+    "REGLA DE OPERACIÓN: A continuación, al cerrar la última vela roja del ciclo, coloque la operación en ALZA (CALL) en la vela de operación siguiente.",
+    "Para configuración simétrica de venta: 1 Roja, 2 Verdes, 1 Roja, 1 Verde -> colocar operación en BAJA (PUT).",
+    "Compruebe que el indicador estocástico respalda su dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "Solo opere cuando el mercado esté verdaderamente en rango y respete la alternancia del ciclo.",
+    "Solo si se cumplen todas las condiciones, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 6,
+    "triggerIndex": 4
+  }
+}

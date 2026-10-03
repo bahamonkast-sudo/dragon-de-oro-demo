@@ -1,0 +1,148 @@
+{
+  "url": "https://www.binaryteach.com/trading-con-canales/",
+  "slug": "trading-con-canales",
+  "depth": 1,
+  "title": "Trading con Canales",
+  "description": "Antes de empezar con este tema de canales en el trading te invito que pases a ver la primer parte de estructura del mercado, es importante […]",
+  "kind": "class",
+  "level": 1,
+  "order": 5,
+  "date_published": "2020-02-05T04:03:21+00:00",
+  "date_modified": "2020-02-05T04:03:23+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 226,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "0p-RxGcKe8k",
+      "url": "https://www.youtube.com/embed/0p-RxGcKe8k?feature=oembed",
+      "title": "Cómo operar CANALES de TENDENCIA -Opciones Binarias- Accion del Precio"
+    }
+  ],
+  "links": [
+    {
+      "text": "primer parte de estructura del mercado",
+      "url": "https://www.binaryteach.com/ciclo-del-mercado-tendencias/",
+      "kind": "page",
+      "slug": "ciclo-del-mercado-tendencias"
+    },
+    {
+      "text": "en esta clase puedes obtener más información al respecto.",
+      "url": "https://www.binaryteach.com/figuras-chartistas/",
+      "kind": "page",
+      "slug": "figuras-chartistas"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-05-trading-con-canales-01.jpg",
+      "status": "ok",
+      "bytes": 111965
+    },
+    {
+      "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/0p-RxGcKe8k/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Antes de empezar con este tema de canales en el trading te invito que pases a ver la primer parte de estructura del mercado , es importante conocer ciertos conceptos del análisis técnico cómo lo serían las tendencias y los soportes y resistencias.",
+      "html": "Antes de empezar con este tema de canales en el trading te invito que pases a ver la <a class=\"internal\" href=\"https://www.binaryteach.com/ciclo-del-mercado-tendencias/\">primer parte de estructura del mercado</a>, es importante conocer ciertos conceptos del análisis técnico cómo lo serían las tendencias y los soportes y resistencias."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Chartismo no es indispensable, pero es muy util. Nos permite encontrar más oportunidades para operar, delimitar ciertas áreas en el gráfico y evitar tomar operaciones cómo en los niveles objetivos que pueda tener una figura chartista.",
+      "html": "El Chartismo no es indispensable, pero es muy util. Nos permite encontrar más oportunidades para operar, delimitar ciertas áreas en el gráfico y evitar tomar operaciones cómo en los niveles objetivos que pueda tener una figura chartista."
+    },
+    {
+      "type": "paragraph",
+      "text": "El chartismo no hace más que delimitarnos con soportes y resistencias tanto dinámicos (Soportes y Resistencias tendenciales) cómo horizontales.",
+      "html": "El chartismo no hace más que delimitarnos  con soportes y resistencias tanto dinámicos (Soportes y Resistencias tendenciales) cómo horizontales."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esta delimitación nos permite tomar operativas apoyándonos con la estructura del mercado que se va creando.",
+      "html": "Esta delimitación nos permite tomar operativas apoyándonos con la estructura del mercado que se va creando."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos encontrar figuras chartistas de continuidad cómo de reversión, en esta clase puedes obtener más información al respecto. Recuerda que esa clase es un pequeño resumen del chartismo, pero acá vamos a profundizar mucho más en las figuras.",
+      "html": "Podemos encontrar figuras chartistas de continuidad cómo de reversión, <a class=\"internal\" href=\"https://www.binaryteach.com/figuras-chartistas/\">en esta clase puedes obtener más información al respecto.</a> Recuerda que esa clase es un pequeño resumen del chartismo, pero acá vamos a profundizar mucho más en las figuras."
+    },
+    {
+      "type": "paragraph",
+      "text": "Empezamos esta clase con los Canales, debemos de considerar que existen canales horizontales, canales bajistas y canales alcistas.",
+      "html": "Empezamos esta clase con los  Canales, debemos de considerar que existen canales horizontales, canales bajistas y canales alcistas."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase explico a detalle cómo identificar los canales y presento algunos ejemplos",
+      "html": "En la siguiente clase explico a detalle cómo identificar los canales y presento algunos ejemplos"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "0p-RxGcKe8k",
+      "url": "https://www.youtube.com/embed/0p-RxGcKe8k?feature=oembed",
+      "title": "Cómo operar CANALES de TENDENCIA -Opciones Binarias- Accion del Precio",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-05-trading-con-canales-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Es mucho más fiable si el precio dentro del canal se mueve de un extremo hacia otro, cómo podemos observar, en este caso el precio se encuentra oscilando delimitado dentro de una resistencia dinámica/horizontal y dentro de un soporte dinámico/horizontal.",
+      "html": "Es mucho más fiable si el  precio dentro del canal se mueve de un extremo hacia otro, cómo podemos observar, en este caso el precio se encuentra oscilando delimitado dentro de una resistencia dinámica/horizontal y dentro de un soporte dinámico/horizontal."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

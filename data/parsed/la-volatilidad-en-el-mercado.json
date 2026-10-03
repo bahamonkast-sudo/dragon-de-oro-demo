@@ -1,0 +1,266 @@
+{
+  "url": "https://www.binaryteach.com/la-volatilidad-en-el-mercado/",
+  "slug": "la-volatilidad-en-el-mercado",
+  "depth": 1,
+  "title": "La volatilidad en el Mercado",
+  "description": "Los mercados de divisas se caracterizan por que son mercados muy volátiles. La volatilidad puede afectar nuestros análisis, por lo que es muy importante para nosotros […]",
+  "kind": "class",
+  "level": 1,
+  "order": 1,
+  "date_published": "2020-02-01T21:03:06+00:00",
+  "date_modified": "2020-04-12T22:45:37+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-estructura-del-mercado"
+  ],
+  "word_count": 483,
+  "videos": [],
+  "links": [],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "original",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg",
+          "width": 0
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-01.jpg",
+      "status": "ok",
+      "bytes": 20573
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "status": "ok",
+      "bytes": 26390
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "status": "ok",
+      "bytes": 31564
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Los mercados de divisas se caracterizan por que son mercados muy volátiles. La volatilidad puede afectar nuestros análisis, por lo que es muy importante para nosotros cómo traders que realizamos análisis técnico, poder diferenciar los diferentes tipos de volatilidad para poder identificar en cual nos favorece más operar.",
+      "html": "Los mercados de divisas se caracterizan por que son mercados muy volátiles. La volatilidad puede afectar nuestros análisis, por lo que es muy importante para nosotros cómo traders que realizamos análisis técnico, poder diferenciar los diferentes tipos de volatilidad para poder identificar en cual nos favorece más operar."
+    },
+    {
+      "type": "paragraph",
+      "text": "La volatilidad de un mercado es la variación que el precio experimenta respecto a su media, se puede decir que, la volatilidad es la velocidad de variación del precio respecto al tiempo, cómo fluctúa el precio.",
+      "html": "La volatilidad de un mercado es la variación que el precio experimenta respecto a su media, se puede decir que, la volatilidad es la velocidad de variación del precio respecto al tiempo, cómo fluctúa el precio."
+    },
+    {
+      "type": "paragraph",
+      "text": "En otras palabras, la volatilidad nos indica la intensidad y frecuencia con la que el precio se moverá. Esto podría llegar a afectar nuestra operación, en especial por que hacemos opciones binarias y nuestra efectividad depende del punto de cierre de la operación respecto al punto de apertura.",
+      "html": "En otras palabras, la volatilidad nos indica la intensidad y frecuencia con la que el precio se moverá. Esto podría llegar a afectar nuestra operación, en especial por que hacemos opciones binarias y nuestra efectividad depende del punto de cierre de la operación respecto al punto de apertura."
+    },
+    {
+      "type": "paragraph",
+      "text": "Un alta volatilidad no significa que corramos el riesgo de perder todas nuestras operaciones, podemos operar con alta eficiencia si operamos situaciones que reconocemos en escenarios claros.",
+      "html": "Un alta volatilidad no significa que corramos el riesgo de perder todas nuestras operaciones, podemos operar con alta eficiencia si operamos situaciones que reconocemos en escenarios claros."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos identificar 3 tipos de volatilidad.",
+      "html": "Podemos identificar 3 tipos de volatilidad."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Volatilidad Débil:",
+      "html": "<strong>Volatilidad Débil:</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tenemos que tener cuidado cuando el mercado nos muestre movimientos muy débiles, a este tipo de volatilidad lo identificamos porque el precio se mueve muy poco. Podemos identificarlo porque los cuerpos de las velas son muy pequeños. Este tipo de volatilidad puede llegar a ser engañosa ya que con sus pocos movimientos se nos dificulta ver la reacción del precio con las zonas importantes.",
+      "html": "Tenemos que tener cuidado cuando el mercado nos muestre movimientos muy débiles, a este tipo de volatilidad lo identificamos porque el precio se mueve muy poco. Podemos identificarlo porque los cuerpos de las velas son muy pequeños. Este tipo de volatilidad puede llegar a ser engañosa ya que con sus pocos movimientos se nos dificulta ver la reacción del precio con las zonas importantes."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-01.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-01.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg",
+      "candidates": [
+        {
+          "role": "original",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg",
+          "width": 0
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Podemos observar muchas velas sin movimiento (velas sin cuerpo).",
+      "width": 1280,
+      "height": 720,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "original",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-d%C3%A9bil.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Volatilidad Saludable:",
+      "html": "<strong>Volatilidad Saludable:</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Independientemente de tu experiencia, la volatilidad saludable suele ser la que mejor nos muestra los movimientos del precio, este tipo de volatilidad nos presenta movimientos más tranquilos, se facilita hacer el seguimiento del precio en zonas importantes. Todas las velas mantienen un tamaño promedio y no presenta demasiadas mechas.",
+      "html": "Independientemente de tu experiencia, la volatilidad saludable suele ser la que mejor nos muestra los movimientos del precio, este tipo de volatilidad nos presenta movimientos más tranquilos, se facilita hacer el seguimiento del precio en zonas importantes. Todas las velas mantienen un tamaño promedio y no presenta demasiadas mechas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Este tipo de volatilidad nos muestra movimientos más claros y seguros.",
+      "width": 1280,
+      "height": 720,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-Saludable.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Volatilidad Alta :",
+      "html": "<strong>Volatilidad Alta</strong>:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Este tipo de volatilidad presenta movimientos rápidos e indecisos. Este tipo de mercado puede ser engañoso puesto que con los movimientos que presenta se dificulta ver la reacción del precio con las zonas importantes, también nos puede dejar un mal punto de entrada a causa de sus movimientos rápidos.",
+      "html": "Este tipo de volatilidad presenta movimientos rápidos e indecisos. Este tipo de mercado puede ser engañoso puesto que con los movimientos que presenta se dificulta ver la reacción del precio con las zonas importantes, también nos puede dejar un mal punto de entrada a causa de sus movimientos rápidos."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "local": "data/assets/images/nivel-1-clase-01-la-volatilidad-en-el-mercado-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Este tipo de volatilidad nos presenta movimientos muy rápidos. Podemos decir que este mercado es “sucio” o esta presentando mucho “ruido”.",
+      "width": 1280,
+      "height": 720,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/07/Volatilidad-alta.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Cómo puedes imaginar, la volatilidad saludable es la más recomendada para operar gracias a los movimientos que presenta y la estructura que nos deja.",
+      "html": "Cómo puedes imaginar, la volatilidad saludable es la más recomendada para operar gracias a los movimientos que presenta y la estructura que nos deja."
+    },
+    {
+      "type": "paragraph",
+      "text": "Mientras tanto, la alta o baja volatilidad puede dificultarnos identificar bien zonas de apoyo para realizar nuestras operativas en Opciones Binarias, debemos ser astutos y permanecer tranquilos ante un mercado muy ruidoso, tratar de aprovechar las oportunidades más claras que se nos presenten.",
+      "html": "Mientras tanto,  la alta o baja volatilidad puede dificultarnos identificar bien zonas de apoyo para realizar nuestras operativas en Opciones Binarias, debemos ser astutos y permanecer tranquilos ante un mercado muy ruidoso, tratar de aprovechar las oportunidades más claras que se nos presenten."
+    },
+    {
+      "type": "paragraph",
+      "text": "Eso si, sí vamos a operar en un mercado volátil tenemos que ser ágiles con nuestros puntos de entrada y operar con precisión, lo cual debemos tratar de hacer siempre, pero sobre todo en estos mercados, ya que puede dejarnos en malos puntos de entrada debido a su rápido movimiento.",
+      "html": "Eso si, sí vamos a operar en un mercado volátil tenemos que ser ágiles con nuestros puntos de entrada y operar con precisión, lo cual debemos tratar de hacer siempre, pero sobre todo en estos mercados, ya que puede dejarnos en malos puntos de entrada debido a su rápido movimiento."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esto no quiere decir que debemos temerle a la volatilidad alta o baja. Todos se pueden operar solo que necesitas tener más paciencia de lo normal o ser un trader más experimentado.",
+      "html": "Esto no quiere decir que debemos temerle a la volatilidad alta o baja. Todos se pueden operar solo que necesitas tener más paciencia de lo normal o ser un trader más experimentado."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

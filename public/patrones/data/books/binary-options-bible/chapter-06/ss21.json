@@ -1,0 +1,31 @@
+﻿{
+  "id": "ss21",
+  "code": "SS21",
+  "name": "Patrón Seguro 21 (Ruptura del Canal de Vela Opuesta tras 5 Velas)",
+  "classification": {
+    "market": "Tendencia Fuerte con Rango de Reversión",
+    "tradeType": "Ruptura de Canal de Vela Opuesta",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "El mercado debe estar en movimiento de tendencia.",
+    "Espere a que se repitan mínimo 5 velas del mismo color.",
+    "Espere a que se forme una vela de color opuesto.",
+    "REGLA DE NIVELES: Una vez formada, marque el máximo y el mínimo de esa vela con líneas horizontales (canal de referencia).",
+    "Ahora espere a que el mercado se invierta y rompa la línea horizontal.",
+    "REGLA DE ENTRADA: Una vez que se produzca una ruptura exitosa, realice la operación en la misma dirección de la ruptura en la siguiente vela.",
+    "Para compras: ruptura al alza de la línea superior -> operar CALL.",
+    "Para ventas: ruptura a la baja de la línea inferior -> operar PUT.",
+    "Utilice un oscilador estocástico predeterminado respaldando la dirección."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en la cuenta real.",
+    "REGLA DE PRECAUCIÓN: La última vela (vela de ruptura) no debe ser un martillo, una vela anómala ni una vela grande.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación."
+  ],
+  "simulation": {
+    "velasBase": 10,
+    "triggerIndex": 8
+  }
+}

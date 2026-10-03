@@ -1,0 +1,1241 @@
+{
+  "url": "https://www.binaryteach.com/figuras-chartistas/",
+  "slug": "figuras-chartistas",
+  "depth": 1,
+  "title": "Figuras Chartistas",
+  "description": "Hola Trader, en la clase de hoy veremos las figuras chartistas. El chartismo es una de las divisiones del análisis técnico, también conocido como análisis gráfico. […]",
+  "kind": "class",
+  "level": null,
+  "order": null,
+  "date_published": "2019-09-02T16:27:45+00:00",
+  "date_modified": "2020-04-12T19:51:15+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-opciones-binarias-version-2"
+  ],
+  "tags": [
+    "tag-accion-del-precio",
+    "tag-curso-nuevo"
+  ],
+  "word_count": 1237,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "vVw8k_awiac",
+      "url": "https://www.youtube.com/embed/vVw8k_awiac?feature=oembed",
+      "title": "Figuras Chartistas -Análisis Técnico - Opciones Binarias"
+    },
+    {
+      "provider": "youtube",
+      "id": "0p-RxGcKe8k",
+      "url": "https://youtu.be/0p-RxGcKe8k",
+      "title": "Canales de Tendencias"
+    },
+    {
+      "provider": "youtube",
+      "id": "y21Yd8B49SA",
+      "url": "https://youtu.be/y21Yd8B49SA",
+      "title": "Triángulos Simétricos"
+    },
+    {
+      "provider": "youtube",
+      "id": "MrhLV9rDGX8",
+      "url": "https://youtu.be/MrhLV9rDGX8",
+      "title": "Triángulos Ascendentes y Descendentes"
+    },
+    {
+      "provider": "youtube",
+      "id": "t4RwxS4dYhg",
+      "url": "https://youtu.be/t4RwxS4dYhg",
+      "title": "Banderas Alcista y Bajista"
+    },
+    {
+      "provider": "youtube",
+      "id": "jUkT9gNdtz4",
+      "url": "https://youtu.be/jUkT9gNdtz4",
+      "title": "Banderín Alcista y Bajista"
+    },
+    {
+      "provider": "youtube",
+      "id": "wa0NPtQyvsM",
+      "url": "https://youtu.be/wa0NPtQyvsM",
+      "title": "Cuñas"
+    },
+    {
+      "provider": "youtube",
+      "id": "TF0P_opMAQ4",
+      "url": "https://youtu.be/TF0P_opMAQ4",
+      "title": "Rectángulo Ascendente y Descendente"
+    },
+    {
+      "provider": "youtube",
+      "id": "Taa9-BPBARo",
+      "url": "https://youtu.be/Taa9-BPBARo",
+      "title": "Doble Techo y Doble Suelo"
+    },
+    {
+      "provider": "youtube",
+      "id": "xF7sLaRsvNE",
+      "url": "https://youtu.be/xF7sLaRsvNE",
+      "title": "Hombro-Cabeza-Hombro y H-C-H Invertido"
+    }
+  ],
+  "links": [
+    {
+      "text": "Canales de Tendencias",
+      "url": "https://youtu.be/0p-RxGcKe8k",
+      "kind": "video",
+      "video_id": "0p-RxGcKe8k",
+      "embed_url": "https://youtu.be/0p-RxGcKe8k"
+    },
+    {
+      "text": "Triángulos Simétricos",
+      "url": "https://youtu.be/y21Yd8B49SA",
+      "kind": "video",
+      "video_id": "y21Yd8B49SA",
+      "embed_url": "https://youtu.be/y21Yd8B49SA"
+    },
+    {
+      "text": "Triángulos Ascendentes y Descendentes",
+      "url": "https://youtu.be/MrhLV9rDGX8",
+      "kind": "video",
+      "video_id": "MrhLV9rDGX8",
+      "embed_url": "https://youtu.be/MrhLV9rDGX8"
+    },
+    {
+      "text": "Banderas Alcista y Bajista",
+      "url": "https://youtu.be/t4RwxS4dYhg",
+      "kind": "video",
+      "video_id": "t4RwxS4dYhg",
+      "embed_url": "https://youtu.be/t4RwxS4dYhg"
+    },
+    {
+      "text": "Banderín Alcista y Bajista",
+      "url": "https://youtu.be/jUkT9gNdtz4",
+      "kind": "video",
+      "video_id": "jUkT9gNdtz4",
+      "embed_url": "https://youtu.be/jUkT9gNdtz4"
+    },
+    {
+      "text": "Cuñas",
+      "url": "https://youtu.be/wa0NPtQyvsM",
+      "kind": "video",
+      "video_id": "wa0NPtQyvsM",
+      "embed_url": "https://youtu.be/wa0NPtQyvsM"
+    },
+    {
+      "text": "Rectángulo Ascendente y Descendente",
+      "url": "https://youtu.be/TF0P_opMAQ4",
+      "kind": "video",
+      "video_id": "TF0P_opMAQ4",
+      "embed_url": "https://youtu.be/TF0P_opMAQ4"
+    },
+    {
+      "text": "Doble Techo y Doble Suelo",
+      "url": "https://youtu.be/Taa9-BPBARo",
+      "kind": "video",
+      "video_id": "Taa9-BPBARo",
+      "embed_url": "https://youtu.be/Taa9-BPBARo"
+    },
+    {
+      "text": "Hombro-Cabeza-Hombro y H-C-H Invertido",
+      "url": "https://youtu.be/xF7sLaRsvNE",
+      "kind": "video",
+      "video_id": "xF7sLaRsvNE",
+      "embed_url": "https://youtu.be/xF7sLaRsvNE"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/vVw8k_awiac/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/vVw8k_awiac/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/vVw8k_awiac/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-01.jpg",
+      "status": "ok",
+      "bytes": 171911
+    },
+    {
+      "url": "https://i.ytimg.com/vi/vVw8k_awiac/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/vVw8k_awiac/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/vVw8k_awiac/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/vVw8k_awiac/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-02.jpg",
+      "status": "ok",
+      "bytes": 32837
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-03.jpg",
+      "status": "ok",
+      "bytes": 26466
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-04.jpg",
+      "status": "ok",
+      "bytes": 26324
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-05.jpg",
+      "status": "ok",
+      "bytes": 14733
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-06.jpg",
+      "status": "ok",
+      "bytes": 20575
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-07.jpg",
+      "status": "ok",
+      "bytes": 28227
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-08.jpg",
+      "status": "ok",
+      "bytes": 15779
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-09.jpg",
+      "status": "ok",
+      "bytes": 14754
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-10.jpg",
+      "status": "ok",
+      "bytes": 13771
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-11.jpg",
+      "status": "ok",
+      "bytes": 16343
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-12.jpg",
+      "status": "ok",
+      "bytes": 17680
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-13.jpg",
+      "status": "ok",
+      "bytes": 19876
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-14.jpg",
+      "status": "ok",
+      "bytes": 42150
+    },
+    {
+      "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png",
+      "kind": "image",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo-1024x505.png",
+          "width": 1024
+        }
+      ],
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png",
+        "resolved": true
+      },
+      "local": "data/assets/images/figuras-chartistas-15.png",
+      "status": "ok",
+      "bytes": 15836
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Hola Trader, en la clase de hoy veremos las figuras chartistas. El chartismo es una de las divisiones del análisis técnico, también conocido como análisis gráfico. (El término Chart se deriva del inglés y significa gráfico ).",
+      "html": "Hola Trader, en la clase de hoy veremos las figuras chartistas. El chartismo es una de las divisiones del análisis técnico, también conocido como análisis gráfico. (El término <em>Chart </em>se deriva del inglés y significa <em>gráfico</em>)."
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "vVw8k_awiac",
+      "url": "https://www.youtube.com/embed/vVw8k_awiac?feature=oembed",
+      "title": "Figuras Chartistas -Análisis Técnico - Opciones Binarias",
+      "caption": "Mira el vídeo antes de continuar. 🙂",
+      "poster": "data/assets/images/figuras-chartistas-01.jpg",
+      "thumb_width": 1280
+    },
+    {
+      "type": "paragraph",
+      "text": "Acá se analiza la información que nos va revelando los gráficos a partir de figuras geométricas. Este tipo de análisis se puede utilizar en gráfico de velas, gráfico de barras y gráfico de líneas.",
+      "html": "Acá se analiza la información que nos va\nrevelando los gráficos a partir de figuras geométricas. Este tipo de análisis\nse puede utilizar en gráfico de velas, gráfico de barras y gráfico de líneas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para motivos de la clase todo será explicado en ejemplos de gráfico de líneas sin una temporalidad específica, puesto que el mercado es fractal y tiende a repetirse en otras temporalidades bajo los mismos principios.",
+      "html": "Para motivos de la clase todo será\nexplicado en ejemplos de gráfico de líneas sin una temporalidad específica,\npuesto que el mercado es fractal y tiende a repetirse en otras temporalidades\nbajo los mismos principios."
+    },
+    {
+      "type": "paragraph",
+      "text": "No es necesario que sepas chartismo para ser rentable, sin embargo, el chartismo bien usado te dará más oportunidades de tomar operaciones durante tu tiempo de análisis, así mismo te podría ayudar a tomar ciertas precauciones en algunos niveles.",
+      "html": "No es necesario que sepas chartismo para\nser rentable, sin embargo, el chartismo bien usado te dará más oportunidades de\ntomar operaciones durante tu tiempo de análisis, así mismo te podría ayudar a\ntomar ciertas precauciones en algunos niveles."
+    },
+    {
+      "type": "paragraph",
+      "text": "En esta clase no se explicarán todas las figuras chartistas, tomaremos como ejemplos las más comunes. Si quieres profundizar más en cada una de las figuras chartistas al final encontrarás las clases respectivas con ejemplos en gráficos de velas.",
+      "html": "En esta clase no se explicarán todas las\nfiguras chartistas, tomaremos como ejemplos las más comunes. Si quieres\nprofundizar más en cada una de las figuras chartistas al final encontrarás las\nclases respectivas con ejemplos en gráficos de velas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos separar las figuras chartistas en dos tipos, las figuras chartistas de cambios de tendencia y de continuidad.",
+      "html": "Podemos separar las figuras chartistas en dos tipos, las figuras chartistas de cambios de tendencia y de continuidad."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Figuras de Reversión o cambio de tendencia.",
+      "html": "<strong>Figuras de Reversión o cambio de tendencia. </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Entre las figuras de cambios de tendencias podemos encontrar a las más comunes que serían doble suelo, doble techo, hombro cabeza hombro y su variante, hombro cabeza hombro invertido.",
+      "html": "Entre las figuras de cambios de tendencias podemos encontrar a las más comunes que serían doble suelo, doble techo, hombro cabeza hombro y su variante, hombro cabeza hombro invertido."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-02.jpg",
+      "local": "data/assets/images/figuras-chartistas-02.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 1,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-cambio-tendencia.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Al ser figuras de reversión deben darse al final de una tendencia, ya sea alcista o bajista dependiendo de la figura.",
+      "html": "Al ser figuras de reversión deben darse al\nfinal de una tendencia, ya sea alcista o bajista dependiendo de la figura."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el siguiente ejemplo observamos un doble techo dado al final de una tendencia alcista, lo que nos mostraría reversión.",
+      "html": "En el siguiente ejemplo observamos un doble\ntecho dado al final de una tendencia alcista, lo que nos mostraría reversión."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-03.jpg",
+      "local": "data/assets/images/figuras-chartistas-03.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 2,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/contexto-para-reversion.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "No puede darse por ejemplo un doble suelo (patrón de reversión al alza) al final de una tendencia alcista, puesto que no nos estaría mostrando reversión sino continuidad.",
+      "html": "No puede darse por ejemplo un doble suelo (patrón de reversión al alza) al final de una tendencia alcista, puesto que no nos estaría mostrando reversión sino continuidad."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Doble Techo y Doble Suelo",
+      "html": "<strong>Doble Techo y Doble Suelo</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Podemos identificarlos porque tienen dos máximos al mismo nivel. Aunque podemos encontrar variaciones con el segundo máximo un poco más alto o más bajo.",
+      "html": "Podemos identificarlos porque tienen dos\nmáximos al mismo nivel. Aunque podemos encontrar variaciones con el segundo\nmáximo un poco más alto o más bajo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos máximos comparten un solo mínimo, este mínimo es el cuello, una zona de soporte que al ser rota confirma la formación de la figura.",
+      "html": "Estos máximos comparten un solo mínimo, este mínimo es el cuello, una zona de soporte que al ser rota confirma la formación de la figura."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-04.jpg",
+      "local": "data/assets/images/figuras-chartistas-04.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 3,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-techo-teorico.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Los dobles suelos son lo inverso al doble techo, dos mínimos al mismo nivel que comparten un máximo, este máximo es el cuello, una zona de resistencia que al ser rota valida el doble suelo.",
+      "html": "Los dobles suelos son lo inverso al doble\ntecho, dos mínimos al mismo nivel que comparten un máximo, este máximo es el\ncuello, una zona de resistencia que al ser rota valida el doble suelo."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-05.jpg",
+      "local": "data/assets/images/figuras-chartistas-05.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 4,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/doble-suelo-teorico.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Patrones como triple techo, triple suelo, hombro cabeza hombro y HCH invertido utilizan la misma teoría. Tras el rompimiento del cuello se confirma la figura y el cambio de tendencia.",
+      "html": "Patrones como triple techo, triple suelo,\nhombro cabeza hombro y HCH invertido utilizan la misma teoría. Tras el\nrompimiento del cuello se confirma la figura y el cambio de tendencia."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-06.jpg",
+      "local": "data/assets/images/figuras-chartistas-06.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Ejemplo de un Hombro Cabeza Hombro aplicando la misma teoría que un doble techo.",
+      "width": 1280,
+      "height": 720,
+      "index": 5,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/hch-teorico.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Tenemos que tener precaución, que se forme una figura no significa que el precio vaya a respetarla. Las figuras chartistas pueden tener un resultado incierto, para evitar esto debemos apoyarnos con toda la información que tenemos en la gráfica (contexto y acción del precio) para tomar una buena decisión.",
+      "html": "Tenemos que tener precaución, que se forme una figura no significa que el precio vaya a respetarla. Las figuras chartistas pueden tener un resultado incierto, para evitar esto debemos apoyarnos con toda la información que tenemos en la gráfica (contexto y acción del precio) para tomar una buena decisión."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Figuras de Continuidad",
+      "html": "<strong>Figuras\nde Continuidad</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Entre las figuras de continuidad más comunes podemos encontrar los triángulos ascendentes, descendentes y banderas alcistas o bajistas.",
+      "html": "Entre las figuras de continuidad más\ncomunes podemos encontrar los triángulos ascendentes, descendentes y banderas\nalcistas o bajistas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-07.jpg",
+      "local": "data/assets/images/figuras-chartistas-07.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 6,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/figuras-chartistas-de-continuidad.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Estas figuras de continuidad no son solo más que descansos del precio, tras la ruptura de la figura el precio buscaría continuar con su camino.",
+      "html": "Estas figuras de continuidad no son solo\nmás que descansos del precio, tras la ruptura de la figura el precio buscaría\ncontinuar con su camino."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Triángulo Ascendente y Descendente",
+      "html": "<strong>Triángulo Ascendente y Descendente</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "El triangulo ascendente tiene una resistencia fuerte al cual el precio le cuesta pasar. Podemos observar que los mínimos están siendo cada vez más altos, esto nos muestra que el precio insiste romper.",
+      "html": "El triangulo ascendente tiene una\nresistencia fuerte al cual el precio le cuesta pasar. Podemos observar que los\nmínimos están siendo cada vez más altos, esto nos muestra que el precio insiste\nromper."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tras el rompimiento del nivel el precio continúa con la tendencia general.",
+      "html": "Tras el rompimiento del nivel el precio\ncontinúa con la tendencia general."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-08.jpg",
+      "local": "data/assets/images/figuras-chartistas-08.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Triángulo Ascendente",
+      "width": 1280,
+      "height": 720,
+      "index": 7,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-ascendente-teorico.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Lo mismo pero inverso pasa para un triángulo descendente. Identificamos un soporte fuerte, el precio va creando máximos cada vez más bajos, lo que nos enseña la insistencia en bajar y continuar con su camino.",
+      "html": "Lo mismo pero inverso pasa para un\ntriángulo descendente. Identificamos un soporte fuerte, el precio va creando máximos\ncada vez más bajos, lo que nos enseña la insistencia en bajar y continuar con\nsu camino."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-09.jpg",
+      "local": "data/assets/images/figuras-chartistas-09.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Triángulo Descendente",
+      "width": 1280,
+      "height": 720,
+      "index": 8,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/triangulo-descendente-teorico.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Banderas Alcistas y Bajistas",
+      "html": "<strong>Banderas Alcistas y Bajistas</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Las banderas alcistas las podemos identificar porque se forma una pequeña consolidación en sentido bajista, mientras que la tendencia general sigue siendo alcista. Esa consolidación forma un Soporte y Resistencia dinámicos. Acá podemos identificar el descanso del precio en un corto retroceso y luego tras la ruptura de la resistencia dinámica el precio buscará continuar con su movimiento alcista.",
+      "html": "Las banderas alcistas las podemos identificar\nporque se forma una pequeña consolidación en sentido bajista, mientras que la\ntendencia general sigue siendo alcista. Esa consolidación forma un Soporte y\nResistencia dinámicos. Acá podemos identificar el descanso del precio en un\ncorto retroceso y luego tras la ruptura de la resistencia dinámica el precio\nbuscará continuar con su movimiento alcista."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-10.jpg",
+      "local": "data/assets/images/figuras-chartistas-10.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 9,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-alcista-teorica.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "En las banderas bajistas podemos identificar una consolidación alcista, esta pequeña consolidación va en contra de la tendencia general bajista. En esta consolidación se forma soportes y resistencias dinámicos. Tras la ruptura del soporte el precio buscaría continuar con su movimiento general bajista.",
+      "html": "En las banderas bajistas podemos\nidentificar una consolidación alcista, esta pequeña consolidación va en contra\nde la tendencia general bajista. En esta consolidación se forma soportes y\nresistencias dinámicos. Tras la ruptura del soporte el precio buscaría\ncontinuar con su movimiento general bajista."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-11.jpg",
+      "local": "data/assets/images/figuras-chartistas-11.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 10,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/bandera-bajista-teorica.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Ten cuidado con los patrones de continuidad, algunas veces los encontraremos en zonas muy consolidadas y la información que nos brinda bajo estas situaciones puede ser muy confusa.",
+      "html": "Ten cuidado con los patrones de\ncontinuidad, algunas veces los encontraremos en zonas muy consolidadas y la\ninformación que nos brinda bajo estas situaciones puede ser muy confusa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Aplicando lo mismo de antes, que una figura de continuidad se forme no significa que el precio la vaya a respetar.",
+      "html": "Aplicando lo mismo de antes, que una figura de continuidad se forme no significa que el precio la vaya a respetar."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Canales Laterales, Alcistas y Bajistas.",
+      "html": "<strong>Canales Laterales, Alcistas y Bajistas. </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación, veremos una de las figuras chartistas más comunes, esta son los canales .",
+      "html": "A continuación, veremos una de las figuras chartistas más comunes, esta son <strong>los canales</strong>."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-12.jpg",
+      "local": "data/assets/images/figuras-chartistas-12.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 11,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canales-teoricos.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Los canales se identifican porque el precio queda atrapado entre una resistencia y un soporte fuerte. En este tipo de situaciones podemos aprovechar las oportunidades de operar cada vez que el precio rebote en las zonas.",
+      "html": "Los canales se identifican porque el precio\nqueda atrapado entre una resistencia y un soporte fuerte. En este tipo de\nsituaciones podemos aprovechar las oportunidades de operar cada vez que el\nprecio rebote en las zonas."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-13.jpg",
+      "local": "data/assets/images/figuras-chartistas-13.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "Con los canales debemos estar atentos, mientras más veces el precio haya testeado el soporte o resistencia, más probabilidades hay que se aproxime la ruptura, una zona de S/R no es para siempre.",
+      "width": 1280,
+      "height": 720,
+      "index": 12,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/canal-lateral-teorico.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Ten cuidado con estas operativas ya que mientras más veces el precio rebote en una zona tiene más probabilidades de que termine rompiéndola.",
+      "html": "Ten cuidado con estas operativas ya que\nmientras más veces el precio rebote en una zona tiene más probabilidades de que\ntermine rompiéndola."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Niveles Objetivo",
+      "html": "<strong>Niveles Objetivo</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "La mayoría de figuras chartistas tienen un nivel objetivo, este nivel es una zona de soportes y resistencias que se puede calcular, el precio buscaría llegar a esta zona tras la ruptura de la figura. Una vez alcance la zona el precio debería buscar retroceder hacia la figura chartista para completar el pullback y luego continuar con su camino. En este pullback se puede aprovechar la oportunidad de operar el ultimo beso.",
+      "html": "La mayoría de figuras chartistas tienen un\nnivel objetivo, este nivel es una zona de soportes y resistencias que se puede\ncalcular, el precio buscaría llegar a esta zona tras la ruptura de la figura.\nUna vez alcance la zona el precio debería buscar retroceder hacia la figura\nchartista para completar el pullback y luego continuar con su camino.  En este pullback se puede aprovechar la\noportunidad de operar el ultimo beso."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-14.jpg",
+      "local": "data/assets/images/figuras-chartistas-14.jpg",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo-1024x576.jpg",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1280,
+      "height": 720,
+      "index": 13,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/cuello-doble-techo.jpg",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Para calcular el nivel objetivo necesitas identificar el punto máximo y mínimo que componen la figura chartistas antes del rompimiento. Cuando el precio rompe la figura se busca una distancia similar en dirección de la ruptura. Esa distancia es a la cual el precio podría llegar y luego retroceder para hacer el pullback.",
+      "html": "Para calcular el nivel objetivo necesitas\nidentificar el punto máximo y mínimo que componen la figura chartistas antes\ndel rompimiento. Cuando el precio rompe la figura se busca una distancia\nsimilar en dirección de la ruptura. Esa distancia es a la cual el precio podría\nllegar y luego retroceder para hacer el pullback."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este nivel objetivo que no es nada más que una zona de soporte o resistencia dependiendo del caso.",
+      "html": "Este nivel objetivo que no es nada más que una zona de soporte o resistencia dependiendo del caso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Recuerda, que estas zonas existan no quiere decir que el precio las vaya a respetar, simplemente son zonas donde existe probabilidad de que el precio interactúe, nuestro trabajo es completar un buen análisis para identificar posibles oportunidades.",
+      "html": "Recuerda, que estas zonas existan no quiere\ndecir que el precio las vaya a respetar, simplemente son zonas donde existe\nprobabilidad de que el precio interactúe, nuestro trabajo es completar un buen\nanálisis para identificar posibles oportunidades."
+    },
+    {
+      "type": "paragraph",
+      "text": "Más adelante veremos como usar todo lo aprendido. Pero antes debemos continuar con algunos temas.",
+      "html": "Más adelante veremos como usar todo lo aprendido. Pero antes debemos continuar con algunos temas."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la próxima clase estaré compartiendo una biblioteca con figuras chartistas, como les digo, son demasiadas, pero no hace falta que te aprendas todas. Con las mas comunes se le puede sacar provecho.",
+      "html": "En la próxima clase estaré compartiendo una biblioteca con figuras chartistas, como les digo, son demasiadas, pero no hace falta que te aprendas todas. Con las mas comunes se le puede sacar provecho."
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuación, encontrarás los enlaces a los vídeos donde se profundiza en cada una de las figuras más comunes.",
+      "html": "A continuación, encontrarás los enlaces a los vídeos donde se profundiza en cada una de las figuras más comunes."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        {
+          "text": "Canales de Tendencias",
+          "html": "<a class=\"external\" href=\"https://youtu.be/0p-RxGcKe8k\" rel=\"noopener nofollow\" target=\"_blank\">Canales de Tendencias</a>"
+        },
+        {
+          "text": "Triángulos Simétricos",
+          "html": "<a class=\"external\" href=\"https://youtu.be/y21Yd8B49SA\" rel=\"noopener nofollow\" target=\"_blank\">Triángulos Simétricos</a>"
+        },
+        {
+          "text": "Triángulos Ascendentes y Descendentes",
+          "html": "<a class=\"external\" href=\"https://youtu.be/MrhLV9rDGX8\" rel=\"noopener nofollow\" target=\"_blank\">Triángulos Ascendentes y Descendentes</a>"
+        },
+        {
+          "text": "Banderas Alcista y Bajista",
+          "html": "<a class=\"external\" href=\"https://youtu.be/t4RwxS4dYhg\" rel=\"noopener nofollow\" target=\"_blank\">Banderas Alcista y Bajista</a>"
+        },
+        {
+          "text": "Banderín Alcista y Bajista",
+          "html": "<a class=\"external\" href=\"https://youtu.be/jUkT9gNdtz4\" rel=\"noopener nofollow\" target=\"_blank\">Banderín Alcista y Bajista</a>"
+        },
+        {
+          "text": "Cuñas",
+          "html": "<a class=\"external\" href=\"https://youtu.be/wa0NPtQyvsM\" rel=\"noopener nofollow\" target=\"_blank\">Cuñas</a>"
+        },
+        {
+          "text": "Rectángulo Ascendente y Descendente",
+          "html": "<a class=\"external\" href=\"https://youtu.be/TF0P_opMAQ4\" rel=\"noopener nofollow\" target=\"_blank\">Rectángulo Ascendente y Descendente</a>"
+        },
+        {
+          "text": "Doble Techo y Doble Suelo",
+          "html": "<a class=\"external\" href=\"https://youtu.be/Taa9-BPBARo\" rel=\"noopener nofollow\" target=\"_blank\">Doble Techo y Doble Suelo</a>"
+        },
+        {
+          "text": "Hombro-Cabeza-Hombro y H-C-H Invertido",
+          "html": "<a class=\"external\" href=\"https://youtu.be/xF7sLaRsvNE\" rel=\"noopener nofollow\" target=\"_blank\">Hombro-Cabeza-Hombro y H-C-H Invertido</a>"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Actividad #4",
+      "html": "<strong>Actividad #4</strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para esta actividad debes elegir 2 figuras chartistas, las que consideres que se te hace más sencillo de recordar e identificar.",
+      "html": "Para esta actividad debes elegir 2 figuras\nchartistas, las que consideres que se te hace más sencillo de recordar e\nidentificar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Luego búscalas en el pasado de tu gráfico, identifícalas y súbelas al grupo del salón virtual para que podamos corregirlas con el equipo.",
+      "html": "Luego búscalas en el pasado de tu gráfico,\nidentifícalas y súbelas al grupo del salón virtual para que podamos corregirlas\ncon el equipo."
+    },
+    {
+      "type": "paragraph",
+      "text": "En un principio te puede resultar muy difícil y aburrido identificarlas, pero con la práctica te darás cuenta que son más comunes de lo que pensamos.",
+      "html": "En un principio te puede resultar muy\ndifícil y aburrido identificarlas, pero con la práctica te darás cuenta que son\nmás comunes de lo que pensamos."
+    },
+    {
+      "type": "paragraph",
+      "text": "Utiliza #Actividad4, y súbelo bajo la etiqueta “chartismo”. A continuación, un ejemplo.",
+      "html": "Utiliza #Actividad4, y súbelo bajo la etiqueta “chartismo”.  A continuación, un ejemplo."
+    },
+    {
+      "type": "image",
+      "src": "data/assets/images/figuras-chartistas-15.png",
+      "local": "data/assets/images/figuras-chartistas-15.png",
+      "remote_src": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png",
+      "candidates": [
+        {
+          "role": "srcset",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png",
+          "width": 1024
+        },
+        {
+          "role": "src",
+          "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo-1024x505.png",
+          "width": 1024
+        }
+      ],
+      "alt": "",
+      "caption": "",
+      "width": 1510,
+      "height": 744,
+      "index": 14,
+      "status": "ok",
+      "chosen": {
+        "role": "srcset",
+        "url": "https://www.binaryteach.com/wp-content/uploads/2019/09/ejemplo-doble-techo.png",
+        "resolved": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "¡Gracias por participar en la clase! Cualquier duda puedes dejarla en los comentarios o en el hilo respectivo en el salón para que puedan ser resueltas en la próxima clase de preguntas y respuestas.",
+      "html": "¡Gracias por participar en la clase!\nCualquier duda puedes dejarla en los comentarios o en el hilo respectivo en el\nsalón para que puedan ser resueltas en la próxima clase de preguntas y\nrespuestas."
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

@@ -1,0 +1,143 @@
+{
+  "url": "https://www.binaryteach.com/tweezer-top-y-tweezer-bottom/",
+  "slug": "tweezer-top-y-tweezer-bottom",
+  "depth": 1,
+  "title": "Cómo operar con Tweezer Top y Tweezer Bottom",
+  "description": "Este patrón de velas es un tanto peculiar, y a diferencia de los patrones vistos con anterioridad, cómo el Pinbar o los Doji, el patrón tweezer […]",
+  "kind": "class",
+  "level": 1,
+  "order": 19,
+  "date_published": "2020-02-15T04:36:29+00:00",
+  "date_modified": "2020-02-15T04:36:31+00:00",
+  "author": "Jim",
+  "categories": [
+    "category-curso-completo"
+  ],
+  "tags": [
+    "tag-velas-japonesas"
+  ],
+  "word_count": 194,
+  "videos": [
+    {
+      "provider": "youtube",
+      "id": "F0LWGy2-eMs",
+      "url": "https://www.youtube.com/embed/F0LWGy2-eMs?feature=oembed",
+      "title": "Tweezer Top & Tweezer Bottom -PATRONES DE VELAS JAPONESAS- Opciones Binarias"
+    }
+  ],
+  "links": [
+    {
+      "text": "Pinbar",
+      "url": "https://www.binaryteach.com/como-analizar-el-pinbar/",
+      "kind": "page",
+      "slug": "como-analizar-el-pinbar"
+    },
+    {
+      "text": "Doji",
+      "url": "https://www.binaryteach.com/que-es-un-doji-libelula-y-un-doji-lapida/",
+      "kind": "page",
+      "slug": "que-es-un-doji-libelula-y-un-doji-lapida"
+    }
+  ],
+  "linked_images": [],
+  "assets": [
+    {
+      "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/maxresdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/maxresdefault.jpg",
+          "width": 1280
+        }
+      ],
+      "chosen": {
+        "role": "poster",
+        "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/maxresdefault.jpg",
+        "resolved": true
+      },
+      "local": "data/assets/images/nivel-1-clase-19-como-operar-con-tweezer-top-y-tweezer-bottom-01.jpg",
+      "status": "ok",
+      "bytes": 125962
+    },
+    {
+      "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/sddefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/sddefault.jpg",
+          "width": 640
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    },
+    {
+      "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/hqdefault.jpg",
+      "kind": "poster",
+      "candidates": [
+        {
+          "role": "poster",
+          "url": "https://i.ytimg.com/vi/F0LWGy2-eMs/hqdefault.jpg",
+          "width": 480
+        }
+      ],
+      "chosen": null,
+      "local": null,
+      "status": "pending",
+      "bytes": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Este patrón de velas es un tanto peculiar, y a diferencia de los patrones vistos con anterioridad, cómo el Pinbar o los Doji , el patrón tweezer top/bottom, esta compuesto por dos velas.",
+      "html": "Este patrón de velas es un tanto peculiar, y a diferencia de los patrones vistos con anterioridad, cómo el <a class=\"internal\" href=\"https://www.binaryteach.com/como-analizar-el-pinbar/\">Pinbar</a> o los <a class=\"internal\" href=\"https://www.binaryteach.com/que-es-un-doji-libelula-y-un-doji-lapida/\">Doji</a>, el patrón tweezer top/bottom, esta compuesto por dos velas."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Tweezer Top esta compuesto por una vela alcista que se detiene en un nivel de resistencia seguido de una vela bajista que reacciona al mismo nivel. Este par de velas comparten un máximo de la misma distancia.",
+      "html": "El Tweezer Top esta compuesto por una vela alcista que se detiene en un nivel de resistencia seguido de una vela bajista que reacciona al mismo nivel. Este par de velas comparten un máximo de la misma distancia."
+    },
+    {
+      "type": "paragraph",
+      "text": "En el caso del Tweezer Bottom, esta compuesto de una vela bajista que se detiene en un soporte, seguido de una vela alcista que reacciona al mismo soporte. Este par de velas comparten un mínimo a la misma distancia.",
+      "html": "En el caso del Tweezer Bottom, esta compuesto de una vela bajista que se detiene en un soporte, seguido de una vela alcista que reacciona al mismo soporte.  Este par de velas comparten un mínimo a la misma distancia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Estos patrones no suelen tener una forma definida, pero los más comunes comparten un tamaño similar, y tienen la forma de unas pinzas.",
+      "html": "Estos patrones no suelen tener una forma definida, pero los más comunes comparten un tamaño similar, y tienen la forma de unas pinzas."
+    },
+    {
+      "type": "paragraph",
+      "text": "Este patrón de velas es de reversión, y tiende a dar mayor fiabilidad al final de una tendencia, en especial si es a favor de una tendencia general.",
+      "html": "Este patrón de velas es de reversión, y tiende a dar mayor fiabilidad al final de una tendencia, en especial si es a favor de  una tendencia general."
+    },
+    {
+      "type": "paragraph",
+      "text": "El Tweezer Top También es conocido como Techo en Pinzas y el Tweezer Bottom cómo Suelo en Pinzas.",
+      "html": "El Tweezer Top También es conocido como <strong>Techo en Pinzas</strong> y el Tweezer Bottom cómo<strong> Suelo en Pinzas. </strong>"
+    },
+    {
+      "type": "paragraph",
+      "text": "En la siguiente clase se explica más a detalle cómo operar este patrón de vela:",
+      "html": "En la siguiente clase se explica más a detalle cómo operar este patrón de vela:"
+    },
+    {
+      "type": "video",
+      "provider": "youtube",
+      "id": "F0LWGy2-eMs",
+      "url": "https://www.youtube.com/embed/F0LWGy2-eMs?feature=oembed",
+      "title": "Tweezer Top & Tweezer Bottom -PATRONES DE VELAS JAPONESAS- Opciones Binarias",
+      "caption": "",
+      "poster": "data/assets/images/nivel-1-clase-19-como-operar-con-tweezer-top-y-tweezer-bottom-01.jpg",
+      "thumb_width": 1280
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

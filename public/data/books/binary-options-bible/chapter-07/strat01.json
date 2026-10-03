@@ -1,0 +1,15 @@
+{
+  "id": "strat01",
+  "code": "STRAT01",
+  "name": "Estrategia 1 - EMA 5 + SAR Parabólico + Estocástico",
+  "marketType": "Tendencia Fuerte",
+  "tradeType": "Continuación",
+  "requirements": [
+    "Aplicar EMA 5, SAR Parabólico (0.02) y Estocástico (80/20). Vela fuerte rompe la EMA 5 con Parabólico y Estocástico alineados. Operar a favor hasta que una vela contraria cruce la EMA 5."
+  ],
+  "snr": 1,
+  "stochasticRule": false,
+  "riskManagement": "1_STEP",
+  "practice": true,
+  "mtgPolicy": "1_STEP"
+}

@@ -1,0 +1,30 @@
+﻿{
+  "id": "ss01",
+  "code": "SS01",
+  "name": "Patrón Seguro 1 (Ruptura SNR de 2 Velas Consecutivas)",
+  "classification": {
+    "market": "Tendencia o Buen Rango",
+    "tradeType": "CALL",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "bookRules": {
+    "requirements": [
+      "El mercado debe estar en tendencia o en un buen movimiento de rango.",
+      "Para CALL: 1 vela verde y 2 velas rojas consecutivas. Para PUT: 1 vela roja y 2 velas verdes consecutivas.",
+      "Trace una línea horizontal entre las dos velas consecutivas (nivel SNR).",
+      "Espere a que el mercado regrese y rompa la línea horizontal (aceptada con mecha y cuerpo).",
+      "Coloque la operación en la misma dirección de la ruptura (Vela de Operación).",
+      "Oscilador estocástico predeterminado: para CALL línea verde sobre roja; para PUT línea roja sobre verde."
+    ],
+    "precautions": [
+      "Asegúrese de realizar prueba retrospectiva en el par de divisas antes de operar en real.",
+      "Siga siempre la tendencia, nunca opere en contra de ella.",
+      "Solo si se cumplen todas las condiciones, realice la operación."
+    ]
+  },
+  "simulation": {
+    "velasBase": 7,
+    "triggerIndex": 5
+  }
+}

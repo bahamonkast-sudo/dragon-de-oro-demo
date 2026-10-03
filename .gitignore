@@ -1,0 +1,12 @@
+.dev.vars
+.wrangler/
+.wrangler-config/
+deploy/
+node_modules/
+*.bak
+*.backup_*
+*corrupto*
+*CORRUPTO*
+public/patrones/control_riesgo/runtime/
+data/raw/
+candle-study-console/

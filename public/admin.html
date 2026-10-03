@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administración · BinaryTeach</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>[hidden] { display: none !important; }</style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <main class="max-w-4xl mx-auto px-5 py-10">
+    <a href="/public/" class="text-sm text-sky-400 hover:text-sky-300">← Volver al curso</a>
+    <h1 class="mt-5 text-2xl font-semibold">Solicitudes de autorización</h1>
+    <p class="mt-2 text-sm text-slate-400">Aprueba manualmente el acceso al siguiente nivel después de revisar el caso por WhatsApp.</p>
+    <form id="login" class="mt-6 flex flex-col sm:flex-row gap-2 max-w-xl">
+      <input id="password" type="password" autocomplete="current-password" required placeholder="Contraseña de administrador" class="flex-1 rounded-lg bg-slate-900 border border-slate-700 px-3 py-2">
+      <button class="rounded-lg bg-sky-600 hover:bg-sky-500 px-4 py-2 font-medium">Entrar</button>
+    </form>
+    <p id="status" class="mt-4 text-sm text-slate-400" role="status"></p>
+    <section id="requests" class="mt-6 space-y-3"></section>
+  </main>
+  <script>
+    const statusBox = document.querySelector('#status');
+    const box = document.querySelector('#requests');
+    const loginForm = document.querySelector('#login');
+    let token = sessionStorage.getItem('bt.admin.token') || '';
+    const esc = (s) => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    async function load() {
+      const headers = token ? {Authorization:'Bearer '+token} : {};
+      const r = await fetch('/api/admin/requests', {headers,cache:'no-store'});
+      const d = await r.json();
+      if (!r.ok) { token=''; sessionStorage.removeItem('bt.admin.token'); loginForm.hidden=false; box.innerHTML=''; statusBox.textContent=d.error || 'Inicia sesión.'; return; }
+      loginForm.hidden = !d.authRequired;
+      if (d.disabled) { statusBox.textContent='El control de acceso por niveles está desactivado en este demo.'; box.innerHTML=''; return; }
+      statusBox.textContent = d.requests.length ? `${d.requests.length} solicitud(es) pendiente(s).` : 'No hay solicitudes pendientes.';
+      box.innerHTML = d.requests.map(x => `<article class="rounded-xl border border-slate-800 bg-slate-900 p-4">
+        <div class="flex flex-wrap items-start justify-between gap-3"><div>
+          <h2 class="font-semibold">${esc(x.name)} · Nivel ${x.level}</h2>
+          <p class="mt-1 text-sm text-slate-400">Alumno ${esc(x.student_code)} · WhatsApp ${esc(x.phone)} · ${x.done_count} lecciones marcadas</p>
+          <p class="mt-1 text-xs text-slate-500">Solicitud ${esc(x.id)} · ${new Date(x.created_at*1000).toLocaleString()}</p>
+        </div><div class="flex gap-2">
+          <a class="rounded-lg border border-slate-700 px-3 py-2 text-sm hover:bg-slate-800" target="_blank" rel="noopener" href="https://wa.me/${esc(x.phone.replace(/\D/g,''))}">Contactar</a>
+          <button data-review="approve" data-id="${esc(x.id)}" class="rounded-lg bg-emerald-700 hover:bg-emerald-600 px-3 py-2 text-sm">Autorizar</button>
+          <button data-review="deny" data-id="${esc(x.id)}" class="rounded-lg border border-slate-700 px-3 py-2 text-sm hover:bg-slate-800">Rechazar</button>
+        </div></div></article>`).join('');
+    }
+    document.querySelector('#login').addEventListener('submit', async e => {
+      e.preventDefault(); statusBox.textContent='Verificando…';
+      const r=await fetch('/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:document.querySelector('#password').value})});
+      const d=await r.json();
+      if(!r.ok){statusBox.textContent=d.error || 'No se pudo iniciar sesión.';return;}
+      token=d.token;sessionStorage.setItem('bt.admin.token',token);await load();
+    });
+    box.addEventListener('click', async e => {
+      const b=e.target.closest('[data-review]');if(!b)return;
+      b.disabled=true;
+      const headers={'Content-Type':'application/json'};if(token)headers.Authorization='Bearer '+token;
+      const r=await fetch('/api/admin/requests/'+encodeURIComponent(b.dataset.id),{method:'POST',headers,body:JSON.stringify({decision:b.dataset.review})});
+      const d=await r.json();statusBox.textContent=r.ok?'Solicitud actualizada.':(d.error||'Error al actualizar.');await load();
+    });
+    load().catch(()=>{statusBox.textContent='No se pudo conectar con el servidor.';});
+    setInterval(()=>load().catch(()=>{statusBox.textContent='No se pudo actualizar la lista.';}),15000);
+  </script>
+</body>
+</html>

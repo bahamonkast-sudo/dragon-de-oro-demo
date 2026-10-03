@@ -1,0 +1,60 @@
+{
+  "url": "https://www.binaryteach.com/curso-de-opciones-binarias-nivel-2/",
+  "slug": "curso-de-opciones-binarias-nivel-2",
+  "depth": 0,
+  "title": "Curso de Opciones Binarias -Nivel 2",
+  "description": "A continuación encontraras una lista de reproducción en YouTube donde podrás seguir de manera ordenada el curso Nivel 2.",
+  "kind": "level",
+  "level": 2,
+  "order": null,
+  "date_published": null,
+  "date_modified": "2020-04-12T22:18:37+00:00",
+  "author": null,
+  "categories": [],
+  "tags": [],
+  "word_count": 35,
+  "videos": [
+    {
+      "provider": "youtube-playlist",
+      "id": "PLKVEzjo-d1qG_vLxYrru_sbOQ75WCVAZO",
+      "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qG_vLxYrru_sbOQ75WCVAZO",
+      "title": "🔴 Curso de Opciones Binarias - Nivel 2"
+    }
+  ],
+  "links": [
+    {
+      "text": "Curso de Opciones Binarias Nivel 2 – Binary Teach",
+      "url": "https://www.youtube.com/playlist",
+      "kind": "youtube"
+    }
+  ],
+  "linked_images": [],
+  "assets": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "A continuación encontraras una lista de reproducción en YouTube donde podrás seguir de manera ordenada el curso Nivel 2.",
+      "html": "A continuación encontraras una lista de reproducción en YouTube donde podrás seguir de manera ordenada el curso Nivel 2."
+    },
+    {
+      "type": "video",
+      "provider": "youtube-playlist",
+      "id": "PLKVEzjo-d1qG_vLxYrru_sbOQ75WCVAZO",
+      "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qG_vLxYrru_sbOQ75WCVAZO",
+      "title": "🔴 Curso de Opciones Binarias - Nivel 2",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "text": "También puedes acceder Clicando el siguiente enlace:",
+      "html": "También puedes acceder Clicando el siguiente enlace:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Curso de Opciones Binarias Nivel 2 – Binary Teach",
+      "html": "<a class=\"external\" href=\"https://www.youtube.com/playlist\" rel=\"noopener nofollow\" target=\"_blank\"><strong>Curso de Opciones Binarias Nivel 2 – Binary Teach</strong></a>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

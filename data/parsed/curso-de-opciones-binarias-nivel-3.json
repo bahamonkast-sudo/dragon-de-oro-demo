@@ -1,0 +1,60 @@
+{
+  "url": "https://www.binaryteach.com/curso-de-opciones-binarias-nivel-3/",
+  "slug": "curso-de-opciones-binarias-nivel-3",
+  "depth": 0,
+  "title": "Curso de Opciones Binarias -Nivel 3",
+  "description": "A continuación encontraras una lista de reproducción en YouTube donde podrás seguir de manera ordenada el curso Nivel 3.",
+  "kind": "level",
+  "level": 3,
+  "order": null,
+  "date_published": null,
+  "date_modified": "2020-04-12T22:34:23+00:00",
+  "author": null,
+  "categories": [],
+  "tags": [],
+  "word_count": 35,
+  "videos": [
+    {
+      "provider": "youtube-playlist",
+      "id": "PLKVEzjo-d1qGx5osIvO9bk_Kgx3E_JTp0",
+      "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qGx5osIvO9bk_Kgx3E_JTp0",
+      "title": "🔴 Curso de Opciones Binarias - Nivel 3"
+    }
+  ],
+  "links": [
+    {
+      "text": "Curso de Opciones Binarias Nivel 3 – Binary Teach",
+      "url": "https://www.youtube.com/playlist",
+      "kind": "youtube"
+    }
+  ],
+  "linked_images": [],
+  "assets": [],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "A continuación encontraras una lista de reproducción en YouTube donde podrás seguir de manera ordenada el curso Nivel 3.",
+      "html": "A continuación encontraras una lista de reproducción en YouTube donde podrás seguir de manera ordenada el curso Nivel 3."
+    },
+    {
+      "type": "video",
+      "provider": "youtube-playlist",
+      "id": "PLKVEzjo-d1qGx5osIvO9bk_Kgx3E_JTp0",
+      "url": "https://www.youtube.com/embed/videoseries?list=PLKVEzjo-d1qGx5osIvO9bk_Kgx3E_JTp0",
+      "title": "🔴 Curso de Opciones Binarias - Nivel 3",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "text": "También puedes acceder Clicando el siguiente enlace:",
+      "html": "También puedes acceder Clicando el siguiente enlace:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Curso de Opciones Binarias Nivel 3 – Binary Teach",
+      "html": "<a class=\"external\" href=\"https://www.youtube.com/playlist\" rel=\"noopener nofollow\" target=\"_blank\"><strong>Curso de Opciones Binarias Nivel 3 – Binary Teach</strong></a>"
+    }
+  ],
+  "status": "ok",
+  "error": null
+}

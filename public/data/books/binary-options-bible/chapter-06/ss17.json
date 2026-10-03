@@ -1,0 +1,27 @@
+﻿{
+  "id": "ss17",
+  "code": "SS17",
+  "name": "Patrón Seguro 17 (Vela Roja Sin Cabeza + Vela Verde Sin Cola)",
+  "classification": {
+    "market": "Todo tipo de mercado",
+    "tradeType": "Giro Alcista por Suelo Plano (Sin Mecha Inferior)",
+    "timeframe": "1M / 5M"
+  },
+  "mtgPolicy": "1_STEP",
+  "requirements": [
+    "Busque una vela roja sin cabeza (sin mecha inferior, cierre igual al mínimo).",
+    "Espere a que se forme inmediatamente una vela verde sin cola (sin mecha inferior, apertura igual al mínimo).",
+    "REGLA DE OPERACIÓN ALCISTA: A continuación, realice la operación en ALZA - DIRECCIÓN (CALL) en la vela comercial siguiente.",
+    "Para configuración simétrica bajista: vela verde sin mecha superior seguida de vela roja sin mecha superior habilita operación en BAJA (PUT).",
+    "Comprueba si el indicador estocástico respalda tu dirección o no."
+  ],
+  "precautions": [
+    "Asegúrese de realizar una prueba retrospectiva en el par de divisas antes de utilizar el patrón en cuenta real.",
+    "Solo si se cumplen todas las condiciones anteriores, realice la operación.",
+    "Verifique que la vela roja no tenga mecha inferior y la verde siguiente no tenga mecha inferior."
+  ],
+  "simulation": {
+    "velasBase": 3,
+    "triggerIndex": 1
+  }
+}
