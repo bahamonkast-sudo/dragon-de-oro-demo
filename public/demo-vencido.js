@@ -187,8 +187,8 @@
     }
     document.body.appendChild(overlay);
     lockScroll();
-    // Inviolable: nada de lo que está debajo recibe eventos.
-    overlay.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); }, true);
+    // Inviolable: lo de debajo no recibe eventos; lo de dentro (campo/botón) sí funciona.
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) { e.preventDefault(); e.stopPropagation(); } }, true);
     overlay.addEventListener('wheel', function (e) { e.preventDefault(); }, { passive: false });
     overlay.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
     overlay.addEventListener('contextmenu', function (e) { e.preventDefault(); });
