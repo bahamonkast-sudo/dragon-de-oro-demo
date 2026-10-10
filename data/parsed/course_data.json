@@ -16424,6 +16424,37 @@
       "status": "ok",
       "error": null,
       "web_path": "public/modules/patrones-de-velas-japonesas.html"
+    },
+    {
+      "url": "patrones/nombres-velas.html",
+      "slug": "nombres-velas",
+      "depth": 0,
+      "title": "Nombres de velas",
+      "description": "Módulo de nombres y tipos de velas japonesas",
+      "kind": "resource",
+      "level": null,
+      "order": null,
+      "date_published": null,
+      "date_modified": null,
+      "author": "Guillermo",
+      "categories": [
+        "category-velas",
+        "category-nombres"
+      ],
+      "tags": [
+        "tag-velas",
+        "tag-nombres",
+        "tag-japonesas"
+      ],
+      "word_count": 0,
+      "videos": [],
+      "links": [],
+      "linked_images": [],
+      "assets": [],
+      "blocks": [],
+      "status": "active",
+      "error": null,
+      "web_path": "nombres-velas"
     }
   ]
 }

@@ -59,8 +59,23 @@ class Handler(SimpleHTTPRequestHandler):
     def guess_type(self, path):
         return content_type(Path(str(path)))
 
+    # Sin caché en HTML/JS/JSON: la misma URL siempre trae lo nuevo (bloqueo vigente).
+    NO_CACHE_TYPES = {
+        "text/html",
+        "text/css",
+        "text/javascript",
+        "application/javascript",
+        "application/json",
+    }
+
     def end_headers(self):
         self.send_header("X-Content-Type-Options", "nosniff")
+        try:
+            if self._charset_target() in self.NO_CACHE_TYPES:
+                self.send_header("Cache-Control", "no-store, no-cache, must-revalidate")
+                self.send_header("Pragma", "no-cache")
+        except Exception:
+            pass
         super().end_headers()
 
     def send_header(self, keyword, value):

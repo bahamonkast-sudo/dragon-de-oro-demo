@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nombres de Velas — Laboratorio Dragón de Oro</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body{background:#05070b;color:#e2e8f0;font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}
+  .grid-bg{background-image:linear-gradient(to right,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.035) 1px,transparent 1px);background-size:36px 36px}
+  .card{background:#0b101c;border:1px solid #1e293b;border-radius:1rem}
+  .chip{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:9999px;border:1px solid #334155}
+  .btn-part{font-size:11px;font-weight:700;padding:.4rem .8rem;border-radius:.6rem;border:1px solid #334155;background:#0f172a;color:#cbd5e1;cursor:pointer;transition:all .15s}
+  .btn-part:hover{border-color:#f59e0b;color:#fff}
+  .btn-part.active{background:#f59e0b;border-color:#f59e0b;color:#020617}
+  .lbl{font-size:11px;fill:#94a3b8;font-weight:600}
+  .lbl-val{font-size:11px;fill:#e2e8f0;font-weight:800}
+  .dashed{stroke:#475569;stroke-width:1;stroke-dasharray:4 4}
+  .hl{filter:drop-shadow(0 0 8px rgba(245,158,11,.8));}
+  .vela-card{transition:transform .2s,border-color .2s}
+  .vela-card:hover{transform:translateY(-3px);border-color:rgba(245,158,11,.5)}
+  details{border:1px solid #1e293b;border-radius:.75rem;background:#0f172a}
+  summary{cursor:pointer;padding:.7rem 1rem;font-size:12px;font-weight:700;color:#fcd34d;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  details div.body{padding:0 1rem 1rem;font-size:12px;color:#cbd5e1;line-height:1.65}
+  .quiz-btn{font-size:11px;font-weight:800;padding:.45rem .9rem;border-radius:.6rem;cursor:pointer;border:1px solid #334155;background:#131a29;color:#e2e8f0}
+  .quiz-btn:hover{border-color:#22c55e}
+</style>
+</head>
+<body class="min-h-screen">
+
+<header class="sticky top-0 z-40 bg-[#0b0e14]/95 backdrop-blur border-b border-slate-800">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+    <div class="flex items-center gap-2 text-sm">
+      <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+      <strong class="tracking-wide">LABORATORIO DE VELAS <span class="text-amber-500">· NOMBRES</span></strong>
+      <span class="hidden sm:inline text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30">MÓDULO 01</span>
+    </div>
+    <nav class="flex items-center gap-3 text-xs font-semibold">
+      <a href="../inicio.html" class="text-slate-300 hover:text-amber-400">← Inicio</a>
+      <a href="hub.html" class="text-slate-300 hover:text-amber-400">Hub</a>
+      <a href="velas/" class="text-slate-300 hover:text-amber-400">Simulador</a>
+      <a href="entrenador.html" class="text-slate-300 hover:text-amber-400">Entrenador</a>
+      <a href="../curso.html" class="px-3 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold hover:bg-amber-400">Aula</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO / INTRO -->
+<section class="grid-bg border-b border-slate-800">
+  <div class="max-w-6xl mx-auto px-4 py-10 grid lg:grid-cols-2 gap-8 items-center">
+    <div>
+      <p class="text-[11px] font-bold tracking-widest text-amber-500 uppercase">Intro · qué es una vela japonesa</p>
+      <h1 class="text-3xl sm:text-4xl font-black text-white mt-2 leading-tight">Una vela = una batalla entre <span class="text-emerald-400">compradores</span> y <span class="text-rose-400">vendedores</span></h1>
+      <p class="text-sm text-slate-300 leading-relaxed mt-4">
+        Las velas japonesas confirman la línea de precio y representan un período de tiempo específico:
+        <strong class="text-white">1, 3, 5, 15 minutos, 1 hora, 1 día, etc.</strong>
+        Al empezar cada vela, el precio oscila arriba y abajo hasta que pasa el tiempo marcado.
+        Después se forma otra vela, y así una y otra vez.
+      </p>
+      <p class="text-sm text-slate-300 leading-relaxed mt-3">
+        Cada vela nos dice <strong class="text-white">cómo ha fluctuado el precio</strong> y, por tanto,
+        <strong class="text-white">cómo se ha comportado ese activo</strong>.
+        Para leer patrones hay que fijarse en 4 cosas:
+      </p>
+      <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
+        <div class="card p-3">📍 <strong class="text-white">Apertura y cierre</strong><br><span class="text-slate-400">¿dónde empezó y dónde terminó?</span></div>
+        <div class="card p-3">📈 <strong class="text-white">Máximo y mínimo</strong><br><span class="text-slate-400">¿hasta dónde llegó la mecha?</span></div>
+        <div class="card p-3">🟩 <strong class="text-white">Tamaño del cuerpo</strong><br><span class="text-slate-400">¿hubo decisión o duda?</span></div>
+        <div class="card p-3">🎨 <strong class="text-white">Color</strong><br><span class="text-slate-400">verde = ganó comprador · rojo = ganó vendedor</span></div>
+      </div>
+    </div>
+    <div class="card p-5">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <h2 class="text-sm font-bold text-white">Anatomía interactiva — toca cada parte</h2>
+        <span class="chip bg-slate-800 text-slate-300">mejora del gráfico original</span>
+      </div>
+      <div class="flex flex-wrap gap-1.5 mt-3" id="part-btns">
+        <button class="btn-part" data-part="maximo">Máximo</button>
+        <button class="btn-part" data-part="apertura">Apertura</button>
+        <button class="btn-part" data-part="cierre">Cierre</button>
+        <button class="btn-part" data-part="cuerpo">Cuerpo</button>
+        <button class="btn-part" data-part="minimo">Mínimo</button>
+        <button class="btn-part" data-part="todo">Ver todo</button>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-2">
+        <!-- VELA ROJA -->
+        <svg viewBox="0 0 220 300" class="w-full h-auto" id="svg-roja" role="img" aria-label="Vela roja bajista">
+          <line x1="110" y1="10" x2="110" y2="55" stroke="#ef4444" stroke-width="2" data-g="maximo"/>
+          <line x1="110" y1="10" x2="165" y2="10" class="dashed" /><text x="170" y="13" class="lbl">Máximo</text>
+          <rect x="85" y="55" width="50" height="150" rx="2" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5" data-g="cuerpo"/>
+          <line x1="135" y1="55" x2="165" y2="55" class="dashed"/><text x="170" y="58" class="lbl-val" data-g="apertura">Apertura</text>
+          <text x="10" y="135" class="lbl" data-g="cuerpo">Cuerpo</text>
+          <line x1="80" y1="132" x2="60" y2="132" class="dashed"/>
+          <line x1="135" y1="205" x2="165" y2="205" class="dashed"/><text x="170" y="208" class="lbl-val" data-g="cierre">Cierre</text>
+          <line x1="110" y1="205" x2="110" y2="260" stroke="#ef4444" stroke-width="2" data-g="minimo"/>
+          <line x1="110" y1="260" x2="165" y2="260" class="dashed"/><text x="170" y="263" class="lbl">Mínimo</text>
+        </svg>
+        <!-- VELA VERDE -->
+        <svg viewBox="0 0 220 300" class="w-full h-auto" id="svg-verde" role="img" aria-label="Vela verde alcista">
+          <line x1="110" y1="10" x2="110" y2="55" stroke="#22c55e" stroke-width="2" data-g="maximo"/>
+          <line x1="110" y1="10" x2="165" y2="10" class="dashed"/><text x="170" y="13" class="lbl">Máximo</text>
+          <rect x="85" y="55" width="50" height="150" rx="2" fill="#14b8a6" stroke="#0f766e" stroke-width="1.5" data-g="cuerpo"/>
+          <line x1="135" y1="55" x2="165" y2="55" class="dashed"/><text x="170" y="58" class="lbl-val" data-g="cierre">Cierre</text>
+          <text x="10" y="135" class="lbl" data-g="cuerpo">Cuerpo</text>
+          <line x1="80" y1="132" x2="60" y2="132" class="dashed"/>
+          <line x1="135" y1="205" x2="165" y2="205" class="dashed"/><text x="170" y="208" class="lbl-val" data-g="apertura">Apertura</text>
+          <line x1="110" y1="205" x2="110" y2="260" stroke="#14b8a6" stroke-width="2" data-g="minimo"/>
+          <line x1="110" y1="260" x2="165" y2="260" class="dashed"/><text x="170" y="263" class="lbl">Mínimo</text>
+        </svg>
+      </div>
+      <div class="grid grid-cols-2 gap-2 text-center text-xs font-bold">
+        <div class="text-rose-400">Vela roja (bajista)<br><span class="font-normal text-slate-400">abre arriba · cierra abajo</span></div>
+        <div class="text-teal-300">Vela verde (alcista)<br><span class="font-normal text-slate-400">abre abajo · cierra arriba</span></div>
+      </div>
+      <p id="part-explain" class="mt-3 text-xs leading-relaxed text-amber-200 bg-amber-500/10 border border-amber-500/30 rounded-xl p-3 min-h-[52px]">Toca un botón para ver qué significa cada parte en tus palabras.</p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 pb-8 grid md:grid-cols-2 gap-3 text-xs leading-relaxed">
+    <div class="card p-4 border-l-4 !border-l-amber-500">⏳ <strong class="text-white">Temporalidades altas = más fiables.</strong> <span class="text-slate-300">Una vela de 1H pesa más que una de 1M: hay más dinero y más decisiones detrás.</span></div>
+    <div class="card p-4 border-l-4 !border-l-sky-500">🧠 <strong class="text-white">Una vela sola no significa nada.</strong> <span class="text-slate-300">Sirve para entender el comportamiento del precio y, <u>en conjunto</u> con contexto e indicadores, tomar decisiones de entrada y salida.</span></div>
+  </div>
+</section>
+
+<!-- TIPOS -->
+<section class="max-w-6xl mx-auto px-4 py-10">
+  <p class="text-[11px] font-bold tracking-widest text-amber-500 uppercase">Tipos de velas japonesas y su significado · <span id="conteo">9 patrones</span></p>
+  <h2 class="text-2xl font-black text-white mt-1">Acostumbra el ojo: lee la vela <u>cuando cierra</u> y en contexto</h2>
+  <p class="text-sm text-slate-400 mt-2 max-w-3xl leading-relaxed">Vamos a analizar algunos tipos de velas para empezar a acostumbrar al ojo y poder interpretarlas una vez se cierran y terminan su formación. Como viste antes, una vela por sí sola <strong class="text-slate-200">no significa nada</strong>: hay que ponerla en contexto y leer todo el conjunto.</p>
+
+  <div class="flex flex-wrap items-center gap-2 mt-5 text-xs">
+    <input id="buscador" placeholder="🔎 Buscar vela: martillo, doji, hombre…" class="flex-1 min-w-[220px] bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500">
+    <div class="flex gap-1.5" id="filtros">
+      <button data-f="todas" class="btn-part active">Todas</button>
+      <button data-f="giro-bajista" class="btn-part">Giro bajista</button>
+      <button data-f="giro-alcista" class="btn-part">Giro alcista</button>
+      <button data-f="duda" class="btn-part">Duda</button>
+    </div>
+  </div>
+
+  <div id="grid-velas" class="grid md:grid-cols-2 gap-4 mt-5"></div>
+
+  <div class="card p-5 mt-6 text-xs text-slate-300 leading-relaxed">
+    <strong class="text-white">¿Cómo me pasas la siguiente vela?</strong> Mándame: 1) foto o nombre de la vela, 2) tu texto de teoría (como el del Hombre colgado). Yo la dibujo en SVG, la mejoro con lectura + contexto + error común + mini-quiz, y la agrego aquí sin romper lo anterior. Este archivo está pensado para crecer: cada vela es un objeto en <code class="text-amber-300">VELAS[]</code> al final del archivo.
+  </div>
+</section>
+
+<footer class="border-t border-slate-800 py-6 text-center text-[11px] text-slate-500">
+  Dragón de Oro · Laboratorio de Velas — Nombres · <a href="hub.html" class="text-amber-400 hover:underline">Volver al Hub</a>
+</footer>
+
+<script>
+const EXPLICA = {
+  maximo: "MÁXIMO: la punta de la mecha superior. Es lo más alto que pagaron los compradores antes de que el precio retroceda. Si queda muy lejos del cuerpo, hubo rechazo.",
+  apertura: "APERTURA: donde abre la vela (empieza el conteo del tiempo). En la roja está ARRIBA, en la verde está ABAJO. Es tu punto de referencia.",
+  cierre: "CIERRE: donde termina la vela cuando se acaba el tiempo (1M, 5M, 1H…). Lo más importante: un cierre por encima/debajo de un nivel confirma o niega.",
+  cuerpo: "CUERPO: distancia entre apertura y cierre. Grande = decisión (un bando ganó claro). Pequeño = duda (nadie se impuso).",
+  minimo: "MÍNIMO: la punta de la mecha inferior. Lo más bajo que vendieron antes de rebotar. Mecha inferior larga = los vendedores intentaron y perdieron.",
+  todo: "VELA COMPLETA: máximo + apertura + cuerpo + cierre + mínimo. Léela siempre cerrada y en contexto (tendencia + nivel + temporalidad)."
+};
+const btns = document.querySelectorAll("#part-btns .btn-part");
+const explain = document.getElementById("part-explain");
+function pintar(parte){
+  btns.forEach(b=>b.classList.toggle("active", b.dataset.part===parte));
+  explain.textContent = EXPLICA[parte] || EXPLICA.todo;
+  document.querySelectorAll("[data-g]").forEach(el=>{
+    el.classList.remove("hl");
+    el.style.opacity = (parte==="todo" || el.dataset.g===parte) ? "1" : ".18";
+    if(el.dataset.g===parte) el.classList.add("hl");
+  });
+}
+btns.forEach(b=>b.addEventListener("click",()=>pintar(b.dataset.part)));
+pintar("todo");
+
+/* ============ BASE DE VELAS — agrega aquí las siguientes ============ */
+const VELAS = [
+  {
+    id:"hombre-colgado", nombre:"Hombre colgado", alias:"Hanging Man",
+    sesgo:"De alcista a bajista", filtro:"giro-bajista",
+    badges:["cuerpo pequeño","mecha inferior larga x2–3","en cima / racha verde"],
+    color:"#ef4444",
+    teoria:"En esta vela el precio se ha movido hacia abajo y después ha vuelto a subir dejando un cuerpo pequeñito. Esto nos indica que primero el precio quería bajar, pero al final ha subido y al no superar el precio de apertura, quizá ya no tiene <strong>fuerza para continuar</strong>.",
+    lectura:"Sube la escalera (tendencia alcista), tropieza abajo (mecha larga = los vendedores empujaron fuerte) y apenas logra volver arriba con un cuerpito. El que subía ya está cansado.",
+    contexto:"Solo vale en zona alta: tras 3+ velas verdes o tocando resistencia / número redondo. En mitad de la nada es solo ruido.",
+    error:"Entrar en PUT apenas la ves formarse. Espera CIERRE + confirmación: siguiente vela roja que rompa su mínimo, o RSI girando.",
+    quiz:{q:"Ves un Hombre colgado en plena subida M5. ¿Qué haces?", si:"Esperar cierre + confirmación bajista", ok:"No compro más: espero cierre y confirmación bajista para PUT; sin confirmación no entro.", no:["Compro CALL porque rebotó hacia arriba","Entro PUT a mitad de la formación"]},
+    svg:"colgado"
+  },
+  {
+    id:"martillo", nombre:"Martillo", alias:"Hammer",
+    sesgo:"De bajista a alcista", filtro:"giro-alcista",
+    badges:["cuerpo pequeño arriba","mecha inferior larga x2–3","en suelo / racha roja"],
+    color:"#14b8a6",
+    teoria:"En este tipo de vela el precio se ha movido hacia abajo y después ha vuelto a subir, superando el precio de apertura. Esto nos indica que quizá su sucesora, muy probablemente, tiene la <strong>intención de subir más</strong>.",
+    lectura:"Es el espejo del Hombre colgado pero abajo: los vendedores hunden el precio, los compradores lo rescatan y cierran arriba del open. El martillo 'clava' el suelo.",
+    contexto:"Solo vale en suelo: tras caída o en soporte. La mecha debe ser 2–3x el cuerpo y la mecha superior casi inexistente. Temporalidad alta = más fiable.",
+    error:"Comprar CALL con la mecha a medio formar. Espera CIERRE verde + siguiente vela que supere su máximo.",
+    quiz:{q:"Cae el precio y se forma un Martillo verde en soporte M5. ¿Qué haces?", si:"Esperar cierre + ruptura del máximo para CALL", ok:"Espero cierre y que la siguiente supere su máximo: ahí el giro tiene fuerza para CALL.", no:["Vendo PUT porque venía cayendo","Compro CALL a mitad de la mecha"]},
+    svg:"martillo"
+  },
+  {
+    id:"estrella-fugaz", nombre:"Estrella fugaz", alias:"Shooting Star",
+    sesgo:"De alcista a bajista", filtro:"giro-bajista",
+    badges:["cuerpo pequeño abajo","mecha superior larga x2–3","en cima / racha verde"],
+    color:"#ef4444",
+    teoria:"En esta vela el precio se ha movido hacia arriba y después ha vuelto a bajar rápidamente, superando el precio de apertura. El precio no prospera, ya que no ha podido dejar un cuerpo más largo. Ya no tiene <strong>fuerza para subir</strong> y puede que su predecesora sea bajista.",
+    lectura:"Los compradores intentaron disparar arriba, pero los vendedores los devolvieron abajo y cerraron débil. La mecha superior es el 'rechazo': quiso subir y no pudo.",
+    contexto:"En cima, tras impulso verde o en resistencia. Ideal si la siguiente vela rompe su mínimo. No la operes aislada en rango lateral.",
+    error:"Vender PUT solo por ver mecha larga. Sin cierre + confirmación roja es solo una sacudida.",
+    quiz:{q:"Tras subir fuerte aparece Estrella fugaz en resistencia. ¿Qué haces?", si:"Esperar cierre + vela roja que rompa su mínimo", ok:"Espero cierre y confirmación: roja rompiendo su mínimo para PUT.", no:["Compro CALL porque la tendencia era alcista","Vendo PUT antes del cierre"]},
+    svg:"fugaz"
+  },
+  {
+    id:"doji", nombre:"Velas doji", alias:"Doji · indecisión",
+    sesgo:"Indecisión", filtro:"duda",
+    badges:["sin cuerpo","apertura ≈ cierre","freno / aviso"],
+    color:"#94a3b8",
+    teoria:"Esta vela sin cuerpo nos indica que el precio no puede ni si <strong>subir</strong> o <strong>bajar</strong>. Es una vela de indecisión. Ante este tipo de velas tenemos que ser más cautos, ya que no nos dan pistas de cuál podría ser la <strong>dirección</strong> que el precio seguirá a continuación.",
+    lectura:"Empate total: abrió y cerró casi en el mismo precio. Nadie ganó. Es un semáforo en amarillo: el mercado duda y algo se está cocinando (continuación o giro).",
+    contexto:"Tras una racha larga (agotamiento) o en un nivel clave vale oro como alerta. En rango choppy salen muchos: ignóralos hasta ver la siguiente vela.",
+    error:"Apostar dirección con solo el doji. El doji no dice a dónde: dice 'espera la siguiente vela'.",
+    quiz:{q:"Aparece un doji perfecto en mitad de tendencia M1. ¿Qué haces?", si:"No entro: espero la siguiente vela que defina", ok:"Manos quietas: el doji solo avisa. La siguiente vela con cuerpo define para CALL o PUT.", no:["Entro CALL porque parece suelo","Entro PUT porque parece techo"]},
+    svg:"doji"
+  },
+  {
+    id:"doji-alcista", nombre:"Doji + vela alcista", alias:"Doji + confirmación",
+    sesgo:"Posible inicio alcista", filtro:"giro-alcista",
+    badges:["doji + cuerpo grande verde","confirmación","mejor en temporalidad alta"],
+    color:"#14b8a6",
+    teoria:"Lo que vemos aquí es una vela doji (indecisión en el mercado) seguida por una vela alcista con gran cuerpo. En temporalidades <strong>altas</strong> (velas de un día o una semana) nos podría indicar el inicio de una tendencia alcista.",
+    lectura:"Duda (doji) + decisión (velón verde que se come la duda). La segunda vela responde la pregunta del doji: ganaron los compradores, y con cuerpo grande = con fuerza.",
+    contexto:"Más fiable en temporalidades altas (H1/D1/semanal) y en suelo o tras consolidación. En M1 exige que el velón cierre con cuerpo sólido, no una mecha.",
+    error:"Comprar con cualquier velita verde tras el doji. El filtro es cuerpo GRANDE que confirme, no un cuerpito dudoso.",
+    quiz:{q:"Doji en suelo + velón verde con cuerpo grande en H1. ¿Qué lees?", si:"Posible inicio alcista: busco CALL con gestión", ok:"Duda resuelta al alza y con fuerza: sesgo CALL, siempre con gestión y contexto.", no:["Sigo esperando porque el doji es bajista","Entro PUT contra el velón"]},
+    svg:"doji-alcista"
+  },
+  {
+    id:"envolvente-bajista", nombre:"Pauta envolvente bajista", alias:"Bearish Engulfing",
+    sesgo:"Confirmación bajista", filtro:"giro-bajista",
+    badges:["martillo + velón rojo","el rojo envuelve al anterior","confirmación de giro"],
+    color:"#ef4444",
+    teoria:"Vemos una vela martillo seguida de una vela bajista. Si antes la vela martillo nos decía que podía estar <strong>cambiando</strong> la tendencia, aquí se nos confirma, ya que la vela que la sigue es bajista y tiene un gran cuerpo que envuelve a la vela martillo.",
+    lectura:"Amago de giro (martillo) + confirmación (velón rojo que lo tapa entero). Los vendedores no solo volvieron: se comieron a los compradores anteriores.",
+    contexto:"En cima / tras Martillo o Hombre colgado. El cuerpo rojo debe envolver TODO el cuerpo anterior (ideal también las mechas). Segunda vela con cierre fuerte = mejor.",
+    error:"Vender antes de que cierre el velón. Si cierra con mecha inferior larguísima o sin envolver, la confirmación es floja.",
+    quiz:{q:"Martillo + velón rojo que lo envuelve entero en resistencia. ¿Qué haces?", si:"Tomo sesgo PUT: giro confirmado", ok:"Giro confirmado por envolvente: sesgo PUT con gestión.", no:["Compro CALL porque hubo un martillo","Ignoro el tamaño del cuerpo"]},
+    svg:"envolvente-bajista"
+  },
+  {
+    id:"envolvente-alcista", nombre:"Pauta envolvente alcista", alias:"Bullish Engulfing",
+    sesgo:"Confirmación alcista", filtro:"giro-alcista",
+    badges:["roja pequeña + velón verde","el verde envuelve","cambio de tendencia"],
+    color:"#14b8a6",
+    teoria:"Vemos una vela bajista con cuerpo pequeño, seguida de una vela alcista con cuerpo grande que cubre la vela y anticipa un <strong>posible</strong> cambio de tendencia.",
+    lectura:"Amago de suelo (rojita débil) + confirmación (velón verde que la tapa entera). Los compradores no solo volvieron: se comieron a los vendedores anteriores. Espejo de la envolvente bajista.",
+    contexto:"En suelo / tras Martillo o Doji. El cuerpo verde debe envolver TODO el cuerpo rojo anterior. Cierre fuerte sin mecha superior larga = mejor.",
+    error:"Comprar antes de que cierre el velón o con un verde que apenas empata. Sin envolver completo, la confirmación es floja.",
+    quiz:{q:"Rojita débil + velón verde que la envuelve entera en soporte. ¿Qué haces?", si:"Tomo sesgo CALL: giro confirmado", ok:"Giro confirmado por envolvente: sesgo CALL con gestión.", no:["Vendo PUT porque la primera era roja","Ignoro el tamaño del cuerpo"]},
+    svg:"envolvente-alcista"
+  },
+  {
+    id:"estrella-tarde", nombre:"Estrella de la tarde", alias:"3 velas · bajista → alcista*",
+    sesgo:"Posible giro alcista (3 velas)", filtro:"giro-alcista",
+    badges:["3 velas","1) velón rojo","2) pausa","3) velón verde"],
+    color:"#14b8a6",
+    teoria:"Este tipo de patrón lo conforman tres velas y nos anticipa un <strong>posible</strong> cambio de tendencia. El cuerpo largo de la primera vela nos dice que el precio ha bajado bastante y que, justo después, aparece una vela con poco cuerpo, pero que ha cerrado por debajo de la apertura, seguido por una vela alcista más larga, que confirma un posible cambio de <strong>tendencia</strong>, en este caso hacia arriba.",
+    lectura:"Caída fuerte (1) + duda que frena (2) + impulso que recupera (3). La tercera debe cerrar dentro del cuerpo de la primera: ahí se confirma que el vendedor se quedó sin fuerza.",
+    contexto:"En suelo, tras caída clara. La vela 2 pequeña (ideal doji) y la 3 con cuerpo grande y cierre fuerte. *En tu fuente viene nombrada 'de la tarde' con dirección bajista→alcista: la respeto tal cual.",
+    error:"Operarla con la vela 3 a medio formar o sin caída previa. Sin contexto de suelo son solo 3 velas sueltas.",
+    quiz:{q:"Velón rojo + velita de pausa + velón verde que recupera en suelo. ¿Qué lees?", si:"Posible giro alcista: sesgo CALL con confirmación", ok:"Estructura 1-2-3 completa en suelo: sesgo CALL con gestión.", no:["Vendo PUT porque la primera era roja","Entro en la vela 2 de pausa"]},
+    svg:"estrella-tarde"
+  },
+  {
+    id:"estrella-manana", nombre:"Estrella de la mañana", alias:"3 velas · alcista → bajista*",
+    sesgo:"Posible giro bajista (3 velas)", filtro:"giro-bajista",
+    badges:["3 velas","1) velón verde","2) freno","3) velón rojo"],
+    color:"#ef4444",
+    teoria:"En este caso la tendencia es alcista y justo después de la primera vela aparece una vela bajista con poco cuerpo, mostrando el «freno» en la subida y, por lo tanto, una posible <strong>recuperación</strong> bajista en la tercera vela.",
+    lectura:"Subida fuerte (1) + freno con cuerpito (2) + devolución roja (3). La tercera debe meterse dentro del cuerpo de la primera: confirma que el comprador perdió el control.",
+    contexto:"En cima, tras subida clara. Vela 2 pequeña = freno; vela 3 grande y con cierre débil = mejor. *En tu fuente viene nombrada 'de la mañana' con dirección alcista→bajista: la respeto tal cual.",
+    error:"Vender solo por ver la velita de freno. El giro lo confirma la TERCERA vela, no la segunda.",
+    quiz:{q:"Velón verde + velita de freno + velón rojo que devuelve en cima. ¿Qué lees?", si:"Posible giro bajista: sesgo PUT con confirmación", ok:"Estructura 1-2-3 completa en cima: sesgo PUT con gestión.", no:["Compro CALL porque la primera era verde","Vendo en la vela 2 de freno"]},
+    svg:"estrella-manana"
+  }
+];
+
+function base(color){
+  return `<svg viewBox="0 0 260 220" class="w-full h-auto bg-[#05070b] rounded-xl border border-slate-800">__C__</svg>`;
+}
+function dibujoColgado(color){
+  return base().replace("__C__",`
+    <line x1="40" y1="170" x2="90" y2="110" stroke="#14b8a6" stroke-width="2"/><polygon points="90,110 76,112 84,96" fill="#14b8a6"/>
+    <text x="18" y="188" font-size="10" fill="#14b8a6" font-weight="700">viene subiendo</text>
+    <line x1="130" y1="20" x2="130" y2="200" stroke="#64748b" stroke-width="2"/>
+    <rect x="112" y="28" width="36" height="30" rx="2" fill="${color}" stroke="#7f1d1d"/>
+    <line x1="130" y1="58" x2="130" y2="200" stroke="${color}" stroke-width="3"/>
+    <text x="155" y="45" font-size="10" fill="#94a3b8">cuerpo pequeño</text>
+    <text x="155" y="140" font-size="10" fill="#94a3b8">mecha 2–3x</text>
+    <line x1="175" y1="110" x2="225" y2="165" stroke="#ef4444" stroke-width="2"/><polygon points="225,165 212,161 219,147" fill="#ef4444"/>
+    <text x="178" y="182" font-size="10" fill="#ef4444" font-weight="700">posible giro ↓</text>`);
+}
+function dibujoMartillo(color){
+  return base().replace("__C__",`
+    <line x1="40" y1="60" x2="90" y2="120" stroke="#ef4444" stroke-width="2"/><polygon points="90,120 76,116 82,102" fill="#ef4444"/>
+    <text x="22" y="48" font-size="10" fill="#ef4444" font-weight="700">venía cayendo</text>
+    <line x1="130" y1="20" x2="130" y2="200" stroke="#64748b" stroke-width="2"/>
+    <rect x="112" y="28" width="36" height="30" rx="2" fill="${color}" stroke="#0f766e"/>
+    <line x1="130" y1="58" x2="130" y2="200" stroke="${color}" stroke-width="3"/>
+    <text x="155" y="45" font-size="10" fill="#94a3b8">cierra sobre open</text>
+    <text x="155" y="140" font-size="10" fill="#94a3b8">mecha 2–3x</text>
+    <line x1="170" y1="165" x2="220" y2="105" stroke="#14b8a6" stroke-width="2"/><polygon points="220,105 206,109 214,123" fill="#14b8a6"/>
+    <text x="172" y="182" font-size="10" fill="#14b8a6" font-weight="700">posible giro ↑</text>`);
+}
+function dibujoFugaz(color){
+  return base().replace("__C__",`
+    <line x1="40" y1="170" x2="90" y2="110" stroke="#14b8a6" stroke-width="2"/><polygon points="90,110 76,112 84,96" fill="#14b8a6"/>
+    <text x="18" y="188" font-size="10" fill="#14b8a6" font-weight="700">viene subiendo</text>
+    <line x1="130" y1="20" x2="130" y2="200" stroke="#64748b" stroke-width="2"/>
+    <line x1="130" y1="20" x2="130" y2="150" stroke="${color}" stroke-width="3"/>
+    <rect x="112" y="150" width="36" height="30" rx="2" fill="#14b8a6" stroke="#0f766e"/>
+    <line x1="130" y1="180" x2="130" y2="195" stroke="#64748b" stroke-width="2"/>
+    <text x="155" y="60" font-size="10" fill="#94a3b8">mecha 2–3x</text>
+    <text x="155" y="168" font-size="10" fill="#94a3b8">cuerpo abajo</text>
+    <line x1="175" y1="110" x2="225" y2="165" stroke="#ef4444" stroke-width="2"/><polygon points="225,165 212,161 219,147" fill="#ef4444"/>
+    <text x="178" y="182" font-size="10" fill="#ef4444" font-weight="700">posible giro ↓</text>`);
+}
+function dibujoDoji(color){
+  return base().replace("__C__",`
+    <text x="70" y="40" font-size="11" fill="#e2e8f0" font-weight="800">apertura ≈ cierre</text>
+    <line x1="130" y1="40" x2="130" y2="180" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="90" y1="110" x2="170" y2="110" stroke="#94a3b8" stroke-width="3"/>
+    <text x="88" y="200" font-size="10" fill="#94a3b8">sin cuerpo = empate</text>
+    <text x="150" y="132" font-size="10" fill="#f59e0b" font-weight="700">⚠ espera la siguiente</text>`);
+}
+function dibujoDojiAlcista(color){
+  return base().replace("__C__",`
+    <line x1="70" y1="70" x2="70" y2="150" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="50" y1="110" x2="90" y2="110" stroke="#94a3b8" stroke-width="2"/>
+    <text x="38" y="168" font-size="10" fill="#94a3b8">1) duda</text>
+    <line x1="160" y1="20" x2="160" y2="180" stroke="${color}" stroke-width="2"/>
+    <rect x="138" y="40" width="44" height="120" rx="2" fill="${color}" stroke="#0f766e"/>
+    <text x="140" y="198" font-size="10" fill="#14b8a6" font-weight="700">2) decisión ↑</text>`);
+}
+function dibujoEnvolvente(color){
+  return base().replace("__C__",`
+    <line x1="40" y1="170" x2="75" y2="130" stroke="#14b8a6" stroke-width="2"/><polygon points="75,130 62,131 69,117" fill="#14b8a6"/>
+    <line x1="95" y1="30" x2="95" y2="190" stroke="#64748b" stroke-width="2"/>
+    <rect x="80" y="38" width="30" height="26" rx="2" fill="#14b8a6" stroke="#0f766e"/>
+    <line x1="95" y1="64" x2="95" y2="190" stroke="#14b8a6" stroke-width="2"/>
+    <text x="60" y="208" font-size="10" fill="#94a3b8">1) martillo</text>
+    <line x1="175" y1="25" x2="175" y2="195" stroke="${color}" stroke-width="2"/>
+    <rect x="153" y="45" width="44" height="130" rx="2" fill="${color}" stroke="#7f1d1d"/>
+    <text x="140" y="208" font-size="10" fill="#ef4444" font-weight="700">2) envuelve ↓</text>
+    <line x1="210" y1="130" x2="245" y2="165" stroke="#ef4444" stroke-width="2"/><polygon points="245,165 232,161 239,147" fill="#ef4444"/>`);
+}
+function dibujoEnvolventeAlcista(color){
+  return base().replace("__C__",`
+    <line x1="40" y1="60" x2="75" y2="100" stroke="#ef4444" stroke-width="2"/><polygon points="75,100 62,99 69,85" fill="#ef4444"/>
+    <line x1="95" y1="30" x2="95" y2="190" stroke="#64748b" stroke-width="2"/>
+    <rect x="80" y="126" width="30" height="26" rx="2" fill="#ef4444" stroke="#7f1d1d"/>
+    <line x1="95" y1="30" x2="95" y2="190" stroke="#ef4444" stroke-width="2"/>
+    <text x="60" y="208" font-size="10" fill="#94a3b8">1) roja débil</text>
+    <line x1="175" y1="25" x2="175" y2="195" stroke="${color}" stroke-width="2"/>
+    <rect x="153" y="45" width="44" height="130" rx="2" fill="${color}" stroke="#0f766e"/>
+    <text x="140" y="208" font-size="10" fill="#14b8a6" font-weight="700">2) envuelve ↑</text>
+    <line x1="210" y1="165" x2="245" y2="120" stroke="#14b8a6" stroke-width="2"/><polygon points="245,120 231,122 238,136" fill="#14b8a6"/>`);
+}
+function dibujoEstrellaTarde(color){
+  return base().replace("__C__",`
+    <text x="30" y="205" font-size="10" fill="#94a3b8">1) cae</text>
+    <line x1="60" y1="40" x2="60" y2="190" stroke="#ef4444" stroke-width="2"/>
+    <rect x="42" y="50" width="36" height="120" rx="2" fill="#ef4444" stroke="#7f1d1d"/>
+    <text x="105" y="205" font-size="10" fill="#94a3b8">2) pausa</text>
+    <line x1="130" y1="110" x2="130" y2="175" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="118" y="128" width="24" height="22" rx="2" fill="#94a3b8"/>
+    <text x="180" y="205" font-size="10" fill="#14b8a6" font-weight="700">3) confirma ↑</text>
+    <line x1="200" y1="40" x2="200" y2="190" stroke="${color}" stroke-width="2"/>
+    <rect x="182" y="70" width="36" height="100" rx="2" fill="${color}" stroke="#0f766e"/>`);
+}
+function dibujoEstrellaManana(color){
+  return base().replace("__C__",`
+    <text x="30" y="205" font-size="10" fill="#94a3b8">1) sube</text>
+    <line x1="60" y1="30" x2="60" y2="180" stroke="#14b8a6" stroke-width="2"/>
+    <rect x="42" y="50" width="36" height="120" rx="2" fill="#14b8a6" stroke="#0f766e"/>
+    <text x="105" y="205" font-size="10" fill="#94a3b8">2) freno</text>
+    <line x1="130" y1="45" x2="130" y2="110" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="118" y="70" width="24" height="22" rx="2" fill="#94a3b8"/>
+    <text x="180" y="205" font-size="10" fill="#ef4444" font-weight="700">3) devuelve ↓</text>
+    <line x1="200" y1="30" x2="200" y2="180" stroke="${color}" stroke-width="2"/>
+    <rect x="182" y="50" width="36" height="100" rx="2" fill="${color}" stroke="#7f1d1d"/>`);
+}
+function dibujar(v){
+  if(v.svg==="martillo") return dibujoMartillo(v.color);
+  if(v.svg==="fugaz") return dibujoFugaz(v.color);
+  if(v.svg==="doji") return dibujoDoji(v.color);
+  if(v.svg==="doji-alcista") return dibujoDojiAlcista(v.color);
+  if(v.svg==="envolvente-bajista") return dibujoEnvolvente(v.color);
+  if(v.svg==="envolvente-alcista") return dibujoEnvolventeAlcista(v.color);
+  if(v.svg==="estrella-tarde") return dibujoEstrellaTarde(v.color);
+  if(v.svg==="estrella-manana") return dibujoEstrellaManana(v.color);
+  return dibujoColgado(v.color);
+}
+
+let filtroActual = "todas";
+function render(){
+  const q = (document.getElementById("buscador").value||"").toLowerCase();
+  const grid = document.getElementById("grid-velas");
+  const lista = VELAS.filter(v =>
+    (filtroActual==="todas"||v.filtro===filtroActual) &&
+    (!q || (v.nombre+v.alias+v.teoria).toLowerCase().includes(q))
+  );
+  grid.innerHTML = lista.length ? lista.map((v,i)=>`
+  <article class="card vela-card p-5" id="vela-${v.id}">
+    <div class="flex items-start justify-between gap-3 flex-wrap">
+      <div>
+        <p class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Vela ${String(VELAS.indexOf(v)+1).padStart(2,"0")} · ${v.alias}</p>
+        <h3 class="text-lg font-black text-white">${v.nombre} <span class="text-xs font-bold text-rose-400">(${v.sesgo})</span></h3>
+      </div>
+      <span class="chip" style="color:${v.color};border-color:${v.color}55;background:${v.color}14">● ${v.filtro.replace("-"," ")}</span>
+    </div>
+    <div class="flex flex-wrap gap-1.5 mt-2">${v.badges.map(b=>`<span class="chip bg-slate-800 text-slate-300">${b}</span>`).join("")}</div>
+    <div class="mt-3">${dibujar(v)}</div>
+    <p class="text-[13px] text-slate-300 leading-relaxed mt-3">${v.teoria}</p>
+    <details class="mt-2" open><summary>📖 Lectura Dragón de Oro (mejora)</summary><div class="body">${v.lectura}<br><br>📌 <strong>Contexto válido:</strong> ${v.contexto}<br>⚠️ <strong>Error común:</strong> ${v.error}</div></details>
+    <div class="mt-2 bg-[#0f172a] border border-slate-700 rounded-xl p-3">
+      <p class="text-xs font-bold text-white">🎯 Mini-quiz: ${v.quiz.q}</p>
+      <div class="flex flex-wrap gap-1.5 mt-2" data-quiz="${i}">
+        ${v.quiz.no.map(t=>`<button class="quiz-btn" data-ok="0">✕ ${t}</button>`).join("")}
+        <button class="quiz-btn" data-ok="1">✓ ${v.quiz.si}</button>
+      </div>
+      <p class="text-[11px] mt-2 hidden" data-msg></p>
+    </div>
+  </article>`).join("") : `<div class="card p-6 text-sm text-slate-400">Sin resultados. Prueba con “colgado”, “martillo” o “doji”.</div>`;
+
+  grid.querySelectorAll("[data-quiz]").forEach(box=>{
+    box.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+      const msg = box.parentElement.querySelector("[data-msg]");
+      const v = lista[+box.dataset.quiz];
+      msg.classList.remove("hidden");
+      if(b.dataset.ok==="1"){ msg.style.color="#4ade80"; msg.textContent="✔ Correcto: "+v.quiz.ok; }
+      else { msg.style.color="#f87171"; msg.textContent="✘ Esa te hace perder: espera siempre cierre + confirmación."; }
+    }));
+  });
+}
+document.getElementById("buscador").addEventListener("input", render);
+document.querySelectorAll("#filtros .btn-part").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("#filtros .btn-part").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); filtroActual=b.dataset.f; render();
+}));
+render();
+</script>
+<script src="../demo-vencido.js?v=2"></script>
+</body>
+</html>

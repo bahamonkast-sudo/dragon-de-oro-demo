@@ -30,9 +30,9 @@
       font-size: 14px;
       font-weight: 500;
     }
-    .top-bar a:hover {
-      text-decoration: underline;
-    }
+    .top-bar a.tab { color: #94a3b8; padding: 6px 12px; border-radius: 8px; border: 1px solid transparent; }
+    .top-bar a.tab:hover { text-decoration: none; color: #fff; }
+    .top-bar a.tab.active { color: #f59e0b; border-color: #f59e0b55; background: #f59e0b14; }
     .frame-container {
       width: 100%;
       height: calc(100% - 48px);
@@ -47,11 +47,21 @@
 <body>
   <div class="top-bar">
     <div><strong>Laboratorio de Velas</strong> &bull; Dragón de Oro</div>
-    <a href="curso.html">&larr; Volver al Curso</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a class="tab active" id="tab-sim" href="patrones/velas/" target="lab-frame" onclick="cambiaTab('sim')">🎮 Simulador</a>
+      <a class="tab" id="tab-nom" href="patrones/nombres-velas.html" target="lab-frame" onclick="cambiaTab('nom')">🕯️ Nombres de velas</a>
+      <a href="curso.html">&larr; Volver al Curso</a>
+    </div>
   </div>
   <div class="frame-container">
-    <iframe src="patrones/velas/" title="Laboratorio de Velas - Dragón de Oro"></iframe>
+    <iframe name="lab-frame" id="lab-frame" src="patrones/velas/" title="Laboratorio de Velas - Dragón de Oro"></iframe>
   </div>
+<script>
+function cambiaTab(cual){
+  document.getElementById('tab-sim').classList.toggle('active', cual==='sim');
+  document.getElementById('tab-nom').classList.toggle('active', cual==='nom');
+}
+</script>
 <script src="demo-vencido.js?v=2"></script>
 </body>
 </html>
